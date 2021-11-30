@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>987</width>
+    <height>649</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="QFrame" name="main_login_frame">
+      <property name="minimumSize">
+       <size>
+        <width>463</width>
+        <height>359</height>
+       </size>
+      </property>
+      <property name="sizeIncrement">
+       <size>
+        <width>0</width>
+        <height>759</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: qlineargradient(spread:pad, x1:0.00609095, y1:0, x2:0.966636, y2:0.955, stop:0 rgba(18, 21, 26, 255), stop:0.477273 rgba(26, 30, 35, 255), stop:1 rgba(18, 21, 26, 255));</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QFrame" name="login_frame">
+         <property name="maximumSize">
+          <size>
+           <width>381</width>
+           <height>301</height>
+          </size>
+         </property>
+         <property name="sizeIncrement">
+          <size>
+           <width>500</width>
+           <height>450</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: #12151a;
+border-radius: 45px
+</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <widget class="QLabel" name="titulo_login_lbl">
+          <property name="geometry">
+           <rect>
+            <x>60</x>
+            <y>20</y>
+            <width>251</width>
+            <height>81</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 35px bold ,Roboto;
+color: #fff;
+font-weight: bold;</string>
+          </property>
+          <property name="text">
+           <string>BIENVENIDO</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="subt_login_lbl">
+          <property name="geometry">
+           <rect>
+            <x>60</x>
+            <y>90</y>
+            <width>155</width>
+            <height>24</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 20px;
+color: #fff;
+font-family: Roboto;
+font-weight: 200;
+</string>
+          </property>
+          <property name="text">
+           <string>Ingresa tus datos</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="user_login_input">
+          <property name="geometry">
+           <rect>
+            <x>50</x>
+            <y>150</y>
+            <width>281</width>
+            <height>25</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>Roboto</family>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QLineEdit{
+background: #23262b;
+border-radius: 5px;
+padding: 5px;
+color: #b3b3b3;
+}
+
+QLineEdit:focus{
+border: 1px solid rgb(75, 75, 75);
+}</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="placeholderText">
+           <string>Código Empleado</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="pass_login_input">
+          <property name="geometry">
+           <rect>
+            <x>50</x>
+            <y>190</y>
+            <width>281</width>
+            <height>25</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>Roboto</family>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QLineEdit{
+background: #23262b;
+border-radius: 5px;
+padding: 5px;
+color: #b3b3b3;
+}
+
+QLineEdit:focus{
+border: 1px solid rgb(75, 75, 75);
+}</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="echoMode">
+           <enum>QLineEdit::Password</enum>
+          </property>
+          <property name="placeholderText">
+           <string>Contraseña</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="login_btn">
+          <property name="geometry">
+           <rect>
+            <x>50</x>
+            <y>240</y>
+            <width>91</width>
+            <height>24</height>
+           </rect>
+          </property>
+          <property name="cursor">
+           <cursorShape>PointingHandCursor</cursorShape>
+          </property>
+          <property name="focusPolicy">
+           <enum>Qt::NoFocus</enum>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton#login_btn{
+background-color: #1173ff;
+color:#fff;
+font-size:12px;
+font-family: Roboto;
+font-weight: bold;
+border-radius: 5px;
+padding-bottom: 1px
+}
+QPushButton#login_btn:hover{
+background-color: #45a9f0;
+}
+
+QPushButton#login_btn:pressed{
+padding-top: 3px;
+padding-left: 3px;
+}
+</string>
+          </property>
+          <property name="text">
+           <string>Ingresar  →</string>
+          </property>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

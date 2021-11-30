@@ -1,0 +1,2187 @@
+(['C:\\proyecto-final\\Interfaces\\loading\\bullsoft.py'],
+ ['C:\\proyecto-final\\Interfaces', 'C:\\proyecto-final\\Interfaces\\loading'],
+ ['PIL', 'pymysql', 'codecs'],
+ ['c:\\Users\\Juan '
+  'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\_pyinstaller_hooks_contrib\\hooks\\stdhooks',
+  'c:\\Users\\Juan '
+  'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\_pyinstaller_hooks_contrib\\hooks\\stdhooks\\__pycache__',
+  'c:\\Users\\Juan '
+  'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\_pyinstaller_hooks_contrib\\hooks\\rthooks',
+  'c:\\Users\\Juan '
+  'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\_pyinstaller_hooks_contrib\\hooks\\rthooks\\__pycache__',
+  'c:\\Users\\Juan '
+  'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\_pyinstaller_hooks_contrib\\hooks'],
+ {},
+ [],
+ [],
+ False,
+ False,
+ False,
+ '3.9.5 (tags/v3.9.5:0a7dcbd, May  3 2021, 17:27:52) [MSC v.1928 64 bit '
+ '(AMD64)]',
+ [('pyi_rth_pkgutil',
+   'C:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_pkgutil.py',
+   'PYSOURCE'),
+  ('pyi_rth_multiprocessing',
+   'C:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_multiprocessing.py',
+   'PYSOURCE'),
+  ('pyi_rth_inspect',
+   'C:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_inspect.py',
+   'PYSOURCE'),
+  ('pyi_rth_pyqt5',
+   'C:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_pyqt5.py',
+   'PYSOURCE'),
+  ('bullsoft',
+   'C:\\proyecto-final\\Interfaces\\loading\\bullsoft.py',
+   'PYSOURCE')],
+ [('inspect',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\inspect.py',
+   'PYMODULE'),
+  ('importlib',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\importlib\\__init__.py',
+   'PYMODULE'),
+  ('importlib._bootstrap_external',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\importlib\\_bootstrap_external.py',
+   'PYMODULE'),
+  ('importlib.metadata',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\importlib\\metadata.py',
+   'PYMODULE'),
+  ('contextlib',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\contextlib.py',
+   'PYMODULE'),
+  ('configparser',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\configparser.py',
+   'PYMODULE'),
+  ('posixpath',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\posixpath.py',
+   'PYMODULE'),
+  ('genericpath',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\genericpath.py',
+   'PYMODULE'),
+  ('stat',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\stat.py',
+   'PYMODULE'),
+  ('zipfile',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\zipfile.py',
+   'PYMODULE'),
+  ('py_compile',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\py_compile.py',
+   'PYMODULE'),
+  ('ntpath',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\ntpath.py',
+   'PYMODULE'),
+  ('string',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\string.py',
+   'PYMODULE'),
+  ('lzma',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\lzma.py',
+   'PYMODULE'),
+  ('_compression',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\_compression.py',
+   'PYMODULE'),
+  ('bz2',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\bz2.py',
+   'PYMODULE'),
+  ('_strptime',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\_strptime.py',
+   'PYMODULE'),
+  ('datetime',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\datetime.py',
+   'PYMODULE'),
+  ('calendar',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\calendar.py',
+   'PYMODULE'),
+  ('threading',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\threading.py',
+   'PYMODULE'),
+  ('_threading_local',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\_threading_local.py',
+   'PYMODULE'),
+  ('struct',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\struct.py',
+   'PYMODULE'),
+  ('shutil',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\shutil.py',
+   'PYMODULE'),
+  ('tarfile',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\tarfile.py',
+   'PYMODULE'),
+  ('gzip',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\gzip.py',
+   'PYMODULE'),
+  ('copy',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\copy.py',
+   'PYMODULE'),
+  ('fnmatch',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\fnmatch.py',
+   'PYMODULE'),
+  ('importlib.util',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\importlib\\util.py',
+   'PYMODULE'),
+  ('pathlib',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\pathlib.py',
+   'PYMODULE'),
+  ('urllib.parse',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\urllib\\parse.py',
+   'PYMODULE'),
+  ('urllib',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\urllib\\__init__.py',
+   'PYMODULE'),
+  ('email',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\email\\__init__.py',
+   'PYMODULE'),
+  ('email.parser',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\email\\parser.py',
+   'PYMODULE'),
+  ('email._policybase',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\email\\_policybase.py',
+   'PYMODULE'),
+  ('email.utils',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\email\\utils.py',
+   'PYMODULE'),
+  ('email._parseaddr',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\email\\_parseaddr.py',
+   'PYMODULE'),
+  ('socket',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\socket.py',
+   'PYMODULE'),
+  ('selectors',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\selectors.py',
+   'PYMODULE'),
+  ('random',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\random.py',
+   'PYMODULE'),
+  ('statistics',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\statistics.py',
+   'PYMODULE'),
+  ('decimal',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\decimal.py',
+   'PYMODULE'),
+  ('_pydecimal',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\_pydecimal.py',
+   'PYMODULE'),
+  ('contextvars',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\contextvars.py',
+   'PYMODULE'),
+  ('fractions',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\fractions.py',
+   'PYMODULE'),
+  ('numbers',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\numbers.py',
+   'PYMODULE'),
+  ('hashlib',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\hashlib.py',
+   'PYMODULE'),
+  ('logging',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\logging\\__init__.py',
+   'PYMODULE'),
+  ('pickle',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\pickle.py',
+   'PYMODULE'),
+  ('pprint',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\pprint.py',
+   'PYMODULE'),
+  ('doctest',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\doctest.py',
+   'PYMODULE'),
+  ('unittest',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\unittest\\__init__.py',
+   'PYMODULE'),
+  ('unittest.async_case',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\unittest\\async_case.py',
+   'PYMODULE'),
+  ('asyncio',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\asyncio\\__init__.py',
+   'PYMODULE'),
+  ('asyncio.unix_events',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\asyncio\\unix_events.py',
+   'PYMODULE'),
+  ('asyncio.log',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\asyncio\\log.py',
+   'PYMODULE'),
+  ('subprocess',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\subprocess.py',
+   'PYMODULE'),
+  ('signal',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\signal.py',
+   'PYMODULE'),
+  ('asyncio.windows_events',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\asyncio\\windows_events.py',
+   'PYMODULE'),
+  ('asyncio.windows_utils',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\asyncio\\windows_utils.py',
+   'PYMODULE'),
+  ('tempfile',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\tempfile.py',
+   'PYMODULE'),
+  ('asyncio.selector_events',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\asyncio\\selector_events.py',
+   'PYMODULE'),
+  ('ssl',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\ssl.py',
+   'PYMODULE'),
+  ('base64',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\base64.py',
+   'PYMODULE'),
+  ('getopt',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\getopt.py',
+   'PYMODULE'),
+  ('gettext',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\gettext.py',
+   'PYMODULE'),
+  ('asyncio.proactor_events',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\asyncio\\proactor_events.py',
+   'PYMODULE'),
+  ('asyncio.base_subprocess',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\asyncio\\base_subprocess.py',
+   'PYMODULE'),
+  ('asyncio.threads',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\asyncio\\threads.py',
+   'PYMODULE'),
+  ('asyncio.subprocess',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\asyncio\\subprocess.py',
+   'PYMODULE'),
+  ('asyncio.streams',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\asyncio\\streams.py',
+   'PYMODULE'),
+  ('asyncio.queues',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\asyncio\\queues.py',
+   'PYMODULE'),
+  ('asyncio.runners',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\asyncio\\runners.py',
+   'PYMODULE'),
+  ('asyncio.events',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\asyncio\\events.py',
+   'PYMODULE'),
+  ('asyncio.base_events',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\asyncio\\base_events.py',
+   'PYMODULE'),
+  ('concurrent.futures',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\concurrent\\futures\\__init__.py',
+   'PYMODULE'),
+  ('concurrent.futures.thread',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\concurrent\\futures\\thread.py',
+   'PYMODULE'),
+  ('queue',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\queue.py',
+   'PYMODULE'),
+  ('concurrent.futures.process',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\concurrent\\futures\\process.py',
+   'PYMODULE'),
+  ('multiprocessing.queues',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\multiprocessing\\queues.py',
+   'PYMODULE'),
+  ('multiprocessing.synchronize',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\multiprocessing\\synchronize.py',
+   'PYMODULE'),
+  ('multiprocessing.heap',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\multiprocessing\\heap.py',
+   'PYMODULE'),
+  ('multiprocessing.resource_tracker',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\multiprocessing\\resource_tracker.py',
+   'PYMODULE'),
+  ('multiprocessing.spawn',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\multiprocessing\\spawn.py',
+   'PYMODULE'),
+  ('runpy',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\runpy.py',
+   'PYMODULE'),
+  ('pkgutil',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\pkgutil.py',
+   'PYMODULE'),
+  ('zipimport',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\zipimport.py',
+   'PYMODULE'),
+  ('multiprocessing.process',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\multiprocessing\\process.py',
+   'PYMODULE'),
+  ('multiprocessing.util',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\multiprocessing\\util.py',
+   'PYMODULE'),
+  ('multiprocessing.forkserver',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\multiprocessing\\forkserver.py',
+   'PYMODULE'),
+  ('multiprocessing.context',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\multiprocessing\\context.py',
+   'PYMODULE'),
+  ('multiprocessing.popen_spawn_win32',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\multiprocessing\\popen_spawn_win32.py',
+   'PYMODULE'),
+  ('multiprocessing.popen_forkserver',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\multiprocessing\\popen_forkserver.py',
+   'PYMODULE'),
+  ('multiprocessing.popen_spawn_posix',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\multiprocessing\\popen_spawn_posix.py',
+   'PYMODULE'),
+  ('multiprocessing.popen_fork',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\multiprocessing\\popen_fork.py',
+   'PYMODULE'),
+  ('multiprocessing.sharedctypes',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\multiprocessing\\sharedctypes.py',
+   'PYMODULE'),
+  ('ctypes',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\ctypes\\__init__.py',
+   'PYMODULE'),
+  ('ctypes._endian',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\ctypes\\_endian.py',
+   'PYMODULE'),
+  ('multiprocessing.pool',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\multiprocessing\\pool.py',
+   'PYMODULE'),
+  ('multiprocessing.dummy',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\multiprocessing\\dummy\\__init__.py',
+   'PYMODULE'),
+  ('multiprocessing.dummy.connection',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\multiprocessing\\dummy\\connection.py',
+   'PYMODULE'),
+  ('multiprocessing.managers',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\multiprocessing\\managers.py',
+   'PYMODULE'),
+  ('multiprocessing.shared_memory',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\multiprocessing\\shared_memory.py',
+   'PYMODULE'),
+  ('secrets',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\secrets.py',
+   'PYMODULE'),
+  ('hmac',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\hmac.py',
+   'PYMODULE'),
+  ('multiprocessing.reduction',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\multiprocessing\\reduction.py',
+   'PYMODULE'),
+  ('multiprocessing.resource_sharer',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\multiprocessing\\resource_sharer.py',
+   'PYMODULE'),
+  ('multiprocessing.connection',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\multiprocessing\\connection.py',
+   'PYMODULE'),
+  ('xmlrpc.client',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\xmlrpc\\client.py',
+   'PYMODULE'),
+  ('xmlrpc',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\xmlrpc\\__init__.py',
+   'PYMODULE'),
+  ('xml.parsers.expat',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\xml\\parsers\\expat.py',
+   'PYMODULE'),
+  ('xml.parsers',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\xml\\parsers\\__init__.py',
+   'PYMODULE'),
+  ('xml',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\xml\\__init__.py',
+   'PYMODULE'),
+  ('xml.sax.expatreader',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\xml\\sax\\expatreader.py',
+   'PYMODULE'),
+  ('xml.sax.saxutils',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\xml\\sax\\saxutils.py',
+   'PYMODULE'),
+  ('urllib.request',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\urllib\\request.py',
+   'PYMODULE'),
+  ('getpass',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\getpass.py',
+   'PYMODULE'),
+  ('nturl2path',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\nturl2path.py',
+   'PYMODULE'),
+  ('ftplib',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\ftplib.py',
+   'PYMODULE'),
+  ('netrc',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\netrc.py',
+   'PYMODULE'),
+  ('shlex',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\shlex.py',
+   'PYMODULE'),
+  ('mimetypes',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\mimetypes.py',
+   'PYMODULE'),
+  ('http.cookiejar',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\http\\cookiejar.py',
+   'PYMODULE'),
+  ('http',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\http\\__init__.py',
+   'PYMODULE'),
+  ('urllib.response',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\urllib\\response.py',
+   'PYMODULE'),
+  ('urllib.error',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\urllib\\error.py',
+   'PYMODULE'),
+  ('xml.sax',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\xml\\sax\\__init__.py',
+   'PYMODULE'),
+  ('xml.sax.handler',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\xml\\sax\\handler.py',
+   'PYMODULE'),
+  ('xml.sax._exceptions',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\xml\\sax\\_exceptions.py',
+   'PYMODULE'),
+  ('xml.sax.xmlreader',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\xml\\sax\\xmlreader.py',
+   'PYMODULE'),
+  ('http.client',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\http\\client.py',
+   'PYMODULE'),
+  ('email.message',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\email\\message.py',
+   'PYMODULE'),
+  ('email.policy',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\email\\policy.py',
+   'PYMODULE'),
+  ('email.contentmanager',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\email\\contentmanager.py',
+   'PYMODULE'),
+  ('email.quoprimime',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\email\\quoprimime.py',
+   'PYMODULE'),
+  ('email.headerregistry',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\email\\headerregistry.py',
+   'PYMODULE'),
+  ('email.iterators',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\email\\iterators.py',
+   'PYMODULE'),
+  ('email.generator',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\email\\generator.py',
+   'PYMODULE'),
+  ('email._encoded_words',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\email\\_encoded_words.py',
+   'PYMODULE'),
+  ('quopri',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\quopri.py',
+   'PYMODULE'),
+  ('uu',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\uu.py',
+   'PYMODULE'),
+  ('optparse',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\optparse.py',
+   'PYMODULE'),
+  ('textwrap',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\textwrap.py',
+   'PYMODULE'),
+  ('multiprocessing',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\multiprocessing\\__init__.py',
+   'PYMODULE'),
+  ('concurrent.futures._base',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\concurrent\\futures\\_base.py',
+   'PYMODULE'),
+  ('concurrent',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\concurrent\\__init__.py',
+   'PYMODULE'),
+  ('asyncio.trsock',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\asyncio\\trsock.py',
+   'PYMODULE'),
+  ('asyncio.staggered',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\asyncio\\staggered.py',
+   'PYMODULE'),
+  ('typing',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\typing.py',
+   'PYMODULE'),
+  ('asyncio.tasks',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\asyncio\\tasks.py',
+   'PYMODULE'),
+  ('asyncio.base_tasks',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\asyncio\\base_tasks.py',
+   'PYMODULE'),
+  ('asyncio.locks',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\asyncio\\locks.py',
+   'PYMODULE'),
+  ('asyncio.sslproto',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\asyncio\\sslproto.py',
+   'PYMODULE'),
+  ('asyncio.transports',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\asyncio\\transports.py',
+   'PYMODULE'),
+  ('asyncio.protocols',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\asyncio\\protocols.py',
+   'PYMODULE'),
+  ('asyncio.futures',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\asyncio\\futures.py',
+   'PYMODULE'),
+  ('asyncio.exceptions',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\asyncio\\exceptions.py',
+   'PYMODULE'),
+  ('asyncio.coroutines',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\asyncio\\coroutines.py',
+   'PYMODULE'),
+  ('asyncio.base_futures',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\asyncio\\base_futures.py',
+   'PYMODULE'),
+  ('asyncio.format_helpers',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\asyncio\\format_helpers.py',
+   'PYMODULE'),
+  ('asyncio.constants',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\asyncio\\constants.py',
+   'PYMODULE'),
+  ('unittest.signals',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\unittest\\signals.py',
+   'PYMODULE'),
+  ('unittest.main',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\unittest\\main.py',
+   'PYMODULE'),
+  ('unittest.runner',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\unittest\\runner.py',
+   'PYMODULE'),
+  ('unittest.loader',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\unittest\\loader.py',
+   'PYMODULE'),
+  ('unittest.suite',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\unittest\\suite.py',
+   'PYMODULE'),
+  ('unittest.case',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\unittest\\case.py',
+   'PYMODULE'),
+  ('unittest._log',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\unittest\\_log.py',
+   'PYMODULE'),
+  ('unittest.result',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\unittest\\result.py',
+   'PYMODULE'),
+  ('unittest.util',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\unittest\\util.py',
+   'PYMODULE'),
+  ('pdb',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\pdb.py',
+   'PYMODULE'),
+  ('pydoc',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\pydoc.py',
+   'PYMODULE'),
+  ('webbrowser',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\webbrowser.py',
+   'PYMODULE'),
+  ('http.server',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\http\\server.py',
+   'PYMODULE'),
+  ('socketserver',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\socketserver.py',
+   'PYMODULE'),
+  ('html',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\html\\__init__.py',
+   'PYMODULE'),
+  ('html.entities',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\html\\entities.py',
+   'PYMODULE'),
+  ('pydoc_data.topics',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\pydoc_data\\topics.py',
+   'PYMODULE'),
+  ('pydoc_data',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\pydoc_data\\__init__.py',
+   'PYMODULE'),
+  ('tty',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\tty.py',
+   'PYMODULE'),
+  ('sysconfig',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\sysconfig.py',
+   'PYMODULE'),
+  ('_aix_support',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\_aix_support.py',
+   'PYMODULE'),
+  ('_bootsubprocess',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\_bootsubprocess.py',
+   'PYMODULE'),
+  ('_osx_support',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\_osx_support.py',
+   'PYMODULE'),
+  ('distutils.log',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\distutils\\log.py',
+   'PYMODULE'),
+  ('distutils',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\distutils\\__init__.py',
+   'PYMODULE'),
+  ('distutils.archive_util',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\distutils\\archive_util.py',
+   'PYMODULE'),
+  ('distutils.dir_util',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\distutils\\dir_util.py',
+   'PYMODULE'),
+  ('distutils.file_util',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\distutils\\file_util.py',
+   'PYMODULE'),
+  ('distutils.dep_util',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\distutils\\dep_util.py',
+   'PYMODULE'),
+  ('distutils.spawn',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\distutils\\spawn.py',
+   'PYMODULE'),
+  ('distutils.debug',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\distutils\\debug.py',
+   'PYMODULE'),
+  ('distutils.errors',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\distutils\\errors.py',
+   'PYMODULE'),
+  ('distutils.ccompiler',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\distutils\\ccompiler.py',
+   'PYMODULE'),
+  ('distutils.fancy_getopt',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\distutils\\fancy_getopt.py',
+   'PYMODULE'),
+  ('distutils.util',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\distutils\\util.py',
+   'PYMODULE'),
+  ('distutils.filelist',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\distutils\\filelist.py',
+   'PYMODULE'),
+  ('distutils.sysconfig',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\distutils\\sysconfig.py',
+   'PYMODULE'),
+  ('distutils.text_file',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\distutils\\text_file.py',
+   'PYMODULE'),
+  ('platform',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\platform.py',
+   'PYMODULE'),
+  ('plistlib',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\plistlib.py',
+   'PYMODULE'),
+  ('glob',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\glob.py',
+   'PYMODULE'),
+  ('code',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\code.py',
+   'PYMODULE'),
+  ('codeop',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\codeop.py',
+   'PYMODULE'),
+  ('bdb',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\bdb.py',
+   'PYMODULE'),
+  ('cmd',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\cmd.py',
+   'PYMODULE'),
+  ('difflib',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\difflib.py',
+   'PYMODULE'),
+  ('__future__',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\__future__.py',
+   'PYMODULE'),
+  ('_compat_pickle',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\_compat_pickle.py',
+   'PYMODULE'),
+  ('bisect',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\bisect.py',
+   'PYMODULE'),
+  ('email.feedparser',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\email\\feedparser.py',
+   'PYMODULE'),
+  ('email._header_value_parser',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\email\\_header_value_parser.py',
+   'PYMODULE'),
+  ('email.header',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\email\\header.py',
+   'PYMODULE'),
+  ('email.base64mime',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\email\\base64mime.py',
+   'PYMODULE'),
+  ('email.charset',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\email\\charset.py',
+   'PYMODULE'),
+  ('email.encoders',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\email\\encoders.py',
+   'PYMODULE'),
+  ('email.errors',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\email\\errors.py',
+   'PYMODULE'),
+  ('csv',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\csv.py',
+   'PYMODULE'),
+  ('importlib.abc',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\importlib\\abc.py',
+   'PYMODULE'),
+  ('importlib._bootstrap',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\importlib\\_bootstrap.py',
+   'PYMODULE'),
+  ('argparse',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\argparse.py',
+   'PYMODULE'),
+  ('token',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\token.py',
+   'PYMODULE'),
+  ('tokenize',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\tokenize.py',
+   'PYMODULE'),
+  ('importlib.machinery',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\importlib\\machinery.py',
+   'PYMODULE'),
+  ('dis',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\dis.py',
+   'PYMODULE'),
+  ('opcode',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\opcode.py',
+   'PYMODULE'),
+  ('ast',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\ast.py',
+   'PYMODULE'),
+  ('pymysql',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\pymysql\\__init__.py',
+   'PYMODULE'),
+  ('pymysql.connections',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\pymysql\\connections.py',
+   'PYMODULE'),
+  ('pymysql.protocol',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\pymysql\\protocol.py',
+   'PYMODULE'),
+  ('pymysql.optionfile',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\pymysql\\optionfile.py',
+   'PYMODULE'),
+  ('pymysql.cursors',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\pymysql\\cursors.py',
+   'PYMODULE'),
+  ('pymysql.constants.SERVER_STATUS',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\pymysql\\constants\\SERVER_STATUS.py',
+   'PYMODULE'),
+  ('pymysql.constants.CR',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\pymysql\\constants\\CR.py',
+   'PYMODULE'),
+  ('pymysql.constants.COMMAND',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\pymysql\\constants\\COMMAND.py',
+   'PYMODULE'),
+  ('pymysql.constants.CLIENT',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\pymysql\\constants\\CLIENT.py',
+   'PYMODULE'),
+  ('pymysql.charset',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\pymysql\\charset.py',
+   'PYMODULE'),
+  ('pymysql.converters',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\pymysql\\converters.py',
+   'PYMODULE'),
+  ('pymysql._auth',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\pymysql\\_auth.py',
+   'PYMODULE'),
+  ('pymysql.times',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\pymysql\\times.py',
+   'PYMODULE'),
+  ('pymysql.err',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\pymysql\\err.py',
+   'PYMODULE'),
+  ('pymysql.constants.ER',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\pymysql\\constants\\ER.py',
+   'PYMODULE'),
+  ('pymysql.constants.FIELD_TYPE',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\pymysql\\constants\\FIELD_TYPE.py',
+   'PYMODULE'),
+  ('pymysql.constants',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\pymysql\\constants\\__init__.py',
+   'PYMODULE'),
+  ('PIL',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PIL\\__init__.py',
+   'PYMODULE'),
+  ('PIL.ImageTk',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PIL\\ImageTk.py',
+   'PYMODULE'),
+  ('PIL.PdfParser',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PIL\\PdfParser.py',
+   'PYMODULE'),
+  ('PIL.Jpeg2KImagePlugin',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PIL\\Jpeg2KImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.features',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PIL\\features.py',
+   'PYMODULE'),
+  ('PIL.ImageShow',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PIL\\ImageShow.py',
+   'PYMODULE'),
+  ('PIL.ImageQt',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PIL\\ImageQt.py',
+   'PYMODULE'),
+  ('PIL._util',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PIL\\_util.py',
+   'PYMODULE'),
+  ('PIL.ImageFilter',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PIL\\ImageFilter.py',
+   'PYMODULE'),
+  ('PIL.PyAccess',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PIL\\PyAccess.py',
+   'PYMODULE'),
+  ('PIL.PngImagePlugin',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PIL\\PngImagePlugin.py',
+   'PYMODULE'),
+  ('PIL._binary',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PIL\\_binary.py',
+   'PYMODULE'),
+  ('PIL.PpmImagePlugin',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PIL\\PpmImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.JpegImagePlugin',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PIL\\JpegImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.MpoImagePlugin',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PIL\\MpoImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.JpegPresets',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PIL\\JpegPresets.py',
+   'PYMODULE'),
+  ('PIL.TiffImagePlugin',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PIL\\TiffImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.GifImagePlugin',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PIL\\GifImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.ImageSequence',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PIL\\ImageSequence.py',
+   'PYMODULE'),
+  ('PIL.ImageChops',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PIL\\ImageChops.py',
+   'PYMODULE'),
+  ('PIL.BmpImagePlugin',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PIL\\BmpImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.ImagePalette',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PIL\\ImagePalette.py',
+   'PYMODULE'),
+  ('PIL.PaletteFile',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PIL\\PaletteFile.py',
+   'PYMODULE'),
+  ('PIL.ImageColor',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PIL\\ImageColor.py',
+   'PYMODULE'),
+  ('colorsys',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\colorsys.py',
+   'PYMODULE'),
+  ('PIL.GimpPaletteFile',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PIL\\GimpPaletteFile.py',
+   'PYMODULE'),
+  ('PIL.GimpGradientFile',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PIL\\GimpGradientFile.py',
+   'PYMODULE'),
+  ('PIL.ImageFile',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PIL\\ImageFile.py',
+   'PYMODULE'),
+  ('PIL.Image',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PIL\\Image.py',
+   'PYMODULE'),
+  ('PIL.WebPImagePlugin',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PIL\\WebPImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.FpxImagePlugin',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PIL\\FpxImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.PcxImagePlugin',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PIL\\PcxImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.MpegImagePlugin',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PIL\\MpegImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.XbmImagePlugin',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PIL\\XbmImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.WmfImagePlugin',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PIL\\WmfImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.TgaImagePlugin',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PIL\\TgaImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.PcdImagePlugin',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PIL\\PcdImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.BufrStubImagePlugin',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PIL\\BufrStubImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.ImImagePlugin',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PIL\\ImImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.PixarImagePlugin',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PIL\\PixarImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.EpsImagePlugin',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PIL\\EpsImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.IptcImagePlugin',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PIL\\IptcImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.IcoImagePlugin',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PIL\\IcoImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.MspImagePlugin',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PIL\\MspImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.GribStubImagePlugin',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PIL\\GribStubImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.SpiderImagePlugin',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PIL\\SpiderImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.PdfImagePlugin',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PIL\\PdfImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.CurImagePlugin',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PIL\\CurImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.MicImagePlugin',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PIL\\MicImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.SunImagePlugin',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PIL\\SunImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.ImtImagePlugin',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PIL\\ImtImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.IcnsImagePlugin',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PIL\\IcnsImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.XVThumbImagePlugin',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PIL\\XVThumbImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.Hdf5StubImagePlugin',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PIL\\Hdf5StubImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.DdsImagePlugin',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PIL\\DdsImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.FliImagePlugin',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PIL\\FliImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.FtexImagePlugin',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PIL\\FtexImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.XpmImagePlugin',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PIL\\XpmImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.PsdImagePlugin',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PIL\\PsdImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.BlpImagePlugin',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PIL\\BlpImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.GbrImagePlugin',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PIL\\GbrImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.DcxImagePlugin',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PIL\\DcxImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.FitsStubImagePlugin',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PIL\\FitsStubImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.McIdasImagePlugin',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PIL\\McIdasImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.SgiImagePlugin',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PIL\\SgiImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.PalmImagePlugin',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PIL\\PalmImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.TiffTags',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PIL\\TiffTags.py',
+   'PYMODULE'),
+  ('PIL.ImageMode',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PIL\\ImageMode.py',
+   'PYMODULE'),
+  ('PIL._version',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PIL\\_version.py',
+   'PYMODULE'),
+  ('tracemalloc',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\tracemalloc.py',
+   'PYMODULE'),
+  ('stringprep',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\stringprep.py',
+   'PYMODULE'),
+  ('_py_abc',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\_py_abc.py',
+   'PYMODULE'),
+  ('circularProgress',
+   'C:\\proyecto-final\\Interfaces\\loading\\circularProgress.py',
+   'PYMODULE'),
+  ('Img.img',
+   'C:\\proyecto-final\\Interfaces\\loading\\Img\\img.py',
+   'PYMODULE'),
+  ('Img', '-', 'PYMODULE'),
+  ('splash', 'C:\\proyecto-final\\Interfaces\\loading\\splash.py', 'PYMODULE'),
+  ('numpy',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\numpy\\__init__.py',
+   'PYMODULE'),
+  ('numpy.core._dtype_ctypes',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\numpy\\core\\_dtype_ctypes.py',
+   'PYMODULE'),
+  ('numpy._pytesttester',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\numpy\\_pytesttester.py',
+   'PYMODULE'),
+  ('numpy.testing',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\numpy\\testing\\__init__.py',
+   'PYMODULE'),
+  ('numpy.testing._private.nosetester',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\numpy\\testing\\_private\\nosetester.py',
+   'PYMODULE'),
+  ('numpy.testing._private.noseclasses',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\numpy\\testing\\_private\\noseclasses.py',
+   'PYMODULE'),
+  ('numpy.testing._private.decorators',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\numpy\\testing\\_private\\decorators.py',
+   'PYMODULE'),
+  ('numpy.testing._private.parameterized',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\numpy\\testing\\_private\\parameterized.py',
+   'PYMODULE'),
+  ('numpy.testing._private',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\numpy\\testing\\_private\\__init__.py',
+   'PYMODULE'),
+  ('numpy.testing._private.utils',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\numpy\\testing\\_private\\utils.py',
+   'PYMODULE'),
+  ('numpy.core.fromnumeric',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\numpy\\core\\fromnumeric.py',
+   'PYMODULE'),
+  ('numpy.core._methods',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\numpy\\core\\_methods.py',
+   'PYMODULE'),
+  ('numpy.lib.stride_tricks',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\numpy\\lib\\stride_tricks.py',
+   'PYMODULE'),
+  ('numpy.core.numeric',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\numpy\\core\\numeric.py',
+   'PYMODULE'),
+  ('numpy.core.arrayprint',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\numpy\\core\\arrayprint.py',
+   'PYMODULE'),
+  ('numpy.core._ufunc_config',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\numpy\\core\\_ufunc_config.py',
+   'PYMODULE'),
+  ('numpy.core.shape_base',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\numpy\\core\\shape_base.py',
+   'PYMODULE'),
+  ('numpy.core._exceptions',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\numpy\\core\\_exceptions.py',
+   'PYMODULE'),
+  ('numpy.core._asarray',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\numpy\\core\\_asarray.py',
+   'PYMODULE'),
+  ('numpy.core.umath',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\numpy\\core\\umath.py',
+   'PYMODULE'),
+  ('numpy.core.overrides',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\numpy\\core\\overrides.py',
+   'PYMODULE'),
+  ('numpy.compat._inspect',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\numpy\\compat\\_inspect.py',
+   'PYMODULE'),
+  ('numpy.core.multiarray',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\numpy\\core\\multiarray.py',
+   'PYMODULE'),
+  ('numpy.core.numerictypes',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\numpy\\core\\numerictypes.py',
+   'PYMODULE'),
+  ('numpy.core._dtype',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\numpy\\core\\_dtype.py',
+   'PYMODULE'),
+  ('numpy.core._type_aliases',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\numpy\\core\\_type_aliases.py',
+   'PYMODULE'),
+  ('numpy.core._string_helpers',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\numpy\\core\\_string_helpers.py',
+   'PYMODULE'),
+  ('numpy.matrixlib',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\numpy\\matrixlib\\__init__.py',
+   'PYMODULE'),
+  ('numpy.matrixlib.defmatrix',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\numpy\\matrixlib\\defmatrix.py',
+   'PYMODULE'),
+  ('numpy.ma',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\numpy\\ma\\__init__.py',
+   'PYMODULE'),
+  ('numpy.ma.extras',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\numpy\\ma\\extras.py',
+   'PYMODULE'),
+  ('numpy.lib.index_tricks',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\numpy\\lib\\index_tricks.py',
+   'PYMODULE'),
+  ('numpy.lib.function_base',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\numpy\\lib\\function_base.py',
+   'PYMODULE'),
+  ('numpy.lib.histograms',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\numpy\\lib\\histograms.py',
+   'PYMODULE'),
+  ('numpy.lib.twodim_base',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\numpy\\lib\\twodim_base.py',
+   'PYMODULE'),
+  ('numpy.core.function_base',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\numpy\\core\\function_base.py',
+   'PYMODULE'),
+  ('numpy.ma.core',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\numpy\\ma\\core.py',
+   'PYMODULE'),
+  ('numpy.core._internal',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\numpy\\core\\_internal.py',
+   'PYMODULE'),
+  ('numpy.ctypeslib',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\numpy\\ctypeslib.py',
+   'PYMODULE'),
+  ('numpy.random',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\numpy\\random\\__init__.py',
+   'PYMODULE'),
+  ('numpy.random._pickle',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\numpy\\random\\_pickle.py',
+   'PYMODULE'),
+  ('numpy.polynomial',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\numpy\\polynomial\\__init__.py',
+   'PYMODULE'),
+  ('numpy.polynomial._polybase',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\numpy\\polynomial\\_polybase.py',
+   'PYMODULE'),
+  ('numpy.polynomial.laguerre',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\numpy\\polynomial\\laguerre.py',
+   'PYMODULE'),
+  ('numpy.polynomial.hermite_e',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\numpy\\polynomial\\hermite_e.py',
+   'PYMODULE'),
+  ('numpy.polynomial.hermite',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\numpy\\polynomial\\hermite.py',
+   'PYMODULE'),
+  ('numpy.polynomial.legendre',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\numpy\\polynomial\\legendre.py',
+   'PYMODULE'),
+  ('numpy.polynomial.chebyshev',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\numpy\\polynomial\\chebyshev.py',
+   'PYMODULE'),
+  ('numpy.polynomial.polynomial',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\numpy\\polynomial\\polynomial.py',
+   'PYMODULE'),
+  ('numpy.polynomial.polyutils',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\numpy\\polynomial\\polyutils.py',
+   'PYMODULE'),
+  ('numpy.fft',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\numpy\\fft\\__init__.py',
+   'PYMODULE'),
+  ('numpy.fft.helper',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\numpy\\fft\\helper.py',
+   'PYMODULE'),
+  ('numpy.fft._pocketfft',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\numpy\\fft\\_pocketfft.py',
+   'PYMODULE'),
+  ('numpy.linalg',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\numpy\\linalg\\__init__.py',
+   'PYMODULE'),
+  ('numpy.linalg.linalg',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\numpy\\linalg\\linalg.py',
+   'PYMODULE'),
+  ('numpy.lib',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\numpy\\lib\\__init__.py',
+   'PYMODULE'),
+  ('numpy.lib._version',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\numpy\\lib\\_version.py',
+   'PYMODULE'),
+  ('numpy.lib.arraypad',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\numpy\\lib\\arraypad.py',
+   'PYMODULE'),
+  ('numpy.lib.arrayterator',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\numpy\\lib\\arrayterator.py',
+   'PYMODULE'),
+  ('numpy.lib.npyio',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\numpy\\lib\\npyio.py',
+   'PYMODULE'),
+  ('numpy.ma.mrecords',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\numpy\\ma\\mrecords.py',
+   'PYMODULE'),
+  ('numpy.core.records',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\numpy\\core\\records.py',
+   'PYMODULE'),
+  ('numpy.lib._iotools',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\numpy\\lib\\_iotools.py',
+   'PYMODULE'),
+  ('numpy.lib._datasource',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\numpy\\lib\\_datasource.py',
+   'PYMODULE'),
+  ('numpy.lib.format',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\numpy\\lib\\format.py',
+   'PYMODULE'),
+  ('numpy.lib.arraysetops',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\numpy\\lib\\arraysetops.py',
+   'PYMODULE'),
+  ('numpy.lib.utils',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\numpy\\lib\\utils.py',
+   'PYMODULE'),
+  ('numpy.lib.polynomial',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\numpy\\lib\\polynomial.py',
+   'PYMODULE'),
+  ('numpy.lib.ufunclike',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\numpy\\lib\\ufunclike.py',
+   'PYMODULE'),
+  ('numpy.lib.shape_base',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\numpy\\lib\\shape_base.py',
+   'PYMODULE'),
+  ('numpy.lib.nanfunctions',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\numpy\\lib\\nanfunctions.py',
+   'PYMODULE'),
+  ('numpy.lib.type_check',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\numpy\\lib\\type_check.py',
+   'PYMODULE'),
+  ('numpy.core.getlimits',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\numpy\\core\\getlimits.py',
+   'PYMODULE'),
+  ('numpy.core.machar',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\numpy\\core\\machar.py',
+   'PYMODULE'),
+  ('numpy.lib.scimath',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\numpy\\lib\\scimath.py',
+   'PYMODULE'),
+  ('numpy.lib.mixins',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\numpy\\lib\\mixins.py',
+   'PYMODULE'),
+  ('numpy.compat',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\numpy\\compat\\__init__.py',
+   'PYMODULE'),
+  ('numpy.compat.py3k',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\numpy\\compat\\py3k.py',
+   'PYMODULE'),
+  ('numpy.core',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\numpy\\core\\__init__.py',
+   'PYMODULE'),
+  ('numpy.core._add_newdocs_scalars',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\numpy\\core\\_add_newdocs_scalars.py',
+   'PYMODULE'),
+  ('numpy.core._add_newdocs',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\numpy\\core\\_add_newdocs.py',
+   'PYMODULE'),
+  ('numpy.core.einsumfunc',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\numpy\\core\\einsumfunc.py',
+   'PYMODULE'),
+  ('numpy.core.memmap',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\numpy\\core\\memmap.py',
+   'PYMODULE'),
+  ('numpy.core.defchararray',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\numpy\\core\\defchararray.py',
+   'PYMODULE'),
+  ('numpy._distributor_init',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\numpy\\_distributor_init.py',
+   'PYMODULE'),
+  ('numpy.version',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\numpy\\version.py',
+   'PYMODULE'),
+  ('numpy.__config__',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\numpy\\__config__.py',
+   'PYMODULE'),
+  ('numpy._globals',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\numpy\\_globals.py',
+   'PYMODULE'),
+  ('PyQt5',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PyQt5\\__init__.py',
+   'PYMODULE'),
+  ('os',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\os.py',
+   'PYMODULE')],
+ [('VCRUNTIME140.dll',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\VCRUNTIME140.dll',
+   'BINARY'),
+  ('python39.dll',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\python39.dll',
+   'BINARY'),
+  ('PyQt5\\Qt5\\plugins\\imageformats\\qtga.dll',
+   'C:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PyQt5\\Qt5\\plugins\\imageformats\\qtga.dll',
+   'BINARY'),
+  ('PyQt5\\Qt5\\plugins\\imageformats\\qicns.dll',
+   'C:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PyQt5\\Qt5\\plugins\\imageformats\\qicns.dll',
+   'BINARY'),
+  ('PyQt5\\Qt5\\plugins\\iconengines\\qsvgicon.dll',
+   'C:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PyQt5\\Qt5\\plugins\\iconengines\\qsvgicon.dll',
+   'BINARY'),
+  ('PyQt5\\Qt5\\plugins\\imageformats\\qgif.dll',
+   'C:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PyQt5\\Qt5\\plugins\\imageformats\\qgif.dll',
+   'BINARY'),
+  ('PyQt5\\Qt5\\plugins\\imageformats\\qsvg.dll',
+   'C:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PyQt5\\Qt5\\plugins\\imageformats\\qsvg.dll',
+   'BINARY'),
+  ('PyQt5\\Qt5\\plugins\\imageformats\\qwbmp.dll',
+   'C:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PyQt5\\Qt5\\plugins\\imageformats\\qwbmp.dll',
+   'BINARY'),
+  ('PyQt5\\Qt5\\plugins\\imageformats\\qjpeg.dll',
+   'C:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PyQt5\\Qt5\\plugins\\imageformats\\qjpeg.dll',
+   'BINARY'),
+  ('PyQt5\\Qt5\\plugins\\platforms\\qminimal.dll',
+   'C:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PyQt5\\Qt5\\plugins\\platforms\\qminimal.dll',
+   'BINARY'),
+  ('PyQt5\\Qt5\\plugins\\platforms\\qwebgl.dll',
+   'C:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PyQt5\\Qt5\\plugins\\platforms\\qwebgl.dll',
+   'BINARY'),
+  ('libopenblas.GK7GX5KEQ4F6UYO3P26ULGBQYHGQO7J4.gfortran-win_amd64.dll',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\numpy\\.libs\\libopenblas.GK7GX5KEQ4F6UYO3P26ULGBQYHGQO7J4.gfortran-win_amd64.dll',
+   'BINARY'),
+  ('PyQt5\\Qt5\\plugins\\imageformats\\qico.dll',
+   'C:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PyQt5\\Qt5\\plugins\\imageformats\\qico.dll',
+   'BINARY'),
+  ('PyQt5\\Qt5\\plugins\\imageformats\\qtiff.dll',
+   'C:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PyQt5\\Qt5\\plugins\\imageformats\\qtiff.dll',
+   'BINARY'),
+  ('d3dcompiler_47.dll',
+   'C:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PyQt5\\Qt5\\bin\\d3dcompiler_47.dll',
+   'BINARY'),
+  ('PyQt5\\Qt5\\plugins\\platforms\\qwindows.dll',
+   'C:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PyQt5\\Qt5\\plugins\\platforms\\qwindows.dll',
+   'BINARY'),
+  ('PyQt5\\Qt5\\plugins\\platformthemes\\qxdgdesktopportal.dll',
+   'C:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PyQt5\\Qt5\\plugins\\platformthemes\\qxdgdesktopportal.dll',
+   'BINARY'),
+  ('PyQt5\\Qt5\\plugins\\styles\\qwindowsvistastyle.dll',
+   'C:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PyQt5\\Qt5\\plugins\\styles\\qwindowsvistastyle.dll',
+   'BINARY'),
+  ('PyQt5\\Qt5\\plugins\\imageformats\\qwebp.dll',
+   'C:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PyQt5\\Qt5\\plugins\\imageformats\\qwebp.dll',
+   'BINARY'),
+  ('PyQt5\\Qt5\\plugins\\platforms\\qoffscreen.dll',
+   'C:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PyQt5\\Qt5\\plugins\\platforms\\qoffscreen.dll',
+   'BINARY'),
+  ('libGLESv2.dll',
+   'C:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PyQt5\\Qt5\\bin\\libGLESv2.dll',
+   'BINARY'),
+  ('libEGL.dll',
+   'C:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PyQt5\\Qt5\\bin\\libEGL.dll',
+   'BINARY'),
+  ('opengl32sw.dll',
+   'C:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PyQt5\\Qt5\\bin\\opengl32sw.dll',
+   'BINARY'),
+  ('_lzma',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\DLLs\\_lzma.pyd',
+   'EXTENSION'),
+  ('_bz2',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\DLLs\\_bz2.pyd',
+   'EXTENSION'),
+  ('unicodedata',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\DLLs\\unicodedata.pyd',
+   'EXTENSION'),
+  ('select',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\DLLs\\select.pyd',
+   'EXTENSION'),
+  ('_socket',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\DLLs\\_socket.pyd',
+   'EXTENSION'),
+  ('_decimal',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\DLLs\\_decimal.pyd',
+   'EXTENSION'),
+  ('_overlapped',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\DLLs\\_overlapped.pyd',
+   'EXTENSION'),
+  ('_ssl',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\DLLs\\_ssl.pyd',
+   'EXTENSION'),
+  ('_asyncio',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\DLLs\\_asyncio.pyd',
+   'EXTENSION'),
+  ('_queue',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\DLLs\\_queue.pyd',
+   'EXTENSION'),
+  ('_ctypes',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\DLLs\\_ctypes.pyd',
+   'EXTENSION'),
+  ('_multiprocessing',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\DLLs\\_multiprocessing.pyd',
+   'EXTENSION'),
+  ('pyexpat',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\DLLs\\pyexpat.pyd',
+   'EXTENSION'),
+  ('_hashlib',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\DLLs\\_hashlib.pyd',
+   'EXTENSION'),
+  ('PIL._webp',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PIL\\_webp.cp39-win_amd64.pyd',
+   'EXTENSION'),
+  ('PIL._imagingtk',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PIL\\_imagingtk.cp39-win_amd64.pyd',
+   'EXTENSION'),
+  ('PIL._imaging',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PIL\\_imaging.cp39-win_amd64.pyd',
+   'EXTENSION'),
+  ('numpy.core._multiarray_umath',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\numpy\\core\\_multiarray_umath.cp39-win_amd64.pyd',
+   'EXTENSION'),
+  ('numpy.core._multiarray_tests',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\numpy\\core\\_multiarray_tests.cp39-win_amd64.pyd',
+   'EXTENSION'),
+  ('numpy.linalg.lapack_lite',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\numpy\\linalg\\lapack_lite.cp39-win_amd64.pyd',
+   'EXTENSION'),
+  ('numpy.random.mtrand',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\numpy\\random\\mtrand.cp39-win_amd64.pyd',
+   'EXTENSION'),
+  ('numpy.random._sfc64',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\numpy\\random\\_sfc64.cp39-win_amd64.pyd',
+   'EXTENSION'),
+  ('numpy.random._philox',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\numpy\\random\\_philox.cp39-win_amd64.pyd',
+   'EXTENSION'),
+  ('numpy.random._pcg64',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\numpy\\random\\_pcg64.cp39-win_amd64.pyd',
+   'EXTENSION'),
+  ('numpy.random._mt19937',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\numpy\\random\\_mt19937.cp39-win_amd64.pyd',
+   'EXTENSION'),
+  ('numpy.random.bit_generator',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\numpy\\random\\bit_generator.cp39-win_amd64.pyd',
+   'EXTENSION'),
+  ('numpy.random._generator',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\numpy\\random\\_generator.cp39-win_amd64.pyd',
+   'EXTENSION'),
+  ('numpy.random._bounded_integers',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\numpy\\random\\_bounded_integers.cp39-win_amd64.pyd',
+   'EXTENSION'),
+  ('numpy.random._common',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\numpy\\random\\_common.cp39-win_amd64.pyd',
+   'EXTENSION'),
+  ('numpy.fft._pocketfft_internal',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\numpy\\fft\\_pocketfft_internal.cp39-win_amd64.pyd',
+   'EXTENSION'),
+  ('numpy.linalg._umath_linalg',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\numpy\\linalg\\_umath_linalg.cp39-win_amd64.pyd',
+   'EXTENSION'),
+  ('PyQt5.QtCore',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PyQt5\\QtCore.pyd',
+   'EXTENSION'),
+  ('PyQt5.QtGui',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PyQt5\\QtGui.pyd',
+   'EXTENSION'),
+  ('PyQt5.QtWidgets',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PyQt5\\QtWidgets.pyd',
+   'EXTENSION'),
+  ('PyQt5.sip',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PyQt5\\sip.cp39-win_amd64.pyd',
+   'EXTENSION'),
+  ('Qt5Gui.dll',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PyQt5\\Qt5\\bin\\Qt5Gui.dll',
+   'BINARY'),
+  ('Qt5Core.dll',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PyQt5\\Qt5\\bin\\Qt5Core.dll',
+   'BINARY'),
+  ('Qt5Svg.dll',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PyQt5\\Qt5\\bin\\Qt5Svg.dll',
+   'BINARY'),
+  ('Qt5Quick.dll',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PyQt5\\Qt5\\bin\\Qt5Quick.dll',
+   'BINARY'),
+  ('Qt5WebSockets.dll',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PyQt5\\Qt5\\bin\\Qt5WebSockets.dll',
+   'BINARY'),
+  ('Qt5Network.dll',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PyQt5\\Qt5\\bin\\Qt5Network.dll',
+   'BINARY'),
+  ('MSVCP140.dll', 'C:\\WINDOWS\\system32\\MSVCP140.dll', 'BINARY'),
+  ('VCRUNTIME140_1.dll',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\VCRUNTIME140_1.dll',
+   'BINARY'),
+  ('Qt5DBus.dll',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PyQt5\\Qt5\\bin\\Qt5DBus.dll',
+   'BINARY'),
+  ('Qt5Widgets.dll',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PyQt5\\Qt5\\bin\\Qt5Widgets.dll',
+   'BINARY'),
+  ('libssl-1_1.dll',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\DLLs\\libssl-1_1.dll',
+   'BINARY'),
+  ('libcrypto-1_1.dll',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\DLLs\\libcrypto-1_1.dll',
+   'BINARY'),
+  ('libffi-7.dll',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\DLLs\\libffi-7.dll',
+   'BINARY'),
+  ('python3.dll',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\python3.dll',
+   'BINARY'),
+  ('MSVCP140_1.dll',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PyQt5\\Qt5\\bin\\MSVCP140_1.dll',
+   'BINARY'),
+  ('Qt5QmlModels.dll',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PyQt5\\Qt5\\bin\\Qt5QmlModels.dll',
+   'BINARY'),
+  ('Qt5Qml.dll',
+   'c:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PyQt5\\Qt5\\bin\\Qt5Qml.dll',
+   'BINARY')],
+ [],
+ [],
+ [('base_library.zip',
+   'C:\\proyecto-final\\Interfaces\\loading\\build\\bullsoft\\base_library.zip',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qtbase_tr.qm',
+   'C:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_tr.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qtbase_lv.qm',
+   'C:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_lv.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qtbase_he.qm',
+   'C:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_he.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qtbase_bg.qm',
+   'C:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_bg.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qtbase_hu.qm',
+   'C:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_hu.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qtbase_en.qm',
+   'C:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_en.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qtbase_ja.qm',
+   'C:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_ja.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qtbase_sk.qm',
+   'C:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_sk.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qtbase_ru.qm',
+   'C:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_ru.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qtbase_uk.qm',
+   'C:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_uk.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qtbase_gd.qm',
+   'C:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_gd.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qtbase_ko.qm',
+   'C:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_ko.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qtbase_it.qm',
+   'C:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_it.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qtbase_cs.qm',
+   'C:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_cs.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qtbase_fi.qm',
+   'C:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_fi.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qtbase_de.qm',
+   'C:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_de.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qtbase_da.qm',
+   'C:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_da.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qtbase_zh_TW.qm',
+   'C:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_zh_TW.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qtbase_ca.qm',
+   'C:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_ca.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qtbase_es.qm',
+   'C:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_es.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qtbase_ar.qm',
+   'C:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_ar.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qtbase_fr.qm',
+   'C:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_fr.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qtbase_pl.qm',
+   'C:\\Users\\Juan '
+   'Ignacio\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_pl.qm',
+   'DATA'),
+  ('wheel-0.37.0.dist-info\\INSTALLER',
+   'c:\\users\\juan '
+   'ignacio\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\wheel-0.37.0.dist-info\\INSTALLER',
+   'DATA'),
+  ('wheel-0.37.0.dist-info\\RECORD',
+   'c:\\users\\juan '
+   'ignacio\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\wheel-0.37.0.dist-info\\RECORD',
+   'DATA'),
+  ('pyinstaller-4.5.1.dist-info\\METADATA',
+   'c:\\users\\juan '
+   'ignacio\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pyinstaller-4.5.1.dist-info\\METADATA',
+   'DATA'),
+  ('wheel-0.37.0.dist-info\\LICENSE.txt',
+   'c:\\users\\juan '
+   'ignacio\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\wheel-0.37.0.dist-info\\LICENSE.txt',
+   'DATA'),
+  ('altgraph-0.17.2.dist-info\\zip-safe',
+   'c:\\users\\juan '
+   'ignacio\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\altgraph-0.17.2.dist-info\\zip-safe',
+   'DATA'),
+  ('altgraph-0.17.2.dist-info\\WHEEL',
+   'c:\\users\\juan '
+   'ignacio\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\altgraph-0.17.2.dist-info\\WHEEL',
+   'DATA'),
+  ('altgraph-0.17.2.dist-info\\LICENSE',
+   'c:\\users\\juan '
+   'ignacio\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\altgraph-0.17.2.dist-info\\LICENSE',
+   'DATA'),
+  ('pyinstaller-4.5.1.dist-info\\INSTALLER',
+   'c:\\users\\juan '
+   'ignacio\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pyinstaller-4.5.1.dist-info\\INSTALLER',
+   'DATA'),
+  ('pyinstaller-4.5.1.dist-info\\RECORD',
+   'c:\\users\\juan '
+   'ignacio\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pyinstaller-4.5.1.dist-info\\RECORD',
+   'DATA'),
+  ('altgraph-0.17.2.dist-info\\INSTALLER',
+   'c:\\users\\juan '
+   'ignacio\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\altgraph-0.17.2.dist-info\\INSTALLER',
+   'DATA'),
+  ('wheel-0.37.0.dist-info\\REQUESTED',
+   'c:\\users\\juan '
+   'ignacio\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\wheel-0.37.0.dist-info\\REQUESTED',
+   'DATA'),
+  ('setuptools-58.0.4.dist-info\\LICENSE',
+   'c:\\users\\juan '
+   'ignacio\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools-58.0.4.dist-info\\LICENSE',
+   'DATA'),
+  ('setuptools-58.0.4.dist-info\\top_level.txt',
+   'c:\\users\\juan '
+   'ignacio\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools-58.0.4.dist-info\\top_level.txt',
+   'DATA'),
+  ('altgraph-0.17.2.dist-info\\METADATA',
+   'c:\\users\\juan '
+   'ignacio\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\altgraph-0.17.2.dist-info\\METADATA',
+   'DATA'),
+  ('pyinstaller-4.5.1.dist-info\\top_level.txt',
+   'c:\\users\\juan '
+   'ignacio\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pyinstaller-4.5.1.dist-info\\top_level.txt',
+   'DATA'),
+  ('pyinstaller-4.5.1.dist-info\\COPYING.txt',
+   'c:\\users\\juan '
+   'ignacio\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pyinstaller-4.5.1.dist-info\\COPYING.txt',
+   'DATA'),
+  ('pyinstaller-4.5.1.dist-info\\REQUESTED',
+   'c:\\users\\juan '
+   'ignacio\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pyinstaller-4.5.1.dist-info\\REQUESTED',
+   'DATA'),
+  ('setuptools-58.0.4.dist-info\\METADATA',
+   'c:\\users\\juan '
+   'ignacio\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools-58.0.4.dist-info\\METADATA',
+   'DATA'),
+  ('wheel-0.37.0.dist-info\\WHEEL',
+   'c:\\users\\juan '
+   'ignacio\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\wheel-0.37.0.dist-info\\WHEEL',
+   'DATA'),
+  ('wheel-0.37.0.dist-info\\METADATA',
+   'c:\\users\\juan '
+   'ignacio\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\wheel-0.37.0.dist-info\\METADATA',
+   'DATA'),
+  ('setuptools-58.0.4.dist-info\\INSTALLER',
+   'c:\\users\\juan '
+   'ignacio\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools-58.0.4.dist-info\\INSTALLER',
+   'DATA'),
+  ('wheel-0.37.0.dist-info\\top_level.txt',
+   'c:\\users\\juan '
+   'ignacio\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\wheel-0.37.0.dist-info\\top_level.txt',
+   'DATA'),
+  ('altgraph-0.17.2.dist-info\\top_level.txt',
+   'c:\\users\\juan '
+   'ignacio\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\altgraph-0.17.2.dist-info\\top_level.txt',
+   'DATA'),
+  ('pyinstaller-4.5.1.dist-info\\WHEEL',
+   'c:\\users\\juan '
+   'ignacio\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pyinstaller-4.5.1.dist-info\\WHEEL',
+   'DATA'),
+  ('wheel-0.37.0.dist-info\\entry_points.txt',
+   'c:\\users\\juan '
+   'ignacio\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\wheel-0.37.0.dist-info\\entry_points.txt',
+   'DATA'),
+  ('pyinstaller-4.5.1.dist-info\\entry_points.txt',
+   'c:\\users\\juan '
+   'ignacio\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pyinstaller-4.5.1.dist-info\\entry_points.txt',
+   'DATA'),
+  ('setuptools-58.0.4.dist-info\\WHEEL',
+   'c:\\users\\juan '
+   'ignacio\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools-58.0.4.dist-info\\WHEEL',
+   'DATA'),
+  ('altgraph-0.17.2.dist-info\\RECORD',
+   'c:\\users\\juan '
+   'ignacio\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\altgraph-0.17.2.dist-info\\RECORD',
+   'DATA'),
+  ('setuptools-58.0.4.dist-info\\REQUESTED',
+   'c:\\users\\juan '
+   'ignacio\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools-58.0.4.dist-info\\REQUESTED',
+   'DATA'),
+  ('setuptools-58.0.4.dist-info\\RECORD',
+   'c:\\users\\juan '
+   'ignacio\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools-58.0.4.dist-info\\RECORD',
+   'DATA'),
+  ('setuptools-58.0.4.dist-info\\entry_points.txt',
+   'c:\\users\\juan '
+   'ignacio\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools-58.0.4.dist-info\\entry_points.txt',
+   'DATA')],
+ [])

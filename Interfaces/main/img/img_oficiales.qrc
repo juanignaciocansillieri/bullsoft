@@ -1,0 +1,24 @@
+<RCC>
+  <qresource prefix="img">
+    <file>refresh.png</file>
+    <file>refresh.png</file>
+    <file>reload.png</file>
+    <file>producto.png</file>
+    <file>7790787004416.jpg</file>
+    <file>Alimento.png</file>
+    <file>arroz.jpg</file>
+    <file>LupaB.png</file>
+    <file>caja.png</file>
+    <file>ddd.jpg</file>
+    <file>Lupa.png</file>
+    <file>rack.png</file>
+    <file>ExitB.png</file>
+    <file>plus.png</file>
+    <file>salame.jpg</file>
+    <file>stock.png</file>
+    <file>trading.png</file>
+    <file>user.png</file>
+    <file>Warehouse Bull Soft Logo.png</file>
+    <file>warehouse.png</file>
+  </qresource>
+</RCC>
