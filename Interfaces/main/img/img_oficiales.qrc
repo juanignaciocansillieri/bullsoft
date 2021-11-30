@@ -1,5 +1,8 @@
 <RCC>
   <qresource prefix="img">
+    <file>shot-cropped-1595298394518.png</file>
+    <file>home-page.png</file>
+    <file>icons8-menú-48.png</file>
     <file>refresh.png</file>
     <file>refresh.png</file>
     <file>reload.png</file>
@@ -19,6 +22,7 @@
     <file>trading.png</file>
     <file>user.png</file>
     <file>Warehouse Bull Soft Logo.png</file>
+    <file>D:/descargas/icons8-menú-principal-48.png</file>
     <file>warehouse.png</file>
   </qresource>
 </RCC>
