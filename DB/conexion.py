@@ -28,6 +28,8 @@ def start_connection():  # inicia conexion a db
     u = os.environ.get('USER_MYSQL')
     ps = os.environ.get('PASSWORD_MYSQL')
     db = os.environ.get('DB_MYSQL')
+    print(ps)
+    print(db)
     try:
         con = pymysql.Connect(host=h, port=p, user=u, password=ps, database=db)
     except pymysql.err.OperationalError as err:

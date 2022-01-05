@@ -1,3 +1,4 @@
+import pymysql
 from PIL import Image
 import os
 from PyQt5 import QtCore
@@ -288,14 +289,13 @@ class Modern(QMainWindow):
             productId = lista_productos[0]
 
     def agregar_area_creada(self):
-
+        print("pase por aca")
         areas = ar.Area.listar_area()
         n = ar.Area.contar_filas()
         child = self.ui.verticalLayout_7.count()
         if child == n:
             pass
         else:
-
             self.btn1 = QtWidgets.QPushButton(self.ui.frame_14)
             self.btn1.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
             self.btn1.setStyleSheet("QPushButton{\n"
@@ -324,6 +324,7 @@ class Modern(QMainWindow):
             font.setWeight(75)
             self.btn1.setFont(font)
             self.btn1.released.connect(self.button_released)
+            print("pase por aca")
 
     ## Agregar botones dinamicamente
     def agregar_btn_areas(self):
@@ -447,12 +448,14 @@ class Modern(QMainWindow):
             i += 1
 
     def button_released(self):
+        print('USANDO RELEASED')
         global globalArea
         self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_areas)
         sending_button = self.sender()
         nombre_area = str(sending_button.objectName())
         globalArea = nombre_area
-        self.listar_areas(globalArea)
+        #self.listar_areas(globalArea)
+        self.listar_posiciones_de_alojamiento(globalArea)
 
     def new_posicion(self, btn):
         self.newPosicionAlojamiento = Pa(btn)
@@ -464,49 +467,46 @@ class Modern(QMainWindow):
         self.newPosicionAlojamiento.show()
 
     def listar_areas(self, btn):
+        print("LLEGUÉ A AREAS")
         global globalArea
         area = btn
-        productos = p.Productos.buscar_productArea(area)
-        n = p.Productos.buscar_product_rows_area(area)
+        self.listar_posiciones_de_alojamiento()
+
+
+    ##### LISTAR POSICIONES DE ALOJAMIENTO ####
+
+    def listar_posiciones_de_alojamiento(self, btn):
+        print("LLEGUÉ A ALOJAMIENTO")
+        global globalArea
+        area = btn
+        alojamientos = al.Alojamiento.listar_posicion_alojamiento(globalArea) #Paso como parámetro Global Area
+
+        #print("llegué a posiciones de alojamiento 2")
+        print(alojamientos)
+        n = al.Alojamiento.contar_filas()
+        self.ui.tableWidget_areas.clear()
         self.ui.tableWidget_areas.setRowCount(n)
-        self.ui.label_area_mod.setText(area)
-        table_row = 0
-        vacio = []
-        if n == 0:
-            for row in vacio:
-                self.ui.tableWidget_areas.setItem(
-                    table_row, 0, QtWidgets.QTableWidgetItem(row[0]))
-                self.ui.tableWidget_areas.setItem(
-                    table_row, 1, QtWidgets.QTableWidgetItem(row[1]))
-                self.ui.tableWidget_areas.setItem(
-                    table_row, 2, QtWidgets.QTableWidgetItem(row[2]))
-                self.ui.tableWidget_areas.setItem(
-                    table_row, 3, QtWidgets.QTableWidgetItem(str(l.Lote.obtener_cantidades(row[0]))))
-                self.ui.tableWidget_areas.setItem(
-                    table_row, 4, QtWidgets.QTableWidgetItem(row[3]))
-                self.ui.tableWidget_areas.setItem(
-                    table_row, 5, QtWidgets.QTableWidgetItem(str(l.Lote.obtener_fecha(row[0]))))
+        table_row=0
 
-                table_row += 1
-        else:
-            for row in productos:
+        for row in alojamientos:
+            self.ui.tableWidget_areas.setItem(
+                table_row, 0, QtWidgets.QTableWidgetItem(row[0]))
+            self.ui.tableWidget_areas.setItem(
+                table_row, 1, QtWidgets.QTableWidgetItem(row[1]))
+            self.ui.tableWidget_areas.setItem(
+                table_row, 2, QtWidgets.QTableWidgetItem(row[2]))
+            self.ui.tableWidget_areas.setItem(
+                table_row, 3, QtWidgets.QTableWidgetItem(row[3]))
 
-                self.ui.tableWidget_areas.setItem(
-                    table_row, 0, QtWidgets.QTableWidgetItem(row[0]))
-                self.ui.tableWidget_areas.setItem(
-                    table_row, 1, QtWidgets.QTableWidgetItem(row[1]))
-                self.ui.tableWidget_areas.setItem(
-                    table_row, 2, QtWidgets.QTableWidgetItem(row[2]))
-                self.ui.tableWidget_areas.setItem(
-                    table_row, 3, QtWidgets.QTableWidgetItem(str(l.Lote.obtener_cantidades(row[0]))))
-                self.ui.tableWidget_areas.setItem(
-                    table_row, 4, QtWidgets.QTableWidgetItem(str(row[3])))
-                self.ui.tableWidget_areas.setItem(
-                    table_row, 5, QtWidgets.QTableWidgetItem(str(l.Lote.obtener_fecha(row[0]))))
+            table_row += 1
 
-                table_row += 1
+            ''' CON ESTO SE LLAMA A CONTAR FILAS, PARA LUEGO PODER UTILIZARLAS
+            usuarios = u.listar_user()
+            n = u.contar_filas()
+            self.ui.tableWidget_usuarios.setRowCount(n)
+            '''
 
-    ## Listar Usuarios en la tabla
+    ## LISTAR USUARIOS EN TABLA
 
     def listar_usuarios(self):
         usuarios = u.listar_user()
@@ -542,7 +542,7 @@ class Modern(QMainWindow):
                 self.ui.tableWidget_usuarios.item(self.ui.tableWidget_usuarios.currentRow(), i).text())
             DNI = seleccionarusuario[0]
 
-        ##Buscar Usuarios
+      ##Buscar Usuarios
 
     def buscar_usuarios(self):
         parametro = self.ui.lineEdit_3.text()
@@ -678,7 +678,7 @@ class BMProduct(QMainWindow):
         areas = ar.Area.listar_area()
         for a in areas:
             self.ui.estado_cbox.addItem(a[0])
-        pos = al.Alojamiento.listar_alojamiento()
+        pos = al.Alojamiento.listar_posicion_alojamiento()
         for p in pos:
             self.ui.ubicacion_cbox.addItem(p[0])
         self.ui.estado_cbox.currentIndexChanged.connect(self.clear_combo)
@@ -821,3 +821,21 @@ class BmUsuario(QMainWindow):
             img = Image.open(self.filename)
             img = img.resize(size)
             img.save('../main/img/{0}'.format(defaultImg))
+
+
+
+
+
+    def listar_alojamiento_disponibles_area(area):
+        a = c.start_connection()
+        cursor = a.cursor()
+        try:
+            query = "SELECT codigo,largo,ancho,alto,volumen,pasillo,disponibilidad,posicion,limite FROM alojamiento WHERE disponibilidad=0 and area=%s"
+            cursor.execute(query, area)
+            productos = cursor.fetchall()
+
+            a.commit()
+        except pymysql.err.OperationalError as err:
+            print("Hubo un error:", err)
+        c.close_connection(a)
+        return productos

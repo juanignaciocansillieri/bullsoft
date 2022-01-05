@@ -1,6 +1,9 @@
 import pymysql
 
+from CLASES import area
 from DB import conexion as c
+
+
 
 
 class Alojamiento:
@@ -135,18 +138,34 @@ class Alojamiento:
 
     @staticmethod
     def listar_alojamiento():
-        a = c.start_connection()
-        cursor = a.cursor()
+        a = c.start_connection() #creo un objeto conexion a DB
+        cursor = a.cursor() #creo un cursor (puntero a espacio de memoria a la pc) de la DB
         try:
             query = "SELECT codigo,largo,ancho,alto,volumen,pasillo,disponibilidad,posicion,limite,columna FROM " \
                     "alojamiento "
-            cursor.execute(query)
-            productos = cursor.fetchall()
+            cursor.execute(query) #en la variable cursor ejecuto el query
+            alojamientos = cursor.fetchall()
             a.commit()
         except pymysql.err.OperationalError as err:
             print("Hubo un error:", err)
         c.close_connection(a)
-        return productos
+        return alojamientos
+
+
+    def listar_posicion_alojamiento(area):
+        print(area)
+        a = c.start_connection()
+        cursor = a.cursor()
+        try:
+            query = f"SELECT codigo,pasillo,segmento,limite FROM alojamiento WHERE area='{area}'"
+            cursor.execute(query)
+            alojamientos = cursor.fetchall()
+            a.commit()
+        except pymysql.err.OperationalError as err:
+            print("Ocurrió un error: ", err)
+        c.close_connection(a)
+        return alojamientos
+
 
     @staticmethod
     def contar_filas():

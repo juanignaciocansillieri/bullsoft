@@ -1682,7 +1682,7 @@ class Ui_MainWindow(object):
         self.frame_4.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_4.setObjectName("frame_4")
         self.tableWidget_areas = QtWidgets.QTableWidget(self.frame_4)
-        self.tableWidget_areas.setGeometry(QtCore.QRect(20, 161, 1600, 321))
+        self.tableWidget_areas.setGeometry(QtCore.QRect(20, 161, 961, 321))
         self.tableWidget_areas.setMaximumSize(QtCore.QSize(16777215, 422))
         self.tableWidget_areas.setStyleSheet("QTableWidget{\n"
 "font-size: 11pt;\n"
@@ -1722,7 +1722,7 @@ class Ui_MainWindow(object):
         self.tableWidget_areas.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers)
         self.tableWidget_areas.setShowGrid(False)
         self.tableWidget_areas.setObjectName("tableWidget_areas")
-        self.tableWidget_areas.setColumnCount(4)
+        self.tableWidget_areas.setColumnCount(6)
         self.tableWidget_areas.setRowCount(0)
         item = QtWidgets.QTableWidgetItem()
         self.tableWidget_areas.setHorizontalHeaderItem(0, item)
@@ -1732,6 +1732,10 @@ class Ui_MainWindow(object):
         self.tableWidget_areas.setHorizontalHeaderItem(2, item)
         item = QtWidgets.QTableWidgetItem()
         self.tableWidget_areas.setHorizontalHeaderItem(3, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget_areas.setHorizontalHeaderItem(4, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget_areas.setHorizontalHeaderItem(5, item)
         self.tableWidget_areas.horizontalHeader().setVisible(False)
         self.tableWidget_areas.horizontalHeader().setCascadingSectionResizes(True)
         self.tableWidget_areas.horizontalHeader().setDefaultSectionSize(147)
@@ -1798,6 +1802,30 @@ class Ui_MainWindow(object):
 "")
         self.label_37.setObjectName("label_37")
         self.horizontalLayout_5.addWidget(self.label_37)
+        self.label_39 = QtWidgets.QLabel(self.frame_25)
+        font = QtGui.QFont()
+        font.setFamily("Roboto")
+        font.setPointSize(11)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_39.setFont(font)
+        self.label_39.setStyleSheet("background: none;\n"
+"color: #282830 ;\n"
+"")
+        self.label_39.setObjectName("label_39")
+        self.horizontalLayout_5.addWidget(self.label_39)
+        self.label_38 = QtWidgets.QLabel(self.frame_25)
+        font = QtGui.QFont()
+        font.setFamily("Roboto")
+        font.setPointSize(11)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_38.setFont(font)
+        self.label_38.setStyleSheet("background: none;\n"
+"color: #282830 ;\n"
+"")
+        self.label_38.setObjectName("label_38")
+        self.horizontalLayout_5.addWidget(self.label_38)
         self.top_frame_stock_5 = QtWidgets.QFrame(self.frame_4)
         self.top_frame_stock_5.setGeometry(QtCore.QRect(0, 0, 1234, 80))
         self.top_frame_stock_5.setMinimumSize(QtCore.QSize(1234, 80))
@@ -1901,7 +1929,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
         self.stackedWidget_3.setCurrentIndex(0)
-        self.stackedWidget_main.setCurrentIndex(5)
+        self.stackedWidget_main.setCurrentIndex(4)
         self.stackedWidget_user.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
@@ -2001,15 +2029,20 @@ class Ui_MainWindow(object):
         item.setText(_translate("MainWindow", "New Column"))
         item = self.tableWidget_areas.horizontalHeaderItem(3)
         item.setText(_translate("MainWindow", "New Column"))
-        self.label_13.setText(_translate("MainWindow", "Nombre"))
-        self.label_35.setText(_translate("MainWindow", "Pasillo"))
-        self.label_36.setText(_translate("MainWindow", "Segmento"))
-        self.label_37.setText(_translate("MainWindow", "Limite"))
+        item = self.tableWidget_areas.horizontalHeaderItem(4)
+        item.setText(_translate("MainWindow", "New Column"))
+        item = self.tableWidget_areas.horizontalHeaderItem(5)
+        item.setText(_translate("MainWindow", "New Column"))
+        self.label_13.setText(_translate("MainWindow", "Código"))
+        self.label_35.setText(_translate("MainWindow", "Descripción"))
+        self.label_36.setText(_translate("MainWindow", "Marca"))
+        self.label_37.setText(_translate("MainWindow", "Cantidad"))
+        self.label_39.setText(_translate("MainWindow", "Ubicación"))
+        self.label_38.setText(_translate("MainWindow", "Primer Vencimiento"))
         self.label_area_mod.setText(_translate("MainWindow", "Label"))
         self.btn_newPosicion.setText(_translate("MainWindow", "Posicion de Alojamiento"))
         self.btn_modificarArea.setText(_translate("MainWindow", "Modificar Área"))
-#import img_oficiales_rc
-
+from Interfaces.main import  img_oficiales_rc
 
 if __name__ == "__main__":
     import sys
