@@ -4240,7 +4240,7 @@ color: #282830 ;
                   <rect>
                    <x>20</x>
                    <y>161</y>
-                   <width>961</width>
+                   <width>1600</width>
                    <height>321</height>
                   </rect>
                  </property>
@@ -4334,16 +4334,6 @@ QHeaderView::section:vertical
                    <string>New Column</string>
                   </property>
                  </column>
-                 <column>
-                  <property name="text">
-                   <string>New Column</string>
-                  </property>
-                 </column>
-                 <column>
-                  <property name="text">
-                   <string>New Column</string>
-                  </property>
-                 </column>
                 </widget>
                 <widget class="QFrame" name="frame_25">
                  <property name="geometry">
@@ -4387,7 +4377,7 @@ color: #282830 ;
 </string>
                     </property>
                     <property name="text">
-                     <string>Código</string>
+                     <string>Nombre</string>
                     </property>
                    </widget>
                   </item>
@@ -4408,7 +4398,7 @@ color: #282830 ;
 </string>
                     </property>
                     <property name="text">
-                     <string>Descripción</string>
+                     <string>Pasillo</string>
                     </property>
                    </widget>
                   </item>
@@ -4428,7 +4418,7 @@ color: #282830 ;
 </string>
                     </property>
                     <property name="text">
-                     <string>Marca</string>
+                     <string>Segmento</string>
                     </property>
                    </widget>
                   </item>
@@ -4448,47 +4438,7 @@ color: #282830 ;
 </string>
                     </property>
                     <property name="text">
-                     <string>Cantidad</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QLabel" name="label_39">
-                    <property name="font">
-                     <font>
-                      <family>Roboto</family>
-                      <pointsize>11</pointsize>
-                      <weight>75</weight>
-                      <bold>true</bold>
-                     </font>
-                    </property>
-                    <property name="styleSheet">
-                     <string notr="true">background: none;
-color: #282830 ;
-</string>
-                    </property>
-                    <property name="text">
-                     <string>Ubicación</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QLabel" name="label_38">
-                    <property name="font">
-                     <font>
-                      <family>Roboto</family>
-                      <pointsize>11</pointsize>
-                      <weight>75</weight>
-                      <bold>true</bold>
-                     </font>
-                    </property>
-                    <property name="styleSheet">
-                     <string notr="true">background: none;
-color: #282830 ;
-</string>
-                    </property>
-                    <property name="text">
-                     <string>Primer Vencimiento</string>
+                     <string>Limite</string>
                     </property>
                    </widget>
                   </item>

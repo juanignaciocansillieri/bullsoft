@@ -198,6 +198,7 @@ def listar_prod_area(param):
 def listar_prod():
     a = c.start_connection()
     cursor = a.cursor()
+    print("Listar productos")
     try:
         query = "SELECT codigo,descripcion,marca, condicion FROM productos"
         cursor.execute(query)

@@ -28,6 +28,8 @@ def start_connection():  # inicia conexion a db
     u = os.environ.get('USER_MYSQL')
     ps = os.environ.get('PASSWORD_MYSQL')
     db = os.environ.get('DB_MYSQL')
+    print(ps)
+    print(db)
     try:
         con = pymysql.Connect(host=h, port=p, user=u, password=ps, database=db)
     except pymysql.err.OperationalError as err:
@@ -123,18 +125,20 @@ def crear_tabla():  # crea una tabla (al iniciar por primera vez el programa se 
     limite VARCHAR(20) NOT NULL
     );"""
 
-    q8 = """ CREATE TABLE IF NOT EXISTS matrizareas (
+    q8 = """ CREATE TABLE IF NOT EXISTS matrizarea (
     idmatrizarea INT UNSIGNED AUTO_INCREMENT PRIMARY KEY NOT NULL,
     codigo VARCHAR(20) NOT NULL,
     area VARCHAR(20) NOT NULL,
-    largo VARCHAR(20) NOT NULL,
-    ancho VARCHAR(20) NOT NULL
+    fila VARCHAR(20) NOT NULL,
+    columna VARCHAR(20) NOT NULL,
+    altura VARCHAR(20) NOT NULL
     );"""
 
     q14 = """CREATE TABLE IF NOT EXISTS datosmatrizarea (
     iddatosmatriz INT UNSIGNED AUTO_INCREMENT PRIMARY KEY NOT NULL,
     filas INT NOT NULL,
     columnas INT NOT NULL,
+    altura INT NOT NULL
     );"""
 
     q9 = """ CREATE TABLE IF NOT EXISTS matriz (
@@ -202,13 +206,13 @@ def crear_tabla():  # crea una tabla (al iniciar por primera vez el programa se 
         cur.execute(q5)
         # cur.execute(q6)
         cur.execute(q7)
-        # cur.execute(q8)
-        cur.execute(q9)
-        cur.execute(q10)
+        cur.execute(q8)
+        #cur.execute(q9)
+        #cur.execute(q10)
         cur.execute(q11)
         cur.execute(q12)
         cur.execute(q13)
-        # cur.execute(q14)
+        cur.execute(q14)
         cur.close()
     except pymysql.err.OperationalError as err:
         print("Hubo un error:", err)
