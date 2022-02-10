@@ -20,6 +20,7 @@ class NewArea(QMainWindow):
         qt_rectangle.moveCenter(center_point)
         self.move(qt_rectangle.topLeft())
         self.ui.crearprod_btn.clicked.connect(self.crear_area)
+        self.posicion_cbox()
 
     # CREAR PRODUCTO NUEVO
     def crear_area(self):
@@ -33,3 +34,9 @@ class NewArea(QMainWindow):
         alto = self.ui.alto_num.value()
         area = a.Area(nom, ide, pasillo, segmento, longitud, ancho, alto)
         self.close()
+
+
+    def posicion_cbox(self):
+        for x in range(3):
+            for y in range(3):
+                self.ui.comboBox.addItem('{}x{}'.format(x+1, y+1))
