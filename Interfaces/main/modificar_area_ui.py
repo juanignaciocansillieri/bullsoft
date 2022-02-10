@@ -288,7 +288,7 @@ class Ui_MainWindow(object):
         self.label_ancho.setText(_translate("MainWindow", "Ancho"))
         self.label_longitud.setText(_translate("MainWindow", "Longitud"))
         self.label_Area_2.setText(_translate("MainWindow", "Identificador"))
-from Interfaces.main import img_oficiales_rc
+from Interfaces.main import img_rc
 
 
 if __name__ == "__main__":

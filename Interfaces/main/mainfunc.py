@@ -14,7 +14,7 @@ from Interfaces.main.create_user_func import UsuarioWindow
 from Interfaces.main.delete_area import BorrarArea
 from Interfaces.main.egreso_func import NewEgreso
 from Interfaces.main.ingreso_func import NewIngreso
-from Interfaces.main.modern import Ui_MainWindow
+from Interfaces.main.main import Ui_MainWindow
 from Interfaces.main.modificar_area import ModificarArea as Ma
 from Interfaces.main.nueva_area import Ui_MainWindow as Na
 from Interfaces.main.nueva_area_func import NewArea
@@ -115,13 +115,15 @@ class Modern(QMainWindow):
 
         ########################## DEPOSITOS ##################################
 
-        self.ui.deposito_btn.clicked.connect(self.mostra_areas)
+        #self.ui.deposito_btn.clicked.connect(self.mostra_areas)
         ## Abrir Pagina Depositos ##
         self.ui.deposito_btn.clicked.connect(lambda: self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_deposito))
         self.ui.deposito_btn.clicked.connect(lambda: self.ui.stackedWidget_3.setCurrentWidget(self.ui.deposito_subpage))
         self.ui.newArea_btn.clicked.connect(self.mostrar_new_area)
         self.ui.label_12.mousePressEvent = self.click_a
-        self.ui.btn_actualizarAreas.clicked.connect(self.mostra_areas)
+        #self.ui.btn_actualizarAreas.clicked.connect(self.mostra_areas)
+        self.ui.btn_actualizarAreas.clicked.connect(self.crear_deposito)
+        self.ui.btn_crearDeposito.clicked.connect(self.crear_deposito)
 
         self.ui.btn_actualizarAreaInd.clicked.connect(lambda: self.listar_areas(globalArea))
         self.ui.btn_newPosicion.clicked.connect(lambda: self.new_posicion(globalArea))
@@ -366,7 +368,7 @@ class Modern(QMainWindow):
             i += 1
 
     ## Mostrar Areas graficamente
-
+    """
     def mostra_areas(self):
         child = self.ui.verticalLayout_7.count()
         areas = ar.Area.listar_area()
@@ -446,7 +448,7 @@ class Modern(QMainWindow):
                     self.ui.gridLayout.itemAt(i).widget().deleteLater()
 
             i += 1
-
+    """
     def button_released(self):
         print('USANDO RELEASED')
         global globalArea
@@ -500,13 +502,29 @@ class Modern(QMainWindow):
 
             table_row += 1
 
-            ''' CON ESTO SE LLAMA A CONTAR FILAS, PARA LUEGO PODER UTILIZARLAS
-            usuarios = u.listar_user()
-            n = u.contar_filas()
-            self.ui.tableWidget_usuarios.setRowCount(n)
-            '''
 
-    ## LISTAR USUARIOS EN TABLA
+    # CREAR DEPÓSITO
+    def crear_deposito(self):
+
+        ancho_area = self.ui.spinBox_anchoarea.value()
+        largo_area = self.ui.spinBox_largoarea.value()
+        for x in range(largo_area):
+            for y in range(ancho_area):
+                frame = QtWidgets.QFrame(self.ui.frame_3)
+                frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
+                frame.setFrameShadow(QtWidgets.QFrame.Raised)
+                frame.setMaximumSize(QtCore.QSize(200, 200))
+                vertical_layout = QtWidgets.QVBoxLayout(frame)
+                self.btn = QPushButton(frame)
+                self.btn.setText('{}x{}'.format(x+1, y+1))
+                self.btn.setObjectName('%s' % y*x)
+                self.btn.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+                self.btn.setMinimumSize(QtCore.QSize(70, 30))
+                self.btn.setMaximumSize(QtCore.QSize(100, 30))
+                vertical_layout.addWidget(self.btn, 0, QtCore.Qt.AlignHCenter | QtCore.Qt.AlignVCenter)
+                self.ui.gridLayout.addWidget(frame, x, y)
+
+    # LISTAR USUARIOS EN TABLA
 
     def listar_usuarios(self):
         usuarios = u.listar_user()
@@ -823,4 +841,10 @@ class BmUsuario(QMainWindow):
             img.save('../main/img/{0}'.format(defaultImg))
 
 
+if __name__ == "__main__":
+    import sys
+    app = QApplication(sys.argv)
+    window = Modern(1)
+    window.show()
+    sys.exit(app.exec())
 

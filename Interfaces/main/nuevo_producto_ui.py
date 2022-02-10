@@ -481,7 +481,7 @@ class Ui_MainWindow(object):
         self.label_area_2.setText(_translate("MainWindow", "Posición de Alojamiento"))
         self.crearprod_btn.setText(_translate("MainWindow", "Crear producto"))
         self.subirFoto_btn.setText(_translate("MainWindow", "Subir Imagen"))
-from Interfaces.main import img_oficiales_rc
+from Interfaces.main import img_rc
 
 
 if __name__ == "__main__":

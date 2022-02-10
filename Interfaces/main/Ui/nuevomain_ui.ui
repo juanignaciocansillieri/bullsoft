@@ -92,28 +92,13 @@
         <cursorShape>PointingHandCursor</cursorShape>
        </property>
        <property name="styleSheet">
-        <string notr="true">QPushButton{
-border:none;
-font-family: Roboto;
-border-radius:5px;
-color: #282830 ;
-
-
-}
-
-QPushButton:hover{
-	background-color: rgba(105, 105, 226, 50);
-}
-
-QPushButton:pressed{
-	background-color: rgba(0,0,0);
-}</string>
+        <string notr="true"/>
        </property>
        <property name="text">
         <string/>
        </property>
        <property name="icon">
-        <iconset resource="../img/img_oficiales.qrc">
+        <iconset resource="../img/img.qrc">
          <normaloff>:/img/shot-cropped-1595298394518.png</normaloff>:/img/shot-cropped-1595298394518.png</iconset>
        </property>
        <property name="iconSize">
@@ -123,10 +108,10 @@ QPushButton:pressed{
         </size>
        </property>
       </widget>
-      <widget class="QPushButton" name="products_btn_stock">
+      <widget class="QPushButton" name="products_btn">
        <property name="geometry">
         <rect>
-         <x>410</x>
+         <x>490</x>
          <y>22</y>
          <width>91</width>
          <height>31</height>
@@ -169,10 +154,10 @@ QPushButton:hover{
         </size>
        </property>
       </widget>
-      <widget class="QPushButton" name="products_btn_stock_2">
+      <widget class="QPushButton" name="deposito_btn">
        <property name="geometry">
         <rect>
-         <x>510</x>
+         <x>600</x>
          <y>22</y>
          <width>91</width>
          <height>31</height>
@@ -215,53 +200,7 @@ QPushButton:hover{
         </size>
        </property>
       </widget>
-      <widget class="QPushButton" name="products_btn_stock_3">
-       <property name="geometry">
-        <rect>
-         <x>610</x>
-         <y>22</y>
-         <width>91</width>
-         <height>31</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <family>Roboto</family>
-         <pointsize>9</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
-        </font>
-       </property>
-       <property name="cursor">
-        <cursorShape>PointingHandCursor</cursorShape>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">QPushButton{
-border:none;
-font-family: Roboto;
-border-radius:5px;
-text-align: center;
-color: #282830 ;
-
-
-}
-
-QPushButton:hover{
-		color:rgb(116, 116, 138)
-
-}</string>
-       </property>
-       <property name="text">
-        <string>Picking</string>
-       </property>
-       <property name="iconSize">
-        <size>
-         <width>30</width>
-         <height>30</height>
-        </size>
-       </property>
-      </widget>
-      <widget class="QPushButton" name="products_btn_stock_4">
+      <widget class="QPushButton" name="users_btn">
        <property name="geometry">
         <rect>
          <x>710</x>
@@ -352,10 +291,10 @@ QPushButton:hover{
         </size>
        </property>
       </widget>
-      <widget class="QPushButton" name="products_btn_stock_6">
+      <widget class="QPushButton" name="inicio_btn">
        <property name="geometry">
         <rect>
-         <x>310</x>
+         <x>380</x>
          <y>22</y>
          <width>91</width>
          <height>31</height>
@@ -525,7 +464,7 @@ border:none</string>
 border: none</string>
             </property>
             <property name="currentIndex">
-             <number>1</number>
+             <number>0</number>
             </property>
             <widget class="QWidget" name="product_subpage">
              <widget class="QLabel" name="label_7">
@@ -566,153 +505,6 @@ border: none</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignCenter</set>
-              </property>
-             </widget>
-             <widget class="QPushButton" name="exit_btn">
-              <property name="geometry">
-               <rect>
-                <x>180</x>
-                <y>710</y>
-                <width>50</width>
-                <height>41</height>
-               </rect>
-              </property>
-              <property name="maximumSize">
-               <size>
-                <width>50</width>
-                <height>41</height>
-               </size>
-              </property>
-              <property name="font">
-               <font>
-                <family>Roboto</family>
-                <weight>75</weight>
-                <bold>true</bold>
-               </font>
-              </property>
-              <property name="cursor">
-               <cursorShape>PointingHandCursor</cursorShape>
-              </property>
-              <property name="styleSheet">
-               <string notr="true">QPushButton{
-border:none;
-padding-right:30px;
-font-family: Roboto;
-text-align: left;
-border-radius:5px;
-margin-bottom:5px
-}
-
-QPushButton:hover{
-background-color: rgba(105, 105, 226, 50);
-}</string>
-              </property>
-              <property name="text">
-               <string/>
-              </property>
-              <property name="icon">
-               <iconset resource="../img/img_oficiales.qrc">
-                <normaloff>:/img/ExitB.png</normaloff>:/img/ExitB.png</iconset>
-              </property>
-              <property name="iconSize">
-               <size>
-                <width>50</width>
-                <height>50</height>
-               </size>
-              </property>
-             </widget>
-             <widget class="QPushButton" name="products_btn_movimiento">
-              <property name="geometry">
-               <rect>
-                <x>230</x>
-                <y>280</y>
-                <width>81</width>
-                <height>31</height>
-               </rect>
-              </property>
-              <property name="font">
-               <font>
-                <family>Roboto</family>
-                <pointsize>9</pointsize>
-                <weight>75</weight>
-                <bold>true</bold>
-               </font>
-              </property>
-              <property name="cursor">
-               <cursorShape>PointingHandCursor</cursorShape>
-              </property>
-              <property name="styleSheet">
-               <string notr="true">QPushButton{
-border:none;
-font-family: Roboto;
-text-align:left;
-color: #282830 ;
-border-radius:5px;
-
-
-}
-
-QPushButton:hover{
-	background-color: rgba(105, 105, 226, 50);
-}
-
-QPushButton:focus{
-	background-color: rgba(105, 105, 226, 50);
-}</string>
-              </property>
-              <property name="text">
-               <string>Movimientos</string>
-              </property>
-              <property name="iconSize">
-               <size>
-                <width>30</width>
-                <height>35</height>
-               </size>
-              </property>
-             </widget>
-             <widget class="QPushButton" name="products_btn_lotes">
-              <property name="geometry">
-               <rect>
-                <x>230</x>
-                <y>330</y>
-                <width>41</width>
-                <height>31</height>
-               </rect>
-              </property>
-              <property name="font">
-               <font>
-                <family>Roboto</family>
-                <pointsize>9</pointsize>
-                <weight>75</weight>
-                <bold>true</bold>
-               </font>
-              </property>
-              <property name="cursor">
-               <cursorShape>PointingHandCursor</cursorShape>
-              </property>
-              <property name="styleSheet">
-               <string notr="true">QPushButton{
-border:none;
-font-family: Roboto;
-text-align:left;
-color: #282830 ;
-border-radius:5px;
-
-
-}
-
-QPushButton:hover{
-	background-color: rgba(105, 105, 226, 50);
-}</string>
-              </property>
-              <property name="text">
-               <string>Lotes</string>
-              </property>
-              <property name="iconSize">
-               <size>
-                <width>30</width>
-                <height>35</height>
-               </size>
               </property>
              </widget>
              <widget class="QPushButton" name="products_btn_stock_7">
@@ -843,7 +635,7 @@ background-color: rgba(105, 105, 226, 50);
                <string/>
               </property>
               <property name="icon">
-               <iconset resource="../img/img_oficiales.qrc">
+               <iconset resource="../img/img.qrc">
                 <normaloff>:/img/ExitB.png</normaloff>:/img/ExitB.png</iconset>
               </property>
               <property name="iconSize">
@@ -853,7 +645,7 @@ background-color: rgba(105, 105, 226, 50);
                </size>
               </property>
              </widget>
-             <widget class="QPushButton" name="products_btn_movimiento_2">
+             <widget class="QPushButton" name="products_btn_movimiento">
               <property name="geometry">
                <rect>
                 <x>90</x>
@@ -904,7 +696,7 @@ QPushButton:focus{
                </size>
               </property>
              </widget>
-             <widget class="QPushButton" name="products_btn_lotes_2">
+             <widget class="QPushButton" name="products_btn_lotes">
               <property name="geometry">
                <rect>
                 <x>90</x>
@@ -950,7 +742,7 @@ QPushButton:hover{
                </size>
               </property>
              </widget>
-             <widget class="QPushButton" name="products_btn_stock_8">
+             <widget class="QPushButton" name="products_btn_stock">
               <property name="geometry">
                <rect>
                 <x>90</x>
@@ -1017,7 +809,7 @@ QPushButton:hover{
                <string/>
               </property>
               <property name="icon">
-               <iconset resource="../img/img_oficiales.qrc">
+               <iconset resource="../img/img.qrc">
                 <normaloff>:/img/producto.png</normaloff>:/img/producto.png</iconset>
               </property>
               <property name="iconSize">
@@ -1049,7 +841,7 @@ QPushButton:hover{
                <string/>
               </property>
               <property name="icon">
-               <iconset resource="../img/img_oficiales.qrc">
+               <iconset resource="../img/img.qrc">
                 <normaloff>:/img/warehouse.png</normaloff>:/img/warehouse.png</iconset>
               </property>
               <property name="iconSize">
@@ -1081,7 +873,7 @@ QPushButton:hover{
                <string/>
               </property>
               <property name="icon">
-               <iconset resource="../img/img_oficiales.qrc">
+               <iconset resource="../img/img.qrc">
                 <normaloff>:/img/trading.png</normaloff>:/img/trading.png</iconset>
               </property>
               <property name="iconSize">
@@ -1091,7 +883,7 @@ QPushButton:hover{
                </size>
               </property>
              </widget>
-             <widget class="QPushButton" name="products_btn_lotes_3">
+             <widget class="QPushButton" name="exit_btn">
               <property name="geometry">
                <rect>
                 <x>70</x>
@@ -1123,7 +915,7 @@ border-radius:5px;
 }
 
 QPushButton:hover{
-	background-color: rgba(105, 105, 226, 50);
+		color:rgb(116, 116, 138)
 }</string>
               </property>
               <property name="text">
@@ -1347,7 +1139,7 @@ QPushButton:hover{
            <number>0</number>
           </property>
           <item>
-           <widget class="QStackedWidget" name="stackedWidget_2">
+           <widget class="QStackedWidget" name="stackedWidget_main">
             <property name="maximumSize">
              <size>
               <width>951</width>
@@ -1355,7 +1147,7 @@ QPushButton:hover{
              </size>
             </property>
             <property name="currentIndex">
-             <number>2</number>
+             <number>4</number>
             </property>
             <widget class="QWidget" name="page_movimientos">
              <layout class="QVBoxLayout" name="verticalLayout_12">
@@ -1534,7 +1326,7 @@ QPushButton:hover{
                          <string/>
                         </property>
                         <property name="icon">
-                         <iconset resource="../img/img_oficiales.qrc">
+                         <iconset resource="../img/img.qrc">
                           <normaloff>:/img/trading.png</normaloff>:/img/trading.png</iconset>
                         </property>
                         <property name="iconSize">
@@ -1588,7 +1380,7 @@ background-color: rgba(71, 71, 103,180);
                          <string>Ingreso</string>
                         </property>
                         <property name="icon">
-                         <iconset resource="../img/img_oficiales.qrc">
+                         <iconset resource="../img/img.qrc">
                           <normaloff>:/img/plus.png</normaloff>:/img/plus.png</iconset>
                         </property>
                         <property name="iconSize">
@@ -1642,7 +1434,7 @@ background-color: rgba(71, 71, 103,180);
                          <string>Egreso</string>
                         </property>
                         <property name="icon">
-                         <iconset resource="../img/img_oficiales.qrc">
+                         <iconset resource="../img/img.qrc">
                           <normaloff>:/img/plus.png</normaloff>:/img/plus.png</iconset>
                         </property>
                         <property name="iconSize">
@@ -1760,7 +1552,7 @@ background-color: rgba(71, 71, 103,180);
                            <string/>
                           </property>
                           <property name="icon">
-                           <iconset resource="../img/img_oficiales.qrc">
+                           <iconset resource="../img/img.qrc">
                             <normaloff>:/img/LupaB.png</normaloff>:/img/LupaB.png</iconset>
                           </property>
                           <property name="iconSize">
@@ -2143,7 +1935,7 @@ color: #282830 ;
                         <string/>
                        </property>
                        <property name="icon">
-                        <iconset resource="../img/img_oficiales.qrc">
+                        <iconset resource="../img/img.qrc">
                          <normaloff>:/img/refresh.png</normaloff>:/img/refresh.png</iconset>
                        </property>
                        <property name="iconSize">
@@ -2334,7 +2126,7 @@ color: #282830 ;
                          <string/>
                         </property>
                         <property name="icon">
-                         <iconset resource="../img/img_oficiales.qrc">
+                         <iconset resource="../img/img.qrc">
                           <normaloff>:/img/user.png</normaloff>:/img/user.png</iconset>
                         </property>
                         <property name="iconSize">
@@ -2388,7 +2180,7 @@ background-color: rgba(71, 71, 103,180);
                          <string>Nuevo Usuario</string>
                         </property>
                         <property name="icon">
-                         <iconset resource="../img/img_oficiales.qrc">
+                         <iconset resource="../img/img.qrc">
                           <normaloff>:/img/plus.png</normaloff>:/img/plus.png</iconset>
                         </property>
                         <property name="iconSize">
@@ -2506,7 +2298,7 @@ background-color: rgba(71, 71, 103,180);
                            <string/>
                           </property>
                           <property name="icon">
-                           <iconset resource="../img/img_oficiales.qrc">
+                           <iconset resource="../img/img.qrc">
                             <normaloff>:/img/LupaB.png</normaloff>:/img/LupaB.png</iconset>
                           </property>
                           <property name="iconSize">
@@ -2833,7 +2625,7 @@ color: #282830 ;
                         <string/>
                        </property>
                        <property name="icon">
-                        <iconset resource="../img/img_oficiales.qrc">
+                        <iconset resource="../img/img.qrc">
                          <normaloff>:/img/refresh.png</normaloff>:/img/refresh.png</iconset>
                        </property>
                        <property name="iconSize">
@@ -3053,7 +2845,7 @@ color: #282830 ;
                        <string/>
                       </property>
                       <property name="icon">
-                       <iconset resource="../img/img_oficiales.qrc">
+                       <iconset resource="../img/img.qrc">
                         <normaloff>:/img/rack.png</normaloff>:/img/rack.png</iconset>
                       </property>
                       <property name="iconSize">
@@ -3107,7 +2899,7 @@ background-color: rgba(71, 71, 103,180);
                        <string>Nueva Área</string>
                       </property>
                       <property name="icon">
-                       <iconset resource="../img/img_oficiales.qrc">
+                       <iconset resource="../img/img.qrc">
                         <normaloff>:/img/plus.png</normaloff>:/img/plus.png</iconset>
                       </property>
                       <property name="iconSize">
@@ -3161,7 +2953,7 @@ background-color: rgba(71, 71, 103,180);
                        <string>Eliminar Área</string>
                       </property>
                       <property name="icon">
-                       <iconset resource="../img/img_oficiales.qrc">
+                       <iconset resource="../img/img.qrc">
                         <normaloff>:/img/plus.png</normaloff>:/img/plus.png</iconset>
                       </property>
                       <property name="iconSize">
@@ -3198,7 +2990,7 @@ background-color: rgba(71, 71, 103,180);
                   <string/>
                  </property>
                  <property name="icon">
-                  <iconset resource="../img/img_oficiales.qrc">
+                  <iconset resource="../img/img.qrc">
                    <normaloff>:/img/refresh.png</normaloff>:/img/refresh.png</iconset>
                  </property>
                  <property name="iconSize">
@@ -3661,7 +3453,7 @@ background-color: rgba(71, 71, 103,180);
                        <string>Posicion de Alojamiento</string>
                       </property>
                       <property name="icon">
-                       <iconset resource="../img/img_oficiales.qrc">
+                       <iconset resource="../img/img.qrc">
                         <normaloff>:/img/plus.png</normaloff>:/img/plus.png</iconset>
                       </property>
                       <property name="iconSize">
@@ -3743,7 +3535,7 @@ background-color: rgba(71, 71, 103,180);
                        <string/>
                       </property>
                       <property name="icon">
-                       <iconset resource="../img/img_oficiales.qrc">
+                       <iconset resource="../img/img.qrc">
                         <normaloff>:/img/refresh.png</normaloff>:/img/refresh.png</iconset>
                       </property>
                       <property name="iconSize">
@@ -3933,7 +3725,7 @@ background-color: rgba(71, 71, 103,180);
                          <string/>
                         </property>
                         <property name="icon">
-                         <iconset resource="../img/img_oficiales.qrc">
+                         <iconset resource="../img/img.qrc">
                           <normaloff>:/img/warehouse.png</normaloff>:/img/warehouse.png</iconset>
                         </property>
                         <property name="iconSize">
@@ -3991,7 +3783,7 @@ background-color: rgba(71, 71, 103,180);
                      <string>Nuevo Producto</string>
                     </property>
                     <property name="icon">
-                     <iconset resource="../img/img_oficiales.qrc">
+                     <iconset resource="../img/img.qrc">
                       <normaloff>:/img/plus.png</normaloff>:/img/plus.png</iconset>
                     </property>
                     <property name="iconSize">
@@ -4105,7 +3897,7 @@ background-color: rgba(71, 71, 103,180);
                            <string/>
                           </property>
                           <property name="icon">
-                           <iconset resource="../img/img_oficiales.qrc">
+                           <iconset resource="../img/img.qrc">
                             <normaloff>:/img/LupaB.png</normaloff>:/img/LupaB.png</iconset>
                           </property>
                           <property name="iconSize">
@@ -4438,7 +4230,7 @@ color: #282830 ;
                         <string/>
                        </property>
                        <property name="icon">
-                        <iconset resource="../img/img_oficiales.qrc">
+                        <iconset resource="../img/img.qrc">
                          <normaloff>:/img/refresh.png</normaloff>:/img/refresh.png</iconset>
                        </property>
                        <property name="iconSize">
@@ -4635,7 +4427,7 @@ color: #282830 ;
                          <string/>
                         </property>
                         <property name="icon">
-                         <iconset resource="../img/img_oficiales.qrc">
+                         <iconset resource="../img/img.qrc">
                           <normaloff>:/img/producto.png</normaloff>:/img/producto.png</iconset>
                         </property>
                         <property name="iconSize">
@@ -4753,7 +4545,7 @@ color: #282830 ;
                            <string/>
                           </property>
                           <property name="icon">
-                           <iconset resource="../img/img_oficiales.qrc">
+                           <iconset resource="../img/img.qrc">
                             <normaloff>:/img/LupaB.png</normaloff>:/img/LupaB.png</iconset>
                           </property>
                           <property name="iconSize">
@@ -5105,7 +4897,7 @@ color: #282830 ;
                         <string/>
                        </property>
                        <property name="icon">
-                        <iconset resource="../img/img_oficiales.qrc">
+                        <iconset resource="../img/img.qrc">
                          <normaloff>:/img/refresh.png</normaloff>:/img/refresh.png</iconset>
                        </property>
                        <property name="iconSize">
@@ -5166,7 +4958,7 @@ color: #282830 ;
   </widget>
  </widget>
  <resources>
-  <include location="../img/img_oficiales.qrc"/>
+  <include location="../img/img.qrc"/>
  </resources>
  <connections/>
 </ui>

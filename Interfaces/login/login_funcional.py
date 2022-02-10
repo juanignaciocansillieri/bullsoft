@@ -11,7 +11,7 @@ from DB import loginDB as l
 
 from CLASES import usuarios as u
 
-from Interfaces.main import modern_func as m
+from Interfaces.main import mainfunc as m
 
 admin_user = True
 

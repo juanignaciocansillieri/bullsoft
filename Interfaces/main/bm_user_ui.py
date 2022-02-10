@@ -468,7 +468,7 @@ class Ui_MainWindow(object):
         self.eliminarprod_btn.setText(_translate("MainWindow", "Dar De Baja"))
         self.subirFoto_btn_2.setText(_translate("MainWindow", "Actualizar Imagen"))
 
-from Interfaces.main import img_oficiales_rc
+
 
 if __name__ == "__main__":
     import sys
