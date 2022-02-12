@@ -14,7 +14,8 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(457, 382)
+        MainWindow.resize(742, 225)
+        MainWindow.setMaximumSize(QtCore.QSize(16777215, 300))
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.verticalLayout = QtWidgets.QVBoxLayout(self.centralwidget)
@@ -22,7 +23,7 @@ class Ui_MainWindow(object):
         self.verticalLayout.setSpacing(0)
         self.verticalLayout.setObjectName("verticalLayout")
         self.frame_2 = QtWidgets.QFrame(self.centralwidget)
-        self.frame_2.setMinimumSize(QtCore.QSize(0, 300))
+        self.frame_2.setMinimumSize(QtCore.QSize(0, 0))
         self.frame_2.setMaximumSize(QtCore.QSize(16777215, 16777215))
         self.frame_2.setStyleSheet("background: #fff;\n"
 "")
@@ -30,7 +31,7 @@ class Ui_MainWindow(object):
         self.frame_2.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_2.setObjectName("frame_2")
         self.frame_3 = QtWidgets.QFrame(self.frame_2)
-        self.frame_3.setGeometry(QtCore.QRect(20, 40, 391, 291))
+        self.frame_3.setGeometry(QtCore.QRect(20, 10, 701, 201))
         self.frame_3.setMaximumSize(QtCore.QSize(16777215, 400))
         self.frame_3.setStyleSheet("border-radius: 10px;\n"
 "background-color: rgb(240, 242, 255);\n"
@@ -42,7 +43,7 @@ class Ui_MainWindow(object):
         self.label_3.setGeometry(QtCore.QRect(20, 10, 62, 27))
         font = QtGui.QFont()
         font.setFamily("Roboto")
-        font.setPointSize(1)
+        font.setPointSize(-1)
         self.label_3.setFont(font)
         self.label_3.setStyleSheet("font-family: Roboto;\n"
 "font-size: 14px;\n"
@@ -54,7 +55,7 @@ class Ui_MainWindow(object):
         self.label_3.setText("")
         self.label_3.setObjectName("label_3")
         self.motivo_input = QtWidgets.QLineEdit(self.frame_3)
-        self.motivo_input.setGeometry(QtCore.QRect(20, 40, 170, 25))
+        self.motivo_input.setGeometry(QtCore.QRect(30, 40, 170, 25))
         self.motivo_input.setMinimumSize(QtCore.QSize(0, 0))
         self.motivo_input.setMaximumSize(QtCore.QSize(16777215, 25))
         self.motivo_input.setStyleSheet("QLineEdit{\n"
@@ -73,14 +74,14 @@ class Ui_MainWindow(object):
         self.motivo_input.setPlaceholderText("")
         self.motivo_input.setObjectName("motivo_input")
         self.crearprod_btn = QtWidgets.QPushButton(self.frame_3)
-        self.crearprod_btn.setGeometry(QtCore.QRect(230, 220, 121, 26))
+        self.crearprod_btn.setGeometry(QtCore.QRect(280, 150, 121, 26))
         font = QtGui.QFont()
         font.setFamily("Roboto")
-        font.setPointSize(1)
+        font.setPointSize(-1)
         self.crearprod_btn.setFont(font)
         self.crearprod_btn.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.crearprod_btn.setStyleSheet("QPushButton{\n"
-"background-color: rgb(71, 71, 103);\n"
+"background-color: rgba(71, 71, 103);\n"
 "color: #fff;\n"
 "border-radius:5px;\n"
 "font-family:Roboto;\n"
@@ -92,10 +93,10 @@ class Ui_MainWindow(object):
 "}")
         self.crearprod_btn.setObjectName("crearprod_btn")
         self.label_egr_ing = QtWidgets.QLabel(self.frame_3)
-        self.label_egr_ing.setGeometry(QtCore.QRect(20, 10, 131, 27))
+        self.label_egr_ing.setGeometry(QtCore.QRect(30, 10, 131, 27))
         font = QtGui.QFont()
         font.setFamily("Roboto")
-        font.setPointSize(1)
+        font.setPointSize(-1)
         self.label_egr_ing.setFont(font)
         self.label_egr_ing.setStyleSheet("font-family: Roboto;\n"
 "font-size: 14px;\n"
@@ -105,10 +106,10 @@ class Ui_MainWindow(object):
 "")
         self.label_egr_ing.setObjectName("label_egr_ing")
         self.label_egr_ing_2 = QtWidgets.QLabel(self.frame_3)
-        self.label_egr_ing_2.setGeometry(QtCore.QRect(20, 70, 131, 27))
+        self.label_egr_ing_2.setGeometry(QtCore.QRect(30, 70, 131, 27))
         font = QtGui.QFont()
         font.setFamily("Roboto")
-        font.setPointSize(1)
+        font.setPointSize(-1)
         self.label_egr_ing_2.setFont(font)
         self.label_egr_ing_2.setStyleSheet("font-family: Roboto;\n"
 "font-size: 14px;\n"
@@ -118,7 +119,7 @@ class Ui_MainWindow(object):
 "")
         self.label_egr_ing_2.setObjectName("label_egr_ing_2")
         self.motivo_input_2 = QtWidgets.QLineEdit(self.frame_3)
-        self.motivo_input_2.setGeometry(QtCore.QRect(20, 100, 170, 25))
+        self.motivo_input_2.setGeometry(QtCore.QRect(30, 100, 170, 25))
         self.motivo_input_2.setMinimumSize(QtCore.QSize(0, 0))
         self.motivo_input_2.setMaximumSize(QtCore.QSize(16777215, 25))
         self.motivo_input_2.setStyleSheet("QLineEdit{\n"
@@ -137,10 +138,10 @@ class Ui_MainWindow(object):
         self.motivo_input_2.setPlaceholderText("")
         self.motivo_input_2.setObjectName("motivo_input_2")
         self.label_pasillos = QtWidgets.QLabel(self.frame_3)
-        self.label_pasillos.setGeometry(QtCore.QRect(220, 10, 131, 27))
+        self.label_pasillos.setGeometry(QtCore.QRect(290, 10, 131, 27))
         font = QtGui.QFont()
         font.setFamily("Roboto")
-        font.setPointSize(1)
+        font.setPointSize(-1)
         self.label_pasillos.setFont(font)
         self.label_pasillos.setStyleSheet("font-family: Roboto;\n"
 "font-size: 14px;\n"
@@ -150,10 +151,10 @@ class Ui_MainWindow(object):
 "")
         self.label_pasillos.setObjectName("label_pasillos")
         self.label_pasillos_2 = QtWidgets.QLabel(self.frame_3)
-        self.label_pasillos_2.setGeometry(QtCore.QRect(220, 70, 131, 27))
+        self.label_pasillos_2.setGeometry(QtCore.QRect(290, 70, 131, 27))
         font = QtGui.QFont()
         font.setFamily("Roboto")
-        font.setPointSize(1)
+        font.setPointSize(-1)
         self.label_pasillos_2.setFont(font)
         self.label_pasillos_2.setStyleSheet("font-family: Roboto;\n"
 "font-size: 14px;\n"
@@ -163,7 +164,7 @@ class Ui_MainWindow(object):
 "")
         self.label_pasillos_2.setObjectName("label_pasillos_2")
         self.segmentos_num = QtWidgets.QSpinBox(self.frame_3)
-        self.segmentos_num.setGeometry(QtCore.QRect(220, 100, 121, 25))
+        self.segmentos_num.setGeometry(QtCore.QRect(290, 100, 121, 25))
         self.segmentos_num.setStyleSheet("background-color: #fff;\n"
 "border-radius: 3px;\n"
 "padding: 4 5px;\n"
@@ -178,7 +179,7 @@ class Ui_MainWindow(object):
         self.segmentos_num.setMaximum(999)
         self.segmentos_num.setObjectName("segmentos_num")
         self.pasillos_num = QtWidgets.QSpinBox(self.frame_3)
-        self.pasillos_num.setGeometry(QtCore.QRect(220, 40, 121, 25))
+        self.pasillos_num.setGeometry(QtCore.QRect(290, 40, 121, 25))
         self.pasillos_num.setStyleSheet("background-color: #fff;\n"
 "border-radius: 3px;\n"
 "padding: 4 5px;\n"
@@ -191,48 +192,9 @@ class Ui_MainWindow(object):
 "")
         self.pasillos_num.setMaximum(999)
         self.pasillos_num.setObjectName("pasillos_num")
-        self.label_egr_ing_3 = QtWidgets.QLabel(self.frame_3)
-        self.label_egr_ing_3.setGeometry(QtCore.QRect(20, 130, 131, 27))
-        font = QtGui.QFont()
-        font.setFamily("Roboto")
-        font.setPointSize(1)
-        self.label_egr_ing_3.setFont(font)
-        self.label_egr_ing_3.setStyleSheet("font-family: Roboto;\n"
-"font-size: 14px;\n"
-"margin-top:10px;\n"
-"margin-left:10px\n"
-"\n"
-"")
-        self.label_egr_ing_3.setObjectName("label_egr_ing_3")
-        self.label_egr_ing_4 = QtWidgets.QLabel(self.frame_3)
-        self.label_egr_ing_4.setGeometry(QtCore.QRect(220, 130, 131, 27))
-        font = QtGui.QFont()
-        font.setFamily("Roboto")
-        font.setPointSize(1)
-        self.label_egr_ing_4.setFont(font)
-        self.label_egr_ing_4.setStyleSheet("font-family: Roboto;\n"
-"font-size: 14px;\n"
-"margin-top:10px;\n"
-"margin-left:10px\n"
-"\n"
-"")
-        self.label_egr_ing_4.setObjectName("label_egr_ing_4")
-        self.label_egr_ing_5 = QtWidgets.QLabel(self.frame_3)
-        self.label_egr_ing_5.setGeometry(QtCore.QRect(20, 190, 131, 27))
-        font = QtGui.QFont()
-        font.setFamily("Roboto")
-        font.setPointSize(1)
-        self.label_egr_ing_5.setFont(font)
-        self.label_egr_ing_5.setStyleSheet("font-family: Roboto;\n"
-"font-size: 14px;\n"
-"margin-top:10px;\n"
-"margin-left:10px\n"
-"\n"
-"")
-        self.label_egr_ing_5.setObjectName("label_egr_ing_5")
-        self.ancho_num = QtWidgets.QSpinBox(self.frame_3)
-        self.ancho_num.setGeometry(QtCore.QRect(220, 160, 121, 25))
-        self.ancho_num.setStyleSheet("background-color: #fff;\n"
+        self.comboBox = QtWidgets.QComboBox(self.frame_3)
+        self.comboBox.setGeometry(QtCore.QRect(500, 40, 121, 25))
+        self.comboBox.setStyleSheet("background-color: #fff;\n"
 "border-radius: 3px;\n"
 "padding: 4 5px;\n"
 "color: rgb(0, 0, 0);\n"
@@ -242,39 +204,36 @@ class Ui_MainWindow(object):
 "font-weight: 400;\n"
 "margin-left: 10px;\n"
 "")
-        self.ancho_num.setMinimum(0)
-        self.ancho_num.setMaximum(999)
-        self.ancho_num.setObjectName("ancho_num")
-        self.longitud_num = QtWidgets.QSpinBox(self.frame_3)
-        self.longitud_num.setGeometry(QtCore.QRect(20, 160, 121, 25))
-        self.longitud_num.setStyleSheet("background-color: #fff;\n"
-"border-radius: 3px;\n"
-"padding: 4 5px;\n"
-"color: rgb(0, 0, 0);\n"
-"font-family:Roboto;\n"
-"border: none;\n"
-"font-size:13px;\n"
-"font-weight: 400;\n"
-"margin-left: 10px;\n"
+        self.comboBox.setObjectName("comboBox")
+        self.label_pasillos_3 = QtWidgets.QLabel(self.frame_3)
+        self.label_pasillos_3.setGeometry(QtCore.QRect(500, 10, 131, 27))
+        font = QtGui.QFont()
+        font.setFamily("Roboto")
+        font.setPointSize(-1)
+        self.label_pasillos_3.setFont(font)
+        self.label_pasillos_3.setStyleSheet("font-family: Roboto;\n"
+"font-size: 14px;\n"
+"margin-top:10px;\n"
+"margin-left:10px\n"
+"\n"
 "")
-        self.longitud_num.setMinimum(0)
-        self.longitud_num.setMaximum(999)
-        self.longitud_num.setObjectName("longitud_num")
-        self.alto_num = QtWidgets.QSpinBox(self.frame_3)
-        self.alto_num.setGeometry(QtCore.QRect(20, 220, 121, 25))
-        self.alto_num.setStyleSheet("background-color: #fff;\n"
-"border-radius: 3px;\n"
-"padding: 4 5px;\n"
-"color: rgb(0, 0, 0);\n"
-"font-family:Roboto;\n"
-"border: none;\n"
-"font-size:13px;\n"
-"font-weight: 400;\n"
-"margin-left: 10px;\n"
-"")
-        self.alto_num.setMinimum(0)
-        self.alto_num.setMaximum(999)
-        self.alto_num.setObjectName("alto_num")
+        self.label_pasillos_3.setObjectName("label_pasillos_3")
+        self.radioButton = QtWidgets.QRadioButton(self.frame_3)
+        self.radioButton.setGeometry(QtCore.QRect(510, 100, 82, 17))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.radioButton.setFont(font)
+        self.radioButton.setIconSize(QtCore.QSize(25, 24))
+        self.radioButton.setCheckable(True)
+        self.radioButton.setChecked(False)
+        self.radioButton.setObjectName("radioButton")
+        self.radioButton_2 = QtWidgets.QRadioButton(self.frame_3)
+        self.radioButton_2.setGeometry(QtCore.QRect(580, 100, 82, 17))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.radioButton_2.setFont(font)
+        self.radioButton_2.setAutoExclusive(False)
+        self.radioButton_2.setObjectName("radioButton_2")
         self.verticalLayout.addWidget(self.frame_2)
         MainWindow.setCentralWidget(self.centralwidget)
 
@@ -289,10 +248,10 @@ class Ui_MainWindow(object):
         self.label_egr_ing_2.setText(_translate("MainWindow", "Identifcador"))
         self.label_pasillos.setText(_translate("MainWindow", "Pasilllos"))
         self.label_pasillos_2.setText(_translate("MainWindow", "Segmentos"))
-        self.label_egr_ing_3.setText(_translate("MainWindow", "Longitud"))
-        self.label_egr_ing_4.setText(_translate("MainWindow", "Ancho"))
-        self.label_egr_ing_5.setText(_translate("MainWindow", "Alto"))
-from Interfaces.main import img_oficiales_rc
+        self.label_pasillos_3.setText(_translate("MainWindow", "Posición"))
+        self.radioButton.setText(_translate("MainWindow", "Entrada"))
+        self.radioButton_2.setText(_translate("MainWindow", "Salida"))
+import img_rc
 
 
 if __name__ == "__main__":

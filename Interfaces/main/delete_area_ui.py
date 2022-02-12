@@ -93,7 +93,7 @@ class Ui_MainWindow(object):
         MainWindow.setWindowTitle(_translate("MainWindow", "Eliminar Área"))
         self.modificar_btn.setText(_translate("MainWindow", "Eliminar"))
         self.label_Area.setText(_translate("MainWindow", "Elegir Área"))
-from Interfaces.main import img_oficiales_rc
+from Interfaces.main import img_rc
 
 
 if __name__ == "__main__":

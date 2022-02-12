@@ -446,7 +446,6 @@ class Ui_MainWindow(object):
         self.ubicacion_label.setText(_translate("MainWindow", "Ubicación"))
         self.modificarprod_btn.setText(_translate("MainWindow", "Modificar Producto"))
         self.eliminarprod_btn.setText(_translate("MainWindow", "Eliminar Producto"))
-from Interfaces.main import img_oficiales_rc
 
 if __name__ == "__main__":
     import sys

@@ -367,7 +367,7 @@ class Ui_MainWindow(object):
         self.label_nivel.setText(_translate("MainWindow", "Nivel"))
         self.label_largo.setText(_translate("MainWindow", "Largo"))
         self.label_limite.setText(_translate("MainWindow", "Limite"))
-from Interfaces.main import img_oficiales_rc
+from Interfaces.main import img_rc
 
 
 if __name__ == "__main__":

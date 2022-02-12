@@ -240,7 +240,7 @@ class Ui_MainWindow(object):
         self.crearprod_btn.setText(_translate("MainWindow", "Confirmar"))
         self.label_cantidad.setText(_translate("MainWindow", "Cantidad"))
         self.label_fecha_2.setText(_translate("MainWindow", "Fecha de Vencimiento"))
-from Interfaces.main import img_oficiales_rc
+from Interfaces.main import img_rc
 
 
 if __name__ == "__main__":

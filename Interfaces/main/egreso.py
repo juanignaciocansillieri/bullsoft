@@ -205,7 +205,7 @@ class Ui_MainWindow(object):
         self.crear_egreso.setText(_translate("MainWindow", "Confirmar"))
         self.label_cantidad_2.setText(_translate("MainWindow", "Cantidad"))
         self.label_codigo_producto_3.setText(_translate("MainWindow", "Motivo"))
-from Interfaces.main import img_oficiales_rc
+from Interfaces.main import img_rc
 
 
 if __name__ == "__main__":
