@@ -6,9 +6,10 @@ from DB import conexion as c
 
 class Area:
 
-    def __init__(self, nombre, identificador, pasillos, segmentos, longitud, ancho, alto):
+    def __init__(self, nombre, identificador,posicion, pasillos, segmentos, longitud, ancho, alto):
         self.nombre = nombre
         self.identificador = identificador
+        self.posicion=posicion
         self.pasillos = pasillos
         self.segmentos = segmentos
         self.longitud = longitud
@@ -22,7 +23,7 @@ class Area:
         a = c.start_connection()
         cursor = a.cursor()
         try:
-            query = "INSERT INTO area(nombre,identificador,pasillos,segmentos,longitud,ancho,alto,disponibilidad) " \
+            query = "INSERT INTO area(nombre,identificador,posicion,pasillos,segmentos,longitud,ancho,alto,disponibilidad) " \
                     "VALUES (%s,%s,%s,%s,%s,%s,%s,%s) "
             values = (
             self.nombre, self.identificador, self.pasillos, self.segmentos, self.disponibilidad, self.longitud,
@@ -34,7 +35,7 @@ class Area:
             print("Hubo un error:", err)
         c.close_connection(a)
 
-    def modificar_area(nombre, iden, pasillos, segmentos, longitud, ancho, alto):
+    def modificar_area(nombre, iden , posicion, pasillos, segmentos, longitud, ancho, alto):
         a = c.start_connection()
         cursor = a.cursor()
         query = "SELECT idarea FROM area WHERE nombre=%s"
@@ -44,12 +45,20 @@ class Area:
         b = cursor.fetchall()
         ida = str(b[0][0])
         try:
+            query = "UPDATE matrizarea SET area=%s WHERE codigo=%s"
+            values = (nombre, posicion)
+            cursor.execute(query, values)
+            a.commit()
             query = "UPDATE area SET nombre=%s WHERE idarea=%s"
             values = (nombre, ida)
             cursor.execute(query, values)
             a.commit()
             query = "UPDATE area SET identificador=%s WHERE idarea=%s"
             values = (iden, ida)
+            cursor.execute(query, values)
+            a.commit()
+            query = "UPDATE area SET posicion=%s WHERE idarea=%s"
+            values = (posicion, ida)
             cursor.execute(query, values)
             a.commit()
             query = "UPDATE area SET pasillos=%s WHERE idarea=%s"
@@ -91,18 +100,6 @@ class Area:
             print("Hubo un error:", err)
         c.close_connection(a)
 
-    @staticmethod
-    def contar_filas():
-        a = c.start_connection()
-        cursor = a.cursor()
-        query = "SELECT COUNT(*) FROM area"
-        cursor.execute(query)
-        a.commit()
-        b = cursor.fetchall()
-        b = str(b[0][0])
-        n = int(b)
-        c.close_connection(a)
-        return n
 
     @staticmethod
     def listar_area():
@@ -130,7 +127,7 @@ class Area:
     def mostrar_area(nombre):
         a = c.start_connection()
         cursor = a.cursor()
-        query = "SELECT nombre,identificador,pasillos,segmentos,longitud,ancho,alto FROM area WHERE nombre=%s"
+        query = "SELECT nombre,identificador,posicion,pasillos,segmentos,longitud,ancho,alto FROM area WHERE nombre=%s"
         cursor.execute(query, nombre)
         data = cursor.fetchall()
         a.commit()
@@ -199,3 +196,16 @@ def ver_iden(iden):
     else:
         c.close_connection(a)
         return 0
+
+
+def contar_filas():
+    a = c.start_connection()
+    cursor = a.cursor()
+    query = "SELECT COUNT(*) FROM area"
+    cursor.execute(query)
+    a.commit()
+    b = cursor.fetchall()
+    b = str(b[0][0])
+    n = int(b)
+    c.close_connection(a)
+    return n
