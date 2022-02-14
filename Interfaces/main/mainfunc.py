@@ -20,6 +20,7 @@ from Interfaces.main.nueva_area import Ui_MainWindow as Na
 from Interfaces.main.nueva_area_func import NewArea
 from Interfaces.main.nuevoProduct_func import ProductWindow
 from Interfaces.main.posiciones_alojamiento import PosicionAlojamiento as Pa
+from CLASES import matriz as mz
 
 defaultImg = ""
 codigoViejo = ""
@@ -503,13 +504,16 @@ class Modern(QMainWindow):
             table_row += 1
 
 
+
     # CREAR DEPÓSITO
     def crear_deposito(self):
 
         ancho_area = self.ui.spinBox_anchoarea.value()
         largo_area = self.ui.spinBox_largoarea.value()
+        mz.alta_datos_matriz(ancho_area,largo_area)
         for x in range(largo_area):
             for y in range(ancho_area):
+                mz.crear_matriz_areas(x+1,y+1)
                 frame = QtWidgets.QFrame(self.ui.frame_3)
                 frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
                 frame.setFrameShadow(QtWidgets.QFrame.Raised)
