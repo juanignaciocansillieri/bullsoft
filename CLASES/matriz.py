@@ -28,3 +28,18 @@ def alta_datos_matriz(ancho,largo):
         print("Hubo un error:", err)
     c.close_connection(a)
 
+def importar_datos_matriz():
+    a = c.start_connection()
+    cursor = a.cursor()
+    try:
+        query = "SELECT filas, columnas FROM datosmatrizarea"
+        cursor.execute(query)
+        data = cursor.fetchall()
+        a.commit()
+        print("se importaron datos de la matriz correctamente")
+        return data
+    except pymysql.err.OperationalError as err:
+        print("Hubo un error:", err)
+    c.close_connection(a)
+
+
