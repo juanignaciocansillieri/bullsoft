@@ -261,7 +261,7 @@ def controlador(con, tabla, columna):
     close_connection(a)
 
 
-def verificar_areas():
+def verificar_deposito():
     a = first_connection()
     cursor = a.cursor()
     try:
