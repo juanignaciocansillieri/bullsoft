@@ -24,10 +24,10 @@ class Area:
         cursor = a.cursor()
         try:
             query = "INSERT INTO area(nombre,identificador,posicion,pasillos,segmentos,longitud,ancho,alto,disponibilidad) " \
-                    "VALUES (%s,%s,%s,%s,%s,%s,%s,%s) "
+                    "VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s) "
             values = (
             self.nombre, self.identificador, self.pasillos, self.segmentos, self.disponibilidad, self.longitud,
-            self.ancho, self.alto)
+            self.ancho, self.alto,self.disponibilidad)
             cursor.execute(query, values)
             a.commit()
             print("se dio alta al area correctamente")

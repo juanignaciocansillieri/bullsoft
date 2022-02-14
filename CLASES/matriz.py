@@ -10,7 +10,6 @@ import numpy as np
 def crear_matriz_areas(x,y):
     codigo=str(str(x)+"x"+str(y))
     ar.Area(codigo,codigo,codigo,0,0,0,0,0)
-    self.alta_matriz_area(codigo,x,y)
     print(x,y)
     print("se dio de alta a la matriz correctamente")
         
