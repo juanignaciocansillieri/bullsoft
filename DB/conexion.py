@@ -167,8 +167,8 @@ def crear_tabla():  # crea una tabla (al iniciar por primera vez el programa se 
     longitud VARCHAR(20) NOT NULL,
     ancho VARCHAR(20) NOT NULL,
     alto VARCHAR(20) NOT NULL,
-    entrada BINARY(1) NOT NULL,
-    salida BINARY(1) NOT NULL,
+    entrada BINARY(1) ,
+    salida BINARY(1),
     disponibilidad VARCHAR(5) NOT NULL
     );"""
 
