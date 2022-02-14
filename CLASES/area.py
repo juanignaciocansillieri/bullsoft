@@ -6,7 +6,7 @@ from DB import conexion as c
 
 class Area:
 
-    def __init__(self, nombre, identificador,posicion, pasillos, segmentos, longitud, ancho, alto):
+    def __init__(self, nombre, identificador,posicion, pasillos, segmentos, longitud, ancho, alto,entrada,salida):
         self.nombre = nombre
         self.identificador = identificador
         self.posicion=posicion
@@ -15,6 +15,8 @@ class Area:
         self.longitud = longitud
         self.ancho = ancho
         self.alto = alto
+        self.entrada=entrada
+        self.salida=salida
         self.disponibilidad = 0
         print("se creo area correctamente")
         self.alta_area()
@@ -23,11 +25,8 @@ class Area:
         a = c.start_connection()
         cursor = a.cursor()
         try:
-            query = "INSERT INTO area(nombre,identificador,posicion,pasillos,segmentos,longitud,ancho,alto,disponibilidad) " \
-                    "VALUES (%s,%s,%s,%s,%s,%s,%s,%s) "
-            values = (
-            self.nombre, self.identificador, self.pasillos, self.segmentos, self.disponibilidad, self.longitud,
-            self.ancho, self.alto)
+            query = "INSERT INTO area(nombre,identificador,posicion,pasillos,segmentos,longitud,ancho,alto,disponibilidad) VALUES (%s,%s,%s,%s,%s,%s,%s,%s) "
+            values = (self.nombre, self.identificador, self.pasillos, self.segmentos, self.disponibilidad, self.longitud,self.ancho, self.alto)
             cursor.execute(query, values)
             a.commit()
             print("se dio alta al area correctamente")
@@ -38,17 +37,17 @@ class Area:
     def modificar_area(nombre, iden , posicion, pasillos, segmentos, longitud, ancho, alto):
         a = c.start_connection()
         cursor = a.cursor()
-        query = "SELECT idarea FROM area WHERE nombre=%s"
-        values = nombre
+        query = "SELECT idarea FROM area WHERE posicion=%s"
+        values = posicion
         cursor.execute(query, values)
         a.commit()
         b = cursor.fetchall()
         ida = str(b[0][0])
         try:
-            query = "UPDATE matrizarea SET area=%s WHERE codigo=%s"
-            values = (nombre, posicion)
-            cursor.execute(query, values)
-            a.commit()
+            #query = "UPDATE matrizarea SET area=%s WHERE codigo=%s"
+            #values = (nombre, posicion)
+            #cursor.execute(query, values)
+            #a.commit()
             query = "UPDATE area SET nombre=%s WHERE idarea=%s"
             values = (nombre, ida)
             cursor.execute(query, values)
