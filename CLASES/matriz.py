@@ -3,6 +3,8 @@ from typing import NoReturn
 import pymysql
 import os
 from DB import conexion as c
+from CLASES import area as ar
+
 import numpy as np
 
 class matriz:
@@ -16,7 +18,7 @@ class matriz:
         print("se creo matriz correctamente")
         
 
-    def formar_matriz(self): #esta se usa cuantas veces se requiera formar la matriz
+    def formar_matriz_3d(self): #esta se usa cuantas veces se requiera formar la matriz
         self.importar_datos_matriz()
         mz=np.zeros((self.filas,self.columnas,self.altura)) #acá creo la matriz
         i,j,k = 0,0,0
@@ -42,7 +44,7 @@ class matriz:
         print("se formo la matriz correctamente")
         return mz
 
-    def crear_matriz(self): #IMPORTANTE ejecutar una sola vez
+    def crear_matriz_3d(self): #IMPORTANTE ejecutar una sola vez
         mz=np.zeros((self.filas,self.columnas,self.altura)) #acá creo la matriz
         i,j,k = 0,0,0
         while i<self.filas:
@@ -51,12 +53,51 @@ class matriz:
                     codigo=str(str(i)+str(j)+str(k))
                     self.alta_matriz(codigo,i,j,k)
                     print(i,j,k)
-                    k=k+1  
+                    k=k+1
                 j=j+1
                 k=0
             i=i+1
             j=0
-        
+        print("se dio de alta a la matriz correctamente")
+        return mz
+
+    def formar_matriz_areas(self): #esta se usa cuantas veces se requiera formar la matriz
+        self.importar_datos_matriz()
+        mz=np.zeros((self.filas,self.columnas)) #acá creo la matriz
+        i,j = 0,0
+        while i<self.filas: #acá le doy altura
+            while j<self.columnas:
+                    codigo=str(str(i)+str(j))
+                    a=c.start_connection()
+                    cursor=a.cursor()
+                    try:
+                        query = "UPDATE matrizarea set codigo=%s WHERE fila=%s and columna=%s and altura=%s"
+                        values = (codigo,i,j)
+                        cursor.execute(query, values)
+                        a.commit()
+                    except pymysql.err.OperationalError as err:
+                        print("Hubo un error:", err)
+
+                    c.close_connection(a)
+                    j=j+1
+            i=i+1
+            j=0
+        print("se formo la matriz correctamente")
+        return mz
+
+    def crear_matriz_areas(self): #IMPORTANTE ejecutar una sola vez
+        mz=np.zeros((self.filas,self.columnas)) #acá creo la matriz
+        i,j = 0,0
+        while i<self.filas:
+            while j<self.columnas:
+                    codigo=str(str(i)+"*"+str(j))
+
+                    ar.Area(codigo,codigo,codigo,0,0,0,0,0)
+                    self.alta_matriz_area(codigo,i,j)
+                    print(i,j)
+                    j=j+1
+            i=i+1
+            j=0
         print("se dio de alta a la matriz correctamente")
         return mz
         
@@ -75,12 +116,12 @@ class matriz:
             print("Hubo un error:", err)
         c.close_connection(a)
 
-    def alta_matriz(self,codigo,fila,columna,altura):
+    def alta_matriz_area(self,codigo,fila,columna):
         a=c.start_connection()
         cursor=a.cursor()
         try:
-            query = "INSERT INTO matrizarea(codigo,area,fila,columna,altura) VALUES (%s,%s,%s,%s,%s)"
-            values = (codigo,codigo,fila,columna,altura)
+            query = "INSERT INTO matrizarea(codigo,area,fila,columna) VALUES (%s,%s,%s,%s)"
+            values = (codigo,codigo,fila,columna)
             cursor.execute(query, values)
             a.commit()
             print("se dio alta a la posicion en la matriz correctamente")
@@ -126,30 +167,6 @@ class matriz:
             print("Hubo un error:", err)
         c.close_connection(a)
 
-    def importar_datos_area(area):
-        a=c.start_connection()
-        cursor=a.cursor()
-        try:
-            query = "SELECT fila FROM matrizarea WHERE area=%s"
-            cursor.execute(query,area)
-            a.commit()
-            b=cursor.fetchall()
-            self.filas=int(b[0][0])
-            query = "SELECT columna FROM matrizarea WHERE area=%s"
-            cursor.execute(query,area)
-            a.commit()
-            b=cursor.fetchall()
-            self.columnas=int(b[0][0])
-            query = "SELECT altura FROM matrizarea WHERE area=%s"
-            cursor.execute(query,area)
-            a.commit()
-            b=cursor.fetchall()
-            self.altura=int(b[0][0])
-            self.mz=self.formar_matriz()
-            print("se importo dato de area correctamente")
-        except pymysql.err.OperationalError as err:
-            print("Hubo un error:", err)
-        c.close_connection(a)
 
     def modificar_matriz(self,filas,columnas,altura):
         if self.filas<filas or self.columnas<columnas or self.altura<altura:
@@ -303,10 +320,47 @@ class matriz:
             print("Hubo un error:", err)
         c.close_connection(a)
 
+def importar_datos_matriz_area(area):
+        a=c.start_connection()
+        cursor=a.cursor()
+        try:
+            query = "SELECT fila FROM datosmatrizarea"
+            cursor.execute(query,area)
+            a.commit()
+            b=cursor.fetchall()
+            filas=int(b[0][0])
+            query = "SELECT columna FROM datosmatrizarea"
+            cursor.execute(query,area)
+            a.commit()
+            b=cursor.fetchall()
+            columnas=int(b[0][0])
+            return [filas,columnas]
+            print("se importo dato de area correctamente")
+        except pymysql.err.OperationalError as err:
+            print("Hubo un error:", err)
+        c.close_connection(a)
 
+def recorrido_matriz_area():
+        a=c.start_connection()
+        cursor=a.cursor()
+        i,j = 0,0
+        fc=importar_datos_matriz_area()
+        filas=fc[0]
+        columnas=[1]
+        try:
 
+            while i<filas:
+                while j<columnas:
 
-
+                        print(i,j)
+                        j=j+1
+                i=i+1
+                j=0
+            print("se recorrio la matriz correctamente")
+            return mz
+        except pymysql.err.OperationalError as err:
+            print("Hubo un error:", err)
+        c.close_connection(a)
 
 
 

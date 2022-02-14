@@ -130,15 +130,13 @@ def crear_tabla():  # crea una tabla (al iniciar por primera vez el programa se 
     codigo VARCHAR(20) NOT NULL,
     area VARCHAR(20) NOT NULL,
     fila VARCHAR(20) NOT NULL,
-    columna VARCHAR(20) NOT NULL,
-    altura VARCHAR(20) NOT NULL
+    columna VARCHAR(20) NOT NULL
     );"""
 
     q14 = """CREATE TABLE IF NOT EXISTS datosmatrizarea (
-    iddatosmatriz INT UNSIGNED AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    iddatosmatrizarea INT UNSIGNED AUTO_INCREMENT PRIMARY KEY NOT NULL,
     filas INT NOT NULL,
-    columnas INT NOT NULL,
-    altura INT NOT NULL
+    columnas INT NOT NULL
     );"""
 
     q9 = """ CREATE TABLE IF NOT EXISTS matriz (
@@ -163,11 +161,14 @@ def crear_tabla():  # crea una tabla (al iniciar por primera vez el programa se 
     idarea INT UNSIGNED AUTO_INCREMENT PRIMARY KEY NOT NULL,
     nombre VARCHAR(20) NOT NULL,
     identificador VARCHAR(20) NOT NULL,
+    posicion VARCHAR(20) NOT NULL,
     pasillos VARCHAR(20) NOT NULL,
     segmentos VARCHAR(20) NOT NULL,
     longitud VARCHAR(20) NOT NULL,
     ancho VARCHAR(20) NOT NULL,
     alto VARCHAR(20) NOT NULL,
+    entrada BINARY(1) NOT NULL,
+    salida BINARY(1) NOT NULL,
     disponibilidad VARCHAR(5) NOT NULL
     );"""
 
@@ -207,8 +208,8 @@ def crear_tabla():  # crea una tabla (al iniciar por primera vez el programa se 
         # cur.execute(q6)
         cur.execute(q7)
         cur.execute(q8)
-        #cur.execute(q9)
-        #cur.execute(q10)
+        # cur.execute(q9)
+        # cur.execute(q10)
         cur.execute(q11)
         cur.execute(q12)
         cur.execute(q13)
@@ -257,4 +258,24 @@ def controlador(con, tabla, columna):
 
     except pymysql.err.OperationalError as err:
         print("Ha ocurrido un error", err)
+    close_connection(a)
+
+
+def verificar_areas():
+    a = first_connection()
+    cursor = a.cursor()
+    try:
+        query = "SELECT * FROM area "
+        cursor.execute(query)
+        a.commit()
+        b = cursor.fetchone()
+        control1 = str(b)
+        if control1 == "None":  # and
+            print("no se encuentra")
+            return 0
+        else:
+            return 1
+    except pymysql.err.OperationalError as err:
+        print("Ha ocurrido un error", err)
+
     close_connection(a)
