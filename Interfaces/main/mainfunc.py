@@ -7,7 +7,7 @@ from PyQt5 import QtWidgets
 from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
 from CLASES import usuarios as u, productos as p, area as ar, movimientos as m, lotes as l, alojamiento as al
-from DB import loginDB
+from DB import loginDB,conexion as conex
 from Interfaces.main.bm_producto import Ui_MainWindow as Ui_Bm
 from Interfaces.main.bm_user_ui import Ui_MainWindow as Bmu
 from Interfaces.main.create_user_func import UsuarioWindow
@@ -118,7 +118,8 @@ class Modern(QMainWindow):
 
         #self.ui.deposito_btn.clicked.connect(self.mostra_areas)
         ## Abrir Pagina Depositos ##
-        self.ui.deposito_btn.clicked.connect(lambda: self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_deposito))
+
+        self.ui.deposito_btn.clicked.connect(self.verificar_deposito_creado)
         self.ui.deposito_btn.clicked.connect(lambda: self.ui.stackedWidget_3.setCurrentWidget(self.ui.deposito_subpage))
         self.ui.newArea_btn.clicked.connect(self.mostrar_new_area)
         self.ui.label_12.mousePressEvent = self.click_a
@@ -131,6 +132,14 @@ class Modern(QMainWindow):
         self.ui.btn_modificarArea.clicked.connect(lambda: self.modificar_area(globalArea))
         self.ui.newArea_btn_2.clicked.connect(self.mostrar_borrar_area)
 
+    def verificar_deposito_creado(self):
+        verificar_deposito = conex.verificar_deposito()
+        if (verificar_deposito == 0):
+            self.ui.deposito_btn.clicked.connect(lambda: self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_area))
+            print("dep", verificar_deposito)
+        else:
+            print("dep", verificar_deposito)
+            self.ui.deposito_btn.clicked.connect(lambda: self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_deposito))
     def click_a(self,event):
         self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_deposito)
 
@@ -292,7 +301,6 @@ class Modern(QMainWindow):
             productId = lista_productos[0]
 
     def agregar_area_creada(self):
-        print("pase por aca")
         areas = ar.Area.listar_area()
         n = ar.Area.contar_filas()
         child = self.ui.verticalLayout_7.count()
@@ -327,7 +335,6 @@ class Modern(QMainWindow):
             font.setWeight(75)
             self.btn1.setFont(font)
             self.btn1.released.connect(self.button_released)
-            print("pase por aca")
 
     ## Agregar botones dinamicamente
     def agregar_btn_areas(self):
@@ -451,7 +458,6 @@ class Modern(QMainWindow):
             i += 1
     """
     def button_released(self):
-        print('USANDO RELEASED')
         global globalArea
         self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_areas)
         sending_button = self.sender()
@@ -470,7 +476,6 @@ class Modern(QMainWindow):
         self.newPosicionAlojamiento.show()
 
     def listar_areas(self, btn):
-        print("LLEGUÉ A AREAS")
         global globalArea
         area = btn
         self.listar_posiciones_de_alojamiento()
@@ -479,13 +484,10 @@ class Modern(QMainWindow):
     ##### LISTAR POSICIONES DE ALOJAMIENTO ####
 
     def listar_posiciones_de_alojamiento(self, btn):
-        print("LLEGUÉ A ALOJAMIENTO")
         global globalArea
         area = btn
         alojamientos = al.Alojamiento.listar_posicion_alojamiento(globalArea) #Paso como parámetro Global Area
 
-        #print("llegué a posiciones de alojamiento 2")
-        print(alojamientos)
         n = al.Alojamiento.contar_filas()
         self.ui.tableWidget_areas.clear()
         self.ui.tableWidget_areas.setRowCount(n)

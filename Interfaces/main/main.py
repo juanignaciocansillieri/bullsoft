@@ -15,6 +15,8 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(1151, 688)
+        MainWindow.setMinimumSize(QtCore.QSize(1151, 688))
+        MainWindow.setMaximumSize(QtCore.QSize(1151, 688))
         font = QtGui.QFont()
         font.setKerning(False)
         MainWindow.setFont(font)
@@ -257,7 +259,7 @@ class Ui_MainWindow(object):
         self.products_btn_stock_7.setIconSize(QtCore.QSize(30, 30))
         self.products_btn_stock_7.setObjectName("products_btn_stock_7")
         self.label_9 = QtWidgets.QLabel(self.product_subpage)
-        self.label_9.setGeometry(QtCore.QRect(20, 20, 128, 40))
+        self.label_9.setGeometry(QtCore.QRect(40, 20, 128, 40))
         self.label_9.setMinimumSize(QtCore.QSize(128, 0))
         self.label_9.setMaximumSize(QtCore.QSize(120, 40))
         font = QtGui.QFont()
@@ -679,7 +681,7 @@ class Ui_MainWindow(object):
         self.frame_22.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_22.setObjectName("frame_22")
         self.tableWidget_movimientos_2 = QtWidgets.QTableWidget(self.frame_22)
-        self.tableWidget_movimientos_2.setGeometry(QtCore.QRect(40, 50, 921, 371))
+        self.tableWidget_movimientos_2.setGeometry(QtCore.QRect(40, 60, 831, 371))
         self.tableWidget_movimientos_2.viewport().setProperty("cursor", QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.tableWidget_movimientos_2.setStyleSheet("QTableWidget{\n"
 "font-size: 11pt;\n"
@@ -2057,26 +2059,303 @@ class Ui_MainWindow(object):
         self.verticalLayout_34.addWidget(self.bottom_mov_3)
         self.verticalLayout_4.addWidget(self.container_mov_3)
         self.stackedWidget_main.addWidget(self.page_lotes)
-        self.page_inicio = QtWidgets.QWidget()
-        self.page_inicio.setObjectName("page_inicio")
-        self.verticalLayout_14 = QtWidgets.QVBoxLayout(self.page_inicio)
+        self.page_egreso = QtWidgets.QWidget()
+        self.page_egreso.setObjectName("page_egreso")
+        self.verticalLayout_14 = QtWidgets.QVBoxLayout(self.page_egreso)
         self.verticalLayout_14.setContentsMargins(0, 0, 0, 0)
         self.verticalLayout_14.setSpacing(0)
         self.verticalLayout_14.setObjectName("verticalLayout_14")
-        self.frame = QtWidgets.QFrame(self.page_inicio)
+        self.frame = QtWidgets.QFrame(self.page_egreso)
         self.frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame.setObjectName("frame")
+        self.label_15 = QtWidgets.QLabel(self.frame)
+        self.label_15.setGeometry(QtCore.QRect(350, 20, 128, 40))
+        self.label_15.setMinimumSize(QtCore.QSize(128, 0))
+        self.label_15.setMaximumSize(QtCore.QSize(120, 40))
+        font = QtGui.QFont()
+        font.setFamily("Roboto")
+        font.setPointSize(20)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_15.setFont(font)
+        self.label_15.setStyleSheet("color: #282830 ;\n"
+"border: none")
+        self.label_15.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_15.setObjectName("label_15")
+        self.label_egr_ing = QtWidgets.QLabel(self.frame)
+        self.label_egr_ing.setGeometry(QtCore.QRect(40, 80, 131, 27))
+        font = QtGui.QFont()
+        font.setFamily("Roboto")
+        font.setPointSize(-1)
+        self.label_egr_ing.setFont(font)
+        self.label_egr_ing.setStyleSheet("font-family: Roboto;\n"
+"font-size: 14px;\n"
+"margin-top:10px;\n"
+"margin-left:10px\n"
+"\n"
+"")
+        self.label_egr_ing.setObjectName("label_egr_ing")
+        self.input_codigoProdEgreso = QtWidgets.QLineEdit(self.frame)
+        self.input_codigoProdEgreso.setGeometry(QtCore.QRect(40, 110, 121, 25))
+        self.input_codigoProdEgreso.setMinimumSize(QtCore.QSize(0, 0))
+        self.input_codigoProdEgreso.setMaximumSize(QtCore.QSize(16777215, 25))
+        self.input_codigoProdEgreso.setStyleSheet("QLineEdit{\n"
+"background-color: #fff;\n"
+"border: 0.5px solid #c1c1c1;\n"
+"border-radius: 3px;\n"
+"padding: 4 5px;\n"
+"color: rgb(0, 0, 0);\n"
+"font-family:Roboto;\n"
+"font-size:13px;\n"
+"font-weight: 400;\n"
+"margin-left: 10px;\n"
+"\n"
+"}\n"
+"")
+        self.input_codigoProdEgreso.setText("")
+        self.input_codigoProdEgreso.setPlaceholderText("")
+        self.input_codigoProdEgreso.setObjectName("input_codigoProdEgreso")
+        self.num_cantidadEgreso = QtWidgets.QSpinBox(self.frame)
+        self.num_cantidadEgreso.setGeometry(QtCore.QRect(200, 110, 121, 25))
+        self.num_cantidadEgreso.setStyleSheet("background-color: #fff;\n"
+"border-radius: 3px;\n"
+"padding: 4 5px;\n"
+"color: rgb(0, 0, 0);\n"
+"font-family:Roboto;\n"
+"border: none;\n"
+"font-size:13px;\n"
+"font-weight: 400;\n"
+"margin-left: 10px;\n"
+"")
+        self.num_cantidadEgreso.setMinimum(0)
+        self.num_cantidadEgreso.setMaximum(999)
+        self.num_cantidadEgreso.setObjectName("num_cantidadEgreso")
+        self.label_pasillos_2 = QtWidgets.QLabel(self.frame)
+        self.label_pasillos_2.setGeometry(QtCore.QRect(200, 80, 131, 27))
+        font = QtGui.QFont()
+        font.setFamily("Roboto")
+        font.setPointSize(-1)
+        self.label_pasillos_2.setFont(font)
+        self.label_pasillos_2.setStyleSheet("font-family: Roboto;\n"
+"font-size: 14px;\n"
+"margin-top:10px;\n"
+"margin-left:10px\n"
+"\n"
+"")
+        self.label_pasillos_2.setObjectName("label_pasillos_2")
+        self.btn_agregarProdEgreso = QtWidgets.QPushButton(self.frame)
+        self.btn_agregarProdEgreso.setGeometry(QtCore.QRect(340, 110, 121, 26))
+        font = QtGui.QFont()
+        font.setFamily("Roboto")
+        font.setPointSize(-1)
+        self.btn_agregarProdEgreso.setFont(font)
+        self.btn_agregarProdEgreso.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.btn_agregarProdEgreso.setStyleSheet("QPushButton{\n"
+"background-color: rgba(71, 71, 103);\n"
+"color: #fff;\n"
+"border-radius:5px;\n"
+"font-family:Roboto;\n"
+"font-size: 13px\n"
+"\n"
+"}\n"
+"QPushButton:hover{\n"
+"background-color: rgba(71, 71, 103,180);\n"
+"}")
+        self.btn_agregarProdEgreso.setObjectName("btn_agregarProdEgreso")
+        self.btn_actualizarProdEgreso = QtWidgets.QPushButton(self.frame)
+        self.btn_actualizarProdEgreso.setGeometry(QtCore.QRect(470, 190, 31, 21))
+        self.btn_actualizarProdEgreso.setMinimumSize(QtCore.QSize(0, 21))
+        self.btn_actualizarProdEgreso.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.btn_actualizarProdEgreso.setText("")
+        self.btn_actualizarProdEgreso.setIcon(icon7)
+        self.btn_actualizarProdEgreso.setIconSize(QtCore.QSize(33, 16))
+        self.btn_actualizarProdEgreso.setObjectName("btn_actualizarProdEgreso")
+        self.frame_31 = QtWidgets.QFrame(self.frame)
+        self.frame_31.setGeometry(QtCore.QRect(49, 180, 411, 41))
+        self.frame_31.setMinimumSize(QtCore.QSize(56, 41))
+        self.frame_31.setStyleSheet("background-color: #f2f2f5;\n"
+"border-radius:15px;")
+        self.frame_31.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_31.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_31.setObjectName("frame_31")
+        self.label_51 = QtWidgets.QLabel(self.frame_31)
+        self.label_51.setGeometry(QtCore.QRect(20, 10, 47, 18))
+        font = QtGui.QFont()
+        font.setFamily("Roboto")
+        font.setPointSize(11)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_51.setFont(font)
+        self.label_51.setStyleSheet("background: none;\n"
+"color: #282830 ;\n"
+"")
+        self.label_51.setObjectName("label_51")
+        self.label_52 = QtWidgets.QLabel(self.frame_31)
+        self.label_52.setGeometry(QtCore.QRect(150, 10, 79, 18))
+        font = QtGui.QFont()
+        font.setFamily("Roboto")
+        font.setPointSize(11)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_52.setFont(font)
+        self.label_52.setStyleSheet("background: none;\n"
+"color: #282830 ;\n"
+"\n"
+"")
+        self.label_52.setObjectName("label_52")
+        self.label_56 = QtWidgets.QLabel(self.frame_31)
+        self.label_56.setGeometry(QtCore.QRect(310, 10, 61, 18))
+        font = QtGui.QFont()
+        font.setFamily("Roboto")
+        font.setPointSize(11)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_56.setFont(font)
+        self.label_56.setStyleSheet("background: none;\n"
+"color: #282830 ;\n"
+"\n"
+"")
+        self.label_56.setObjectName("label_56")
+        self.tableWidget_lotes_2 = QtWidgets.QTableWidget(self.frame_31)
+        self.tableWidget_lotes_2.setGeometry(QtCore.QRect(0, 30, 801, 351))
+        self.tableWidget_lotes_2.viewport().setProperty("cursor", QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.tableWidget_lotes_2.setStyleSheet("QTableWidget{\n"
+"font-size: 11pt;\n"
+"margin-top:15px;\n"
+"color: #000;\n"
+"font-family: Roboto;\n"
+"text-align:center;\n"
+"}\n"
+"QHeaderView::section {\n"
+"    background-color: #394353;\n"
+"    border-radius: 11px;\n"
+"    color:#fff;\n"
+"    font-size: 9pt;\n"
+"    font-family:Roboto;\n"
+"    border-left: 1px solid #394353;\n"
+"\n"
+"}\n"
+"\n"
+"QHeaderView::section:horizontal\n"
+"{\n"
+"    border-top: 1px solid #394353;\n"
+"\n"
+"}\n"
+"\n"
+"QHeaderView::section:vertical\n"
+"{\n"
+"\n"
+"    border-left: 1px solid #394353;\n"
+"}")
+        self.tableWidget_lotes_2.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers)
+        self.tableWidget_lotes_2.setShowGrid(False)
+        self.tableWidget_lotes_2.setObjectName("tableWidget_lotes_2")
+        self.tableWidget_lotes_2.setColumnCount(5)
+        self.tableWidget_lotes_2.setRowCount(0)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget_lotes_2.setHorizontalHeaderItem(0, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget_lotes_2.setHorizontalHeaderItem(1, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget_lotes_2.setHorizontalHeaderItem(2, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget_lotes_2.setHorizontalHeaderItem(3, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget_lotes_2.setHorizontalHeaderItem(4, item)
+        self.tableWidget_lotes_2.horizontalHeader().setVisible(False)
+        self.tableWidget_lotes_2.horizontalHeader().setCascadingSectionResizes(True)
+        self.tableWidget_lotes_2.horizontalHeader().setDefaultSectionSize(160)
+        self.tableWidget_lotes_2.horizontalHeader().setSortIndicatorShown(True)
+        self.tableWidget_lotes_2.horizontalHeader().setStretchLastSection(True)
+        self.tableWidget_lotes_2.verticalHeader().setVisible(False)
+        self.tableWidget_lotes_2.verticalHeader().setDefaultSectionSize(41)
+        self.tableWidget_egreso = QtWidgets.QTableWidget(self.frame)
+        self.tableWidget_egreso.setGeometry(QtCore.QRect(50, 240, 461, 351))
+        self.tableWidget_egreso.viewport().setProperty("cursor", QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.tableWidget_egreso.setStyleSheet("QTableWidget{\n"
+"font-size: 11pt;\n"
+"margin-top:15px;\n"
+"color: #000;\n"
+"font-family: Roboto;\n"
+"text-align:center;\n"
+"}\n"
+"QHeaderView::section {\n"
+"    background-color: #394353;\n"
+"    border-radius: 11px;\n"
+"    color:#fff;\n"
+"    font-size: 9pt;\n"
+"    font-family:Roboto;\n"
+"    border-left: 1px solid #394353;\n"
+"\n"
+"}\n"
+"\n"
+"QHeaderView::section:horizontal\n"
+"{\n"
+"    border-top: 1px solid #394353;\n"
+"\n"
+"}\n"
+"\n"
+"QHeaderView::section:vertical\n"
+"{\n"
+"\n"
+"    border-left: 1px solid #394353;\n"
+"}")
+        self.tableWidget_egreso.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers)
+        self.tableWidget_egreso.setShowGrid(False)
+        self.tableWidget_egreso.setObjectName("tableWidget_egreso")
+        self.tableWidget_egreso.setColumnCount(3)
+        self.tableWidget_egreso.setRowCount(0)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget_egreso.setHorizontalHeaderItem(0, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget_egreso.setHorizontalHeaderItem(1, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget_egreso.setHorizontalHeaderItem(2, item)
+        self.tableWidget_egreso.horizontalHeader().setVisible(False)
+        self.tableWidget_egreso.horizontalHeader().setCascadingSectionResizes(True)
+        self.tableWidget_egreso.horizontalHeader().setDefaultSectionSize(150)
+        self.tableWidget_egreso.horizontalHeader().setSortIndicatorShown(True)
+        self.tableWidget_egreso.horizontalHeader().setStretchLastSection(True)
+        self.tableWidget_egreso.verticalHeader().setVisible(False)
+        self.tableWidget_egreso.verticalHeader().setDefaultSectionSize(41)
+        self.lista_egreso = QtWidgets.QListWidget(self.frame)
+        self.lista_egreso.setGeometry(QtCore.QRect(560, 210, 361, 391))
+        font = QtGui.QFont()
+        font.setFamily("Roboto")
+        font.setPointSize(16)
+        self.lista_egreso.setFont(font)
+        self.lista_egreso.setStyleSheet("background-color: #f2f2f5;\n"
+"")
+        self.lista_egreso.setAutoScrollMargin(16)
+        self.lista_egreso.setEditTriggers(QtWidgets.QAbstractItemView.DoubleClicked)
+        self.lista_egreso.setBatchSize(100)
+        self.lista_egreso.setObjectName("lista_egreso")
+        self.label_16 = QtWidgets.QLabel(self.frame)
+        self.label_16.setGeometry(QtCore.QRect(680, 170, 128, 40))
+        self.label_16.setMinimumSize(QtCore.QSize(128, 0))
+        self.label_16.setMaximumSize(QtCore.QSize(120, 40))
+        font = QtGui.QFont()
+        font.setFamily("Roboto")
+        font.setPointSize(19)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_16.setFont(font)
+        self.label_16.setStyleSheet("color: #282830 ;\n"
+"border: none")
+        self.label_16.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_16.setObjectName("label_16")
         self.verticalLayout_14.addWidget(self.frame)
-        self.stackedWidget_main.addWidget(self.page_inicio)
+        self.stackedWidget_main.addWidget(self.page_egreso)
         self.verticalLayout_2.addWidget(self.stackedWidget_main)
         self.horizontalLayout.addWidget(self.righ_frame)
         self.verticalLayout.addWidget(self.main_frame)
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
-        self.stackedWidget_3.setCurrentIndex(1)
-        self.stackedWidget_main.setCurrentIndex(5)
+        self.stackedWidget_3.setCurrentIndex(0)
+        self.stackedWidget_main.setCurrentIndex(4)
+        self.lista_egreso.setCurrentRow(-1)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
@@ -2200,6 +2479,30 @@ class Ui_MainWindow(object):
         self.label_43.setText(_translate("MainWindow", "Lote"))
         self.label_45.setText(_translate("MainWindow", " Fecha de Vencimiento"))
         self.label_46.setText(_translate("MainWindow", "Cantidad"))
+        self.label_15.setText(_translate("MainWindow", "Egreso"))
+        self.label_egr_ing.setText(_translate("MainWindow", "Código"))
+        self.label_pasillos_2.setText(_translate("MainWindow", "Cantidad"))
+        self.btn_agregarProdEgreso.setText(_translate("MainWindow", "Agregar"))
+        self.label_51.setText(_translate("MainWindow", "Código"))
+        self.label_52.setText(_translate("MainWindow", "Descripción"))
+        self.label_56.setText(_translate("MainWindow", "Cantidad"))
+        item = self.tableWidget_lotes_2.horizontalHeaderItem(0)
+        item.setText(_translate("MainWindow", "New Column"))
+        item = self.tableWidget_lotes_2.horizontalHeaderItem(1)
+        item.setText(_translate("MainWindow", "New Column"))
+        item = self.tableWidget_lotes_2.horizontalHeaderItem(2)
+        item.setText(_translate("MainWindow", "New Column"))
+        item = self.tableWidget_lotes_2.horizontalHeaderItem(3)
+        item.setText(_translate("MainWindow", "New Column"))
+        item = self.tableWidget_lotes_2.horizontalHeaderItem(4)
+        item.setText(_translate("MainWindow", "New Column"))
+        item = self.tableWidget_egreso.horizontalHeaderItem(0)
+        item.setText(_translate("MainWindow", "New Column"))
+        item = self.tableWidget_egreso.horizontalHeaderItem(1)
+        item.setText(_translate("MainWindow", "New Column"))
+        item = self.tableWidget_egreso.horizontalHeaderItem(2)
+        item.setText(_translate("MainWindow", "New Column"))
+        self.label_16.setText(_translate("MainWindow", "Picking"))
 import img_rc
 
 

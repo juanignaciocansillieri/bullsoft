@@ -2,6 +2,7 @@ from PyQt5.QtWidgets import *
 
 from CLASES import area as a
 from Interfaces.main.nueva_area import Ui_MainWindow
+from CLASES import  matriz as mz
 
 
 class NewArea(QMainWindow):
@@ -37,6 +38,8 @@ class NewArea(QMainWindow):
 
 
     def posicion_cbox(self):
-        for x in range(3):
-            for y in range(3):
+        medidas = mz.importar_datos_matriz()
+        print("aa",medidas[0][1])
+        for x in range(medidas[0][0]):
+            for y in range(medidas[0][1]):
                 self.ui.comboBox.addItem('{}x{}'.format(x+1, y+1))
