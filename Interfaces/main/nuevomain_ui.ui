@@ -1159,7 +1159,7 @@ QPushButton:hover{
              </size>
             </property>
             <property name="currentIndex">
-             <number>4</number>
+             <number>6</number>
             </property>
             <widget class="QWidget" name="page_movimientos">
              <layout class="QVBoxLayout" name="verticalLayout_12">

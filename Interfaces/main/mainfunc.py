@@ -140,6 +140,7 @@ class Modern(QMainWindow):
         else:
             print("dep", verificar_deposito)
             self.ui.deposito_btn.clicked.connect(lambda: self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_deposito))
+            self.ui.tableWidget_egreso
     def click_a(self,event):
         self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_deposito)
 
