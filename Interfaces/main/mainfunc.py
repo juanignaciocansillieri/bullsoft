@@ -28,7 +28,8 @@ DNI_Viejo = ""
 DNI = ""
 globalArea = ""
 nombreNuevo = ""
-
+n_egreso=0
+tupla_egreso=()
 
 class Modern(QMainWindow):
 
@@ -67,7 +68,9 @@ class Modern(QMainWindow):
         self.ui.products_btn_movimiento.clicked.connect(
             lambda: self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_movimientos))
         self.ui.products_btn_movimiento.clicked.connect(self.listar_movimientos)
-        self.ui.new_egreso_btn.clicked.connect(self.mostrar_egreso)
+        self.ui.new_egreso_btn.clicked.connect(lambda: self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_egreso))
+        self.ui.btn_agregarProdEgreso.clicked.connect(self.guardar_egreso)
+        self.ui.btn_actualizarProdEgreso.clicked.connect(self.act_egreso)
         self.ui.new_ingreso_btn.clicked.connect(self.mostrar_ingreso)
         self.ui.btn_actualizarMov.clicked.connect(self.listar_movimientos)
         self.ui.pushButton_18.clicked.connect(self.buscar_movimiento)
@@ -196,6 +199,42 @@ class Modern(QMainWindow):
                 table_row, 4, QtWidgets.QTableWidgetItem(str(l.Lote.obtener_fecha(row[0]))))
 
             table_row += 1
+
+            #   MOVIMIENTO EGRESO
+
+    def guardar_egreso(self):
+        global  n_egreso
+        global tupla_egreso
+        codigo=self.ui.input_codigoProdEgreso.text()
+        cantidad=self.ui.num_cantidadEgreso.text()
+        desc=p.ver_desc(codigo)
+        t=(str(codigo),desc,str(cantidad))
+        tupla_egreso=tupla_egreso+t
+        print(tupla_egreso)
+        self.ui.input_codigoProdEgreso.setText("")
+        #self.ui.num_cantidadEgreso.
+        n_egreso=n_egreso+1
+
+    def act_egreso(self):
+        print("actualizar")
+        global tupla_egreso
+        table_row = 0
+        for row in tupla_egreso:
+            print(table_row)
+            print(tupla_egreso[0])
+            print(tupla_egreso[1])
+            print(tupla_egreso[2])
+            self.ui.tableWidget_egreso_2.setItem(
+                table_row, 0, QtWidgets.QTableWidgetItem(str(tupla_egreso[0])))
+            self.ui.tableWidget_egreso_2.setItem(
+                table_row, 1, QtWidgets.QTableWidgetItem(str(tupla_egreso[1])))
+            self.ui.tableWidget_egreso_2.setItem(
+                table_row, 2, QtWidgets.QTableWidgetItem(str(tupla_egreso[2])))
+            table_row += 1
+
+
+    def confirmar_egreso(self):
+        return 0
 
     ## Listar Movimientos en la tabla
     def listar_movimientos(self):
@@ -845,6 +884,9 @@ class BmUsuario(QMainWindow):
             img = Image.open(self.filename)
             img = img.resize(size)
             img.save('../main/img/{0}'.format(defaultImg))
+
+
+
 
 
 if __name__ == "__main__":

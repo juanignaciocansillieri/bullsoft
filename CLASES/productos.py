@@ -252,3 +252,17 @@ def ver_cod(codigo):
     else:
         c.close_connection(a)
         return 0
+
+def ver_desc(codigo):
+    a = c.start_connection()
+    cursor = a.cursor()
+    try:
+        """query = "SELECT descripcion FROM productos WHERE codigo=%s"
+        cursor.execute(query,codigo)
+        data = cursor.fetchall()
+        a.commit()
+        return data"""
+        return "prueba"
+    except pymysql.err.OperationalError as err:
+        print("Hubo un error:", err)
+    c.close_connection(a)
