@@ -2217,10 +2217,10 @@ class Ui_MainWindow(object):
 "\n"
 "")
         self.label_56.setObjectName("label_56")
-        self.tableWidget_lotes_2 = QtWidgets.QTableWidget(self.frame_31)
-        self.tableWidget_lotes_2.setGeometry(QtCore.QRect(0, 30, 801, 351))
-        self.tableWidget_lotes_2.viewport().setProperty("cursor", QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.tableWidget_lotes_2.setStyleSheet("QTableWidget{\n"
+        self.tableWidget_egreso_2 = QtWidgets.QTableWidget(self.frame_31)
+        self.tableWidget_egreso_2.setGeometry(QtCore.QRect(0, 30, 801, 351))
+        self.tableWidget_egreso_2.viewport().setProperty("cursor", QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.tableWidget_egreso_2.setStyleSheet("QTableWidget{\n"
 "font-size: 11pt;\n"
 "margin-top:15px;\n"
 "color: #000;\n"
@@ -2248,77 +2248,28 @@ class Ui_MainWindow(object):
 "\n"
 "    border-left: 1px solid #394353;\n"
 "}")
-        self.tableWidget_lotes_2.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers)
-        self.tableWidget_lotes_2.setShowGrid(False)
-        self.tableWidget_lotes_2.setObjectName("tableWidget_lotes_2")
-        self.tableWidget_lotes_2.setColumnCount(5)
-        self.tableWidget_lotes_2.setRowCount(0)
+        self.tableWidget_egreso_2.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers)
+        self.tableWidget_egreso_2.setShowGrid(False)
+        self.tableWidget_egreso_2.setObjectName("tableWidget_egreso_2")
+        self.tableWidget_egreso_2.setColumnCount(5)
+        self.tableWidget_egreso_2.setRowCount(0)
         item = QtWidgets.QTableWidgetItem()
-        self.tableWidget_lotes_2.setHorizontalHeaderItem(0, item)
+        self.tableWidget_egreso_2.setHorizontalHeaderItem(0, item)
         item = QtWidgets.QTableWidgetItem()
-        self.tableWidget_lotes_2.setHorizontalHeaderItem(1, item)
+        self.tableWidget_egreso_2.setHorizontalHeaderItem(1, item)
         item = QtWidgets.QTableWidgetItem()
-        self.tableWidget_lotes_2.setHorizontalHeaderItem(2, item)
+        self.tableWidget_egreso_2.setHorizontalHeaderItem(2, item)
         item = QtWidgets.QTableWidgetItem()
-        self.tableWidget_lotes_2.setHorizontalHeaderItem(3, item)
+        self.tableWidget_egreso_2.setHorizontalHeaderItem(3, item)
         item = QtWidgets.QTableWidgetItem()
-        self.tableWidget_lotes_2.setHorizontalHeaderItem(4, item)
-        self.tableWidget_lotes_2.horizontalHeader().setVisible(False)
-        self.tableWidget_lotes_2.horizontalHeader().setCascadingSectionResizes(True)
-        self.tableWidget_lotes_2.horizontalHeader().setDefaultSectionSize(160)
-        self.tableWidget_lotes_2.horizontalHeader().setSortIndicatorShown(True)
-        self.tableWidget_lotes_2.horizontalHeader().setStretchLastSection(True)
-        self.tableWidget_lotes_2.verticalHeader().setVisible(False)
-        self.tableWidget_lotes_2.verticalHeader().setDefaultSectionSize(41)
-        self.tableWidget_egreso = QtWidgets.QTableWidget(self.frame)
-        self.tableWidget_egreso.setGeometry(QtCore.QRect(50, 240, 461, 351))
-        self.tableWidget_egreso.viewport().setProperty("cursor", QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.tableWidget_egreso.setStyleSheet("QTableWidget{\n"
-"font-size: 11pt;\n"
-"margin-top:15px;\n"
-"color: #000;\n"
-"font-family: Roboto;\n"
-"text-align:center;\n"
-"}\n"
-"QHeaderView::section {\n"
-"    background-color: #394353;\n"
-"    border-radius: 11px;\n"
-"    color:#fff;\n"
-"    font-size: 9pt;\n"
-"    font-family:Roboto;\n"
-"    border-left: 1px solid #394353;\n"
-"\n"
-"}\n"
-"\n"
-"QHeaderView::section:horizontal\n"
-"{\n"
-"    border-top: 1px solid #394353;\n"
-"\n"
-"}\n"
-"\n"
-"QHeaderView::section:vertical\n"
-"{\n"
-"\n"
-"    border-left: 1px solid #394353;\n"
-"}")
-        self.tableWidget_egreso.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers)
-        self.tableWidget_egreso.setShowGrid(False)
-        self.tableWidget_egreso.setObjectName("tableWidget_egreso")
-        self.tableWidget_egreso.setColumnCount(3)
-        self.tableWidget_egreso.setRowCount(0)
-        item = QtWidgets.QTableWidgetItem()
-        self.tableWidget_egreso.setHorizontalHeaderItem(0, item)
-        item = QtWidgets.QTableWidgetItem()
-        self.tableWidget_egreso.setHorizontalHeaderItem(1, item)
-        item = QtWidgets.QTableWidgetItem()
-        self.tableWidget_egreso.setHorizontalHeaderItem(2, item)
-        self.tableWidget_egreso.horizontalHeader().setVisible(False)
-        self.tableWidget_egreso.horizontalHeader().setCascadingSectionResizes(True)
-        self.tableWidget_egreso.horizontalHeader().setDefaultSectionSize(150)
-        self.tableWidget_egreso.horizontalHeader().setSortIndicatorShown(True)
-        self.tableWidget_egreso.horizontalHeader().setStretchLastSection(True)
-        self.tableWidget_egreso.verticalHeader().setVisible(False)
-        self.tableWidget_egreso.verticalHeader().setDefaultSectionSize(41)
+        self.tableWidget_egreso_2.setHorizontalHeaderItem(4, item)
+        self.tableWidget_egreso_2.horizontalHeader().setVisible(False)
+        self.tableWidget_egreso_2.horizontalHeader().setCascadingSectionResizes(True)
+        self.tableWidget_egreso_2.horizontalHeader().setDefaultSectionSize(160)
+        self.tableWidget_egreso_2.horizontalHeader().setSortIndicatorShown(True)
+        self.tableWidget_egreso_2.horizontalHeader().setStretchLastSection(True)
+        self.tableWidget_egreso_2.verticalHeader().setVisible(False)
+        self.tableWidget_egreso_2.verticalHeader().setDefaultSectionSize(41)
         self.lista_egreso = QtWidgets.QListWidget(self.frame)
         self.lista_egreso.setGeometry(QtCore.QRect(560, 210, 361, 391))
         font = QtGui.QFont()
@@ -2354,7 +2305,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
         self.stackedWidget_3.setCurrentIndex(0)
-        self.stackedWidget_main.setCurrentIndex(4)
+        self.stackedWidget_main.setCurrentIndex(7)
         self.lista_egreso.setCurrentRow(-1)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
@@ -2486,21 +2437,15 @@ class Ui_MainWindow(object):
         self.label_51.setText(_translate("MainWindow", "Código"))
         self.label_52.setText(_translate("MainWindow", "Descripción"))
         self.label_56.setText(_translate("MainWindow", "Cantidad"))
-        item = self.tableWidget_lotes_2.horizontalHeaderItem(0)
+        item = self.tableWidget_egreso_2.horizontalHeaderItem(0)
         item.setText(_translate("MainWindow", "New Column"))
-        item = self.tableWidget_lotes_2.horizontalHeaderItem(1)
+        item = self.tableWidget_egreso_2.horizontalHeaderItem(1)
         item.setText(_translate("MainWindow", "New Column"))
-        item = self.tableWidget_lotes_2.horizontalHeaderItem(2)
+        item = self.tableWidget_egreso_2.horizontalHeaderItem(2)
         item.setText(_translate("MainWindow", "New Column"))
-        item = self.tableWidget_lotes_2.horizontalHeaderItem(3)
+        item = self.tableWidget_egreso_2.horizontalHeaderItem(3)
         item.setText(_translate("MainWindow", "New Column"))
-        item = self.tableWidget_lotes_2.horizontalHeaderItem(4)
-        item.setText(_translate("MainWindow", "New Column"))
-        item = self.tableWidget_egreso.horizontalHeaderItem(0)
-        item.setText(_translate("MainWindow", "New Column"))
-        item = self.tableWidget_egreso.horizontalHeaderItem(1)
-        item.setText(_translate("MainWindow", "New Column"))
-        item = self.tableWidget_egreso.horizontalHeaderItem(2)
+        item = self.tableWidget_egreso_2.horizontalHeaderItem(4)
         item.setText(_translate("MainWindow", "New Column"))
         self.label_16.setText(_translate("MainWindow", "Picking"))
 import img_rc
