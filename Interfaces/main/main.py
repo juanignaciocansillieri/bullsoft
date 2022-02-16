@@ -2345,6 +2345,25 @@ class Ui_MainWindow(object):
 "border: none")
         self.label_16.setAlignment(QtCore.Qt.AlignCenter)
         self.label_16.setObjectName("label_16")
+        self.btn_eliminarProdEgreso = QtWidgets.QPushButton(self.frame)
+        self.btn_eliminarProdEgreso.setGeometry(QtCore.QRect(480, 110, 121, 26))
+        font = QtGui.QFont()
+        font.setFamily("Roboto")
+        font.setPointSize(-1)
+        self.btn_eliminarProdEgreso.setFont(font)
+        self.btn_eliminarProdEgreso.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.btn_eliminarProdEgreso.setStyleSheet("QPushButton{\n"
+"background-color: rgba(71, 71, 103);\n"
+"color: #fff;\n"
+"border-radius:5px;\n"
+"font-family:Roboto;\n"
+"font-size: 13px\n"
+"\n"
+"}\n"
+"QPushButton:hover{\n"
+"background-color: rgba(71, 71, 103,180);\n"
+"}")
+        self.btn_eliminarProdEgreso.setObjectName("btn_eliminarProdEgreso")
         self.verticalLayout_14.addWidget(self.frame)
         self.stackedWidget_main.addWidget(self.page_egreso)
         self.verticalLayout_2.addWidget(self.stackedWidget_main)
@@ -2354,7 +2373,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
         self.stackedWidget_3.setCurrentIndex(0)
-        self.stackedWidget_main.setCurrentIndex(6)
+        self.stackedWidget_main.setCurrentIndex(7)
         self.lista_egreso.setCurrentRow(-1)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
@@ -2503,6 +2522,7 @@ class Ui_MainWindow(object):
         item = self.tableWidget_egreso.horizontalHeaderItem(2)
         item.setText(_translate("MainWindow", "New Column"))
         self.label_16.setText(_translate("MainWindow", "Picking"))
+        self.btn_eliminarProdEgreso.setText(_translate("MainWindow", "Eliminar"))
 import img_rc
 
 

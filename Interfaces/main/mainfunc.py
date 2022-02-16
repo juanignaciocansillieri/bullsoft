@@ -513,8 +513,7 @@ class Modern(QMainWindow):
         sending_button = self.sender()
         nombre_area = str(sending_button.objectName())
         globalArea = nombre_area
-        #self.listar_areas(globalArea)
-        self.listar_posiciones_de_alojamiento(globalArea)
+        self.listar_areas(globalArea)
 
     def new_posicion(self, btn):
         self.newPosicionAlojamiento = Pa(btn)
@@ -525,35 +524,18 @@ class Modern(QMainWindow):
         self.newPosicionAlojamiento = Ma(btn)
         self.newPosicionAlojamiento.show()
 
+
+
     def listar_areas(self, btn):
         global globalArea
         area = btn
-        self.listar_posiciones_de_alojamiento()
-
-
-    ##### LISTAR POSICIONES DE ALOJAMIENTO ####
-
-    def listar_posiciones_de_alojamiento(self, btn):
-        global globalArea
-        area = btn
-        alojamientos = al.Alojamiento.listar_posicion_alojamiento(globalArea) #Paso como parámetro Global Area
-
-        n = al.Alojamiento.contar_filas()
-        self.ui.tableWidget_areas.clear()
+        productos = p.Productos.buscar_productArea(area)
+        n = p.Productos.buscar_product_rows_area(area)
         self.ui.tableWidget_areas.setRowCount(n)
-        table_row=0
+        self.ui.label_area_mod.setText(area)
+        table_row = 0
+        vacio = []
 
-        for row in alojamientos:
-            self.ui.tableWidget_areas.setItem(
-                table_row, 0, QtWidgets.QTableWidgetItem(row[0]))
-            self.ui.tableWidget_areas.setItem(
-                table_row, 1, QtWidgets.QTableWidgetItem(row[1]))
-            self.ui.tableWidget_areas.setItem(
-                table_row, 2, QtWidgets.QTableWidgetItem(row[2]))
-            self.ui.tableWidget_areas.setItem(
-                table_row, 3, QtWidgets.QTableWidgetItem(row[3]))
-
-            table_row += 1
 
 
 
@@ -566,21 +548,7 @@ class Modern(QMainWindow):
         for x in range(largo_area):
             for y in range(ancho_area):
                 mz.crear_matriz_areas(x+1,y+1)
-        """"
-                frame = QtWidgets.QFrame(self.ui.frame_3)
-                frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
-                frame.setFrameShadow(QtWidgets.QFrame.Raised)
-                frame.setMaximumSize(QtCore.QSize(200, 200))
-                vertical_layout = QtWidgets.QVBoxLayout(frame)
-                self.btn = QPushButton(frame)
-                self.btn.setText('{}x{}'.format(x+1, y+1))
-                self.btn.setObjectName('%s' % y*x)
-                self.btn.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-                self.btn.setMinimumSize(QtCore.QSize(70, 30))
-                self.btn.setMaximumSize(QtCore.QSize(100, 30))
-                vertical_layout.addWidget(self.btn, 0, QtCore.Qt.AlignHCenter | QtCore.Qt.AlignVCenter)
-                self.ui.gridLayout.addWidget(frame, x, y)
-        """
+
     # LISTAR USUARIOS EN TABLA
 
     def listar_usuarios(self):
