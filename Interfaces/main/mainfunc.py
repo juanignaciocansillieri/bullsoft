@@ -29,7 +29,7 @@ DNI = ""
 globalArea = ""
 nombreNuevo = ""
 n_egreso=0
-tupla_egreso=()
+tupla_egreso=[]
 
 class Modern(QMainWindow):
 
@@ -212,32 +212,38 @@ class Modern(QMainWindow):
         codigo=self.ui.input_codigoProdEgreso.text()
         cantidad=self.ui.num_cantidadEgreso.text()
         desc=p.ver_desc(codigo)
-        t=(str(codigo),desc,str(cantidad))
-        tupla_egreso=tupla_egreso+t
+        t = [str(codigo), desc, str(cantidad)]
+        tupla_egreso = tupla_egreso + [t]
         print(tupla_egreso)
         self.ui.input_codigoProdEgreso.setText("")
         #self.ui.num_cantidadEgreso.
         n_egreso=n_egreso+1
+        self.act_egreso()
 
     def act_egreso(self):
         print("actualizar")
         global tupla_egreso
         table_row = 0
         for row in tupla_egreso:
-            print(table_row)
-            print(tupla_egreso[0])
-            print(tupla_egreso[1])
-            print(tupla_egreso[2])
-            self.ui.tableWidget_egreso_2.setItem(
-                table_row, 0, QtWidgets.QTableWidgetItem(str(tupla_egreso[0])))
-            self.ui.tableWidget_egreso_2.setItem(
-                table_row, 1, QtWidgets.QTableWidgetItem(str(tupla_egreso[1])))
-            self.ui.tableWidget_egreso_2.setItem(
-                table_row, 2, QtWidgets.QTableWidgetItem(str(tupla_egreso[2])))
-            table_row += 1
+            self.ui.tableWidget_egreso.setRowCount(n_egreso)
+            self.ui.tableWidget_egreso.setItem(
+                table_row, 0, QtWidgets.QTableWidgetItem(str(row[0])))
+            self.ui.tableWidget_egreso.setItem(
+                table_row, 1, QtWidgets.QTableWidgetItem(str(row[1])))
+            self.ui.tableWidget_egreso.setItem(
+                table_row, 2, QtWidgets.QTableWidgetItem(str(row[2])))
+            table_row = table_row + 1
 
 
     def confirmar_egreso(self):
+        global tupla_egreso
+        n = len(tupla_egreso)
+        i = 0
+        while i < n:
+            codigo = tupla_egreso[i]
+            cantidad = tupla_egreso[i + 2]
+            l.fifo(codigo, cantidad)
+            i = i + 3
         return 0
 
     ## Listar Movimientos en la tabla
@@ -424,9 +430,8 @@ class Modern(QMainWindow):
         child = self.ui.verticalLayout_7.count()
         areas = ar.Area.listar_area()
         n = ar.contar_filas()
-        i = 1
-        j = 1
-
+        x = 0
+        y = 0
         for a in areas:
 
                     frame = QtWidgets.QFrame(self.ui.frame_3)
@@ -443,7 +448,11 @@ class Modern(QMainWindow):
                     self.btn.setMaximumSize(QtCore.QSize(100, 30))
                     self.label = QtWidgets.QLabel(frame)
                     self.btn.released.connect(self.button_released)
-                    self.ui.gridLayout.addWidget(frame, int(a[2]), int(a[3]))
+                    p=a[2].split(sep="x")
+                    x=int(p[0])
+                    y=int(p[1])
+                    print(x,y)
+                    self.ui.gridLayout.addWidget(frame, x, y)
                     font = QtGui.QFont()
                     font.setFamily("Roboto")
                     font.setPointSize(10)
@@ -496,7 +505,6 @@ class Modern(QMainWindow):
                             for i in reversed(range(self.ui.gridLayout.count())):
                                 self.ui.gridLayout.itemAt(i).widget().deleteLater()
 
-                    i += 1
 
     def button_released(self):
         global globalArea
