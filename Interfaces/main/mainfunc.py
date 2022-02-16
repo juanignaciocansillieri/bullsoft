@@ -126,14 +126,17 @@ class Modern(QMainWindow):
         self.ui.deposito_btn.clicked.connect(lambda: self.ui.stackedWidget_3.setCurrentWidget(self.ui.deposito_subpage))
         self.ui.newArea_btn.clicked.connect(self.mostrar_new_area)
         self.ui.label_12.mousePressEvent = self.click_a
-        #self.ui.btn_actualizarAreas.clicked.connect(self.mostra_areas)
-        self.ui.btn_actualizarAreas.clicked.connect(self.crear_deposito)
+        self.ui.btn_actualizarAreas.clicked.connect(self.mostra_areas)
+        #self.ui.btn_actualizarAreas.clicked.connect(self.crear_deposito)
         self.ui.btn_crearDeposito.clicked.connect(self.crear_deposito)
 
         self.ui.btn_actualizarAreaInd.clicked.connect(lambda: self.listar_areas(globalArea))
         self.ui.btn_newPosicion.clicked.connect(lambda: self.new_posicion(globalArea))
         self.ui.btn_modificarArea.clicked.connect(lambda: self.modificar_area(globalArea))
         self.ui.newArea_btn_2.clicked.connect(self.mostrar_borrar_area)
+
+        ##########################       ##################################
+
 
     def verificar_deposito_creado(self):
         verificar_deposito = conex.verificar_deposito()
@@ -379,12 +382,11 @@ class Modern(QMainWindow):
     ## Agregar botones dinamicamente
     def agregar_btn_areas(self):
 
+        print("agregar btn areas")
         areas = ar.Area.listar_area()
         i = 0
-        n = ar.Area.contar_filas()
-        child = self.ui.verticalLayout_7.count()
-
         for area in areas:
+            print(area)
             self.btn1 = QtWidgets.QPushButton(self.ui.frame_14)
             self.btn1.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
             self.btn1.setStyleSheet("QPushButton{\n"
@@ -416,87 +418,86 @@ class Modern(QMainWindow):
             i += 1
 
     ## Mostrar Areas graficamente
-    """
+
     def mostra_areas(self):
+        print("mostrar areas")
         child = self.ui.verticalLayout_7.count()
         areas = ar.Area.listar_area()
-        n = ar.Area.contar_filas()
+        n = ar.contar_filas()
         i = 1
+        j = 1
+
+
 
         for a in areas:
-
-            frame = QtWidgets.QFrame(self.ui.frame_3)
-            frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
-            frame.setFrameShadow(QtWidgets.QFrame.Raised)
-            frame.setObjectName(a[0])
-            frame.setMaximumSize(QtCore.QSize(200, 200))
-            vertical_layout = QtWidgets.QVBoxLayout(frame)
-            # verticalLayout.addWidget(frame)
-            self.btn = QPushButton(frame)
-            self.btn.setText("Ver")
-            self.btn.setObjectName('%s' % a[0])
-            self.btn.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-            self.btn.setMinimumSize(QtCore.QSize(70, 30))
-            self.btn.setMaximumSize(QtCore.QSize(100, 30))
-
-            self.label = QtWidgets.QLabel(frame)
-            self.btn.released.connect(self.button_released)
-
-            self.ui.gridLayout.addWidget(frame, 1, i)
-            font = QtGui.QFont()
-            font.setFamily("Roboto")
-            font.setPointSize(10)
-            font.setBold(True)
-            font.setWeight(75)
-            self.label.setFont(font)
-            self.label.setText(a[0])
-            self.label.setAlignment(QtCore.Qt.AlignHCenter | QtCore.Qt.AlignVCenter)
-            self.label.setStyleSheet("QLabel{\n"  "border:none;\n""}")
-            self.label.setMaximumSize(QtCore.QSize(150, 50))
-            vertical_layout.addWidget(self.label, 0, QtCore.Qt.AlignHCenter | QtCore.Qt.AlignVCenter)
-            vertical_layout.addWidget(self.btn, 0, QtCore.Qt.AlignHCenter | QtCore.Qt.AlignVCenter)
-
-            if child < n:
-                if child == n - 1:
-                    self.agregar_area_creada()
-                else:
-
-                    self.btn2 = QtWidgets.QPushButton(self.ui.frame_14)
-                    self.btn2.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-                    self.btn2.setStyleSheet("QPushButton{\n"
-                                            "border:none;\n"
-                                            "font-family: Roboto;\n"
-                                            "border-radius:5px;\n"
-                                            "margin-right:20px;\n"
-                                            "text-align: center;\n"
-                                            "color: #000 ;\n"
-                                            "padding:5px;\n"
-                                            "\n"
-                                            "\n"
-                                            "}\n"
-                                            "\n"
-                                            "QPushButton:hover{\n"
-                                            "    background-color: rgba(105, 105, 226, 50);\n"
-                                            "}")
-                    self.btn2.setObjectName(a[0])
-                    self.btn2.setText(a[0])
-                    self.ui.verticalLayout_7.addWidget(self.btn2)
+                    frame = QtWidgets.QFrame(self.ui.frame_3)
+                    frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
+                    frame.setFrameShadow(QtWidgets.QFrame.Raised)
+                    frame.setObjectName(a[0])
+                    frame.setMaximumSize(QtCore.QSize(200, 200))
+                    vertical_layout = QtWidgets.QVBoxLayout(frame)
+                    self.btn = QPushButton(frame)
+                    self.btn.setText("Ver")
+                    self.btn.setObjectName('%s' % a[0])
+                    self.btn.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+                    self.btn.setMinimumSize(QtCore.QSize(70, 30))
+                    self.btn.setMaximumSize(QtCore.QSize(100, 30))
+                    self.label = QtWidgets.QLabel(frame)
+                    self.btn.released.connect(self.button_released)
                     font = QtGui.QFont()
                     font.setFamily("Roboto")
                     font.setPointSize(10)
                     font.setBold(True)
                     font.setWeight(75)
-                    self.btn2.setFont(font)
-                    self.btn2.released.connect(self.button_released)
-            elif child > n:
+                    self.label.setFont(font)
+                    self.label.setText(a[0])
+                    self.label.setAlignment(QtCore.Qt.AlignHCenter | QtCore.Qt.AlignVCenter)
+                    self.label.setStyleSheet("QLabel{\n"  "border:none;\n""}")
+                    self.label.setMaximumSize(QtCore.QSize(150, 50))
+                    vertical_layout.addWidget(self.label, 0, QtCore.Qt.AlignHCenter | QtCore.Qt.AlignVCenter)
+                    vertical_layout.addWidget(self.btn, 0, QtCore.Qt.AlignHCenter | QtCore.Qt.AlignVCenter)
 
-                for i in reversed(range(self.ui.verticalLayout_7.count())):
-                    self.ui.verticalLayout_7.itemAt(i).widget().deleteLater()
-                for i in reversed(range(self.ui.gridLayout.count())):
-                    self.ui.gridLayout.itemAt(i).widget().deleteLater()
+                    if child < n:
+                        if child == n - 1:
+                            self.agregar_area_creada()
+                        else:
 
-            i += 1
-    """
+                                self.btn2 = QtWidgets.QPushButton(self.ui.frame_14)
+                                self.btn2.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+                                self.btn2.setStyleSheet("QPushButton{\n"
+                                                        "border:none;\n"
+                                                        "font-family: Roboto;\n"
+                                                        "border-radius:5px;\n"
+                                                        "margin-right:20px;\n"
+                                                        "text-align: center;\n"
+                                                        "color: #000 ;\n"
+                                                        "padding:5px;\n"
+                                                        "\n"
+                                                        "\n"
+                                                        "}\n"
+                                                        "\n"
+                                                        "QPushButton:hover{\n"
+                                                        "    background-color: rgba(105, 105, 226, 50);\n"
+                                                        "}")
+                                self.btn2.setObjectName(a[0])
+                                self.btn2.setText(a[0])
+                                self.ui.verticalLayout_7.addWidget(self.btn2)
+                                font = QtGui.QFont()
+                                font.setFamily("Roboto")
+                                font.setPointSize(10)
+                                font.setBold(True)
+                                font.setWeight(75)
+                                self.btn2.setFont(font)
+                                self.btn2.released.connect(self.button_released)
+                    elif child > n:
+
+                            for i in reversed(range(self.ui.verticalLayout_7.count())):
+                                self.ui.verticalLayout_7.itemAt(i).widget().deleteLater()
+                            for i in reversed(range(self.ui.gridLayout.count())):
+                                self.ui.gridLayout.itemAt(i).widget().deleteLater()
+
+                    i += 1
+
     def button_released(self):
         global globalArea
         self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_areas)
@@ -556,6 +557,7 @@ class Modern(QMainWindow):
         for x in range(largo_area):
             for y in range(ancho_area):
                 mz.crear_matriz_areas(x+1,y+1)
+        """"
                 frame = QtWidgets.QFrame(self.ui.frame_3)
                 frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
                 frame.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -569,7 +571,7 @@ class Modern(QMainWindow):
                 self.btn.setMaximumSize(QtCore.QSize(100, 30))
                 vertical_layout.addWidget(self.btn, 0, QtCore.Qt.AlignHCenter | QtCore.Qt.AlignVCenter)
                 self.ui.gridLayout.addWidget(frame, x, y)
-
+        """
     # LISTAR USUARIOS EN TABLA
 
     def listar_usuarios(self):

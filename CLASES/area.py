@@ -37,7 +37,7 @@ class Area:
     def modificar_area(nombre, iden , posicion, pasillos, segmentos, longitud, ancho, alto):
         a = c.start_connection()
         cursor = a.cursor()
-        query = "SELECT idarea FROM area WHERE posicion=%s"
+        query = "SELECT idarea FROM area WHERE nombre=%s"
         values = posicion
         cursor.execute(query, values)
         a.commit()

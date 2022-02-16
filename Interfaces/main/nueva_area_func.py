@@ -23,23 +23,21 @@ class NewArea(QMainWindow):
         self.ui.crearprod_btn.clicked.connect(self.crear_area)
         self.posicion_cbox()
 
-    # CREAR PRODUCTO NUEVO
+    # CREAR ÁREA
     def crear_area(self):
         # RECIBIR VALORES DE LA VENTANA
         nom = self.ui.motivo_input.text()
         ide = self.ui.motivo_input_2.text()
         pasillo = self.ui.segmentos_num.value()
         segmento = self.ui.pasillos_num.value()
-        longitud = self.ui.longitud_num.value()
-        ancho = self.ui.ancho_num.value()
-        alto = self.ui.alto_num.value()
-        area = a.Area(nom, ide, pasillo, segmento, longitud, ancho, alto)
+        posicion = self.ui.comboBox.currentText()
+        a.Area.modificar_area(nom, ide , posicion, pasillo, segmento, 0, 0, 0)
         self.close()
 
 
     def posicion_cbox(self):
         medidas = mz.importar_datos_matriz()
-        print("aa",medidas[0][1])
         for x in range(medidas[0][0]):
             for y in range(medidas[0][1]):
                 self.ui.comboBox.addItem('{}x{}'.format(x+1, y+1))
+
