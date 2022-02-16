@@ -21,6 +21,7 @@ from Interfaces.main.nueva_area_func import NewArea
 from Interfaces.main.nuevoProduct_func import ProductWindow
 from Interfaces.main.posiciones_alojamiento import PosicionAlojamiento as Pa
 from CLASES import matriz as mz
+from CLASES import lotes as l
 
 defaultImg = ""
 codigoViejo = ""
@@ -29,7 +30,7 @@ DNI = ""
 globalArea = ""
 nombreNuevo = ""
 n_egreso=0
-tupla_egreso=()
+tupla_egreso=[]
 
 class Modern(QMainWindow):
 
@@ -212,32 +213,38 @@ class Modern(QMainWindow):
         codigo=self.ui.input_codigoProdEgreso.text()
         cantidad=self.ui.num_cantidadEgreso.text()
         desc=p.ver_desc(codigo)
-        t=(str(codigo),desc,str(cantidad))
-        tupla_egreso=tupla_egreso+t
-        print(tupla_egreso)
+        t=[str(codigo),desc,str(cantidad)]
+        tupla_egreso=tupla_egreso+[t]
+        print (tupla_egreso)
         self.ui.input_codigoProdEgreso.setText("")
         #self.ui.num_cantidadEgreso.
         n_egreso=n_egreso+1
+        self.act_egreso()
 
     def act_egreso(self):
         print("actualizar")
         global tupla_egreso
         table_row = 0
         for row in tupla_egreso:
-            print(table_row)
-            print(tupla_egreso[0])
-            print(tupla_egreso[1])
-            print(tupla_egreso[2])
-            self.ui.tableWidget_egreso_2.setItem(
-                table_row, 0, QtWidgets.QTableWidgetItem(str(tupla_egreso[0])))
-            self.ui.tableWidget_egreso_2.setItem(
-                table_row, 1, QtWidgets.QTableWidgetItem(str(tupla_egreso[1])))
-            self.ui.tableWidget_egreso_2.setItem(
-                table_row, 2, QtWidgets.QTableWidgetItem(str(tupla_egreso[2])))
-            table_row += 1
+            self.ui.tableWidget_egreso.setRowCount(n_egreso)
+            self.ui.tableWidget_egreso.setItem(
+                table_row, 0, QtWidgets.QTableWidgetItem(str(row[0])))
+            self.ui.tableWidget_egreso.setItem(
+                table_row, 1, QtWidgets.QTableWidgetItem(str(row[1])))
+            self.ui.tableWidget_egreso.setItem(
+                table_row, 2, QtWidgets.QTableWidgetItem(str(row[2])))
+            table_row = table_row+1
 
 
     def confirmar_egreso(self):
+        global tupla_egreso
+        n=len(tupla_egreso)
+        i=0
+        while i<n:
+            codigo=tupla_egreso[i]
+            cantidad=tupla_egreso[i+2]
+            l.fifo(codigo,cantidad)
+            i=i+3
         return 0
 
     ## Listar Movimientos en la tabla
