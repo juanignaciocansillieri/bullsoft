@@ -31,6 +31,7 @@ nombreNuevo = ""
 n_egreso=0
 tupla_egreso=[]
 
+
 class Modern(QMainWindow):
 
     def __init__(self, admin):
