@@ -134,7 +134,11 @@ class Alojamiento:
         cursor.execute(query, codigo)
         data = cursor.fetchall()
         a.commit()
-        return data
+        if data == "None":
+            print("no se encontro el alojamietno indicado")
+            return 0
+        else:
+            return data
 
     @staticmethod
     def listar_alojamiento():

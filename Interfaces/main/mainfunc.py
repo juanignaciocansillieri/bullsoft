@@ -247,6 +247,20 @@ class Modern(QMainWindow):
             i = i + 3
         return 0
 
+    def borrar_egreso(self):
+        global  n_egreso
+        global tupla_egreso
+        codigo=self.ui.input_codigoProdEgreso.text()
+        i=tupla_egreso.index(codigo)
+        tupla_egreso.pop(i)
+        tupla_egreso.pop(i+1)
+        tupla_egreso.pop(i+2)
+        print(tupla_egreso)
+        self.ui.input_codigoProdEgreso.setText("")
+        #self.ui.num_cantidadEgreso.
+        n_egreso=n_egreso-1
+        self.act_egreso()
+
     ## Listar Movimientos en la tabla
     def listar_movimientos(self):
         movimientos = m.listar_movimientos()

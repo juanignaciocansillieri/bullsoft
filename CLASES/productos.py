@@ -63,68 +63,72 @@ class Productos:
         cursor.execute(query, values)
         a.commit()
         b = cursor.fetchall()
-        idp = str(b[0][0])
+        if b == "None":
+            print("no se encontro el producto indicado")
+            return 0
+        else:
+            idp = str(b[0][0])
 
-        try:
-            query = "UPDATE productos set codigo=%s WHERE idproductos=%s"
-            values = (codigon, idp)
-            cursor.execute(query, values)
-            a.commit()
-            query = "UPDATE productos set marca=%s WHERE idproductos=%s"
-            values = (marca, idp)
-            cursor.execute(query, values)
-            a.commit()
-            query = "UPDATE productos set descripcion=%s WHERE idproductos=%s"
-            values = (descripcion, idp)
-            cursor.execute(query, values)
-            a.commit()
-            query = "UPDATE productos set foto=%s WHERE idproductos=%s"
-            values = (foto, idp)
-            cursor.execute(query, values)
-            a.commit()
-            query = "UPDATE productos set condicion=%s WHERE idproductos=%s"
-            values = (condicion, idp)
-            cursor.execute(query, values)
-            a.commit()
-            query = "UPDATE productos set fragil=%s WHERE idproductos=%s"
-            values = (fragil, idp)
-            cursor.execute(query, values)
-            a.commit()
-            query = "SELECT ubicacion from productos  WHERE idproductos=%s"
-            values = idp
-            cursor.execute(query, values)
-            ubicacionv = cursor.fetchall()
-            ubicacionv = str(ubicacionv[0][0])
-            a.commit()
-            if ubicacionv != ubicacion:
-                alojamiento.Alojamiento.ab_alojamiento(ubicacionv)
-                alojamiento.Alojamiento.ab_alojamiento(ubicacion)
-                query = "UPDATE productos set ubicacion=%s WHERE idproductos=%s"
-                values = (ubicacion, idp)
+            try:
+                query = "UPDATE productos set codigo=%s WHERE idproductos=%s"
+                values = (codigon, idp)
                 cursor.execute(query, values)
                 a.commit()
-            #
-            query = "UPDATE productos set peso=%s WHERE idproductos=%s"
-            values = (peso, idp)
-            cursor.execute(query, values)
-            a.commit()
-            query = "UPDATE productos set largo=%s WHERE idproductos=%s"
-            values = (largo, idp)
-            cursor.execute(query, values)
-            a.commit()
-            query = "UPDATE productos set ancho=%s WHERE idproductos=%s"
-            values = (ancho, idp)
-            cursor.execute(query, values)
-            a.commit()
-            query = "UPDATE productos set alto=%s WHERE idproductos=%s"
-            values = (alto, idp)
-            cursor.execute(query, values)
-            a.commit()
-            lotes.Lote.mod_idpruct(codigov, codigon)
-            print("se MODIFICO producto correctamente")
-        except pymysql.err.OperationalError as err:
-            print("Hubo un error:", err)
-        c.close_connection(a)
+                query = "UPDATE productos set marca=%s WHERE idproductos=%s"
+                values = (marca, idp)
+                cursor.execute(query, values)
+                a.commit()
+                query = "UPDATE productos set descripcion=%s WHERE idproductos=%s"
+                values = (descripcion, idp)
+                cursor.execute(query, values)
+                a.commit()
+                query = "UPDATE productos set foto=%s WHERE idproductos=%s"
+                values = (foto, idp)
+                cursor.execute(query, values)
+                a.commit()
+                query = "UPDATE productos set condicion=%s WHERE idproductos=%s"
+                values = (condicion, idp)
+                cursor.execute(query, values)
+                a.commit()
+                query = "UPDATE productos set fragil=%s WHERE idproductos=%s"
+                values = (fragil, idp)
+                cursor.execute(query, values)
+                a.commit()
+                query = "SELECT ubicacion from productos  WHERE idproductos=%s"
+                values = idp
+                cursor.execute(query, values)
+                ubicacionv = cursor.fetchall()
+                ubicacionv = str(ubicacionv[0][0])
+                a.commit()
+                if ubicacionv != ubicacion:
+                    alojamiento.Alojamiento.ab_alojamiento(ubicacionv)
+                    alojamiento.Alojamiento.ab_alojamiento(ubicacion)
+                    query = "UPDATE productos set ubicacion=%s WHERE idproductos=%s"
+                    values = (ubicacion, idp)
+                    cursor.execute(query, values)
+                    a.commit()
+                #
+                query = "UPDATE productos set peso=%s WHERE idproductos=%s"
+                values = (peso, idp)
+                cursor.execute(query, values)
+                a.commit()
+                query = "UPDATE productos set largo=%s WHERE idproductos=%s"
+                values = (largo, idp)
+                cursor.execute(query, values)
+                a.commit()
+                query = "UPDATE productos set ancho=%s WHERE idproductos=%s"
+                values = (ancho, idp)
+                cursor.execute(query, values)
+                a.commit()
+                query = "UPDATE productos set alto=%s WHERE idproductos=%s"
+                values = (alto, idp)
+                cursor.execute(query, values)
+                a.commit()
+                lotes.Lote.mod_idpruct(codigov, codigon)
+                print("se MODIFICO producto correctamente")
+            except pymysql.err.OperationalError as err:
+                print("Hubo un error:", err)
+            c.close_connection(a)
 
     def buscar_product(param):
         a = c.start_connection()
@@ -133,7 +137,11 @@ class Productos:
         cursor.execute(query, (param, param, param))
         data = cursor.fetchall()
         a.commit()
-        return data
+        if data == "None":
+            print("no se encontro el producto indicado")
+            return 0
+        else:
+            return data
 
     def buscar_productArea(param):
         a = c.start_connection()
@@ -150,8 +158,11 @@ class Productos:
         query = "SELECT * FROM productos WHERE codigo = %s"
         product = cursor.execute(query, param)
         a.commit()
-        print("VERRRI", product)
-        return product
+        if product == "None":
+            print("no se encontro el producto indicado")
+            return 0
+        else:
+            return product
 
     def buscar_product_rows(param):
         a = c.start_connection()
@@ -177,7 +188,12 @@ class Productos:
         cursor.execute(query, codigo)
         data = cursor.fetchall()
         a.commit()
-        return data
+
+        if data == "None":
+            print("no se encontro el producto indicado")
+            return 0
+        else:
+            return data
 
 
 def listar_prod_area(param):
@@ -256,13 +272,13 @@ def ver_cod(codigo):
 def ver_desc(codigo):
     a = c.start_connection()
     cursor = a.cursor()
-    try:
-        """query = "SELECT descripcion FROM productos WHERE codigo=%s"
-        cursor.execute(query,codigo)
-        data = cursor.fetchall()
-        a.commit()
-        return data"""
-        return "prueba"
-    except pymysql.err.OperationalError as err:
-        print("Hubo un error:", err)
+    query = "SELECT descripcion FROM productos WHERE codigo=%s"
+    cursor.execute(query,codigo)
+    data = cursor.fetchall()
+    a.commit()
+    if data == "None":
+        print("no se encontro el producto indicado")
+        return 0
+    else:
+        return data
     c.close_connection(a)

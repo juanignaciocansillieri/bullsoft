@@ -57,7 +57,11 @@ class Usuarios:
         cursor.execute(query, dni)
         data = cursor.fetchall()
         a.commit()
-        return data
+        if data == "None":
+            print("no se encontro el usuario indicado")
+            return 0
+        else:
+            return data
 
     def ab_usuario(dni):
         a = c.start_connection()
@@ -80,53 +84,60 @@ class Usuarios:
         cursor.execute(query, values)
         a.commit()
         b = cursor.fetchall()
-        idu = str(b[0][0])
-        try:
-            query = "UPDATE usuarios SET nombre=%s WHERE idusuarios=%s"
-            values = (nombre, idu)
-            cursor.execute(query, values)
-            a.commit()
-            query = "UPDATE usuarios SET apellido=%s WHERE idusuarios=%s"
-            values = (apellido, idu)
-            cursor.execute(query, values)
-            a.commit()
-            query = "UPDATE usuarios SET dni=%s WHERE idusuarios=%s"
-            values = (dnin, idu)
-            cursor.execute(query, values)
-            a.commit()
-            query = "UPDATE usuarios SET nacimiento=%s WHERE idusuarios=%s"
-            values = (nacimiento, idu)
-            cursor.execute(query, values)
-            a.commit()
-            query = "UPDATE usuarios SET tipo=%s WHERE idusuarios=%s"
-            values = (tipo, idu)
-            cursor.execute(query, values)
-            a.commit()
-            query = "UPDATE usuarios SET puesto=%s WHERE idusuarios=%s"
-            values = (puesto, idu)
-            cursor.execute(query, values)
-            a.commit()
-            query = "UPDATE usuarios SET mail=%s WHERE idusuarios=%s"
-            values = (mail, idu)
-            cursor.execute(query, values)
-            a.commit()
-            query = "UPDATE usuarios SET foto=%s WHERE idusuarios=%s"
-            values = (foto, idu)
-            cursor.execute(query, values)
-            a.commit()
-            print("se modifico  usuario correctamente")
-        except pymysql.err.OperationalError as err:
-            print("Hubo un error:", err)
-        c.close_connection(a)
+        if b == "None":
+            print("no se encontro el usuario indicado")
+            return 0
+        else:
+            idu = str(b[0][0])
+            try:
+                query = "UPDATE usuarios SET nombre=%s WHERE idusuarios=%s"
+                values = (nombre, idu)
+                cursor.execute(query, values)
+                a.commit()
+                query = "UPDATE usuarios SET apellido=%s WHERE idusuarios=%s"
+                values = (apellido, idu)
+                cursor.execute(query, values)
+                a.commit()
+                query = "UPDATE usuarios SET dni=%s WHERE idusuarios=%s"
+                values = (dnin, idu)
+                cursor.execute(query, values)
+                a.commit()
+                query = "UPDATE usuarios SET nacimiento=%s WHERE idusuarios=%s"
+                values = (nacimiento, idu)
+                cursor.execute(query, values)
+                a.commit()
+                query = "UPDATE usuarios SET tipo=%s WHERE idusuarios=%s"
+                values = (tipo, idu)
+                cursor.execute(query, values)
+                a.commit()
+                query = "UPDATE usuarios SET puesto=%s WHERE idusuarios=%s"
+                values = (puesto, idu)
+                cursor.execute(query, values)
+                a.commit()
+                query = "UPDATE usuarios SET mail=%s WHERE idusuarios=%s"
+                values = (mail, idu)
+                cursor.execute(query, values)
+                a.commit()
+                query = "UPDATE usuarios SET foto=%s WHERE idusuarios=%s"
+                values = (foto, idu)
+                cursor.execute(query, values)
+                a.commit()
+                print("se modifico  usuario correctamente")
+            except pymysql.err.OperationalError as err:
+                print("Hubo un error:", err)
+            c.close_connection(a)
 
     def verificar(param):
         a = c.start_connection()
         cursor = a.cursor()
         query = "SELECT * FROM usuarios WHERE dni = %s"
-        product = cursor.execute(query, param)
+        data = cursor.execute(query, param)
         a.commit()
-        print("VERRRI", product)
-        return product
+        if data == "None":
+            print("no se encontro el usuario indicado")
+            return 0
+        else:
+            return data
 
 
 def contar_filas():
