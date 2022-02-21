@@ -509,11 +509,11 @@ class Modern(QMainWindow):
 
     def button_released(self):
         global globalArea
-        self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_areas)
+        self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_areaIndividual)
         sending_button = self.sender()
         nombre_area = str(sending_button.objectName())
         globalArea = nombre_area
-        self.listar_areas(globalArea)
+        self.listar_segmentos(globalArea)
 
     def new_posicion(self, btn):
         self.newPosicionAlojamiento = Pa(btn)
@@ -526,19 +526,38 @@ class Modern(QMainWindow):
 
 
 
-    def listar_areas(self, btn):
+    def listar_segmentos(self, btn):
         global globalArea
-        area = btn
-        productos = p.Productos.buscar_productArea(area)
-        n = p.Productos.buscar_product_rows_area(area)
-        self.ui.tableWidget_areas.setRowCount(n)
-        self.ui.label_area_mod.setText(area)
-        table_row = 0
-        vacio = []
+        nombreArea = btn
+        self.ui.label_nombre_area.setText(nombreArea)
+        self.ui.pushButton.clicked.connect(lambda :self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_deposito))
+        area = ar.Area.mostrar_area(nombreArea)
+        child = self.ui.gridLayout_2.count()
+        print(child)
+        print(area)
+        niveles = 3 # momentaneo
+        pasillos = int(area[0][3])
+        segmentos = int(area[0][4])
+        vacio = 0
+        i = 1
+        if child >0:
+            #for i in reversed(range(self.ui.verticalLayout.count())):
+            #   self.ui.verticalLayout.itemAt(i).widget().deleteLater()
+            for i in reversed(range(self.ui.gridLayout_2.count())):
+                self.ui.gridLayout_2.itemAt(i).widget().deleteLater()
 
-
-
-
+        for x in range(segmentos):
+            frame = QtWidgets.QFrame(self.ui.frame_area)
+            frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
+            frame.setFrameShadow(QtWidgets.QFrame.Raised)
+            frame.setMaximumSize(QtCore.QSize(50, 200))
+            vertical_layout = QtWidgets.QVBoxLayout(frame)
+            self.ui.gridLayout_2.addWidget(frame,1,i)
+            for y in range(niveles):
+                frame2 = QtWidgets.QPushButton(self.ui.frame)
+                frame2.setMaximumSize(QtCore.QSize(40, 40))
+                vertical_layout.addWidget(frame2)
+            i += 1
     # CREAR DEPÓSITO
     def crear_deposito(self):
 

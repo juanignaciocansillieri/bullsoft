@@ -42,48 +42,52 @@ class Area:
         cursor.execute(query, values)
         a.commit()
         b = cursor.fetchall()
-        ida = str(b[0][0])
-        try:
-            #query = "UPDATE matrizarea SET area=%s WHERE codigo=%s"
-            #values = (nombre, posicion)
-            #cursor.execute(query, values)
-            #a.commit()
-            query = "UPDATE area SET nombre=%s WHERE idarea=%s"
-            values = (nombre, ida)
-            cursor.execute(query, values)
-            a.commit()
-            query = "UPDATE area SET identificador=%s WHERE idarea=%s"
-            values = (iden, ida)
-            cursor.execute(query, values)
-            a.commit()
-            query = "UPDATE area SET posicion=%s WHERE idarea=%s"
-            values = (posicion, ida)
-            cursor.execute(query, values)
-            a.commit()
-            query = "UPDATE area SET pasillos=%s WHERE idarea=%s"
-            values = (pasillos, ida)
-            cursor.execute(query, values)
-            a.commit()
-            query = "UPDATE area SET segmentos=%s WHERE idarea=%s"
-            values = (segmentos, ida)
-            cursor.execute(query, values)
-            a.commit()
-            query = "UPDATE area SET longitud=%s WHERE idarea=%s"
-            values = (longitud, ida)
-            cursor.execute(query, values)
-            a.commit()
-            query = "UPDATE area SET ancho=%s WHERE idarea=%s"
-            values = (ancho, ida)
-            cursor.execute(query, values)
-            a.commit()
-            query = "UPDATE area SET alto=%s WHERE idarea=%s"
-            values = (alto, ida)
-            cursor.execute(query, values)
-            a.commit()
-            print("se modifico area correctamente")
-        except pymysql.err.OperationalError as err:
-            print("Hubo un error:", err)
-        c.close_connection(a)
+        if b == "None":
+            print("no se encontro el area indicado")
+            return 0
+        else:
+            ida = str(b[0][0])
+            try:
+                #query = "UPDATE matrizarea SET area=%s WHERE codigo=%s"
+                #values = (nombre, posicion)
+                #cursor.execute(query, values)
+                #a.commit()
+                query = "UPDATE area SET nombre=%s WHERE idarea=%s"
+                values = (nombre, ida)
+                cursor.execute(query, values)
+                a.commit()
+                query = "UPDATE area SET identificador=%s WHERE idarea=%s"
+                values = (iden, ida)
+                cursor.execute(query, values)
+                a.commit()
+                query = "UPDATE area SET posicion=%s WHERE idarea=%s"
+                values = (posicion, ida)
+                cursor.execute(query, values)
+                a.commit()
+                query = "UPDATE area SET pasillos=%s WHERE idarea=%s"
+                values = (pasillos, ida)
+                cursor.execute(query, values)
+                a.commit()
+                query = "UPDATE area SET segmentos=%s WHERE idarea=%s"
+                values = (segmentos, ida)
+                cursor.execute(query, values)
+                a.commit()
+                query = "UPDATE area SET longitud=%s WHERE idarea=%s"
+                values = (longitud, ida)
+                cursor.execute(query, values)
+                a.commit()
+                query = "UPDATE area SET ancho=%s WHERE idarea=%s"
+                values = (ancho, ida)
+                cursor.execute(query, values)
+                a.commit()
+                query = "UPDATE area SET alto=%s WHERE idarea=%s"
+                values = (alto, ida)
+                cursor.execute(query, values)
+                a.commit()
+                print("se modifico area correctamente")
+            except pymysql.err.OperationalError as err:
+                print("Hubo un error:", err)
+            c.close_connection(a)
 
     def eliminar_area(nombre):
         a = c.start_connection()
@@ -109,10 +113,15 @@ class Area:
             cursor.execute(query)
             area = cursor.fetchall()
             a.commit()
+            if area == "None":
+                print("no se encontro el area indicado")
+                return 0
+            else:
+                return area
         except pymysql.err.OperationalError as err:
             print("Hubo un error:", err)
         c.close_connection(a)
-        return area
+
 
     def mostrar_identificador(nombre):
         a = c.start_connection()
@@ -121,7 +130,11 @@ class Area:
         cursor.execute(query, nombre)
         data = cursor.fetchall()
         a.commit()
-        return data
+        if area == "None":
+            print("no se encontro el area indicado")
+            return 0
+        else:
+            return data
 
     def mostrar_area(nombre):
         a = c.start_connection()
@@ -130,6 +143,10 @@ class Area:
         cursor.execute(query, nombre)
         data = cursor.fetchall()
         a.commit()
+        #if area == "None":
+        #    print("no se encontro el area indicado")
+        #    return 0
+        #else:
         return data
 
 
