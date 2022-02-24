@@ -328,10 +328,10 @@ def modificar_dispo_egreso(codigo,prod,cantidad):
         print("Hubo un error:", err)
     c.close_connection(a)
 
-def busc_pos(segmento,columna,area):
+def busc_pos(area,segmento,columna):
     a = c.start_connection()
     cursor = a.cursor()
-    query = "SELECT * FROM alojamiento WHERE segmento=%s AND columna=%s and area=%s"
+    query = "SELECT * FROM alojamiento WHERE segmento=%s AND columna=%s AND area=%s"
     cursor.execute(query, (segmento,columna,area))
     data = cursor.fetchall()
     a.commit()

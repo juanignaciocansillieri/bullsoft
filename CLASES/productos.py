@@ -297,3 +297,18 @@ def ver_vol(codigo):
         data=data[0]
         return data
     c.close_connection(a)
+
+def buscar_prod_posicion(posicion):
+    a = c.start_connection()
+    cursor = a.cursor()
+    query = "SELECT * FROM productos WHERE posicion=%s"
+    cursor.execute(query, codigo)
+    data = cursor.fetchall()
+    a.commit()
+    if data == "None":
+        print("no se encontro el producto indicado")
+        return 0
+    else:
+        data = data[0]
+        return data
+    c.close_connection(a)
