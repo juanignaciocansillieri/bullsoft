@@ -18,7 +18,7 @@ class Alojamiento:
         self.columna = columna
         self.nivel = nivel
         self.volumen = self.largo * self.ancho * self.alto
-        self.disponibilidad = 0  # 0 disponible 1 tiene algo 2 esta lleno
+        self.disponibilidad = 100
         self.posicion = str(
             str(area) + "" + str(pasillo) + "" + str(self.segmento) + "" + str(filas) + "" + str(columna) + "" + str(
                 nivel))
@@ -241,6 +241,93 @@ def ver_codigo(codigo):
     else:
         c.close_connection(a)
         return 0
+
+def ver_dispo(codigo):
+    a = c.start_connection()
+    cursor = a.cursor()
+    query = "SELECT disponibilidad FROM alojamiento WHERE codigo=%s"
+    cursor.execute(query, codigo)
+    data = cursor.fetchall()
+    a.commit()
+    if data == "None":
+        print("no se encontro el alojamietno indicado")
+        return 0
+    else:
+        return data
+
+
+def modificar_dispo_ingreso(codigo,volumen):
+    a = c.start_connection()
+    cursor = a.cursor()
+    try:
+        query = "SELECT disponibilidad FROM alojamiento WHERE codigo=%s"
+        cursor.execute(query, codigo)
+        data = cursor.fetchall()
+        a.commit()
+        dispo=data[0]
+        if(dispo<100):
+
+            query = "SELECT volumen FROM alojamiento WHERE codigo=%s"
+            cursor.execute(query, codigo)
+            data = cursor.fetchall()
+            a.commit()
+            vol=data[0]
+
+            x=(vol*100)/volumen
+
+            dispo=dispo-x
+            if (dispo <100):
+
+                query = "UPDATE alojamiento set disponibilidad=%s WHERE codigo=%s"
+                values = (limite, codigo)
+                cursor.execute(query, values)
+                a.commit()
+                print("se MODIFICO alojamiento correctamente")
+            else:
+                print("no hay disponibilidad suficiente")
+                return 1
+
+        else:
+            print("no hay disponibilidad")
+            return 0
+    except pymysql.err.OperationalError as err:
+        print("Hubo un error:", err)
+    c.close_connection(a)
+
+def modificar_dispo_egreso(codigo,prod,cantidad):
+    a = c.start_connection()
+    cursor = a.cursor()
+    try:
+        query = "SELECT disponibilidad FROM alojamiento WHERE codigo=%s"
+        cursor.execute(query, codigo)
+        data = cursor.fetchall()
+        a.commit()
+        dispo = data[0]
+        if (dispo < 100):
+
+            query = "SELECT volumen FROM producto WHERE codigo=%s"
+            cursor.execute(query, prod)
+            data = cursor.fetchall()
+            a.commit()
+            vol = data[0]*cantidad
+
+            x = (vol * 100) / volumen
+
+            dispo = dispo + x
+
+            query = "UPDATE alojamiento set disponibilidad=%s WHERE codigo=%s"
+            values = (limite, codigo)
+            cursor.execute(query, values)
+            a.commit()
+            print("se MODIFICO alojamiento correctamente")
+
+        else:
+            print("no hay disponibilidad")
+            return 0
+    except pymysql.err.OperationalError as err:
+        print("Hubo un error:", err)
+    c.close_connection(a)
+
 
 
 """
