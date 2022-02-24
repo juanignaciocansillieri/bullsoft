@@ -143,11 +143,12 @@ class Modern(QMainWindow):
         verificar_deposito = conex.verificar_deposito()
         if (verificar_deposito == 0):
             self.ui.deposito_btn.clicked.connect(lambda: self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_area))
-            print("dep", verificar_deposito)
+            print("dep0", verificar_deposito)
         else:
-            print("dep", verificar_deposito)
+            print("dep1", verificar_deposito)
             self.ui.deposito_btn.clicked.connect(lambda: self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_deposito))
-            self.ui.tableWidget_egreso
+
+
     def click_a(self,event):
         self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_deposito)
 
@@ -352,8 +353,9 @@ class Modern(QMainWindow):
 
     def agregar_area_creada(self):
         areas = ar.Area.listar_area()
-        n = ar.Area.contar_filas()
+        n = ar.contar_filas()
         child = self.ui.verticalLayout_7.count()
+        print("areacreada")
         if child == n:
             pass
         else:
@@ -388,12 +390,9 @@ class Modern(QMainWindow):
 
     ## Agregar botones dinamicamente
     def agregar_btn_areas(self):
-
-        print("agregar btn areas")
         areas = ar.Area.listar_area()
         i = 0
         for area in areas:
-            print(area)
             self.btn1 = QtWidgets.QPushButton(self.ui.frame_14)
             self.btn1.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
             self.btn1.setStyleSheet("QPushButton{\n"
@@ -431,10 +430,10 @@ class Modern(QMainWindow):
         child = self.ui.verticalLayout_7.count()
         areas = ar.Area.listar_area()
         n = ar.contar_filas()
-        x = 0
-        y = 0
+        print(n,child)
+        for i in reversed(range(self.ui.verticalLayout_7.count())):
+            self.ui.verticalLayout_7.itemAt(i).widget().deleteLater()
         for a in areas:
-
                     frame = QtWidgets.QFrame(self.ui.frame_3)
                     frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
                     frame.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -452,7 +451,6 @@ class Modern(QMainWindow):
                     p=a[2].split(sep="x")
                     x=int(p[0])
                     y=int(p[1])
-                    print(x,y)
                     self.ui.gridLayout.addWidget(frame, x, y)
                     font = QtGui.QFont()
                     font.setFamily("Roboto")
@@ -471,7 +469,7 @@ class Modern(QMainWindow):
                         if child == n - 1:
                             self.agregar_area_creada()
                         else:
-
+                                print(a)
                                 self.btn2 = QtWidgets.QPushButton(self.ui.frame_14)
                                 self.btn2.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
                                 self.btn2.setStyleSheet("QPushButton{\n"
@@ -500,7 +498,6 @@ class Modern(QMainWindow):
                                 self.btn2.setFont(font)
                                 self.btn2.released.connect(self.button_released)
                     elif child > n:
-
                             for i in reversed(range(self.ui.verticalLayout_7.count())):
                                 self.ui.verticalLayout_7.itemAt(i).widget().deleteLater()
                             for i in reversed(range(self.ui.gridLayout.count())):
@@ -535,14 +532,12 @@ class Modern(QMainWindow):
         child = self.ui.gridLayout_2.count()
         print(child)
         print(area)
-        niveles = 3 # momentaneo
+        niveles = 5 # momentaneo
         pasillos = int(area[0][3])
         segmentos = int(area[0][4])
         vacio = 0
         i = 1
         if child >0:
-            #for i in reversed(range(self.ui.verticalLayout.count())):
-            #   self.ui.verticalLayout.itemAt(i).widget().deleteLater()
             for i in reversed(range(self.ui.gridLayout_2.count())):
                 self.ui.gridLayout_2.itemAt(i).widget().deleteLater()
 
