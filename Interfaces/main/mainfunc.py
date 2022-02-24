@@ -143,11 +143,12 @@ class Modern(QMainWindow):
         verificar_deposito = conex.verificar_deposito()
         if (verificar_deposito == 0):
             self.ui.deposito_btn.clicked.connect(lambda: self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_area))
-            print("dep", verificar_deposito)
+            print("dep0", verificar_deposito)
         else:
-            print("dep", verificar_deposito)
+            print("dep1", verificar_deposito)
             self.ui.deposito_btn.clicked.connect(lambda: self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_deposito))
-            self.ui.tableWidget_egreso
+
+
     def click_a(self,event):
         self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_deposito)
 
@@ -246,20 +247,6 @@ class Modern(QMainWindow):
             l.fifo(codigo, cantidad)
             i = i + 3
         return 0
-
-    def borrar_egreso(self):
-        global  n_egreso
-        global tupla_egreso
-        codigo=self.ui.input_codigoProdEgreso.text()
-        i=tupla_egreso.index(codigo)
-        tupla_egreso.pop(i)
-        tupla_egreso.pop(i+1)
-        tupla_egreso.pop(i+2)
-        print(tupla_egreso)
-        self.ui.input_codigoProdEgreso.setText("")
-        #self.ui.num_cantidadEgreso.
-        n_egreso=n_egreso-1
-        self.act_egreso()
 
     ## Listar Movimientos en la tabla
     def listar_movimientos(self):
@@ -366,8 +353,9 @@ class Modern(QMainWindow):
 
     def agregar_area_creada(self):
         areas = ar.Area.listar_area()
-        n = ar.Area.contar_filas()
+        n = ar.contar_filas()
         child = self.ui.verticalLayout_7.count()
+        print("areacreada")
         if child == n:
             pass
         else:
@@ -402,12 +390,9 @@ class Modern(QMainWindow):
 
     ## Agregar botones dinamicamente
     def agregar_btn_areas(self):
-
-        print("agregar btn areas")
         areas = ar.Area.listar_area()
         i = 0
         for area in areas:
-            print(area)
             self.btn1 = QtWidgets.QPushButton(self.ui.frame_14)
             self.btn1.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
             self.btn1.setStyleSheet("QPushButton{\n"
@@ -445,10 +430,10 @@ class Modern(QMainWindow):
         child = self.ui.verticalLayout_7.count()
         areas = ar.Area.listar_area()
         n = ar.contar_filas()
-        x = 0
-        y = 0
+        print(n,child)
+        for i in reversed(range(self.ui.verticalLayout_7.count())):
+            self.ui.verticalLayout_7.itemAt(i).widget().deleteLater()
         for a in areas:
-
                     frame = QtWidgets.QFrame(self.ui.frame_3)
                     frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
                     frame.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -466,7 +451,6 @@ class Modern(QMainWindow):
                     p=a[2].split(sep="x")
                     x=int(p[0])
                     y=int(p[1])
-                    print(x,y)
                     self.ui.gridLayout.addWidget(frame, x, y)
                     font = QtGui.QFont()
                     font.setFamily("Roboto")
@@ -485,7 +469,7 @@ class Modern(QMainWindow):
                         if child == n - 1:
                             self.agregar_area_creada()
                         else:
-
+                                print(a)
                                 self.btn2 = QtWidgets.QPushButton(self.ui.frame_14)
                                 self.btn2.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
                                 self.btn2.setStyleSheet("QPushButton{\n"
@@ -514,7 +498,6 @@ class Modern(QMainWindow):
                                 self.btn2.setFont(font)
                                 self.btn2.released.connect(self.button_released)
                     elif child > n:
-
                             for i in reversed(range(self.ui.verticalLayout_7.count())):
                                 self.ui.verticalLayout_7.itemAt(i).widget().deleteLater()
                             for i in reversed(range(self.ui.gridLayout.count())):
@@ -523,12 +506,11 @@ class Modern(QMainWindow):
 
     def button_released(self):
         global globalArea
-        self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_areas)
+        self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_areaIndividual)
         sending_button = self.sender()
         nombre_area = str(sending_button.objectName())
         globalArea = nombre_area
-        #self.listar_areas(globalArea)
-        self.listar_posiciones_de_alojamiento(globalArea)
+        self.listar_segmentos(globalArea)
 
     def new_posicion(self, btn):
         self.newPosicionAlojamiento = Pa(btn)
@@ -539,38 +521,38 @@ class Modern(QMainWindow):
         self.newPosicionAlojamiento = Ma(btn)
         self.newPosicionAlojamiento.show()
 
-    def listar_areas(self, btn):
+
+
+    def listar_segmentos(self, btn):
         global globalArea
-        area = btn
-        self.listar_posiciones_de_alojamiento()
+        nombreArea = btn
+        self.ui.label_nombre_area.setText(nombreArea)
+        self.ui.pushButton.clicked.connect(lambda :self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_deposito))
+        area = ar.Area.mostrar_area(nombreArea)
+        child = self.ui.gridLayout_2.count()
+        print(child)
+        print(area)
+        niveles = 5 # momentaneo
+        pasillos = int(area[0][3])
+        segmentos = int(area[0][4])
+        vacio = 0
+        i = 1
+        if child >0:
+            for i in reversed(range(self.ui.gridLayout_2.count())):
+                self.ui.gridLayout_2.itemAt(i).widget().deleteLater()
 
-
-    ##### LISTAR POSICIONES DE ALOJAMIENTO ####
-
-    def listar_posiciones_de_alojamiento(self, btn):
-        global globalArea
-        area = btn
-        alojamientos = al.Alojamiento.listar_posicion_alojamiento(globalArea) #Paso como parámetro Global Area
-
-        n = al.Alojamiento.contar_filas()
-        self.ui.tableWidget_areas.clear()
-        self.ui.tableWidget_areas.setRowCount(n)
-        table_row=0
-
-        for row in alojamientos:
-            self.ui.tableWidget_areas.setItem(
-                table_row, 0, QtWidgets.QTableWidgetItem(row[0]))
-            self.ui.tableWidget_areas.setItem(
-                table_row, 1, QtWidgets.QTableWidgetItem(row[1]))
-            self.ui.tableWidget_areas.setItem(
-                table_row, 2, QtWidgets.QTableWidgetItem(row[2]))
-            self.ui.tableWidget_areas.setItem(
-                table_row, 3, QtWidgets.QTableWidgetItem(row[3]))
-
-            table_row += 1
-
-
-
+        for x in range(segmentos):
+            frame = QtWidgets.QFrame(self.ui.frame_area)
+            frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
+            frame.setFrameShadow(QtWidgets.QFrame.Raised)
+            frame.setMaximumSize(QtCore.QSize(50, 200))
+            vertical_layout = QtWidgets.QVBoxLayout(frame)
+            self.ui.gridLayout_2.addWidget(frame,1,i)
+            for y in range(niveles):
+                frame2 = QtWidgets.QPushButton(self.ui.frame)
+                frame2.setMaximumSize(QtCore.QSize(40, 40))
+                vertical_layout.addWidget(frame2)
+            i += 1
     # CREAR DEPÓSITO
     def crear_deposito(self):
 
@@ -580,21 +562,7 @@ class Modern(QMainWindow):
         for x in range(largo_area):
             for y in range(ancho_area):
                 mz.crear_matriz_areas(x+1,y+1)
-        """"
-                frame = QtWidgets.QFrame(self.ui.frame_3)
-                frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
-                frame.setFrameShadow(QtWidgets.QFrame.Raised)
-                frame.setMaximumSize(QtCore.QSize(200, 200))
-                vertical_layout = QtWidgets.QVBoxLayout(frame)
-                self.btn = QPushButton(frame)
-                self.btn.setText('{}x{}'.format(x+1, y+1))
-                self.btn.setObjectName('%s' % y*x)
-                self.btn.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-                self.btn.setMinimumSize(QtCore.QSize(70, 30))
-                self.btn.setMaximumSize(QtCore.QSize(100, 30))
-                vertical_layout.addWidget(self.btn, 0, QtCore.Qt.AlignHCenter | QtCore.Qt.AlignVCenter)
-                self.ui.gridLayout.addWidget(frame, x, y)
-        """
+
     # LISTAR USUARIOS EN TABLA
 
     def listar_usuarios(self):
