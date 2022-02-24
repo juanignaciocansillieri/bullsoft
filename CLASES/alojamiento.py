@@ -328,6 +328,19 @@ def modificar_dispo_egreso(codigo,prod,cantidad):
         print("Hubo un error:", err)
     c.close_connection(a)
 
+def busc_pos(segmento,columna):
+    a = c.start_connection()
+    cursor = a.cursor()
+    query = "SELECT * FROM alojamiento WHERE segmento=%s AND columna=%s"
+    cursor.execute(query, (segmento,columna))
+    data = cursor.fetchall()
+    a.commit()
+    if data == "None":
+        print("no se encontro el alojamietno indicado")
+        return 0
+    else:
+        return data
+
 
 
 """
