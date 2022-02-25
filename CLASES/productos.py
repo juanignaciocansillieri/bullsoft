@@ -23,9 +23,6 @@ class Productos:
         self.alto = alto
         self.alta_producto()
 
-    def asignar_ubicacion(self):
-        pass
-
     def alta_producto(self):
         a = c.start_connection()
         cursor = a.cursor()
@@ -302,7 +299,7 @@ def buscar_prod_posicion(posicion):
     a = c.start_connection()
     cursor = a.cursor()
     query = "SELECT * FROM productos WHERE posicion=%s"
-    cursor.execute(query, codigo)
+    cursor.execute(query, posicion)
     data = cursor.fetchall()
     a.commit()
     if data == "None":
