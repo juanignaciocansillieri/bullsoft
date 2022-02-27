@@ -166,8 +166,8 @@ def crear_tabla():  # crea una tabla (al iniciar por primera vez el programa se 
     longitud VARCHAR(20) NOT NULL,
     ancho VARCHAR(20) NOT NULL,
     alto VARCHAR(20) NOT NULL,
-    entrada BINARY(1) ,
-    salida BINARY(1),
+    entrada INT,
+    salida INT,
     disponibilidad VARCHAR(5) NOT NULL
     );"""
 
@@ -181,9 +181,7 @@ def crear_tabla():  # crea una tabla (al iniciar por primera vez el programa se 
     fragil BINARY(1) NOT NULL,
     foto VARCHAR(100) NOT NULL,
     peso INT NOT NULL,
-    largo INT NOT NULL,
-    ancho INT NOT NULL,
-    alto INT NOT NULL
+    volumen INT NOT NULL,
     );"""
 
     q13 = """CREATE TABLE IF NOT EXISTS movimientos (

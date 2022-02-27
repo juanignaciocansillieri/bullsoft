@@ -3,6 +3,9 @@ from PyQt5.QtWidgets import *
 from CLASES import area as a
 from Interfaces.main.nueva_area import Ui_MainWindow
 from CLASES import  matriz as mz
+from CLASES import  area as ar
+from PyQt5 import QtWidgets
+from PyQt5.QtWidgets import *
 
 
 class NewArea(QMainWindow):
@@ -31,7 +34,25 @@ class NewArea(QMainWindow):
         pasillo = self.ui.segmentos_num.value()
         segmento = self.ui.pasillos_num.value()
         posicion = self.ui.comboBox.currentText()
-        a.Area.modificar_area(nom, ide , posicion, pasillo, segmento, 0, 0, 0)
+        if self.ui.radioButton.isChecked()==True:
+            if ar.ver_e()==0:
+                QtWidgets.QMessageBox.critical(self, "Error", "Entrada ya ocupada")
+                return None
+            else:
+                entrada=1
+                salida=0
+        if self.ui.radioButton_2.isChecked() == True:
+            if ar.ver_s()==0:
+                QtWidgets.QMessageBox.critical(self, "Error", "Salida ya ocupada")
+                return None
+            else:
+                entrada=0
+                salida=1
+        if ar.ver_area_posicion(posicion) == 1:
+            a.Area.modificar_area(nom, ide , posicion, pasillo, segmento, 0, 0, 0,entrada,salida)
+        else:
+            QtWidgets.QMessageBox.critical(self, "Error", "Espacio ya ocupado")
+            return None
         self.close()
 
 
