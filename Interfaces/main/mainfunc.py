@@ -14,7 +14,7 @@ from Interfaces.main.create_user_func import UsuarioWindow
 from Interfaces.main.delete_area import BorrarArea
 from Interfaces.main.egreso_func import NewEgreso
 from Interfaces.main.ingreso_func import NewIngreso
-from Interfaces.main.main import Ui_MainWindow
+from Interfaces.main.new_main import Ui_MainWindow
 from Interfaces.main.modificar_area import ModificarArea as Ma
 from Interfaces.main.nueva_area import Ui_MainWindow as Na
 from Interfaces.main.nueva_area_func import NewArea
@@ -75,11 +75,11 @@ class Modern(QMainWindow):
         self.ui.btn_actualizarProdEgreso.clicked.connect(self.act_egreso)
         self.ui.new_ingreso_btn.clicked.connect(self.mostrar_ingreso)
         self.ui.btn_actualizarMov.clicked.connect(self.listar_movimientos)
-        self.ui.pushButton_18.clicked.connect(self.buscar_movimiento)
+        self.ui.pushButton_21.clicked.connect(self.buscar_movimiento)
         # Abrir Pag Lotes
         self.ui.products_btn_lotes.clicked.connect(
             lambda: self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_lotes))
-        self.ui.pushButton_19.clicked.connect(self.listar_lotes)
+        self.ui.pushButton_20.clicked.connect(self.listar_lotes)
 
         # Listamos productos al iniciar la ventana
 

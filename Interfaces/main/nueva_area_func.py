@@ -34,6 +34,8 @@ class NewArea(QMainWindow):
         pasillo = self.ui.segmentos_num.value()
         segmento = self.ui.pasillos_num.value()
         posicion = self.ui.comboBox.currentText()
+
+        """"
         if self.ui.radioButton.isChecked()==True:
             if ar.ver_e()==0:
                 QtWidgets.QMessageBox.critical(self, "Error", "Entrada ya ocupada")
@@ -49,10 +51,11 @@ class NewArea(QMainWindow):
                 entrada=0
                 salida=1
         if ar.ver_area_posicion(posicion) == 1:
-            a.Area.modificar_area(nom, ide , posicion, pasillo, segmento, 0, 0, 0,entrada,salida)
         else:
             QtWidgets.QMessageBox.critical(self, "Error", "Espacio ya ocupado")
             return None
+            """
+        a.Area.modificar_area(nom, ide , posicion, pasillo, segmento, 0, 0, 0)
         self.close()
 
 

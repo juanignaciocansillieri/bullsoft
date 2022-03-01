@@ -229,11 +229,12 @@ def contar_filas():
 def ver_area_posicion(posicion):
     a = c.start_connection()
     cursor = a.cursor()
-    query = "SELECT * FROM area where posicion=%s"
+    query = "SELECT nombre FROM area where posicion=%s"
     cursor.execute(query,posicion)
     a.commit()
     b = cursor.fetchall()
-    if b=="None":
+    nombre = str(b[0][0])
+    if nombre=="None":
         return 1
     else:
         return 0
@@ -243,7 +244,7 @@ def ver_e():
     a = c.start_connection()
     cursor = a.cursor()
     query = "SELECT * FROM area where entrada=1"
-    cursor.execute(query, posicion)
+    cursor.execute(query)
     a.commit()
     b = cursor.fetchall()
     if b == "None":
@@ -256,7 +257,7 @@ def ver_s():
     a = c.start_connection()
     cursor = a.cursor()
     query = "SELECT * FROM area where entrada=1"
-    cursor.execute(query, posicion)
+    cursor.execute(query)
     a.commit()
     b = cursor.fetchall()
     if b == "None":
