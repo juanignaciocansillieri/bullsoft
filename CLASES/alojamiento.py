@@ -7,25 +7,24 @@ from DB import conexion as c
 
 
 class Alojamiento:
-    def __init__(self, largo, ancho, alto, area, pasillo, segmento, filas, nivel, limite, columna):
+    def __init__(self, largo, ancho, alto, area, pasillo, segmento, nivel, limite, columna):
         self.columna = columna
         self.largo = largo
         self.ancho = ancho
         self.alto = alto
         self.area = area
         self.segmento = segmento
-        self.filas = filas
         self.columna = columna
         self.nivel = nivel
         self.volumen = self.largo * self.ancho * self.alto
         self.disponibilidad = 100
         self.posicion = str(
-            str(area) + "" + str(pasillo) + "" + str(self.segmento) + "" + str(filas) + "" + str(columna) + "" + str(
+            str(area) + "" + str(pasillo) + "" + str(self.segmento) + ""+ "" + str(columna) + "" + str(
                 nivel))
         self.pasillo = pasillo
         self.limite = limite
         self.codigo = str(
-            str(area) + "" + str(pasillo) + "" + str(self.segmento) + "" + str(filas) + "" + str(columna) + "" + str(
+            str(area) + "" + str(pasillo) + "" + str(self.segmento) + "" "" + str(columna) + "" + str(
                 nivel))
         print(self.codigo)
         self.alta_alojamiento()
@@ -36,11 +35,11 @@ class Alojamiento:
         cursor = a.cursor()
         try:
             query = "INSERT INTO alojamiento(codigo,area,largo,ancho,alto,volumen,disponibilidad,posicion,pasillo," \
-                    "segmento,nivel,fila,limite,columna) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s) "
+                    "segmento,nivel,limite,columna) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s) "
             values = (
                 self.codigo, self.area, self.largo, self.ancho, self.alto, self.volumen, self.disponibilidad,
                 self.posicion,
-                self.pasillo, self.segmento, self.nivel, self.filas, self.limite, self.columna)
+                self.pasillo, self.segmento, self.nivel, self.limite, self.columna)
             cursor.execute(query, values)
             a.commit()
             print("se dio alta alojamiento correctamente")
@@ -279,7 +278,7 @@ def modificar_dispo_ingreso(codigo,volumen):
             if (dispo <100):
 
                 query = "UPDATE alojamiento set disponibilidad=%s WHERE codigo=%s"
-                values = (limite, codigo)
+                values = (dispo, codigo)
                 cursor.execute(query, values)
                 a.commit()
                 print("se MODIFICO alojamiento correctamente")

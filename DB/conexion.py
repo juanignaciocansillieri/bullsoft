@@ -112,7 +112,6 @@ def crear_tabla():  # crea una tabla (al iniciar por primera vez el programa se 
     pasillo VARCHAR(20) NOT NULL,
     segmento VARCHAR(20) NOT NULL,
     columna VARCHAR(20) NOT NULL,
-    fila VARCHAR(20) NOT NULL,
     nivel VARCHAR(20) NOT NULL,
     codigo VARCHAR(100) NOT NULL,
     posicion VARCHAR(100) NOT NULL,
