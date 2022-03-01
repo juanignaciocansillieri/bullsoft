@@ -566,9 +566,17 @@ class Modern(QMainWindow):
         global globalPosicion
         sending_button = self.sender()
         nombre_posicion = str(sending_button.objectName())
+        self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_posicionesAlojamiento)
         print(nombre_posicion)
         globalPosicion = nombre_posicion
         print(globalPosicion)
+        self.listar_productos_posicion()
+
+
+
+    def listar_productos_posicion(self):
+        global globalPosicion
+        self.ui.label_posicion.setText(globalPosicion)
     # CREAR DEPÓSITO
     def crear_deposito(self):
 
@@ -578,6 +586,8 @@ class Modern(QMainWindow):
         for x in range(largo_area):
             for y in range(ancho_area):
                 mz.crear_matriz_areas(x+1,y+1)
+
+
 
     # LISTAR USUARIOS EN TABLA
 
