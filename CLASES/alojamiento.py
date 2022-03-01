@@ -310,12 +310,12 @@ def modificar_dispo_egreso(codigo,prod,cantidad):
             a.commit()
             vol = data[0]*cantidad
 
-            x = (vol * 100) / volumen
+            x = (vol * 100) / vol
 
             dispo = dispo + x
 
             query = "UPDATE alojamiento set disponibilidad=%s WHERE codigo=%s"
-            values = (limite, codigo)
+            values = (x, codigo)
             cursor.execute(query, values)
             a.commit()
             print("se MODIFICO alojamiento correctamente")
