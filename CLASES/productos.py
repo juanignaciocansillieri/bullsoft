@@ -6,7 +6,7 @@ from DB import conexion as c
 
 class Productos:
     def __init__(self, codigo, marca, cantidad, descripcion, ubicacion, fechalote, vencimiento, condicion, fragil, foto,
-                 peso, largo, ancho, alto):
+                 peso,volumen, precio):
         self.codigo = codigo
         self.marca = marca
         self.cantidad = cantidad
@@ -18,19 +18,18 @@ class Productos:
         self.condicion = condicion
         self.fragil = fragil
         self.peso = peso
-        self.ancho = ancho
-        self.largo = largo
-        self.alto = alto
+        self.volumen=volumen
+        self.precio=precio
         self.alta_producto()
 
     def alta_producto(self):
         a = c.start_connection()
         cursor = a.cursor()
         try:
-            query = "INSERT INTO productos (codigo, marca, descripcion,ubicacion,condicion,fragil,foto,peso,largo," \
-                    "ancho,alto) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s) "
+            query = "INSERT INTO productos (codigo, marca, descripcion,ubicacion,condicion,fragil,foto,peso," \
+                    "volumen,precio) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s) "
             values = (self.codigo, self.marca, self.descripcion, self.ubicacion, self.condicion, self.fragil, self.foto,
-                      self.peso, self.largo, self.ancho, self.alto)
+                      self.peso, self.volumen,self.precio)
             cursor.execute(query, values)
             a.commit()
             lotes.Lote(self.codigo, self.cantidad, self.fechalote, self.vencimiento)
@@ -51,8 +50,7 @@ class Productos:
         lotes.Lote.eliminar_prod_lote(codigo)
         print("Se elimino producto correctamente")
 
-    def modificar_produc(codigov, codigon, marca, descripcion, ubicacion, condicion, fragil, foto, peso, largo, ancho,
-                         alto):
+    def modificar_produc(codigov, codigon, marca, descripcion, ubicacion, condicion, fragil, foto, peso,volumen, precio):
         a = c.start_connection()
         cursor = a.cursor()
         query = "SELECT idproductos FROM productos WHERE codigo=%s"
@@ -97,28 +95,21 @@ class Productos:
                 ubicacionv = cursor.fetchall()
                 ubicacionv = str(ubicacionv[0][0])
                 a.commit()
-                if ubicacionv != ubicacion:
-                    alojamiento.Alojamiento.ab_alojamiento(ubicacionv)
-                    alojamiento.Alojamiento.ab_alojamiento(ubicacion)
-                    query = "UPDATE productos set ubicacion=%s WHERE idproductos=%s"
-                    values = (ubicacion, idp)
-                    cursor.execute(query, values)
-                    a.commit()
+                query = "UPDATE productos set ubicacion=%s WHERE idproductos=%s"
+                values = (ubicacion, idp)
+                cursor.execute(query, values)
+                a.commit()
                 #
                 query = "UPDATE productos set peso=%s WHERE idproductos=%s"
                 values = (peso, idp)
                 cursor.execute(query, values)
                 a.commit()
-                query = "UPDATE productos set largo=%s WHERE idproductos=%s"
-                values = (largo, idp)
+                query = "UPDATE productos set volumen=%s WHERE idproductos=%s"
+                values = (volumen, idp)
                 cursor.execute(query, values)
                 a.commit()
-                query = "UPDATE productos set ancho=%s WHERE idproductos=%s"
-                values = (ancho, idp)
-                cursor.execute(query, values)
-                a.commit()
-                query = "UPDATE productos set alto=%s WHERE idproductos=%s"
-                values = (alto, idp)
+                query = "UPDATE productos set precio=%s WHERE idproductos=%s"
+                values = (precio, idp)
                 cursor.execute(query, values)
                 a.commit()
                 lotes.Lote.mod_idpruct(codigov, codigon)
@@ -181,7 +172,7 @@ class Productos:
         a = c.start_connection()
         cursor = a.cursor()
         query = (
-            "SELECT p.codigo, p.marca, l.cantidad, p.descripcion,p.ubicacion, l.fechalote, l.vencimiento,p.fragil,p.foto,p.peso,p.largo,p.ancho,p.alto,p.condicion FROM productos p JOIN lote l ON p.codigo = l.idproducto WHERE codigo=%s")
+            "SELECT p.codigo, p.marca, l.cantidad, p.descripcion,p.ubicacion, l.fechalote, l.vencimiento,p.fragil,p.foto,p.peso,p.volumen,p.precio,p.condicion FROM productos p JOIN lote l ON p.codigo = l.idproducto WHERE codigo=%s")
         cursor.execute(query, codigo)
         data = cursor.fetchall()
         a.commit()
@@ -300,6 +291,21 @@ def buscar_prod_posicion(posicion):
     cursor = a.cursor()
     query = "SELECT * FROM productos WHERE posicion=%s"
     cursor.execute(query, posicion)
+    data = cursor.fetchall()
+    a.commit()
+    if data == "None":
+        print("no se encontro el producto indicado")
+        return 0
+    else:
+        data = data[0]
+        return data
+    c.close_connection(a)
+
+def ver_precio(codigo):
+    a = c.start_connection()
+    cursor = a.cursor()
+    query = "SELECT precio FROM productos WHERE codigo=%s"
+    cursor.execute(query, codigo)
     data = cursor.fetchall()
     a.commit()
     if data == "None":
