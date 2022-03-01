@@ -22,6 +22,7 @@ from Interfaces.main.nuevoProduct_func import ProductWindow
 from Interfaces.main.posiciones_alojamiento import PosicionAlojamiento as Pa
 from CLASES import matriz as mz
 
+globalPosicion = ""
 defaultImg = ""
 codigoViejo = ""
 DNI_Viejo = ""
@@ -122,8 +123,13 @@ class Modern(QMainWindow):
 
         #self.ui.deposito_btn.clicked.connect(self.mostra_areas)
         ## Abrir Pagina Depositos ##
-
-        self.ui.deposito_btn.clicked.connect(self.verificar_deposito_creado)
+        verificar_deposito = conex.verificar_deposito()
+        if (verificar_deposito == 0):
+            self.ui.deposito_btn.clicked.connect(lambda: self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_area))
+            print("dep0", verificar_deposito)
+        else:
+            print("dep1", verificar_deposito)
+            self.ui.deposito_btn.clicked.connect(lambda: self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_deposito))
         self.ui.deposito_btn.clicked.connect(lambda: self.ui.stackedWidget_3.setCurrentWidget(self.ui.deposito_subpage))
         self.ui.newArea_btn.clicked.connect(self.mostrar_new_area)
         self.ui.label_12.mousePressEvent = self.click_a
@@ -525,6 +531,7 @@ class Modern(QMainWindow):
 
     def listar_segmentos(self, btn):
         global globalArea
+        global globalPosicion
         nombreArea = btn
         self.ui.label_nombre_area.setText(nombreArea)
         self.ui.pushButton.clicked.connect(lambda :self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_deposito))
@@ -532,7 +539,7 @@ class Modern(QMainWindow):
         child = self.ui.gridLayout_2.count()
         print(child)
         print(area)
-        niveles = 5 # momentaneo
+        niveles = 3 # momentaneo
         pasillos = int(area[0][3])
         segmentos = int(area[0][4])
         vacio = 0
@@ -549,10 +556,27 @@ class Modern(QMainWindow):
             vertical_layout = QtWidgets.QVBoxLayout(frame)
             self.ui.gridLayout_2.addWidget(frame,1,i)
             for y in range(niveles):
-                frame2 = QtWidgets.QPushButton(self.ui.frame)
-                frame2.setMaximumSize(QtCore.QSize(40, 40))
-                vertical_layout.addWidget(frame2)
+                btn_area = QtWidgets.QPushButton(self.ui.frame)
+                btn_area.setMaximumSize(QtCore.QSize(40, 40))
+                btn_area.setObjectName(globalArea + "-" + str(x+1) + "-" + str(y+1))
+                vertical_layout.addWidget(btn_area)
+                btn_area.released.connect(self.button_released2)
             i += 1
+    def button_released2(self):
+        global globalPosicion
+        sending_button = self.sender()
+        nombre_posicion = str(sending_button.objectName())
+        self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_posicionesAlojamiento)
+        print(nombre_posicion)
+        globalPosicion = nombre_posicion
+        print(globalPosicion)
+        self.listar_productos_posicion()
+
+
+
+    def listar_productos_posicion(self):
+        global globalPosicion
+        self.ui.label_posicion.setText(globalPosicion)
     # CREAR DEPÓSITO
     def crear_deposito(self):
 
@@ -562,6 +586,8 @@ class Modern(QMainWindow):
         for x in range(largo_area):
             for y in range(ancho_area):
                 mz.crear_matriz_areas(x+1,y+1)
+
+
 
     # LISTAR USUARIOS EN TABLA
 
