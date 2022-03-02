@@ -26,15 +26,13 @@ class Productos:
         a = c.start_connection()
         cursor = a.cursor()
         try:
-            query = "INSERT INTO productos (codigo, marca, descripcion,ubicacion,condicion,fragil,foto,peso," \
+            query = "INSERT INTO productos (codigo, marca, descripcion,ubicacion,fragil,foto,peso," \
                     "volumen,precio) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s) "
             values = (self.codigo, self.marca, self.descripcion, self.ubicacion, self.condicion, self.fragil, self.foto,
                       self.peso, self.volumen,self.precio)
             cursor.execute(query, values)
             a.commit()
             lotes.Lote(self.codigo, self.cantidad, self.fechalote, self.vencimiento)
-            alojamiento.Alojamiento.ab_alojamiento(self.codigo)
-
             print("se dio alta producto correctamente")
 
         except pymysql.err.OperationalError as err:
@@ -306,6 +304,21 @@ def ver_precio(codigo):
     cursor = a.cursor()
     query = "SELECT precio FROM productos WHERE codigo=%s"
     cursor.execute(query, codigo)
+    data = cursor.fetchall()
+    a.commit()
+    if data == "None":
+        print("no se encontro el producto indicado")
+        return 0
+    else:
+        data = data[0]
+        return data
+    c.close_connection(a)
+
+def ver_posicion(codigo):
+    a = c.start_connection()
+    cursor = a.cursor()
+    query = "SELECT posicion FROM productos WHERE codigo=%s"
+    cursor.execute(query, posicion)
     data = cursor.fetchall()
     a.commit()
     if data == "None":
