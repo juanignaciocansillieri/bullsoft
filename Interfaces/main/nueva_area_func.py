@@ -34,6 +34,7 @@ class NewArea(QMainWindow):
         segmento = self.ui.segmentos_num.value()
         pasillo = self.ui.pasillos_num.value()
         posicion = self.ui.comboBox.currentText()
+        print(posicion)
         entrada=0
         salida=0
         if(nom=="" or ide==""):
@@ -57,7 +58,7 @@ class NewArea(QMainWindow):
                 entrada=0
                 salida=1
         if ar.ver_area_posicion(posicion) == 1:
-            a.Area.modificar_area(nom, ide , posicion, pasillo, segmento, 0, 0, 0,entrada,salida)
+            a.Area.modificar_area(nom, ide , posicion, pasillo, segmento, 0, 0,entrada,salida)
         else:
             QtWidgets.QMessageBox.critical(self, "Error", "Espacio ya ocupado")
             return None

@@ -143,7 +143,7 @@ class Area:
     def mostrar_area(nombre):
         a = c.start_connection()
         cursor = a.cursor()
-        query = "SELECT nombre,identificador,posicion,pasillos,segmentos,longitud,ancho,alto FROM area WHERE nombre=%s"
+        query = "SELECT nombre,identificador,posicion,pasillos,segmentos FROM area WHERE nombre=%s"
         cursor.execute(query, nombre)
         data = cursor.fetchall()
         a.commit()
@@ -270,26 +270,28 @@ def contar_niveles(area):
 def ver_area_posicion(posicion):
     a = c.start_connection()
     cursor = a.cursor()
-    query = "SELECT posicion FROM area where nombre=%s"
-    cursor.execute(query,nombre)
+    query = "SELECT nombre FROM area where posicion=%s"
+    cursor.execute(query,posicion)
     a.commit()
     b = cursor.fetchall()
-    posicion=str(b[0][0])
-    return  posicion
+    b=str(b[0][0])
+    print (b,posicion)
+    if posicion!=b:
+        return 0
+    else:
+        return b
     c.close_connection(a)
+
 
 def ver_posicion(area):
     a = c.start_connection()
     cursor = a.cursor()
     query = "SELECT posicion FROM area where nombre=%s"
-    cursor.execute(query,posicion)
+    cursor.execute(query,nombre)
     a.commit()
     b = cursor.fetchall()
     nombre=str(b[0][0])
-    if nombre==posicion:
-        return 1
-    else:
-        return 0
+    return nombre
     c.close_connection(a)
 
 def ver_e():
@@ -302,7 +304,7 @@ def ver_e():
     if b == "None":
         return 0
     else:
-        return b[0][0]
+        return b
     c.close_connection(a)
 
 def ver_s():
@@ -315,7 +317,7 @@ def ver_s():
     if b == "None":
         return 0
     else:
-        return b[0][0]
+        return b
     c.close_connection(a)
 
 def ver_area_siguiente(area):

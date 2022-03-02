@@ -282,8 +282,8 @@ def pick(producto):
     inicio=a.ver_e()
     posicioninicio=a.ver_posicion(inicio)
     print(posicioninicio)
-    while iar<nar:
-        while iseg<nseg:
+    #while iar<nar:
+     #   while iseg<nseg:
 
 
 
