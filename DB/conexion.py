@@ -162,9 +162,8 @@ def crear_tabla():  # crea una tabla (al iniciar por primera vez el programa se 
     posicion VARCHAR(20) NOT NULL,
     pasillos VARCHAR(20) NOT NULL,
     segmentos VARCHAR(20) NOT NULL,
-    longitud VARCHAR(20) NOT NULL,
-    ancho VARCHAR(20) NOT NULL,
-    alto VARCHAR(20) NOT NULL,
+    columnas VARCHAR(20) NOT NULL,
+    niveles VARCHAR(20) NOT NULL,
     entrada INT,
     salida INT,
     disponibilidad VARCHAR(5) NOT NULL
@@ -267,6 +266,7 @@ def verificar_deposito():
         b = cursor.fetchone()
         control1 = str(b)
         if control1 == "None":  # and
+            print(control1)
             print("no se encuentra")
             return 0
         else:

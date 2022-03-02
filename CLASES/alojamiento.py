@@ -2,6 +2,8 @@ import pymysql
 
 from CLASES import area
 from DB import conexion as c
+from CLASES import productos as p
+from CLASES import area as a
 
 
 
@@ -170,18 +172,18 @@ class Alojamiento:
         return alojamientos
 
 
-    @staticmethod
-    def contar_filas():
-        a = c.start_connection()
-        cursor = a.cursor()
-        query = "SELECT COUNT(*) FROM alojamiento"
-        cursor.execute(query)
-        a.commit()
-        b = cursor.fetchall()
-        b = str(b[0][0])
-        n = int(b)
-        c.close_connection(a)
-        return n
+
+def contar_filas():
+    a = c.start_connection()
+    cursor = a.cursor()
+    query = "SELECT COUNT(*) FROM alojamiento"
+    cursor.execute(query)
+    a.commit()
+    b = cursor.fetchall()
+    b = str(b[0][0])
+    n = int(b)
+    c.close_connection(a)
+    return n
 
     def listar_alojamiento_disponibles_area(area):
         a = c.start_connection()
@@ -209,6 +211,17 @@ class Alojamiento:
         c.close_connection(a)
         return n
 
+def contar_nivel(nombre):
+    a = c.start_connection()
+    cursor = a.cursor()
+    query = "SELECT niveles FROM area WHERE nombre=%s"
+    cursor.execute(query,nombre)
+    a.commit()
+    b = cursor.fetchall()
+    b = str(b[0][0])
+    n = int(b)
+    c.close_connection(a)
+    return n
 
 def ver_codigo(codigo):
     a = c.start_connection()
@@ -253,6 +266,32 @@ def ver_dispo(codigo):
         return 0
     else:
         return data
+
+
+def pick(producto):
+    nal=contar_filas()
+    ial=0
+    nar=a.contar_filas()
+    iar=0
+    nseg=a.contar_segmentos()
+    iseg=0
+    ncol=a.contar_columnas()
+    icol=0
+    nniv=contar_nivel()
+    iniv=0
+    inicio=a.ver_e()
+    posicioninicio=a.ver_posicion(inicio)
+    print(posicioninicio)
+    while iar<nar:
+        while iseg<nseg:
+
+
+
+
+
+
+
+
 
 
 def modificar_dispo_ingreso(codigo,volumen):
