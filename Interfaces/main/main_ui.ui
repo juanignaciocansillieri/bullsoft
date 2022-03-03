@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1192</width>
-    <height>686</height>
+    <height>703</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -1204,7 +1204,7 @@ border:none</string>
           <item>
            <widget class="QStackedWidget" name="stackedWidget_main">
             <property name="currentIndex">
-             <number>9</number>
+             <number>3</number>
             </property>
             <widget class="QWidget" name="page_deposito">
              <layout class="QVBoxLayout" name="verticalLayout_13">
@@ -1856,6 +1856,58 @@ border: none</string>
                     <property name="geometry">
                      <rect>
                       <x>370</x>
+                      <y>60</y>
+                      <width>121</width>
+                      <height>26</height>
+                     </rect>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>26</height>
+                     </size>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Cairo SemiBold</family>
+                      <pointsize>10</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="cursor">
+                     <cursorShape>PointingHandCursor</cursorShape>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">QPushButton{
+background-color: #055ffc;
+color:#fff;
+border-radius: 5px;
+text-align:center;
+}
+
+QPushButton:hover{
+
+}</string>
+                    </property>
+                    <property name="text">
+                     <string>Nueva Estantería</string>
+                    </property>
+                    <property name="icon">
+                     <iconset>
+                      <normaloff>:/img/plus.png</normaloff>:/img/plus.png</iconset>
+                    </property>
+                    <property name="iconSize">
+                     <size>
+                      <width>13</width>
+                      <height>13</height>
+                     </size>
+                    </property>
+                   </widget>
+                   <widget class="QPushButton" name="btn_newPosicion">
+                    <property name="geometry">
+                     <rect>
+                      <x>500</x>
                       <y>60</y>
                       <width>121</width>
                       <height>26</height>
@@ -4494,60 +4546,6 @@ color: #282830 ;
                       </property>
                       <property name="alignment">
                        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-                      </property>
-                     </widget>
-                     <widget class="QPushButton" name="btn_newPosicion">
-                      <property name="geometry">
-                       <rect>
-                        <x>360</x>
-                        <y>26</y>
-                        <width>181</width>
-                        <height>26</height>
-                       </rect>
-                      </property>
-                      <property name="minimumSize">
-                       <size>
-                        <width>0</width>
-                        <height>26</height>
-                       </size>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <family>Roboto</family>
-                        <pointsize>9</pointsize>
-                        <weight>75</weight>
-                        <bold>true</bold>
-                       </font>
-                      </property>
-                      <property name="cursor">
-                       <cursorShape>PointingHandCursor</cursorShape>
-                      </property>
-                      <property name="styleSheet">
-                       <string notr="true">QPushButton{
-background-color: rgb(71, 71, 103);
-color:#fff;
-padding-right:15px;
-border-radius: 5px;
-text-align:right;
-}
-
-QPushButton:hover{
-background-color: rgba(71, 71, 103,180);
-
-}</string>
-                      </property>
-                      <property name="text">
-                       <string>Posicion de Alojamiento</string>
-                      </property>
-                      <property name="icon">
-                       <iconset>
-                        <normaloff>:/img/plus.png</normaloff>:/img/plus.png</iconset>
-                      </property>
-                      <property name="iconSize">
-                       <size>
-                        <width>13</width>
-                        <height>13</height>
-                       </size>
                       </property>
                      </widget>
                      <widget class="QPushButton" name="btn_modificarArea">
