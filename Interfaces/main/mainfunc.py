@@ -20,6 +20,7 @@ from Interfaces.main.nueva_area import Ui_MainWindow as Na
 from Interfaces.main.nueva_area_func import NewArea
 from Interfaces.main.nuevoProduct_func import ProductWindow
 from Interfaces.main.posiciones_alojamiento import PosicionAlojamiento as Pa
+from Interfaces.main.nueva_estanteria_func import Nueva_estanteria as ne
 from CLASES import matriz as mz
 
 globalPosicion = ""
@@ -142,6 +143,7 @@ class Modern(QMainWindow):
         self.ui.btn_newPosicion.clicked.connect(lambda: self.new_posicion(globalArea))
         self.ui.btn_modificarArea.clicked.connect(lambda: self.modificar_area(globalArea))
         self.ui.newArea_btn_2.clicked.connect(self.mostrar_borrar_area)
+        self.ui.btn_nuevaEstanteria.clicked.connect(self.mostrar_nueva_estanteria)
 
         ##########################       ##################################
 
@@ -194,6 +196,10 @@ class Modern(QMainWindow):
     def mostrar_borrar_area(self):
         self.borrarArea = BorrarArea()
         self.borrarArea.show()
+
+    def mostrar_nueva_estanteria(self):
+        self.nueva_estanteria = ne(globalArea)
+        self.nueva_estanteria.show()
 
     ## Listar Productos en la tabla
     def listar_productos(self):
@@ -538,7 +544,7 @@ class Modern(QMainWindow):
         self.listar_segmentos(globalArea)
 
     def new_posicion(self, btn):
-        self.newPosicionAlojamiento = Pa(btn)
+        self.newPosicionAlojamiento = Pa(globalArea)
         self.newPosicionAlojamiento.show()
 
     def modificar_area(self, btn):
@@ -558,9 +564,9 @@ class Modern(QMainWindow):
         child = self.ui.gridLayout_2.count()
         print(child)
         print(area)
-        niveles = 3 # momentaneo
+        niveles = 3# momentaneo ##cuantas columnas tiene esa estanteria en esa area
         pasillos = int(area[0][3])
-        segmentos = int(area[0][4])
+        segmentos = int(area[0][4]) ##cuantas estanterias tiene el area
         vacio = 0
         i = 1
         if child >0:
@@ -574,6 +580,7 @@ class Modern(QMainWindow):
             frame.setMaximumSize(QtCore.QSize(50, 200))
             vertical_layout = QtWidgets.QVBoxLayout(frame)
             self.ui.gridLayout_2.addWidget(frame,1,i)
+            ###NIVELES VA ACA
             for y in range(niveles):
                 btn_area = QtWidgets.QPushButton(self.ui.frame)
                 btn_area.setMaximumSize(QtCore.QSize(40, 40))
@@ -581,6 +588,8 @@ class Modern(QMainWindow):
                 vertical_layout.addWidget(btn_area)
                 btn_area.released.connect(self.button_released2)
             i += 1
+
+
     def button_released2(self):
         global globalPosicion
         sending_button = self.sender()
