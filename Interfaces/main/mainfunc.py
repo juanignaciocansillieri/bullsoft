@@ -564,9 +564,9 @@ class Modern(QMainWindow):
         child = self.ui.gridLayout_2.count()
         print(child)
         print(area)
-        niveles = 3 # momentaneo
+        niveles = 3# momentaneo ##cuantas columnas tiene esa estanteria en esa area
         pasillos = int(area[0][3])
-        segmentos = int(area[0][4])
+        segmentos = int(area[0][4]) ##cuantas estanterias tiene el area
         vacio = 0
         i = 1
         if child >0:
@@ -580,6 +580,7 @@ class Modern(QMainWindow):
             frame.setMaximumSize(QtCore.QSize(50, 200))
             vertical_layout = QtWidgets.QVBoxLayout(frame)
             self.ui.gridLayout_2.addWidget(frame,1,i)
+            ###NIVELES VA ACA
             for y in range(niveles):
                 btn_area = QtWidgets.QPushButton(self.ui.frame)
                 btn_area.setMaximumSize(QtCore.QSize(40, 40))
@@ -587,6 +588,8 @@ class Modern(QMainWindow):
                 vertical_layout.addWidget(btn_area)
                 btn_area.released.connect(self.button_released2)
             i += 1
+
+
     def button_released2(self):
         global globalPosicion
         sending_button = self.sender()
