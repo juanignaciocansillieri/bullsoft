@@ -1204,7 +1204,7 @@ border:none</string>
           <item>
            <widget class="QStackedWidget" name="stackedWidget_main">
             <property name="currentIndex">
-             <number>1</number>
+             <number>9</number>
             </property>
             <widget class="QWidget" name="page_deposito">
              <layout class="QVBoxLayout" name="verticalLayout_13">
@@ -1812,42 +1812,98 @@ QPushButton:hover{
                    <property name="frameShadow">
                     <enum>QFrame::Raised</enum>
                    </property>
-                   <layout class="QHBoxLayout" name="horizontalLayout_2">
-                    <item>
-                     <widget class="QLabel" name="label_nombre_area">
-                      <property name="minimumSize">
-                       <size>
-                        <width>211</width>
-                        <height>0</height>
-                       </size>
-                      </property>
-                      <property name="maximumSize">
-                       <size>
-                        <width>120</width>
-                        <height>40</height>
-                       </size>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <family>Cairo</family>
-                        <pointsize>20</pointsize>
-                        <weight>75</weight>
-                        <bold>true</bold>
-                       </font>
-                      </property>
-                      <property name="styleSheet">
-                       <string notr="true">color: #282830 ;
+                   <widget class="QLabel" name="label_nombre_area">
+                    <property name="geometry">
+                     <rect>
+                      <x>150</x>
+                      <y>50</y>
+                      <width>211</width>
+                      <height>40</height>
+                     </rect>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>211</width>
+                      <height>0</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>120</width>
+                      <height>40</height>
+                     </size>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Cairo</family>
+                      <pointsize>20</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">color: #282830 ;
 border: none</string>
-                      </property>
-                      <property name="text">
-                       <string>Nombre Área</string>
-                      </property>
-                      <property name="alignment">
-                       <set>Qt::AlignCenter</set>
-                      </property>
-                     </widget>
-                    </item>
-                   </layout>
+                    </property>
+                    <property name="text">
+                     <string>Nombre Área</string>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignCenter</set>
+                    </property>
+                   </widget>
+                   <widget class="QPushButton" name="btn_nuevaEstanteria">
+                    <property name="geometry">
+                     <rect>
+                      <x>370</x>
+                      <y>60</y>
+                      <width>121</width>
+                      <height>26</height>
+                     </rect>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>26</height>
+                     </size>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Cairo SemiBold</family>
+                      <pointsize>10</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="cursor">
+                     <cursorShape>PointingHandCursor</cursorShape>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">QPushButton{
+background-color: #055ffc;
+color:#fff;
+border-radius: 5px;
+text-align:center;
+}
+
+QPushButton:hover{
+
+}</string>
+                    </property>
+                    <property name="text">
+                     <string>Nueva Posición</string>
+                    </property>
+                    <property name="icon">
+                     <iconset>
+                      <normaloff>:/img/plus.png</normaloff>:/img/plus.png</iconset>
+                    </property>
+                    <property name="iconSize">
+                     <size>
+                      <width>13</width>
+                      <height>13</height>
+                     </size>
+                    </property>
+                   </widget>
                   </widget>
                  </item>
                  <item>

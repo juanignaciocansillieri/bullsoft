@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'nuevomain_ui.ui'
+# Form implementation generated from reading ui file 'main_ui.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.4
 #
@@ -14,188 +14,14 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(1151, 688)
-        MainWindow.setMinimumSize(QtCore.QSize(1151, 688))
-        MainWindow.setMaximumSize(QtCore.QSize(1151, 688))
-        font = QtGui.QFont()
-        font.setKerning(False)
-        MainWindow.setFont(font)
-        MainWindow.setStyleSheet("background: #fff;")
+        MainWindow.resize(1192, 686)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
-        self.centralwidget.setStyleSheet("border-radius:10px;")
         self.centralwidget.setObjectName("centralwidget")
         self.verticalLayout = QtWidgets.QVBoxLayout(self.centralwidget)
         self.verticalLayout.setContentsMargins(0, 0, 0, 0)
         self.verticalLayout.setSpacing(0)
         self.verticalLayout.setObjectName("verticalLayout")
-        self.top_frame = QtWidgets.QFrame(self.centralwidget)
-        self.top_frame.setMinimumSize(QtCore.QSize(1151, 65))
-        self.top_frame.setMaximumSize(QtCore.QSize(16777215, 65))
-        self.top_frame.setStyleSheet("border-bottom: 1px solid #cccccc;\n"
-"")
-        self.top_frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.top_frame.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.top_frame.setObjectName("top_frame")
-        self.products_btn_2 = QtWidgets.QPushButton(self.top_frame)
-        self.products_btn_2.setGeometry(QtCore.QRect(30, 10, 50, 51))
-        self.products_btn_2.setMaximumSize(QtCore.QSize(50, 16777215))
-        font = QtGui.QFont()
-        font.setFamily("Roboto")
-        font.setPointSize(9)
-        font.setBold(True)
-        font.setWeight(75)
-        self.products_btn_2.setFont(font)
-        self.products_btn_2.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.products_btn_2.setStyleSheet("")
-        self.products_btn_2.setText("")
-        icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap(":/img/shot-cropped-1595298394518.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.products_btn_2.setIcon(icon)
-        self.products_btn_2.setIconSize(QtCore.QSize(100, 100))
-        self.products_btn_2.setObjectName("products_btn_2")
-        self.products_btn = QtWidgets.QPushButton(self.top_frame)
-        self.products_btn.setGeometry(QtCore.QRect(490, 22, 91, 31))
-        font = QtGui.QFont()
-        font.setFamily("Roboto")
-        font.setPointSize(9)
-        font.setBold(True)
-        font.setWeight(75)
-        self.products_btn.setFont(font)
-        self.products_btn.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.products_btn.setStyleSheet("QPushButton{\n"
-"border:none;\n"
-"font-family: Roboto;\n"
-"border-radius:5px;\n"
-"text-align: center;\n"
-"color: #282830 ;\n"
-"\n"
-"\n"
-"}\n"
-"\n"
-"QPushButton:hover{\n"
-"        color:rgb(116, 116, 138)\n"
-"\n"
-"}")
-        self.products_btn.setIconSize(QtCore.QSize(30, 30))
-        self.products_btn.setObjectName("products_btn")
-        self.deposito_btn = QtWidgets.QPushButton(self.top_frame)
-        self.deposito_btn.setGeometry(QtCore.QRect(600, 22, 91, 31))
-        font = QtGui.QFont()
-        font.setFamily("Roboto")
-        font.setPointSize(9)
-        font.setBold(True)
-        font.setWeight(75)
-        self.deposito_btn.setFont(font)
-        self.deposito_btn.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.deposito_btn.setStyleSheet("QPushButton{\n"
-"border:none;\n"
-"font-family: Roboto;\n"
-"border-radius:5px;\n"
-"text-align: center;\n"
-"color: #282830 ;\n"
-"\n"
-"\n"
-"}\n"
-"\n"
-"QPushButton:hover{\n"
-"        color:rgb(116, 116, 138)\n"
-"\n"
-"}")
-        self.deposito_btn.setIconSize(QtCore.QSize(30, 30))
-        self.deposito_btn.setObjectName("deposito_btn")
-        self.users_btn = QtWidgets.QPushButton(self.top_frame)
-        self.users_btn.setGeometry(QtCore.QRect(710, 22, 91, 31))
-        font = QtGui.QFont()
-        font.setFamily("Roboto")
-        font.setPointSize(9)
-        font.setBold(True)
-        font.setWeight(75)
-        self.users_btn.setFont(font)
-        self.users_btn.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.users_btn.setStyleSheet("QPushButton{\n"
-"border:none;\n"
-"font-family: Roboto;\n"
-"border-radius:5px;\n"
-"text-align: center;\n"
-"color: #282830 ;\n"
-"\n"
-"\n"
-"}\n"
-"\n"
-"QPushButton:hover{\n"
-"        color:rgb(116, 116, 138)\n"
-"\n"
-"}")
-        self.users_btn.setIconSize(QtCore.QSize(30, 30))
-        self.users_btn.setObjectName("users_btn")
-        self.products_btn_stock_5 = QtWidgets.QPushButton(self.top_frame)
-        self.products_btn_stock_5.setGeometry(QtCore.QRect(1050, 22, 91, 31))
-        font = QtGui.QFont()
-        font.setFamily("Roboto")
-        font.setPointSize(9)
-        font.setBold(False)
-        font.setWeight(50)
-        self.products_btn_stock_5.setFont(font)
-        self.products_btn_stock_5.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.products_btn_stock_5.setStyleSheet("QPushButton{\n"
-"border:none;\n"
-"font-family: Roboto;\n"
-"border-radius:5px;\n"
-"text-align: center;\n"
-"color: #282830 ;\n"
-"\n"
-"\n"
-"}\n"
-"\n"
-"QPushButton:hover{\n"
-"    \n"
-"}")
-        self.products_btn_stock_5.setIconSize(QtCore.QSize(30, 30))
-        self.products_btn_stock_5.setObjectName("products_btn_stock_5")
-        self.inicio_btn = QtWidgets.QPushButton(self.top_frame)
-        self.inicio_btn.setGeometry(QtCore.QRect(380, 22, 91, 31))
-        font = QtGui.QFont()
-        font.setFamily("Roboto")
-        font.setPointSize(9)
-        font.setBold(True)
-        font.setWeight(75)
-        self.inicio_btn.setFont(font)
-        self.inicio_btn.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.inicio_btn.setStyleSheet("QPushButton{\n"
-"border:none;\n"
-"font-family: Roboto;\n"
-"border-radius:5px;\n"
-"text-align: center;\n"
-"color: #282830 ;\n"
-"\n"
-"\n"
-"}\n"
-"\n"
-"QPushButton:hover{\n"
-"        color:rgb(116, 116, 138)\n"
-"\n"
-"}")
-        self.inicio_btn.setIconSize(QtCore.QSize(30, 30))
-        self.inicio_btn.setObjectName("inicio_btn")
-        self.label_8 = QtWidgets.QLabel(self.top_frame)
-        self.label_8.setGeometry(QtCore.QRect(80, 22, 101, 31))
-        self.label_8.setMinimumSize(QtCore.QSize(0, 0))
-        self.label_8.setMaximumSize(QtCore.QSize(16777215, 16777215))
-        font = QtGui.QFont()
-        font.setFamily("Roboto")
-        font.setPointSize(16)
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_8.setFont(font)
-        self.label_8.setStyleSheet("color: #282830 ;\n"
-"border:none")
-        self.label_8.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
-        self.label_8.setObjectName("label_8")
-        self.verticalLayout.addWidget(self.top_frame)
         self.main_frame = QtWidgets.QFrame(self.centralwidget)
-        self.main_frame.setMinimumSize(QtCore.QSize(1151, 0))
-        self.main_frame.setMaximumSize(QtCore.QSize(0, 16777215))
-        self.main_frame.setStyleSheet("")
         self.main_frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.main_frame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.main_frame.setObjectName("main_frame")
@@ -204,239 +30,207 @@ class Ui_MainWindow(object):
         self.horizontalLayout.setSpacing(0)
         self.horizontalLayout.setObjectName("horizontalLayout")
         self.left_frame = QtWidgets.QFrame(self.main_frame)
-        self.left_frame.setMaximumSize(QtCore.QSize(200, 16777215))
-        self.left_frame.setStyleSheet("border-right: 1px solid #cccccc;")
+        self.left_frame.setMinimumSize(QtCore.QSize(203, 0))
+        self.left_frame.setMaximumSize(QtCore.QSize(203, 16777215))
+        self.left_frame.setStyleSheet("QFrame{\n"
+"background: #fff;\n"
+"}")
         self.left_frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.left_frame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.left_frame.setObjectName("left_frame")
-        self.verticalLayout_3 = QtWidgets.QVBoxLayout(self.left_frame)
-        self.verticalLayout_3.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayout_3.setSpacing(0)
-        self.verticalLayout_3.setObjectName("verticalLayout_3")
         self.stackedWidget_3 = QtWidgets.QStackedWidget(self.left_frame)
-        self.stackedWidget_3.setMaximumSize(QtCore.QSize(191, 611))
-        self.stackedWidget_3.setStyleSheet("background:#fff;\n"
-"border: none")
+        self.stackedWidget_3.setGeometry(QtCore.QRect(0, 348, 203, 291))
+        self.stackedWidget_3.setStyleSheet("background:#fff")
         self.stackedWidget_3.setObjectName("stackedWidget_3")
         self.product_subpage = QtWidgets.QWidget()
         self.product_subpage.setObjectName("product_subpage")
-        self.label_7 = QtWidgets.QLabel(self.product_subpage)
-        self.label_7.setGeometry(QtCore.QRect(220, 150, 128, 40))
-        self.label_7.setMinimumSize(QtCore.QSize(128, 0))
-        self.label_7.setMaximumSize(QtCore.QSize(120, 40))
+        self.label_15 = QtWidgets.QLabel(self.product_subpage)
+        self.label_15.setGeometry(QtCore.QRect(32, 29, 128, 21))
+        self.label_15.setMinimumSize(QtCore.QSize(128, 0))
+        self.label_15.setMaximumSize(QtCore.QSize(200, 40))
         font = QtGui.QFont()
-        font.setFamily("Roboto")
-        font.setPointSize(17)
+        font.setFamily("Cairo SemiBold")
+        font.setPointSize(13)
         font.setBold(True)
         font.setWeight(75)
-        self.label_7.setFont(font)
-        self.label_7.setStyleSheet("color: #282830 ;\n"
-"border: none")
-        self.label_7.setAlignment(QtCore.Qt.AlignCenter)
-        self.label_7.setObjectName("label_7")
-        self.products_btn_stock_7 = QtWidgets.QPushButton(self.product_subpage)
-        self.products_btn_stock_7.setGeometry(QtCore.QRect(230, 230, 51, 31))
+        self.label_15.setFont(font)
+        self.label_15.setStyleSheet("border: none;\n"
+"color: #818489 ;\n"
+"")
+        self.label_15.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_15.setObjectName("label_15")
+        self.products_btn_movimientos_2 = QtWidgets.QPushButton(self.product_subpage)
+        self.products_btn_movimientos_2.setGeometry(QtCore.QRect(60, 116, 18, 15))
         font = QtGui.QFont()
         font.setFamily("Roboto")
-        font.setPointSize(9)
+        font.setPointSize(10)
         font.setBold(True)
         font.setWeight(75)
-        self.products_btn_stock_7.setFont(font)
-        self.products_btn_stock_7.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.products_btn_stock_7.setStyleSheet("QPushButton{\n"
+        self.products_btn_movimientos_2.setFont(font)
+        self.products_btn_movimientos_2.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.products_btn_movimientos_2.setStyleSheet("QPushButton{\n"
 "border:none;\n"
 "font-family: Roboto;\n"
 "border-radius:5px;\n"
-"text-align: left;\n"
+"text-align: center;\n"
 "color: #282830 ;\n"
 "\n"
 "\n"
 "}\n"
 "\n"
 "QPushButton:hover{\n"
-"    background-color: rgba(105, 105, 226, 50);\n"
+"        color:rgb(116, 116, 138)\n"
+"\n"
 "}")
-        self.products_btn_stock_7.setIconSize(QtCore.QSize(30, 30))
-        self.products_btn_stock_7.setObjectName("products_btn_stock_7")
-        self.label_9 = QtWidgets.QLabel(self.product_subpage)
-        self.label_9.setGeometry(QtCore.QRect(40, 20, 128, 40))
-        self.label_9.setMinimumSize(QtCore.QSize(128, 0))
-        self.label_9.setMaximumSize(QtCore.QSize(120, 40))
+        self.products_btn_movimientos_2.setText("")
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap(":/img/iconos_grises_movimiento.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap(":/img/iconos_azules_mov azul.png"), QtGui.QIcon.Normal, QtGui.QIcon.On)
+        self.products_btn_movimientos_2.setIcon(icon)
+        self.products_btn_movimientos_2.setIconSize(QtCore.QSize(18, 15))
+        self.products_btn_movimientos_2.setCheckable(True)
+        self.products_btn_movimientos_2.setObjectName("products_btn_movimientos_2")
+        self.products_btn_lotes_2 = QtWidgets.QPushButton(self.product_subpage)
+        self.products_btn_lotes_2.setGeometry(QtCore.QRect(61, 158, 16, 16))
         font = QtGui.QFont()
         font.setFamily("Roboto")
-        font.setPointSize(17)
+        font.setPointSize(10)
         font.setBold(True)
         font.setWeight(75)
-        self.label_9.setFont(font)
-        self.label_9.setStyleSheet("color: #282830 ;\n"
-"border: none")
-        self.label_9.setAlignment(QtCore.Qt.AlignCenter)
-        self.label_9.setObjectName("label_9")
-        self.exit_btn_2 = QtWidgets.QPushButton(self.product_subpage)
-        self.exit_btn_2.setGeometry(QtCore.QRect(10, 570, 50, 41))
-        self.exit_btn_2.setMaximumSize(QtCore.QSize(50, 41))
-        font = QtGui.QFont()
-        font.setFamily("Roboto")
-        font.setBold(True)
-        font.setWeight(75)
-        self.exit_btn_2.setFont(font)
-        self.exit_btn_2.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.exit_btn_2.setStyleSheet("QPushButton{\n"
+        self.products_btn_lotes_2.setFont(font)
+        self.products_btn_lotes_2.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.products_btn_lotes_2.setStyleSheet("QPushButton{\n"
 "border:none;\n"
-"padding-right:30px;\n"
 "font-family: Roboto;\n"
-"text-align: left;\n"
 "border-radius:5px;\n"
-"margin-bottom:5px\n"
+"text-align: center;\n"
+"color: #282830 ;\n"
+"\n"
+"\n"
 "}\n"
 "\n"
 "QPushButton:hover{\n"
-"background-color: rgba(105, 105, 226, 50);\n"
+"        color:rgb(116, 116, 138)\n"
+"\n"
 "}")
-        self.exit_btn_2.setText("")
+        self.products_btn_lotes_2.setText("")
         icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap(":/img/ExitB.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.exit_btn_2.setIcon(icon1)
-        self.exit_btn_2.setIconSize(QtCore.QSize(50, 50))
-        self.exit_btn_2.setObjectName("exit_btn_2")
+        icon1.addPixmap(QtGui.QPixmap("img/iconos_grises_lotes.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon1.addPixmap(QtGui.QPixmap(":/img/iconos_azules_lotes azul.png"), QtGui.QIcon.Normal, QtGui.QIcon.On)
+        self.products_btn_lotes_2.setIcon(icon1)
+        self.products_btn_lotes_2.setIconSize(QtCore.QSize(16, 16))
+        self.products_btn_lotes_2.setCheckable(True)
+        self.products_btn_lotes_2.setObjectName("products_btn_lotes_2")
         self.products_btn_movimiento = QtWidgets.QPushButton(self.product_subpage)
-        self.products_btn_movimiento.setGeometry(QtCore.QRect(90, 280, 91, 31))
+        self.products_btn_movimiento.setGeometry(QtCore.QRect(90, 108, 81, 31))
         font = QtGui.QFont()
-        font.setFamily("Roboto")
+        font.setFamily("Cairo")
         font.setPointSize(11)
-        font.setBold(True)
-        font.setWeight(75)
+        font.setBold(False)
+        font.setWeight(50)
         self.products_btn_movimiento.setFont(font)
         self.products_btn_movimiento.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.products_btn_movimiento.setStyleSheet("QPushButton{\n"
 "border:none;\n"
-"font-family: Roboto;\n"
-"text-align:left;\n"
-"color: #282830 ;\n"
 "border-radius:5px;\n"
+"text-align: center;\n"
+"color: #818489 ;\n"
 "\n"
 "\n"
 "}\n"
 "\n"
 "QPushButton:hover{\n"
-"        color:rgb(116, 116, 138)\n"
-"\n"
-"}\n"
-"\n"
-"QPushButton:focus{\n"
-"        color:rgb(116, 116, 138)\n"
+"color:#055FFC;\n"
+"font-weight: bold\n"
 "\n"
 "}")
-        self.products_btn_movimiento.setIconSize(QtCore.QSize(30, 35))
+        self.products_btn_movimiento.setIconSize(QtCore.QSize(30, 30))
         self.products_btn_movimiento.setObjectName("products_btn_movimiento")
-        self.products_btn_lotes = QtWidgets.QPushButton(self.product_subpage)
-        self.products_btn_lotes.setGeometry(QtCore.QRect(90, 390, 61, 31))
-        font = QtGui.QFont()
-        font.setFamily("Roboto")
-        font.setPointSize(11)
-        font.setBold(True)
-        font.setWeight(75)
-        self.products_btn_lotes.setFont(font)
-        self.products_btn_lotes.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.products_btn_lotes.setStyleSheet("QPushButton{\n"
-"border:none;\n"
-"font-family: Roboto;\n"
-"text-align:left;\n"
-"color: #282830 ;\n"
-"border-radius:5px;\n"
-"\n"
-"\n"
-"}\n"
-"\n"
-"QPushButton:hover{\n"
-"        color:rgb(116, 116, 138)\n"
-"\n"
-"}")
-        self.products_btn_lotes.setIconSize(QtCore.QSize(30, 35))
-        self.products_btn_lotes.setObjectName("products_btn_lotes")
         self.products_btn_stock = QtWidgets.QPushButton(self.product_subpage)
-        self.products_btn_stock.setGeometry(QtCore.QRect(90, 160, 51, 31))
+        self.products_btn_stock.setGeometry(QtCore.QRect(90, 71, 41, 21))
         font = QtGui.QFont()
-        font.setFamily("Roboto")
+        font.setFamily("Cairo")
         font.setPointSize(11)
-        font.setBold(True)
-        font.setWeight(75)
+        font.setBold(False)
+        font.setWeight(50)
         self.products_btn_stock.setFont(font)
         self.products_btn_stock.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.products_btn_stock.setStyleSheet("QPushButton{\n"
 "border:none;\n"
-"font-family: Roboto;\n"
 "border-radius:5px;\n"
-"text-align: left;\n"
-"color: #282830 ;\n"
+"text-align: center;\n"
+"color: #818489 ;\n"
 "\n"
 "\n"
 "}\n"
 "\n"
 "QPushButton:hover{\n"
-"    color:rgb(116, 116, 138)\n"
+"color:#055FFC;\n"
+"font-weight: bold;\n"
+"\n"
 "}")
         self.products_btn_stock.setIconSize(QtCore.QSize(30, 30))
+        self.products_btn_stock.setCheckable(True)
         self.products_btn_stock.setObjectName("products_btn_stock")
-        self.pushButton_17 = QtWidgets.QPushButton(self.product_subpage)
-        self.pushButton_17.setGeometry(QtCore.QRect(30, 380, 51, 41))
-        self.pushButton_17.setMaximumSize(QtCore.QSize(60, 60))
-        self.pushButton_17.setStyleSheet("margin-left:5px")
-        self.pushButton_17.setText("")
-        icon2 = QtGui.QIcon()
-        icon2.addPixmap(QtGui.QPixmap(":/img/producto.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_17.setIcon(icon2)
-        self.pushButton_17.setIconSize(QtCore.QSize(35, 35))
-        self.pushButton_17.setObjectName("pushButton_17")
-        self.pushButton_13 = QtWidgets.QPushButton(self.product_subpage)
-        self.pushButton_13.setGeometry(QtCore.QRect(30, 150, 51, 41))
-        self.pushButton_13.setMaximumSize(QtCore.QSize(60, 60))
-        self.pushButton_13.setStyleSheet("margin-left:5px")
-        self.pushButton_13.setText("")
-        icon3 = QtGui.QIcon()
-        icon3.addPixmap(QtGui.QPixmap(":/img/warehouse.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_13.setIcon(icon3)
-        self.pushButton_13.setIconSize(QtCore.QSize(35, 35))
-        self.pushButton_13.setObjectName("pushButton_13")
-        self.pushButton_16 = QtWidgets.QPushButton(self.product_subpage)
-        self.pushButton_16.setGeometry(QtCore.QRect(29, 269, 51, 51))
-        self.pushButton_16.setMaximumSize(QtCore.QSize(60, 60))
-        self.pushButton_16.setStyleSheet("margin-left:5px")
-        self.pushButton_16.setText("")
-        icon4 = QtGui.QIcon()
-        icon4.addPixmap(QtGui.QPixmap(":/img/trading.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_16.setIcon(icon4)
-        self.pushButton_16.setIconSize(QtCore.QSize(35, 35))
-        self.pushButton_16.setObjectName("pushButton_16")
-        self.exit_btn = QtWidgets.QPushButton(self.product_subpage)
-        self.exit_btn.setGeometry(QtCore.QRect(70, 577, 61, 21))
+        self.products_btn_stock_2 = QtWidgets.QPushButton(self.product_subpage)
+        self.products_btn_stock_2.setGeometry(QtCore.QRect(58, 70, 20, 20))
         font = QtGui.QFont()
         font.setFamily("Roboto")
         font.setPointSize(11)
         font.setBold(True)
         font.setWeight(75)
-        self.exit_btn.setFont(font)
-        self.exit_btn.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.exit_btn.setStyleSheet("QPushButton{\n"
+        self.products_btn_stock_2.setFont(font)
+        self.products_btn_stock_2.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.products_btn_stock_2.setStyleSheet("QPushButton{\n"
 "border:none;\n"
 "font-family: Roboto;\n"
-"text-align:left;\n"
-"color: #282830 ;\n"
 "border-radius:5px;\n"
+"text-align: center;\n"
+"color: #282830 ;\n"
 "\n"
 "\n"
 "}\n"
 "\n"
 "QPushButton:hover{\n"
 "        color:rgb(116, 116, 138)\n"
+"\n"
 "}")
-        self.exit_btn.setIconSize(QtCore.QSize(30, 35))
-        self.exit_btn.setObjectName("exit_btn")
+        self.products_btn_stock_2.setText("")
+        icon2 = QtGui.QIcon()
+        icon2.addPixmap(QtGui.QPixmap(":/img/iconos_grises_stock.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon2.addPixmap(QtGui.QPixmap(":/img/iconos_azules_stock azul.png"), QtGui.QIcon.Active, QtGui.QIcon.On)
+        self.products_btn_stock_2.setIcon(icon2)
+        self.products_btn_stock_2.setIconSize(QtCore.QSize(16, 16))
+        self.products_btn_stock_2.setCheckable(True)
+        self.products_btn_stock_2.setObjectName("products_btn_stock_2")
+        self.products_btn_lotes = QtWidgets.QPushButton(self.product_subpage)
+        self.products_btn_lotes.setGeometry(QtCore.QRect(90, 155, 41, 21))
+        font = QtGui.QFont()
+        font.setFamily("Cairo")
+        font.setPointSize(11)
+        self.products_btn_lotes.setFont(font)
+        self.products_btn_lotes.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.products_btn_lotes.setStyleSheet("QPushButton{\n"
+"border:none;\n"
+"border-radius:5px;\n"
+"text-align: center;\n"
+"color: #818489 ;\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"color:#055FFC;\n"
+"font-weight: bold\n"
+"}")
+        self.products_btn_lotes.setIconSize(QtCore.QSize(30, 30))
+        self.products_btn_lotes.setObjectName("products_btn_lotes")
         self.stackedWidget_3.addWidget(self.product_subpage)
+        self.user_subpage = QtWidgets.QWidget()
+        self.user_subpage.setObjectName("user_subpage")
+        self.stackedWidget_3.addWidget(self.user_subpage)
         self.deposito_subpage = QtWidgets.QWidget()
         self.deposito_subpage.setObjectName("deposito_subpage")
         self.frame_6 = QtWidgets.QFrame(self.deposito_subpage)
-        self.frame_6.setGeometry(QtCore.QRect(0, -5, 201, 691))
+        self.frame_6.setGeometry(QtCore.QRect(0, -2, 203, 291))
         self.frame_6.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_6.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_6.setObjectName("frame_6")
@@ -444,41 +238,43 @@ class Ui_MainWindow(object):
         self.verticalLayout_6.setContentsMargins(0, 0, 0, 0)
         self.verticalLayout_6.setObjectName("verticalLayout_6")
         self.frame_13 = QtWidgets.QFrame(self.frame_6)
-        self.frame_13.setMaximumSize(QtCore.QSize(200, 100))
+        self.frame_13.setMaximumSize(QtCore.QSize(200, 51))
+        self.frame_13.setStyleSheet("border:none")
         self.frame_13.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_13.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_13.setObjectName("frame_13")
         self.label_10 = QtWidgets.QLabel(self.frame_13)
-        self.label_10.setGeometry(QtCore.QRect(40, 30, 128, 40))
+        self.label_10.setGeometry(QtCore.QRect(0, 10, 200, 40))
         self.label_10.setMinimumSize(QtCore.QSize(128, 0))
-        self.label_10.setMaximumSize(QtCore.QSize(120, 40))
+        self.label_10.setMaximumSize(QtCore.QSize(208, 40))
         font = QtGui.QFont()
-        font.setFamily("Roboto")
-        font.setPointSize(17)
+        font.setFamily("Cairo SemiBold")
+        font.setPointSize(13)
         font.setBold(True)
         font.setWeight(75)
         self.label_10.setFont(font)
-        self.label_10.setStyleSheet("color: #282830 ;\n"
-"")
+        self.label_10.setStyleSheet("color: #818489 ;\n"
+"border:none")
         self.label_10.setAlignment(QtCore.Qt.AlignCenter)
         self.label_10.setObjectName("label_10")
         self.verticalLayout_6.addWidget(self.frame_13)
         self.label_12 = QtWidgets.QLabel(self.frame_6)
-        self.label_12.setMinimumSize(QtCore.QSize(128, 0))
-        self.label_12.setMaximumSize(QtCore.QSize(193, 40))
+        self.label_12.setMinimumSize(QtCore.QSize(201, 0))
+        self.label_12.setMaximumSize(QtCore.QSize(193, 16))
         font = QtGui.QFont()
-        font.setFamily("Roboto")
-        font.setPointSize(14)
-        font.setBold(True)
-        font.setWeight(75)
+        font.setFamily("Cairo")
+        font.setPointSize(12)
+        font.setBold(False)
+        font.setWeight(50)
         self.label_12.setFont(font)
         self.label_12.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.label_12.setStyleSheet("color: #282830 ;\n"
-"")
+        self.label_12.setStyleSheet("color: #818489 ;\n"
+"border:none")
         self.label_12.setAlignment(QtCore.Qt.AlignCenter)
         self.label_12.setObjectName("label_12")
         self.verticalLayout_6.addWidget(self.label_12)
         self.frame_14 = QtWidgets.QFrame(self.frame_6)
+        self.frame_14.setStyleSheet("border:none")
         self.frame_14.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_14.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_14.setObjectName("frame_14")
@@ -497,193 +293,1056 @@ class Ui_MainWindow(object):
         self.verticalLayout_8.addWidget(self.frame_5, 0, QtCore.Qt.AlignTop)
         self.verticalLayout_6.addWidget(self.frame_14)
         self.stackedWidget_3.addWidget(self.deposito_subpage)
-        self.user_subpage = QtWidgets.QWidget()
-        self.user_subpage.setObjectName("user_subpage")
-        self.stackedWidget_3.addWidget(self.user_subpage)
-        self.verticalLayout_3.addWidget(self.stackedWidget_3)
+        self.labelTitulo = QtWidgets.QPushButton(self.left_frame)
+        self.labelTitulo.setGeometry(QtCore.QRect(50, 30, 108, 25))
+        self.labelTitulo.setStyleSheet("border:none")
+        self.labelTitulo.setText("")
+        icon3 = QtGui.QIcon()
+        icon3.addPixmap(QtGui.QPixmap(":/img/WEB FINAL_logo.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.labelTitulo.setIcon(icon3)
+        self.labelTitulo.setIconSize(QtCore.QSize(110, 200))
+        self.labelTitulo.setObjectName("labelTitulo")
+        self.inicio_btn = QtWidgets.QPushButton(self.left_frame)
+        self.inicio_btn.setGeometry(QtCore.QRect(51, 110, 18, 18))
+        font = QtGui.QFont()
+        font.setFamily("Roboto")
+        font.setPointSize(11)
+        font.setBold(True)
+        font.setWeight(75)
+        self.inicio_btn.setFont(font)
+        self.inicio_btn.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.inicio_btn.setStyleSheet("QPushButton{\n"
+"border:none;\n"
+"font-family: Roboto;\n"
+"border-radius:5px;\n"
+"text-align: center;\n"
+"color: #282830 ;\n"
+"\n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"        color:rgb(116, 116, 138)\n"
+"\n"
+"}")
+        self.inicio_btn.setText("")
+        icon4 = QtGui.QIcon()
+        icon4.addPixmap(QtGui.QPixmap(":/img/iconos_grises_inicio.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon4.addPixmap(QtGui.QPixmap(":/img/iconos_azules_inicio azul.png"), QtGui.QIcon.Disabled, QtGui.QIcon.On)
+        icon4.addPixmap(QtGui.QPixmap(":/img/iconos_azules_inicio azul.png"), QtGui.QIcon.Active, QtGui.QIcon.On)
+        self.inicio_btn.setIcon(icon4)
+        self.inicio_btn.setIconSize(QtCore.QSize(18, 18))
+        self.inicio_btn.setCheckable(True)
+        self.inicio_btn.setObjectName("inicio_btn")
+        self.products_btn = QtWidgets.QPushButton(self.left_frame)
+        self.products_btn.setGeometry(QtCore.QRect(50, 170, 20, 18))
+        font = QtGui.QFont()
+        font.setFamily("Roboto")
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.products_btn.setFont(font)
+        self.products_btn.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.products_btn.setStyleSheet("QPushButton{\n"
+"border:none;\n"
+"font-family: Roboto;\n"
+"border-radius:5px;\n"
+"text-align: center;\n"
+"color: #282830 ;\n"
+"\n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"        color:rgb(116, 116, 138)\n"
+"\n"
+"}")
+        self.products_btn.setText("")
+        icon5 = QtGui.QIcon()
+        icon5.addPixmap(QtGui.QPixmap(":/img/iconos_grises_productos.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon5.addPixmap(QtGui.QPixmap(":/img/iconos_azules_product azul.png"), QtGui.QIcon.Normal, QtGui.QIcon.On)
+        self.products_btn.setIcon(icon5)
+        self.products_btn.setIconSize(QtCore.QSize(20, 18))
+        self.products_btn.setCheckable(True)
+        self.products_btn.setObjectName("products_btn")
+        self.deposito_btn = QtWidgets.QPushButton(self.left_frame)
+        self.deposito_btn.setGeometry(QtCore.QRect(50, 230, 18, 18))
+        font = QtGui.QFont()
+        font.setFamily("Roboto")
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.deposito_btn.setFont(font)
+        self.deposito_btn.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.deposito_btn.setStyleSheet("QPushButton{\n"
+"border:none;\n"
+"font-family: Roboto;\n"
+"border-radius:5px;\n"
+"text-align: center;\n"
+"color: #282830 ;\n"
+"\n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"        color:rgb(116, 116, 138)\n"
+"\n"
+"}")
+        self.deposito_btn.setText("")
+        icon6 = QtGui.QIcon()
+        icon6.addPixmap(QtGui.QPixmap(":/img/iconos_grises_areas.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon6.addPixmap(QtGui.QPixmap(":/img/iconos_azules_areas azul.png"), QtGui.QIcon.Active, QtGui.QIcon.On)
+        self.deposito_btn.setIcon(icon6)
+        self.deposito_btn.setIconSize(QtCore.QSize(18, 18))
+        self.deposito_btn.setCheckable(True)
+        self.deposito_btn.setObjectName("deposito_btn")
+        self.users_btn = QtWidgets.QPushButton(self.left_frame)
+        self.users_btn.setGeometry(QtCore.QRect(51, 290, 18, 18))
+        font = QtGui.QFont()
+        font.setFamily("Roboto")
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.users_btn.setFont(font)
+        self.users_btn.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.users_btn.setStyleSheet("QPushButton{\n"
+"border:none;\n"
+"font-family: Roboto;\n"
+"border-radius:5px;\n"
+"text-align: center;\n"
+"color: #282830 ;\n"
+"\n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"        color:rgb(116, 116, 138)\n"
+"\n"
+"}")
+        self.users_btn.setText("")
+        icon7 = QtGui.QIcon()
+        icon7.addPixmap(QtGui.QPixmap(":/img/iconos_grises_usuarios.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon7.addPixmap(QtGui.QPixmap(":/img/iconos_azules_usuarios azul.png"), QtGui.QIcon.Active, QtGui.QIcon.On)
+        self.users_btn.setIcon(icon7)
+        self.users_btn.setIconSize(QtCore.QSize(18, 18))
+        self.users_btn.setCheckable(True)
+        self.users_btn.setObjectName("users_btn")
+        self.inicio_btn_2 = QtWidgets.QPushButton(self.left_frame)
+        self.inicio_btn_2.setGeometry(QtCore.QRect(80, 110, 41, 21))
+        font = QtGui.QFont()
+        font.setFamily("Cairo SemiBold")
+        font.setPointSize(11)
+        font.setBold(False)
+        font.setWeight(50)
+        self.inicio_btn_2.setFont(font)
+        self.inicio_btn_2.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.inicio_btn_2.setStyleSheet("QPushButton{\n"
+"border:none;\n"
+"border-radius:5px;\n"
+"text-align: center;\n"
+"color: #818489 ;\n"
+"\n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"color:#055FFC;\n"
+"font-weight: 200;\n"
+"font-family: Cairo ExtraBold\n"
+"}")
+        self.inicio_btn_2.setIconSize(QtCore.QSize(30, 30))
+        self.inicio_btn_2.setObjectName("inicio_btn_2")
+        self.products_btn_2 = QtWidgets.QPushButton(self.left_frame)
+        self.products_btn_2.setGeometry(QtCore.QRect(80, 170, 71, 21))
+        font = QtGui.QFont()
+        font.setFamily("Cairo SemiBold")
+        font.setPointSize(11)
+        font.setBold(False)
+        font.setWeight(50)
+        self.products_btn_2.setFont(font)
+        self.products_btn_2.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.products_btn_2.setStyleSheet("QPushButton{\n"
+"border:none;\n"
+"border-radius:5px;\n"
+"text-align: center;\n"
+"color: #818489 ;\n"
+"\n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"color:#055FFC;\n"
+"font-family: Cairo ExtraBold\n"
+"\n"
+"}")
+        self.products_btn_2.setIconSize(QtCore.QSize(30, 30))
+        self.products_btn_2.setObjectName("products_btn_2")
+        self.deposito_btn_2 = QtWidgets.QPushButton(self.left_frame)
+        self.deposito_btn_2.setGeometry(QtCore.QRect(80, 230, 41, 21))
+        font = QtGui.QFont()
+        font.setFamily("Cairo semibold")
+        font.setPointSize(11)
+        self.deposito_btn_2.setFont(font)
+        self.deposito_btn_2.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.deposito_btn_2.setStyleSheet("QPushButton{\n"
+"border:none;\n"
+"border-radius:5px;\n"
+"text-align: center;\n"
+"color: #818489 ;\n"
+"font-family: Cairo semibold\n"
+"\n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"color:#055FFC;\n"
+"font-family: Cairo ExtraBold\n"
+"\n"
+"}")
+        self.deposito_btn_2.setIconSize(QtCore.QSize(30, 30))
+        self.deposito_btn_2.setObjectName("deposito_btn_2")
+        self.users_btn_2 = QtWidgets.QPushButton(self.left_frame)
+        self.users_btn_2.setGeometry(QtCore.QRect(80, 289, 61, 21))
+        font = QtGui.QFont()
+        font.setFamily("Cairo SemiBold")
+        font.setPointSize(11)
+        self.users_btn_2.setFont(font)
+        self.users_btn_2.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.users_btn_2.setStyleSheet("QPushButton{\n"
+"border:none;\n"
+"border-radius:5px;\n"
+"text-align: center;\n"
+"color: #818489 ;\n"
+"\n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"    color:#055FFC;\n"
+"font-family: Cairo ExtraBold\n"
+"\n"
+"}")
+        self.users_btn_2.setIconSize(QtCore.QSize(30, 30))
+        self.users_btn_2.setObjectName("users_btn_2")
+        self.exit_btn = QtWidgets.QPushButton(self.left_frame)
+        self.exit_btn.setGeometry(QtCore.QRect(90, 642, 31, 21))
+        font = QtGui.QFont()
+        font.setFamily("Cairo semibold")
+        font.setPointSize(11)
+        self.exit_btn.setFont(font)
+        self.exit_btn.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.exit_btn.setStyleSheet("QPushButton{\n"
+"border:none;\n"
+"border-radius:5px;\n"
+"text-align: center;\n"
+"color:#055FFC;\n"
+"font-family: Cairo semibold\n"
+"\n"
+"\n"
+"}\n"
+"")
+        self.exit_btn.setIconSize(QtCore.QSize(30, 35))
+        self.exit_btn.setObjectName("exit_btn")
+        self.exit_btn_2 = QtWidgets.QPushButton(self.left_frame)
+        self.exit_btn_2.setGeometry(QtCore.QRect(64, 640, 21, 31))
+        self.exit_btn_2.setMaximumSize(QtCore.QSize(50, 41))
+        font = QtGui.QFont()
+        font.setFamily("Roboto")
+        font.setBold(True)
+        font.setWeight(75)
+        self.exit_btn_2.setFont(font)
+        self.exit_btn_2.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.exit_btn_2.setStyleSheet("QPushButton{\n"
+"border:none;\n"
+"padding-right:30px;\n"
+"font-family: Roboto;\n"
+"text-align: left;\n"
+"border-radius:5px;\n"
+"margin-bottom:5px\n"
+"}\n"
+"")
+        self.exit_btn_2.setText("")
+        icon8 = QtGui.QIcon()
+        icon8.addPixmap(QtGui.QPixmap(":/img/Icono_salir-31.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.exit_btn_2.setIcon(icon8)
+        self.exit_btn_2.setIconSize(QtCore.QSize(18, 18))
+        self.exit_btn_2.setCheckable(True)
+        self.exit_btn_2.setObjectName("exit_btn_2")
+        self.line = QtWidgets.QFrame(self.left_frame)
+        self.line.setGeometry(QtCore.QRect(0, 346, 201, 1))
+        self.line.setStyleSheet("background: #c6c9ce")
+        self.line.setFrameShape(QtWidgets.QFrame.HLine)
+        self.line.setFrameShadow(QtWidgets.QFrame.Sunken)
+        self.line.setObjectName("line")
+        self.line_2 = QtWidgets.QFrame(self.left_frame)
+        self.line_2.setGeometry(QtCore.QRect(202, 0, 1, 681))
+        self.line_2.setStyleSheet("background: #c6c9ce")
+        self.line_2.setFrameShape(QtWidgets.QFrame.VLine)
+        self.line_2.setFrameShadow(QtWidgets.QFrame.Sunken)
+        self.line_2.setObjectName("line_2")
         self.horizontalLayout.addWidget(self.left_frame)
-        self.righ_frame = QtWidgets.QFrame(self.main_frame)
-        self.righ_frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.righ_frame.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.righ_frame.setObjectName("righ_frame")
-        self.verticalLayout_2 = QtWidgets.QVBoxLayout(self.righ_frame)
+        self.right_frame = QtWidgets.QFrame(self.main_frame)
+        self.right_frame.setStyleSheet("background: #fff;\n"
+"border:none")
+        self.right_frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.right_frame.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.right_frame.setObjectName("right_frame")
+        self.verticalLayout_2 = QtWidgets.QVBoxLayout(self.right_frame)
         self.verticalLayout_2.setContentsMargins(0, 0, 0, 0)
         self.verticalLayout_2.setSpacing(0)
         self.verticalLayout_2.setObjectName("verticalLayout_2")
-        self.stackedWidget_main = QtWidgets.QStackedWidget(self.righ_frame)
-        self.stackedWidget_main.setMaximumSize(QtCore.QSize(951, 621))
+        self.stackedWidget_main = QtWidgets.QStackedWidget(self.right_frame)
         self.stackedWidget_main.setObjectName("stackedWidget_main")
-        self.page_movimientos = QtWidgets.QWidget()
-        self.page_movimientos.setObjectName("page_movimientos")
-        self.verticalLayout_12 = QtWidgets.QVBoxLayout(self.page_movimientos)
-        self.verticalLayout_12.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayout_12.setSpacing(0)
-        self.verticalLayout_12.setObjectName("verticalLayout_12")
-        self.container_mov_2 = QtWidgets.QFrame(self.page_movimientos)
-        self.container_mov_2.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.container_mov_2.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.container_mov_2.setObjectName("container_mov_2")
-        self.verticalLayout_27 = QtWidgets.QVBoxLayout(self.container_mov_2)
-        self.verticalLayout_27.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayout_27.setSpacing(0)
-        self.verticalLayout_27.setObjectName("verticalLayout_27")
-        self.top_frame_mov_2 = QtWidgets.QFrame(self.container_mov_2)
-        self.top_frame_mov_2.setMinimumSize(QtCore.QSize(1, 80))
-        self.top_frame_mov_2.setMaximumSize(QtCore.QSize(555, 70))
-        self.top_frame_mov_2.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.top_frame_mov_2.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.top_frame_mov_2.setObjectName("top_frame_mov_2")
-        self.frame_12 = QtWidgets.QFrame(self.top_frame_mov_2)
-        self.frame_12.setGeometry(QtCore.QRect(0, 13, 681, 70))
-        self.frame_12.setMinimumSize(QtCore.QSize(354, 70))
-        self.frame_12.setMaximumSize(QtCore.QSize(16777215, 50))
-        self.frame_12.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_12.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_12.setObjectName("frame_12")
-        self.verticalLayout_29 = QtWidgets.QVBoxLayout(self.frame_12)
-        self.verticalLayout_29.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayout_29.setSpacing(0)
-        self.verticalLayout_29.setObjectName("verticalLayout_29")
-        self.groupBox_8 = QtWidgets.QGroupBox(self.frame_12)
-        self.groupBox_8.setMinimumSize(QtCore.QSize(384, 0))
-        self.groupBox_8.setTitle("")
-        self.groupBox_8.setObjectName("groupBox_8")
-        self.label_27 = QtWidgets.QLabel(self.groupBox_8)
-        self.label_27.setGeometry(QtCore.QRect(80, 10, 152, 52))
-        self.label_27.setMinimumSize(QtCore.QSize(152, 0))
-        self.label_27.setMaximumSize(QtCore.QSize(120, 16777215))
+        self.page_deposito = QtWidgets.QWidget()
+        self.page_deposito.setObjectName("page_deposito")
+        self.verticalLayout_13 = QtWidgets.QVBoxLayout(self.page_deposito)
+        self.verticalLayout_13.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout_13.setSpacing(0)
+        self.verticalLayout_13.setObjectName("verticalLayout_13")
+        self.frame_7 = QtWidgets.QFrame(self.page_deposito)
+        self.frame_7.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_7.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_7.setObjectName("frame_7")
+        self.label_72 = QtWidgets.QLabel(self.frame_7)
+        self.label_72.setGeometry(QtCore.QRect(130, 50, 81, 31))
+        self.label_72.setMinimumSize(QtCore.QSize(66, 0))
+        self.label_72.setMaximumSize(QtCore.QSize(16777215, 16777215))
         font = QtGui.QFont()
         font.setFamily("Roboto")
+        font.setPointSize(22)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_72.setFont(font)
+        self.label_72.setStyleSheet("color: #282830 ;\n"
+"")
+        self.label_72.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
+        self.label_72.setObjectName("label_72")
+        self.newArea_btn = QtWidgets.QPushButton(self.frame_7)
+        self.newArea_btn.setGeometry(QtCore.QRect(130, 90, 121, 26))
+        self.newArea_btn.setMinimumSize(QtCore.QSize(0, 26))
+        font = QtGui.QFont()
+        font.setFamily("Cairo SemiBold")
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.newArea_btn.setFont(font)
+        self.newArea_btn.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.newArea_btn.setStyleSheet("QPushButton{\n"
+"background-color: #055ffc;\n"
+"color:#fff;\n"
+"border-radius: 5px;\n"
+"text-align:center;\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"\n"
+"}")
+        icon9 = QtGui.QIcon()
+        icon9.addPixmap(QtGui.QPixmap(":/img/plus.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.newArea_btn.setIcon(icon9)
+        self.newArea_btn.setIconSize(QtCore.QSize(13, 13))
+        self.newArea_btn.setObjectName("newArea_btn")
+        self.newArea_btn_2 = QtWidgets.QPushButton(self.frame_7)
+        self.newArea_btn_2.setGeometry(QtCore.QRect(260, 90, 121, 26))
+        self.newArea_btn_2.setMinimumSize(QtCore.QSize(0, 26))
+        font = QtGui.QFont()
+        font.setFamily("Cairo SemiBold")
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.newArea_btn_2.setFont(font)
+        self.newArea_btn_2.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.newArea_btn_2.setStyleSheet("QPushButton{\n"
+"background-color: #055ffc;\n"
+"color:#fff;\n"
+"border-radius: 5px;\n"
+"text-align:center;\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"\n"
+"}")
+        self.newArea_btn_2.setIcon(icon9)
+        self.newArea_btn_2.setIconSize(QtCore.QSize(13, 13))
+        self.newArea_btn_2.setObjectName("newArea_btn_2")
+        self.btn_actualizarAreas = QtWidgets.QPushButton(self.frame_7)
+        self.btn_actualizarAreas.setGeometry(QtCore.QRect(390, 90, 26, 26))
+        font = QtGui.QFont()
+        font.setFamily("Roboto")
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.btn_actualizarAreas.setFont(font)
+        self.btn_actualizarAreas.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.btn_actualizarAreas.setStyleSheet("QPushButton{\n"
+"border:none;\n"
+"font-family: Roboto;\n"
+"border-radius:5px;\n"
+"text-align: center;\n"
+"color: #282830 ;\n"
+"background: #212325\n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"        color:rgb(116, 116, 138)\n"
+"\n"
+"}")
+        self.btn_actualizarAreas.setText("")
+        icon10 = QtGui.QIcon()
+        icon10.addPixmap(QtGui.QPixmap(":/img/lupa y actualizar_actualizar.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.btn_actualizarAreas.setIcon(icon10)
+        self.btn_actualizarAreas.setIconSize(QtCore.QSize(14, 16))
+        self.btn_actualizarAreas.setCheckable(True)
+        self.btn_actualizarAreas.setObjectName("btn_actualizarAreas")
+        self.frame_4 = QtWidgets.QFrame(self.frame_7)
+        self.frame_4.setGeometry(QtCore.QRect(130, 130, 650, 500))
+        self.frame_4.setMinimumSize(QtCore.QSize(600, 250))
+        self.frame_4.setMaximumSize(QtCore.QSize(650, 500))
+        self.frame_4.setStyleSheet("border: 2px solid black;")
+        self.frame_4.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_4.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_4.setObjectName("frame_4")
+        self.gridLayout = QtWidgets.QGridLayout(self.frame_4)
+        self.gridLayout.setObjectName("gridLayout")
+        self.verticalLayout_13.addWidget(self.frame_7)
+        self.stackedWidget_main.addWidget(self.page_deposito)
+        self.page_posicionesAlojamiento = QtWidgets.QWidget()
+        self.page_posicionesAlojamiento.setObjectName("page_posicionesAlojamiento")
+        self.label_posicion = QtWidgets.QLabel(self.page_posicionesAlojamiento)
+        self.label_posicion.setGeometry(QtCore.QRect(410, 20, 111, 71))
+        font = QtGui.QFont()
+        font.setFamily("Cairo")
         font.setPointSize(18)
         font.setBold(True)
         font.setWeight(75)
-        self.label_27.setFont(font)
-        self.label_27.setStyleSheet("color: #282830 ;\n"
-"")
-        self.label_27.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
-        self.label_27.setObjectName("label_27")
-        self.pushButton_18 = QtWidgets.QPushButton(self.groupBox_8)
-        self.pushButton_18.setGeometry(QtCore.QRect(20, 9, 49, 40))
-        self.pushButton_18.setMaximumSize(QtCore.QSize(60, 60))
-        self.pushButton_18.setStyleSheet("margin-left:5px")
-        self.pushButton_18.setText("")
-        self.pushButton_18.setIcon(icon4)
-        self.pushButton_18.setIconSize(QtCore.QSize(40, 40))
-        self.pushButton_18.setObjectName("pushButton_18")
-        self.new_ingreso_btn = QtWidgets.QPushButton(self.groupBox_8)
-        self.new_ingreso_btn.setGeometry(QtCore.QRect(250, 22, 81, 26))
-        self.new_ingreso_btn.setMinimumSize(QtCore.QSize(0, 26))
+        self.label_posicion.setFont(font)
+        self.label_posicion.setObjectName("label_posicion")
+        self.tableWidget_niveles = QtWidgets.QTableWidget(self.page_posicionesAlojamiento)
+        self.tableWidget_niveles.setGeometry(QtCore.QRect(30, 130, 871, 231))
+        self.tableWidget_niveles.setObjectName("tableWidget_niveles")
+        self.tableWidget_niveles.setColumnCount(4)
+        self.tableWidget_niveles.setRowCount(0)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget_niveles.setHorizontalHeaderItem(0, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget_niveles.setHorizontalHeaderItem(1, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget_niveles.setHorizontalHeaderItem(2, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget_niveles.setHorizontalHeaderItem(3, item)
+        self.tableWidget_niveles.horizontalHeader().setDefaultSectionSize(206)
+        self.tableWidget_niveles.horizontalHeader().setMinimumSectionSize(50)
+        self.tableWidget_niveles.verticalHeader().setDefaultSectionSize(42)
+        self.stackedWidget_main.addWidget(self.page_posicionesAlojamiento)
+        self.page_area = QtWidgets.QWidget()
+        self.page_area.setObjectName("page_area")
+        self.frame_8 = QtWidgets.QFrame(self.page_area)
+        self.frame_8.setGeometry(QtCore.QRect(0, 0, 945, 685))
+        self.frame_8.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_8.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_8.setObjectName("frame_8")
+        self.label_73 = QtWidgets.QLabel(self.frame_8)
+        self.label_73.setGeometry(QtCore.QRect(350, 40, 201, 51))
+        self.label_73.setMinimumSize(QtCore.QSize(66, 0))
+        self.label_73.setMaximumSize(QtCore.QSize(16777215, 16777215))
         font = QtGui.QFont()
-        font.setFamily("Roboto")
-        font.setPointSize(9)
+        font.setFamily("Cairo")
+        font.setPointSize(23)
         font.setBold(True)
         font.setWeight(75)
-        self.new_ingreso_btn.setFont(font)
-        self.new_ingreso_btn.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.new_ingreso_btn.setStyleSheet("QPushButton{\n"
-"background-color: rgb(71, 71, 103);\n"
+        self.label_73.setFont(font)
+        self.label_73.setStyleSheet("color: #282830 ;\n"
+"")
+        self.label_73.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
+        self.label_73.setObjectName("label_73")
+        self.spinBox_anchoarea = QtWidgets.QSpinBox(self.frame_8)
+        self.spinBox_anchoarea.setGeometry(QtCore.QRect(100, 240, 161, 26))
+        font = QtGui.QFont()
+        font.setPointSize(-1)
+        font.setBold(False)
+        font.setWeight(50)
+        self.spinBox_anchoarea.setFont(font)
+        self.spinBox_anchoarea.setStyleSheet("background:#f5f5f5;\n"
+"border-radius: 3px;\n"
+"padding: 4 5px;\n"
+"color: rgb(0, 0, 0);\n"
+"border: 1px solid #f5f5f5;\n"
+"font-size:13px;\n"
+"font-weight: 400;\n"
+"margin-left: 10px;\n"
+"")
+        self.spinBox_anchoarea.setObjectName("spinBox_anchoarea")
+        self.spinBox_largoarea = QtWidgets.QSpinBox(self.frame_8)
+        self.spinBox_largoarea.setGeometry(QtCore.QRect(100, 310, 161, 26))
+        font = QtGui.QFont()
+        font.setPointSize(-1)
+        font.setBold(False)
+        font.setWeight(50)
+        self.spinBox_largoarea.setFont(font)
+        self.spinBox_largoarea.setStyleSheet("background:#f5f5f5;\n"
+"border-radius: 3px;\n"
+"padding: 4 5px;\n"
+"color: rgb(0, 0, 0);\n"
+"border: 1px solid #f5f5f5;\n"
+"font-size:13px;\n"
+"font-weight: 400;\n"
+"margin-left: 10px;\n"
+"")
+        self.spinBox_largoarea.setObjectName("spinBox_largoarea")
+        self.label_2 = QtWidgets.QLabel(self.frame_8)
+        self.label_2.setGeometry(QtCore.QRect(110, 220, 47, 13))
+        font = QtGui.QFont()
+        font.setFamily("Cairo")
+        font.setPointSize(12)
+        font.setBold(False)
+        font.setWeight(50)
+        self.label_2.setFont(font)
+        self.label_2.setObjectName("label_2")
+        self.label_3 = QtWidgets.QLabel(self.frame_8)
+        self.label_3.setGeometry(QtCore.QRect(110, 280, 47, 21))
+        font = QtGui.QFont()
+        font.setFamily("Cairo")
+        font.setPointSize(12)
+        self.label_3.setFont(font)
+        self.label_3.setObjectName("label_3")
+        self.label_74 = QtWidgets.QLabel(self.frame_8)
+        self.label_74.setGeometry(QtCore.QRect(110, 150, 511, 41))
+        self.label_74.setMinimumSize(QtCore.QSize(66, 0))
+        self.label_74.setMaximumSize(QtCore.QSize(16777215, 16777215))
+        font = QtGui.QFont()
+        font.setFamily("Cairo")
+        font.setPointSize(17)
+        font.setBold(False)
+        font.setWeight(50)
+        self.label_74.setFont(font)
+        self.label_74.setStyleSheet("color: #282830 ;\n"
+"")
+        self.label_74.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
+        self.label_74.setObjectName("label_74")
+        self.btn_crearDeposito = QtWidgets.QPushButton(self.frame_8)
+        self.btn_crearDeposito.setGeometry(QtCore.QRect(110, 360, 151, 26))
+        self.btn_crearDeposito.setMinimumSize(QtCore.QSize(0, 26))
+        font = QtGui.QFont()
+        font.setFamily("Cairo SemiBold")
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.btn_crearDeposito.setFont(font)
+        self.btn_crearDeposito.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.btn_crearDeposito.setStyleSheet("QPushButton{\n"
+"background-color: #055ffc;\n"
 "color:#fff;\n"
-"padding-right:15px;\n"
 "border-radius: 5px;\n"
-"text-align:right;\n"
+"text-align:center;\n"
 "}\n"
 "\n"
 "QPushButton:hover{\n"
-"background-color: rgba(71, 71, 103,180);\n"
 "\n"
 "}")
-        icon5 = QtGui.QIcon()
-        icon5.addPixmap(QtGui.QPixmap(":/img/plus.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.new_ingreso_btn.setIcon(icon5)
-        self.new_ingreso_btn.setIconSize(QtCore.QSize(13, 13))
-        self.new_ingreso_btn.setObjectName("new_ingreso_btn")
-        self.new_egreso_btn = QtWidgets.QPushButton(self.groupBox_8)
-        self.new_egreso_btn.setGeometry(QtCore.QRect(351, 23, 81, 26))
-        self.new_egreso_btn.setMinimumSize(QtCore.QSize(0, 26))
+        self.btn_crearDeposito.setIcon(icon9)
+        self.btn_crearDeposito.setIconSize(QtCore.QSize(13, 13))
+        self.btn_crearDeposito.setObjectName("btn_crearDeposito")
+        self.stackedWidget_main.addWidget(self.page_area)
+        self.page_areaIndividual = QtWidgets.QWidget()
+        self.page_areaIndividual.setObjectName("page_areaIndividual")
+        self.verticalLayout_16 = QtWidgets.QVBoxLayout(self.page_areaIndividual)
+        self.verticalLayout_16.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout_16.setSpacing(0)
+        self.verticalLayout_16.setObjectName("verticalLayout_16")
+        self.frame_10 = QtWidgets.QFrame(self.page_areaIndividual)
+        self.frame_10.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_10.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_10.setObjectName("frame_10")
+        self.verticalLayout_22 = QtWidgets.QVBoxLayout(self.frame_10)
+        self.verticalLayout_22.setObjectName("verticalLayout_22")
+        self.frame_32 = QtWidgets.QFrame(self.frame_10)
+        self.frame_32.setMaximumSize(QtCore.QSize(16777215, 100))
+        self.frame_32.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_32.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_32.setObjectName("frame_32")
+        self.label_nombre_area = QtWidgets.QLabel(self.frame_32)
+        self.label_nombre_area.setGeometry(QtCore.QRect(150, 50, 211, 40))
+        self.label_nombre_area.setMinimumSize(QtCore.QSize(211, 0))
+        self.label_nombre_area.setMaximumSize(QtCore.QSize(120, 40))
         font = QtGui.QFont()
-        font.setFamily("Roboto")
-        font.setPointSize(9)
+        font.setFamily("Cairo")
+        font.setPointSize(20)
         font.setBold(True)
         font.setWeight(75)
-        self.new_egreso_btn.setFont(font)
-        self.new_egreso_btn.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.new_egreso_btn.setStyleSheet("QPushButton{\n"
-"background-color: rgb(71, 71, 103);\n"
+        self.label_nombre_area.setFont(font)
+        self.label_nombre_area.setStyleSheet("color: #282830 ;\n"
+"border: none")
+        self.label_nombre_area.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_nombre_area.setObjectName("label_nombre_area")
+        self.btn_nuevaEstanteria = QtWidgets.QPushButton(self.frame_32)
+        self.btn_nuevaEstanteria.setGeometry(QtCore.QRect(370, 60, 121, 26))
+        self.btn_nuevaEstanteria.setMinimumSize(QtCore.QSize(0, 26))
+        font = QtGui.QFont()
+        font.setFamily("Cairo SemiBold")
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.btn_nuevaEstanteria.setFont(font)
+        self.btn_nuevaEstanteria.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.btn_nuevaEstanteria.setStyleSheet("QPushButton{\n"
+"background-color: #055ffc;\n"
 "color:#fff;\n"
-"padding-right:15px;\n"
 "border-radius: 5px;\n"
-"text-align:right;\n"
+"text-align:center;\n"
 "}\n"
 "\n"
 "QPushButton:hover{\n"
-"background-color: rgba(71, 71, 103,180);\n"
 "\n"
 "}")
-        self.new_egreso_btn.setIcon(icon5)
-        self.new_egreso_btn.setIconSize(QtCore.QSize(13, 13))
-        self.new_egreso_btn.setObjectName("new_egreso_btn")
-        self.verticalLayout_29.addWidget(self.groupBox_8)
-        self.verticalLayout_27.addWidget(self.top_frame_mov_2)
-        self.mid_mov_2 = QtWidgets.QFrame(self.container_mov_2)
-        self.mid_mov_2.setMaximumSize(QtCore.QSize(16777215, 70))
-        self.mid_mov_2.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.mid_mov_2.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.mid_mov_2.setObjectName("mid_mov_2")
-        self.verticalLayout_30 = QtWidgets.QVBoxLayout(self.mid_mov_2)
-        self.verticalLayout_30.setContentsMargins(0, 30, 0, 0)
-        self.verticalLayout_30.setSpacing(0)
-        self.verticalLayout_30.setObjectName("verticalLayout_30")
-        self.frame_21 = QtWidgets.QFrame(self.mid_mov_2)
-        self.frame_21.setMinimumSize(QtCore.QSize(0, 50))
-        self.frame_21.setMaximumSize(QtCore.QSize(16777215, 50))
-        self.frame_21.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_21.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_21.setObjectName("frame_21")
-        self.verticalLayout_31 = QtWidgets.QVBoxLayout(self.frame_21)
-        self.verticalLayout_31.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayout_31.setSpacing(0)
-        self.verticalLayout_31.setObjectName("verticalLayout_31")
-        self.groupBox_9 = QtWidgets.QGroupBox(self.frame_21)
-        self.groupBox_9.setMinimumSize(QtCore.QSize(0, 50))
-        self.groupBox_9.setStyleSheet("margin-left: 14px")
-        self.groupBox_9.setTitle("")
-        self.groupBox_9.setObjectName("groupBox_9")
-        self.pushButton_21 = QtWidgets.QPushButton(self.groupBox_9)
-        self.pushButton_21.setGeometry(QtCore.QRect(18, 9, 31, 21))
-        self.pushButton_21.setMinimumSize(QtCore.QSize(0, 21))
-        self.pushButton_21.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.pushButton_21.setText("")
-        icon6 = QtGui.QIcon()
-        icon6.addPixmap(QtGui.QPixmap(":/img/LupaB.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_21.setIcon(icon6)
-        self.pushButton_21.setIconSize(QtCore.QSize(52, 82))
-        self.pushButton_21.setObjectName("pushButton_21")
-        self.lineEdit_5 = QtWidgets.QLineEdit(self.groupBox_9)
-        self.lineEdit_5.setGeometry(QtCore.QRect(50, 10, 311, 20))
-        self.lineEdit_5.setMinimumSize(QtCore.QSize(0, 20))
-        self.lineEdit_5.setStyleSheet("font-family: Roboto;\n"
+        self.btn_nuevaEstanteria.setIcon(icon9)
+        self.btn_nuevaEstanteria.setIconSize(QtCore.QSize(13, 13))
+        self.btn_nuevaEstanteria.setObjectName("btn_nuevaEstanteria")
+        self.verticalLayout_22.addWidget(self.frame_32)
+        self.frame_11 = QtWidgets.QFrame(self.frame_10)
+        self.frame_11.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_11.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_11.setObjectName("frame_11")
+        self.frame_area = QtWidgets.QFrame(self.frame_11)
+        self.frame_area.setGeometry(QtCore.QRect(190, 40, 591, 400))
+        self.frame_area.setMinimumSize(QtCore.QSize(500, 350))
+        self.frame_area.setMaximumSize(QtCore.QSize(600, 400))
+        self.frame_area.setStyleSheet("border: 2px solid black")
+        self.frame_area.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_area.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_area.setObjectName("frame_area")
+        self.gridLayout_2 = QtWidgets.QGridLayout(self.frame_area)
+        self.gridLayout_2.setObjectName("gridLayout_2")
+        self.pushButton = QtWidgets.QPushButton(self.frame_11)
+        self.pushButton.setGeometry(QtCore.QRect(40, 30, 75, 23))
+        self.pushButton.setStyleSheet("QPushButton{\n"
+"background-color: #055ffc;\n"
+"color:#fff;\n"
+"border-radius: 5px;\n"
+"text-align:center;\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"\n"
+"}")
+        self.pushButton.setObjectName("pushButton")
+        self.verticalLayout_22.addWidget(self.frame_11)
+        self.verticalLayout_16.addWidget(self.frame_10)
+        self.stackedWidget_main.addWidget(self.page_areaIndividual)
+        self.page_stock = QtWidgets.QWidget()
+        self.page_stock.setObjectName("page_stock")
+        self.verticalLayout_3 = QtWidgets.QVBoxLayout(self.page_stock)
+        self.verticalLayout_3.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout_3.setSpacing(0)
+        self.verticalLayout_3.setObjectName("verticalLayout_3")
+        self.frame_main_stock = QtWidgets.QFrame(self.page_stock)
+        self.frame_main_stock.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_main_stock.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_main_stock.setObjectName("frame_main_stock")
+        self.buscar_input = QtWidgets.QLineEdit(self.frame_main_stock)
+        self.buscar_input.setGeometry(QtCore.QRect(700, 110, 193, 26))
+        font = QtGui.QFont()
+        font.setFamily("Cairo")
+        font.setPointSize(10)
+        self.buscar_input.setFont(font)
+        self.buscar_input.setStyleSheet("background:#f5f5f5;\n"
+"color:#818489;\n"
+"padding-left: 7px;\n"
+"border-radius: 5px;")
+        self.buscar_input.setFrame(True)
+        self.buscar_input.setObjectName("buscar_input")
+        self.btn_buscarP = QtWidgets.QPushButton(self.frame_main_stock)
+        self.btn_buscarP.setGeometry(QtCore.QRect(900, 110, 26, 26))
+        font = QtGui.QFont()
+        font.setFamily("Roboto")
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.btn_buscarP.setFont(font)
+        self.btn_buscarP.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.btn_buscarP.setStyleSheet("QPushButton{\n"
+"border:none;\n"
+"font-family: Roboto;\n"
+"border-radius:5px;\n"
+"text-align: center;\n"
+"color: #282830 ;\n"
+"background: #212325\n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"        color:rgb(116, 116, 138)\n"
+"\n"
+"}")
+        self.btn_buscarP.setText("")
+        icon11 = QtGui.QIcon()
+        icon11.addPixmap(QtGui.QPixmap(":/img/lupa y actualizar_lupa.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.btn_buscarP.setIcon(icon11)
+        self.btn_buscarP.setIconSize(QtCore.QSize(14, 16))
+        self.btn_buscarP.setCheckable(True)
+        self.btn_buscarP.setObjectName("btn_buscarP")
+        self.frame_33 = QtWidgets.QFrame(self.frame_main_stock)
+        self.frame_33.setGeometry(QtCore.QRect(40, 150, 851, 47))
+        self.frame_33.setMinimumSize(QtCore.QSize(82, 41))
+        self.frame_33.setStyleSheet("background-color: #212325;\n"
+"color:#fff;\n"
+"border-radius:8px;\n"
+"padding-left:4px;")
+        self.frame_33.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_33.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_33.setObjectName("frame_33")
+        self.horizontalLayout_16 = QtWidgets.QHBoxLayout(self.frame_33)
+        self.horizontalLayout_16.setObjectName("horizontalLayout_16")
+        self.label_47 = QtWidgets.QLabel(self.frame_33)
+        font = QtGui.QFont()
+        font.setFamily("Cairo")
+        font.setPointSize(13)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_47.setFont(font)
+        self.label_47.setStyleSheet("background: none;\n"
+"color: #fff ;\n"
 "")
-        self.lineEdit_5.setText("")
-        self.lineEdit_5.setObjectName("lineEdit_5")
-        self.verticalLayout_31.addWidget(self.groupBox_9)
-        self.verticalLayout_30.addWidget(self.frame_21, 0, QtCore.Qt.AlignBottom)
-        self.verticalLayout_27.addWidget(self.mid_mov_2)
-        self.bottom_mov_2 = QtWidgets.QFrame(self.container_mov_2)
-        self.bottom_mov_2.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.bottom_mov_2.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.bottom_mov_2.setObjectName("bottom_mov_2")
-        self.verticalLayout_32 = QtWidgets.QVBoxLayout(self.bottom_mov_2)
-        self.verticalLayout_32.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayout_32.setSpacing(0)
-        self.verticalLayout_32.setObjectName("verticalLayout_32")
-        self.frame_22 = QtWidgets.QFrame(self.bottom_mov_2)
-        self.frame_22.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_22.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_22.setObjectName("frame_22")
-        self.tableWidget_movimientos_2 = QtWidgets.QTableWidget(self.frame_22)
-        self.tableWidget_movimientos_2.setGeometry(QtCore.QRect(40, 60, 831, 371))
-        self.tableWidget_movimientos_2.viewport().setProperty("cursor", QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.tableWidget_movimientos_2.setStyleSheet("QTableWidget{\n"
+        self.label_47.setObjectName("label_47")
+        self.horizontalLayout_16.addWidget(self.label_47, 0, QtCore.Qt.AlignLeft)
+        self.label_48 = QtWidgets.QLabel(self.frame_33)
+        font = QtGui.QFont()
+        font.setFamily("Cairo")
+        font.setPointSize(13)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_48.setFont(font)
+        self.label_48.setStyleSheet("background: none;\n"
+"color: #fff ;\n"
+"\n"
+"")
+        self.label_48.setObjectName("label_48")
+        self.horizontalLayout_16.addWidget(self.label_48, 0, QtCore.Qt.AlignLeft)
+        self.label_49 = QtWidgets.QLabel(self.frame_33)
+        font = QtGui.QFont()
+        font.setFamily("Cairo")
+        font.setPointSize(13)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_49.setFont(font)
+        self.label_49.setStyleSheet("background: none;\n"
+"color: #fff ;\n"
+"")
+        self.label_49.setObjectName("label_49")
+        self.horizontalLayout_16.addWidget(self.label_49, 0, QtCore.Qt.AlignLeft)
+        self.label_50 = QtWidgets.QLabel(self.frame_33)
+        font = QtGui.QFont()
+        font.setFamily("Cairo")
+        font.setPointSize(13)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_50.setFont(font)
+        self.label_50.setStyleSheet("background: none;\n"
+"color: #fff ;\n"
+"")
+        self.label_50.setObjectName("label_50")
+        self.horizontalLayout_16.addWidget(self.label_50, 0, QtCore.Qt.AlignLeft)
+        self.label_53 = QtWidgets.QLabel(self.frame_33)
+        font = QtGui.QFont()
+        font.setFamily("Cairo")
+        font.setPointSize(13)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_53.setFont(font)
+        self.label_53.setStyleSheet("background: none;\n"
+"color: #fff ;\n"
+"")
+        self.label_53.setObjectName("label_53")
+        self.horizontalLayout_16.addWidget(self.label_53, 0, QtCore.Qt.AlignLeft)
+        self.product_new_btn = QtWidgets.QPushButton(self.frame_main_stock)
+        self.product_new_btn.setGeometry(QtCore.QRect(40, 110, 121, 26))
+        self.product_new_btn.setMinimumSize(QtCore.QSize(0, 26))
+        font = QtGui.QFont()
+        font.setFamily("Cairo SemiBold")
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.product_new_btn.setFont(font)
+        self.product_new_btn.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.product_new_btn.setStyleSheet("QPushButton{\n"
+"background-color: #055ffc;\n"
+"color:#fff;\n"
+"border-radius: 5px;\n"
+"text-align:center;\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"\n"
+"}")
+        self.product_new_btn.setIcon(icon9)
+        self.product_new_btn.setIconSize(QtCore.QSize(13, 13))
+        self.product_new_btn.setObjectName("product_new_btn")
+        self.label_54 = QtWidgets.QLabel(self.frame_main_stock)
+        self.label_54.setGeometry(QtCore.QRect(40, 70, 71, 20))
+        self.label_54.setMinimumSize(QtCore.QSize(66, 0))
+        self.label_54.setMaximumSize(QtCore.QSize(120, 16777215))
+        font = QtGui.QFont()
+        font.setFamily("Roboto")
+        font.setPointSize(21)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_54.setFont(font)
+        self.label_54.setStyleSheet("color: #282830 ;\n"
+"")
+        self.label_54.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
+        self.label_54.setObjectName("label_54")
+        self.btn_actualizarStock = QtWidgets.QPushButton(self.frame_main_stock)
+        self.btn_actualizarStock.setGeometry(QtCore.QRect(900, 160, 26, 26))
+        font = QtGui.QFont()
+        font.setFamily("Roboto")
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.btn_actualizarStock.setFont(font)
+        self.btn_actualizarStock.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.btn_actualizarStock.setStyleSheet("QPushButton{\n"
+"border:none;\n"
+"font-family: Roboto;\n"
+"border-radius:5px;\n"
+"text-align: center;\n"
+"color: #282830 ;\n"
+"background: #212325\n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"        color:rgb(116, 116, 138)\n"
+"\n"
+"}")
+        self.btn_actualizarStock.setText("")
+        self.btn_actualizarStock.setIcon(icon10)
+        self.btn_actualizarStock.setIconSize(QtCore.QSize(14, 16))
+        self.btn_actualizarStock.setCheckable(True)
+        self.btn_actualizarStock.setObjectName("btn_actualizarStock")
+        self.tableWidget_stock_2 = QtWidgets.QTableWidget(self.frame_main_stock)
+        self.tableWidget_stock_2.setGeometry(QtCore.QRect(50, 190, 851, 451))
+        self.tableWidget_stock_2.setMaximumSize(QtCore.QSize(16777215, 489))
+        self.tableWidget_stock_2.viewport().setProperty("cursor", QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.tableWidget_stock_2.setStyleSheet("QTableWidget{\n"
+"font-size: 11pt;\n"
+"margin-left: 0px;\n"
+"margin-top:15px;\n"
+"color: #000;\n"
+"font-family: Cairo Semibold;\n"
+"text-align:center;\n"
+"}\n"
+"QheaderView::item\n"
+"    {\n"
+"text-align:center;\n"
+"\n"
+"    }\n"
+"QHeaderView::section {\n"
+"    background-color: #394353;\n"
+"    border-radius: 11px;\n"
+"    color:#fff;\n"
+"    font-size: 9pt;\n"
+"    font-family:Roboto;\n"
+"}\n"
+"\n"
+"QHeaderView::section:horizontal\n"
+"{\n"
+"    border-top: 1px solid #394353;\n"
+"\n"
+"}\n"
+"\n"
+"QHeaderView::section:vertical\n"
+"{\n"
+"\n"
+"    border-left: 1px solid #394353;\n"
+"}")
+        self.tableWidget_stock_2.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers)
+        self.tableWidget_stock_2.setShowGrid(False)
+        self.tableWidget_stock_2.setObjectName("tableWidget_stock_2")
+        self.tableWidget_stock_2.setColumnCount(5)
+        self.tableWidget_stock_2.setRowCount(0)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget_stock_2.setHorizontalHeaderItem(0, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget_stock_2.setHorizontalHeaderItem(1, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget_stock_2.setHorizontalHeaderItem(2, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget_stock_2.setHorizontalHeaderItem(3, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget_stock_2.setHorizontalHeaderItem(4, item)
+        self.tableWidget_stock_2.horizontalHeader().setVisible(False)
+        self.tableWidget_stock_2.horizontalHeader().setCascadingSectionResizes(True)
+        self.tableWidget_stock_2.horizontalHeader().setDefaultSectionSize(170)
+        self.tableWidget_stock_2.horizontalHeader().setSortIndicatorShown(True)
+        self.tableWidget_stock_2.horizontalHeader().setStretchLastSection(True)
+        self.tableWidget_stock_2.verticalHeader().setVisible(False)
+        self.tableWidget_stock_2.verticalHeader().setDefaultSectionSize(41)
+        self.verticalLayout_3.addWidget(self.frame_main_stock)
+        self.stackedWidget_main.addWidget(self.page_stock)
+        self.page_egreso = QtWidgets.QWidget()
+        self.page_egreso.setObjectName("page_egreso")
+        self.verticalLayout_15 = QtWidgets.QVBoxLayout(self.page_egreso)
+        self.verticalLayout_15.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout_15.setSpacing(0)
+        self.verticalLayout_15.setObjectName("verticalLayout_15")
+        self.frame_9 = QtWidgets.QFrame(self.page_egreso)
+        self.frame_9.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_9.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_9.setObjectName("frame_9")
+        self.label_16 = QtWidgets.QLabel(self.frame_9)
+        self.label_16.setGeometry(QtCore.QRect(380, 20, 128, 40))
+        self.label_16.setMinimumSize(QtCore.QSize(128, 0))
+        self.label_16.setMaximumSize(QtCore.QSize(120, 40))
+        font = QtGui.QFont()
+        font.setFamily("Cairo")
+        font.setPointSize(22)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_16.setFont(font)
+        self.label_16.setStyleSheet("color: #282830 ;\n"
+"border: none")
+        self.label_16.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_16.setObjectName("label_16")
+        self.label_egr_ing = QtWidgets.QLabel(self.frame_9)
+        self.label_egr_ing.setGeometry(QtCore.QRect(40, 80, 131, 27))
+        font = QtGui.QFont()
+        font.setFamily("Roboto")
+        font.setPointSize(-1)
+        self.label_egr_ing.setFont(font)
+        self.label_egr_ing.setStyleSheet("font-family: Roboto;\n"
+"font-size: 14px;\n"
+"margin-top:10px;\n"
+"margin-left:10px\n"
+"\n"
+"")
+        self.label_egr_ing.setObjectName("label_egr_ing")
+        self.input_codigoProdEgreso = QtWidgets.QLineEdit(self.frame_9)
+        self.input_codigoProdEgreso.setGeometry(QtCore.QRect(40, 110, 121, 25))
+        self.input_codigoProdEgreso.setMinimumSize(QtCore.QSize(0, 0))
+        self.input_codigoProdEgreso.setMaximumSize(QtCore.QSize(16777215, 25))
+        self.input_codigoProdEgreso.setStyleSheet("QLineEdit{\n"
+"background:#f5f5f5;\n"
+"border-radius: 3px;\n"
+"padding: 4 5px;\n"
+"color: rgb(0, 0, 0);\n"
+"font-family:Roboto;\n"
+"font-size:13px;\n"
+"font-weight: 400;\n"
+"margin-left: 10px;\n"
+"border: 1px solid #f5f5f5;\n"
+"margin-left: 10px;\n"
+"\n"
+"}\n"
+"")
+        self.input_codigoProdEgreso.setText("")
+        self.input_codigoProdEgreso.setPlaceholderText("")
+        self.input_codigoProdEgreso.setObjectName("input_codigoProdEgreso")
+        self.num_cantidadEgreso = QtWidgets.QSpinBox(self.frame_9)
+        self.num_cantidadEgreso.setGeometry(QtCore.QRect(200, 110, 121, 25))
+        self.num_cantidadEgreso.setStyleSheet("background:#f5f5f5;\n"
+"border-radius: 3px;\n"
+"padding: 4 5px;\n"
+"color: rgb(0, 0, 0);\n"
+"font-family:Roboto;\n"
+"border: none;\n"
+"font-size:13px;\n"
+"font-weight: 400;\n"
+"margin-left: 10px;\n"
+"")
+        self.num_cantidadEgreso.setMinimum(0)
+        self.num_cantidadEgreso.setMaximum(999)
+        self.num_cantidadEgreso.setObjectName("num_cantidadEgreso")
+        self.label_pasillos_2 = QtWidgets.QLabel(self.frame_9)
+        self.label_pasillos_2.setGeometry(QtCore.QRect(200, 80, 131, 27))
+        font = QtGui.QFont()
+        font.setFamily("Roboto")
+        font.setPointSize(-1)
+        self.label_pasillos_2.setFont(font)
+        self.label_pasillos_2.setStyleSheet("font-family: Roboto;\n"
+"font-size: 14px;\n"
+"margin-top:10px;\n"
+"margin-left:10px\n"
+"\n"
+"")
+        self.label_pasillos_2.setObjectName("label_pasillos_2")
+        self.btn_agregarProdEgreso = QtWidgets.QPushButton(self.frame_9)
+        self.btn_agregarProdEgreso.setGeometry(QtCore.QRect(340, 110, 121, 26))
+        font = QtGui.QFont()
+        font.setFamily("Cairo")
+        font.setPointSize(10)
+        self.btn_agregarProdEgreso.setFont(font)
+        self.btn_agregarProdEgreso.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.btn_agregarProdEgreso.setStyleSheet("QPushButton{\n"
+"background-color: #055ffc;\n"
+"color:#fff;\n"
+"border-radius: 5px;\n"
+"text-align:center;\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"\n"
+"}")
+        self.btn_agregarProdEgreso.setObjectName("btn_agregarProdEgreso")
+        self.btn_actualizarProdEgreso = QtWidgets.QPushButton(self.frame_9)
+        self.btn_actualizarProdEgreso.setGeometry(QtCore.QRect(470, 190, 31, 21))
+        self.btn_actualizarProdEgreso.setMinimumSize(QtCore.QSize(0, 21))
+        self.btn_actualizarProdEgreso.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.btn_actualizarProdEgreso.setText("")
+        icon12 = QtGui.QIcon()
+        icon12.addPixmap(QtGui.QPixmap(":/img/refresh.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.btn_actualizarProdEgreso.setIcon(icon12)
+        self.btn_actualizarProdEgreso.setIconSize(QtCore.QSize(33, 16))
+        self.btn_actualizarProdEgreso.setObjectName("btn_actualizarProdEgreso")
+        self.frame_31 = QtWidgets.QFrame(self.frame_9)
+        self.frame_31.setGeometry(QtCore.QRect(49, 180, 411, 41))
+        self.frame_31.setMinimumSize(QtCore.QSize(56, 41))
+        self.frame_31.setStyleSheet("background-color: #212325;\n"
+"border-radius:15px;")
+        self.frame_31.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_31.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_31.setObjectName("frame_31")
+        self.label_75 = QtWidgets.QLabel(self.frame_31)
+        self.label_75.setGeometry(QtCore.QRect(20, 10, 47, 18))
+        font = QtGui.QFont()
+        font.setFamily("Roboto")
+        font.setPointSize(11)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_75.setFont(font)
+        self.label_75.setStyleSheet("background: none;\n"
+"color: #fff ;\n"
+"")
+        self.label_75.setObjectName("label_75")
+        self.label_76 = QtWidgets.QLabel(self.frame_31)
+        self.label_76.setGeometry(QtCore.QRect(150, 10, 79, 18))
+        font = QtGui.QFont()
+        font.setFamily("Roboto")
+        font.setPointSize(11)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_76.setFont(font)
+        self.label_76.setStyleSheet("background: none;\n"
+"color: #fff ;\n"
+"\n"
+"")
+        self.label_76.setObjectName("label_76")
+        self.label_77 = QtWidgets.QLabel(self.frame_31)
+        self.label_77.setGeometry(QtCore.QRect(310, 10, 61, 18))
+        font = QtGui.QFont()
+        font.setFamily("Roboto")
+        font.setPointSize(11)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_77.setFont(font)
+        self.label_77.setStyleSheet("background: none;\n"
+"color: #fff ;\n"
+"\n"
+"")
+        self.label_77.setObjectName("label_77")
+        self.tableWidget_lotes_2 = QtWidgets.QTableWidget(self.frame_31)
+        self.tableWidget_lotes_2.setGeometry(QtCore.QRect(0, 30, 801, 351))
+        self.tableWidget_lotes_2.viewport().setProperty("cursor", QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.tableWidget_lotes_2.setStyleSheet("QTableWidget{\n"
 "font-size: 11pt;\n"
 "margin-top:15px;\n"
 "color: #000;\n"
@@ -711,275 +1370,329 @@ class Ui_MainWindow(object):
 "\n"
 "    border-left: 1px solid #394353;\n"
 "}")
-        self.tableWidget_movimientos_2.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers)
-        self.tableWidget_movimientos_2.setShowGrid(False)
-        self.tableWidget_movimientos_2.setObjectName("tableWidget_movimientos_2")
-        self.tableWidget_movimientos_2.setColumnCount(6)
-        self.tableWidget_movimientos_2.setRowCount(0)
+        self.tableWidget_lotes_2.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers)
+        self.tableWidget_lotes_2.setShowGrid(False)
+        self.tableWidget_lotes_2.setObjectName("tableWidget_lotes_2")
+        self.tableWidget_lotes_2.setColumnCount(5)
+        self.tableWidget_lotes_2.setRowCount(0)
         item = QtWidgets.QTableWidgetItem()
-        self.tableWidget_movimientos_2.setHorizontalHeaderItem(0, item)
+        self.tableWidget_lotes_2.setHorizontalHeaderItem(0, item)
         item = QtWidgets.QTableWidgetItem()
-        self.tableWidget_movimientos_2.setHorizontalHeaderItem(1, item)
+        self.tableWidget_lotes_2.setHorizontalHeaderItem(1, item)
         item = QtWidgets.QTableWidgetItem()
-        self.tableWidget_movimientos_2.setHorizontalHeaderItem(2, item)
+        self.tableWidget_lotes_2.setHorizontalHeaderItem(2, item)
         item = QtWidgets.QTableWidgetItem()
-        self.tableWidget_movimientos_2.setHorizontalHeaderItem(3, item)
+        self.tableWidget_lotes_2.setHorizontalHeaderItem(3, item)
         item = QtWidgets.QTableWidgetItem()
-        self.tableWidget_movimientos_2.setHorizontalHeaderItem(4, item)
-        item = QtWidgets.QTableWidgetItem()
-        self.tableWidget_movimientos_2.setHorizontalHeaderItem(5, item)
-        self.tableWidget_movimientos_2.horizontalHeader().setVisible(False)
-        self.tableWidget_movimientos_2.horizontalHeader().setCascadingSectionResizes(True)
-        self.tableWidget_movimientos_2.horizontalHeader().setDefaultSectionSize(135)
-        self.tableWidget_movimientos_2.horizontalHeader().setSortIndicatorShown(True)
-        self.tableWidget_movimientos_2.horizontalHeader().setStretchLastSection(True)
-        self.tableWidget_movimientos_2.verticalHeader().setVisible(False)
-        self.tableWidget_movimientos_2.verticalHeader().setDefaultSectionSize(41)
-        self.frame_23 = QtWidgets.QFrame(self.frame_22)
-        self.frame_23.setGeometry(QtCore.QRect(29, 9, 831, 41))
-        self.frame_23.setMinimumSize(QtCore.QSize(56, 41))
-        self.frame_23.setStyleSheet("background-color: #f2f2f5;\n"
-"border-radius:15px;")
-        self.frame_23.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_23.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_23.setObjectName("frame_23")
-        self.label_28 = QtWidgets.QLabel(self.frame_23)
-        self.label_28.setGeometry(QtCore.QRect(20, 10, 47, 18))
-        font = QtGui.QFont()
-        font.setFamily("Roboto")
-        font.setPointSize(11)
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_28.setFont(font)
-        self.label_28.setStyleSheet("background: none;\n"
-"color: #282830 ;\n"
-"")
-        self.label_28.setObjectName("label_28")
-        self.label_29 = QtWidgets.QLabel(self.frame_23)
-        self.label_29.setGeometry(QtCore.QRect(130, 10, 79, 18))
-        font = QtGui.QFont()
-        font.setFamily("Roboto")
-        font.setPointSize(11)
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_29.setFont(font)
-        self.label_29.setStyleSheet("background: none;\n"
-"color: #282830 ;\n"
+        self.tableWidget_lotes_2.setHorizontalHeaderItem(4, item)
+        self.tableWidget_lotes_2.horizontalHeader().setVisible(False)
+        self.tableWidget_lotes_2.horizontalHeader().setCascadingSectionResizes(True)
+        self.tableWidget_lotes_2.horizontalHeader().setDefaultSectionSize(160)
+        self.tableWidget_lotes_2.horizontalHeader().setSortIndicatorShown(True)
+        self.tableWidget_lotes_2.horizontalHeader().setStretchLastSection(True)
+        self.tableWidget_lotes_2.verticalHeader().setVisible(False)
+        self.tableWidget_lotes_2.verticalHeader().setDefaultSectionSize(41)
+        self.tableWidget_egreso = QtWidgets.QTableWidget(self.frame_9)
+        self.tableWidget_egreso.setGeometry(QtCore.QRect(50, 240, 461, 351))
+        self.tableWidget_egreso.viewport().setProperty("cursor", QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.tableWidget_egreso.setStyleSheet("QTableWidget{\n"
+"font-size: 11pt;\n"
+"margin-top:15px;\n"
+"color: #000;\n"
+"font-family: Roboto;\n"
+"text-align:center;\n"
+"}\n"
+"QHeaderView::section {\n"
+"    background-color: #394353;\n"
+"    border-radius: 11px;\n"
+"    color:#fff;\n"
+"    font-size: 9pt;\n"
+"    font-family:Roboto;\n"
+"    border-left: 1px solid #394353;\n"
 "\n"
-"")
-        self.label_29.setObjectName("label_29")
-        self.label_30 = QtWidgets.QLabel(self.frame_23)
-        self.label_30.setGeometry(QtCore.QRect(410, 10, 132, 18))
-        font = QtGui.QFont()
-        font.setFamily("Roboto")
-        font.setPointSize(11)
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_30.setFont(font)
-        self.label_30.setStyleSheet("background: none;\n"
-"color: #282830 ;\n"
-"")
-        self.label_30.setObjectName("label_30")
-        self.label_32 = QtWidgets.QLabel(self.frame_23)
-        self.label_32.setGeometry(QtCore.QRect(690, 10, 71, 18))
-        font = QtGui.QFont()
-        font.setFamily("Roboto")
-        font.setPointSize(11)
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_32.setFont(font)
-        self.label_32.setStyleSheet("background: none;\n"
-"color: #282830 ;\n"
-"text-align:left;\n"
-"")
-        self.label_32.setObjectName("label_32")
-        self.label_31 = QtWidgets.QLabel(self.frame_23)
-        self.label_31.setGeometry(QtCore.QRect(570, 10, 80, 18))
-        font = QtGui.QFont()
-        font.setFamily("Roboto")
-        font.setPointSize(11)
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_31.setFont(font)
-        self.label_31.setStyleSheet("background: none;\n"
-"color: #282830 ;\n"
-"")
-        self.label_31.setObjectName("label_31")
-        self.label_33 = QtWidgets.QLabel(self.frame_23)
-        self.label_33.setGeometry(QtCore.QRect(280, 10, 61, 18))
-        font = QtGui.QFont()
-        font.setFamily("Roboto")
-        font.setPointSize(11)
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_33.setFont(font)
-        self.label_33.setStyleSheet("background: none;\n"
-"color: #282830 ;\n"
+"}\n"
 "\n"
+"QHeaderView::section:horizontal\n"
+"{\n"
+"    border-top: 1px solid #394353;\n"
+"\n"
+"}\n"
+"\n"
+"QHeaderView::section:vertical\n"
+"{\n"
+"\n"
+"    border-left: 1px solid #394353;\n"
+"}")
+        self.tableWidget_egreso.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers)
+        self.tableWidget_egreso.setShowGrid(False)
+        self.tableWidget_egreso.setObjectName("tableWidget_egreso")
+        self.tableWidget_egreso.setColumnCount(3)
+        self.tableWidget_egreso.setRowCount(0)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget_egreso.setHorizontalHeaderItem(0, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget_egreso.setHorizontalHeaderItem(1, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget_egreso.setHorizontalHeaderItem(2, item)
+        self.tableWidget_egreso.horizontalHeader().setVisible(False)
+        self.tableWidget_egreso.horizontalHeader().setCascadingSectionResizes(True)
+        self.tableWidget_egreso.horizontalHeader().setDefaultSectionSize(150)
+        self.tableWidget_egreso.horizontalHeader().setSortIndicatorShown(True)
+        self.tableWidget_egreso.horizontalHeader().setStretchLastSection(True)
+        self.tableWidget_egreso.verticalHeader().setVisible(False)
+        self.tableWidget_egreso.verticalHeader().setDefaultSectionSize(41)
+        self.lista_egreso = QtWidgets.QListWidget(self.frame_9)
+        self.lista_egreso.setGeometry(QtCore.QRect(560, 210, 361, 391))
+        font = QtGui.QFont()
+        font.setFamily("Roboto")
+        font.setPointSize(16)
+        self.lista_egreso.setFont(font)
+        self.lista_egreso.setStyleSheet("background-color: #f2f2f5;\n"
 "")
-        self.label_33.setObjectName("label_33")
-        self.btn_actualizarMov = QtWidgets.QPushButton(self.frame_22)
-        self.btn_actualizarMov.setGeometry(QtCore.QRect(870, 20, 31, 21))
-        self.btn_actualizarMov.setMinimumSize(QtCore.QSize(0, 21))
-        self.btn_actualizarMov.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.btn_actualizarMov.setText("")
-        icon7 = QtGui.QIcon()
-        icon7.addPixmap(QtGui.QPixmap(":/img/refresh.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.btn_actualizarMov.setIcon(icon7)
-        self.btn_actualizarMov.setIconSize(QtCore.QSize(33, 16))
-        self.btn_actualizarMov.setObjectName("btn_actualizarMov")
-        self.verticalLayout_32.addWidget(self.frame_22)
-        self.verticalLayout_27.addWidget(self.bottom_mov_2)
-        self.verticalLayout_12.addWidget(self.container_mov_2)
-        self.stackedWidget_main.addWidget(self.page_movimientos)
+        self.lista_egreso.setAutoScrollMargin(16)
+        self.lista_egreso.setEditTriggers(QtWidgets.QAbstractItemView.DoubleClicked)
+        self.lista_egreso.setBatchSize(100)
+        self.lista_egreso.setObjectName("lista_egreso")
+        self.label_17 = QtWidgets.QLabel(self.frame_9)
+        self.label_17.setGeometry(QtCore.QRect(680, 170, 128, 40))
+        self.label_17.setMinimumSize(QtCore.QSize(128, 0))
+        self.label_17.setMaximumSize(QtCore.QSize(120, 40))
+        font = QtGui.QFont()
+        font.setFamily("Roboto")
+        font.setPointSize(19)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_17.setFont(font)
+        self.label_17.setStyleSheet("color: #282830 ;\n"
+"border: none")
+        self.label_17.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_17.setObjectName("label_17")
+        self.btn_eliminarProdEgreso = QtWidgets.QPushButton(self.frame_9)
+        self.btn_eliminarProdEgreso.setGeometry(QtCore.QRect(480, 110, 121, 26))
+        font = QtGui.QFont()
+        font.setFamily("Cairo")
+        font.setPointSize(10)
+        self.btn_eliminarProdEgreso.setFont(font)
+        self.btn_eliminarProdEgreso.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.btn_eliminarProdEgreso.setStyleSheet("QPushButton{\n"
+"background-color: #055ffc;\n"
+"color:#fff;\n"
+"border-radius: 5px;\n"
+"text-align:center;\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"\n"
+"}")
+        self.btn_eliminarProdEgreso.setObjectName("btn_eliminarProdEgreso")
+        self.verticalLayout_15.addWidget(self.frame_9)
+        self.stackedWidget_main.addWidget(self.page_egreso)
         self.page_usuarios = QtWidgets.QWidget()
         self.page_usuarios.setObjectName("page_usuarios")
         self.verticalLayout_11 = QtWidgets.QVBoxLayout(self.page_usuarios)
         self.verticalLayout_11.setContentsMargins(0, 0, 0, 0)
         self.verticalLayout_11.setSpacing(0)
         self.verticalLayout_11.setObjectName("verticalLayout_11")
-        self.container_stock_2 = QtWidgets.QFrame(self.page_usuarios)
-        self.container_stock_2.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.container_stock_2.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.container_stock_2.setObjectName("container_stock_2")
-        self.verticalLayout_17 = QtWidgets.QVBoxLayout(self.container_stock_2)
-        self.verticalLayout_17.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayout_17.setSpacing(0)
-        self.verticalLayout_17.setObjectName("verticalLayout_17")
-        self.top_frame_stock_2 = QtWidgets.QFrame(self.container_stock_2)
-        self.top_frame_stock_2.setMinimumSize(QtCore.QSize(0, 80))
-        self.top_frame_stock_2.setMaximumSize(QtCore.QSize(346, 70))
-        self.top_frame_stock_2.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.top_frame_stock_2.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.top_frame_stock_2.setObjectName("top_frame_stock_2")
-        self.frame_15 = QtWidgets.QFrame(self.top_frame_stock_2)
-        self.frame_15.setGeometry(QtCore.QRect(0, 13, 391, 70))
-        self.frame_15.setMinimumSize(QtCore.QSize(354, 70))
-        self.frame_15.setMaximumSize(QtCore.QSize(16777215, 50))
-        self.frame_15.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_15.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_15.setObjectName("frame_15")
-        self.verticalLayout_18 = QtWidgets.QVBoxLayout(self.frame_15)
-        self.verticalLayout_18.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayout_18.setSpacing(0)
-        self.verticalLayout_18.setObjectName("verticalLayout_18")
-        self.groupBox_3 = QtWidgets.QGroupBox(self.frame_15)
-        self.groupBox_3.setTitle("")
-        self.groupBox_3.setObjectName("groupBox_3")
-        self.label_17 = QtWidgets.QLabel(self.groupBox_3)
-        self.label_17.setGeometry(QtCore.QRect(90, 10, 120, 52))
-        self.label_17.setMinimumSize(QtCore.QSize(66, 0))
-        self.label_17.setMaximumSize(QtCore.QSize(120, 16777215))
+        self.frame_3 = QtWidgets.QFrame(self.page_usuarios)
+        self.frame_3.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_3.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_3.setObjectName("frame_3")
+        self.verticalLayout_12 = QtWidgets.QVBoxLayout(self.frame_3)
+        self.verticalLayout_12.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout_12.setSpacing(0)
+        self.verticalLayout_12.setObjectName("verticalLayout_12")
+        self.frame_main_stock_4 = QtWidgets.QFrame(self.frame_3)
+        self.frame_main_stock_4.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_main_stock_4.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_main_stock_4.setObjectName("frame_main_stock_4")
+        self.lineEdit_3 = QtWidgets.QLineEdit(self.frame_main_stock_4)
+        self.lineEdit_3.setGeometry(QtCore.QRect(700, 110, 193, 26))
+        font = QtGui.QFont()
+        font.setFamily("Cairo")
+        font.setPointSize(10)
+        self.lineEdit_3.setFont(font)
+        self.lineEdit_3.setStyleSheet("background:#f5f5f5;\n"
+"color:#818489;\n"
+"padding-left: 7px;\n"
+"border-radius: 5px;")
+        self.lineEdit_3.setFrame(True)
+        self.lineEdit_3.setObjectName("lineEdit_3")
+        self.btn_buscarU = QtWidgets.QPushButton(self.frame_main_stock_4)
+        self.btn_buscarU.setGeometry(QtCore.QRect(900, 110, 26, 26))
         font = QtGui.QFont()
         font.setFamily("Roboto")
-        font.setPointSize(18)
+        font.setPointSize(10)
         font.setBold(True)
         font.setWeight(75)
-        self.label_17.setFont(font)
-        self.label_17.setStyleSheet("color: #282830 ;\n"
+        self.btn_buscarU.setFont(font)
+        self.btn_buscarU.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.btn_buscarU.setStyleSheet("QPushButton{\n"
+"border:none;\n"
+"font-family: Roboto;\n"
+"border-radius:5px;\n"
+"text-align: center;\n"
+"color: #282830 ;\n"
+"background: #212325\n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"        color:rgb(116, 116, 138)\n"
+"\n"
+"}")
+        self.btn_buscarU.setText("")
+        self.btn_buscarU.setIcon(icon11)
+        self.btn_buscarU.setIconSize(QtCore.QSize(14, 16))
+        self.btn_buscarU.setCheckable(True)
+        self.btn_buscarU.setObjectName("btn_buscarU")
+        self.frame_36 = QtWidgets.QFrame(self.frame_main_stock_4)
+        self.frame_36.setGeometry(QtCore.QRect(40, 150, 851, 47))
+        self.frame_36.setMinimumSize(QtCore.QSize(82, 41))
+        self.frame_36.setStyleSheet("background-color: #212325;\n"
+"color:#fff;\n"
+"border-radius:8px;\n"
+"padding-left:4px;")
+        self.frame_36.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_36.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_36.setObjectName("frame_36")
+        self.horizontalLayout_18 = QtWidgets.QHBoxLayout(self.frame_36)
+        self.horizontalLayout_18.setObjectName("horizontalLayout_18")
+        self.label_66 = QtWidgets.QLabel(self.frame_36)
+        font = QtGui.QFont()
+        font.setFamily("Cairo")
+        font.setPointSize(13)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_66.setFont(font)
+        self.label_66.setStyleSheet("background: none;\n"
+"color: #fff ;\n"
 "")
-        self.label_17.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
-        self.label_17.setObjectName("label_17")
-        self.pushButton_10 = QtWidgets.QPushButton(self.groupBox_3)
-        self.pushButton_10.setGeometry(QtCore.QRect(23, 9, 49, 40))
-        self.pushButton_10.setMaximumSize(QtCore.QSize(60, 60))
-        self.pushButton_10.setStyleSheet("margin-left:5px")
-        self.pushButton_10.setText("")
-        icon8 = QtGui.QIcon()
-        icon8.addPixmap(QtGui.QPixmap(":/img/user.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_10.setIcon(icon8)
-        self.pushButton_10.setIconSize(QtCore.QSize(40, 40))
-        self.pushButton_10.setObjectName("pushButton_10")
-        self.user_new_btn = QtWidgets.QPushButton(self.groupBox_3)
-        self.user_new_btn.setGeometry(QtCore.QRect(194, 24, 121, 26))
+        self.label_66.setObjectName("label_66")
+        self.horizontalLayout_18.addWidget(self.label_66, 0, QtCore.Qt.AlignLeft)
+        self.label_67 = QtWidgets.QLabel(self.frame_36)
+        font = QtGui.QFont()
+        font.setFamily("Cairo")
+        font.setPointSize(13)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_67.setFont(font)
+        self.label_67.setStyleSheet("background: none;\n"
+"color: #fff ;\n"
+"\n"
+"")
+        self.label_67.setObjectName("label_67")
+        self.horizontalLayout_18.addWidget(self.label_67, 0, QtCore.Qt.AlignLeft)
+        self.label_68 = QtWidgets.QLabel(self.frame_36)
+        font = QtGui.QFont()
+        font.setFamily("Cairo")
+        font.setPointSize(13)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_68.setFont(font)
+        self.label_68.setStyleSheet("background: none;\n"
+"color: #fff ;\n"
+"")
+        self.label_68.setObjectName("label_68")
+        self.horizontalLayout_18.addWidget(self.label_68, 0, QtCore.Qt.AlignLeft)
+        self.label_69 = QtWidgets.QLabel(self.frame_36)
+        font = QtGui.QFont()
+        font.setFamily("Cairo")
+        font.setPointSize(13)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_69.setFont(font)
+        self.label_69.setStyleSheet("background: none;\n"
+"color: #fff ;\n"
+"")
+        self.label_69.setObjectName("label_69")
+        self.horizontalLayout_18.addWidget(self.label_69, 0, QtCore.Qt.AlignLeft)
+        self.label_70 = QtWidgets.QLabel(self.frame_36)
+        font = QtGui.QFont()
+        font.setFamily("Cairo")
+        font.setPointSize(13)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_70.setFont(font)
+        self.label_70.setStyleSheet("background: none;\n"
+"color: #fff ;\n"
+"")
+        self.label_70.setObjectName("label_70")
+        self.horizontalLayout_18.addWidget(self.label_70, 0, QtCore.Qt.AlignLeft)
+        self.user_new_btn = QtWidgets.QPushButton(self.frame_main_stock_4)
+        self.user_new_btn.setGeometry(QtCore.QRect(40, 110, 121, 26))
         self.user_new_btn.setMinimumSize(QtCore.QSize(0, 26))
         font = QtGui.QFont()
-        font.setFamily("Roboto")
-        font.setPointSize(9)
+        font.setFamily("Cairo SemiBold")
+        font.setPointSize(10)
         font.setBold(True)
         font.setWeight(75)
         self.user_new_btn.setFont(font)
         self.user_new_btn.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.user_new_btn.setStyleSheet("QPushButton{\n"
-"background-color: rgb(71, 71, 103);\n"
+"background-color: #055ffc;\n"
 "color:#fff;\n"
-"padding-right:15px;\n"
 "border-radius: 5px;\n"
-"text-align:right;\n"
+"text-align:center;\n"
 "}\n"
 "\n"
 "QPushButton:hover{\n"
-"background-color: rgba(71, 71, 103,180);\n"
 "\n"
 "}")
-        self.user_new_btn.setIcon(icon5)
+        self.user_new_btn.setIcon(icon9)
         self.user_new_btn.setIconSize(QtCore.QSize(13, 13))
         self.user_new_btn.setObjectName("user_new_btn")
-        self.verticalLayout_18.addWidget(self.groupBox_3)
-        self.verticalLayout_17.addWidget(self.top_frame_stock_2)
-        self.mid_stock_2 = QtWidgets.QFrame(self.container_stock_2)
-        self.mid_stock_2.setMaximumSize(QtCore.QSize(16777215, 70))
-        self.mid_stock_2.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.mid_stock_2.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.mid_stock_2.setObjectName("mid_stock_2")
-        self.verticalLayout_19 = QtWidgets.QVBoxLayout(self.mid_stock_2)
-        self.verticalLayout_19.setContentsMargins(0, 30, 0, 0)
-        self.verticalLayout_19.setSpacing(0)
-        self.verticalLayout_19.setObjectName("verticalLayout_19")
-        self.frame_16 = QtWidgets.QFrame(self.mid_stock_2)
-        self.frame_16.setMinimumSize(QtCore.QSize(0, 50))
-        self.frame_16.setMaximumSize(QtCore.QSize(16777215, 50))
-        self.frame_16.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_16.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_16.setObjectName("frame_16")
-        self.verticalLayout_20 = QtWidgets.QVBoxLayout(self.frame_16)
-        self.verticalLayout_20.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayout_20.setSpacing(0)
-        self.verticalLayout_20.setObjectName("verticalLayout_20")
-        self.groupBox_6 = QtWidgets.QGroupBox(self.frame_16)
-        self.groupBox_6.setMinimumSize(QtCore.QSize(0, 50))
-        self.groupBox_6.setStyleSheet("margin-left: 14px")
-        self.groupBox_6.setTitle("")
-        self.groupBox_6.setObjectName("groupBox_6")
-        self.btn_buscarU = QtWidgets.QPushButton(self.groupBox_6)
-        self.btn_buscarU.setGeometry(QtCore.QRect(18, 9, 32, 21))
-        self.btn_buscarU.setMinimumSize(QtCore.QSize(0, 21))
-        self.btn_buscarU.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.btn_buscarU.setText("")
-        self.btn_buscarU.setIcon(icon6)
-        self.btn_buscarU.setIconSize(QtCore.QSize(60, 47))
-        self.btn_buscarU.setObjectName("btn_buscarU")
-        self.lineEdit_3 = QtWidgets.QLineEdit(self.groupBox_6)
-        self.lineEdit_3.setGeometry(QtCore.QRect(50, 9, 301, 20))
-        self.lineEdit_3.setMinimumSize(QtCore.QSize(0, 20))
-        self.lineEdit_3.setStyleSheet("font-family: Roboto;\n"
+        self.label_71 = QtWidgets.QLabel(self.frame_main_stock_4)
+        self.label_71.setGeometry(QtCore.QRect(40, 70, 111, 20))
+        self.label_71.setMinimumSize(QtCore.QSize(66, 0))
+        self.label_71.setMaximumSize(QtCore.QSize(120, 16777215))
+        font = QtGui.QFont()
+        font.setFamily("Roboto")
+        font.setPointSize(21)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_71.setFont(font)
+        self.label_71.setStyleSheet("color: #282830 ;\n"
 "")
-        self.lineEdit_3.setText("")
-        self.lineEdit_3.setObjectName("lineEdit_3")
-        self.verticalLayout_20.addWidget(self.groupBox_6)
-        self.verticalLayout_19.addWidget(self.frame_16, 0, QtCore.Qt.AlignBottom)
-        self.verticalLayout_17.addWidget(self.mid_stock_2)
-        self.bottom_stock_2 = QtWidgets.QFrame(self.container_stock_2)
-        self.bottom_stock_2.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.bottom_stock_2.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.bottom_stock_2.setObjectName("bottom_stock_2")
-        self.verticalLayout_21 = QtWidgets.QVBoxLayout(self.bottom_stock_2)
-        self.verticalLayout_21.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayout_21.setSpacing(0)
-        self.verticalLayout_21.setObjectName("verticalLayout_21")
-        self.frame_17 = QtWidgets.QFrame(self.bottom_stock_2)
-        self.frame_17.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_17.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_17.setObjectName("frame_17")
-        self.tableWidget_usuarios = QtWidgets.QTableWidget(self.frame_17)
-        self.tableWidget_usuarios.setGeometry(QtCore.QRect(20, 70, 881, 381))
+        self.label_71.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
+        self.label_71.setObjectName("label_71")
+        self.btn_actualizarUsuarios = QtWidgets.QPushButton(self.frame_main_stock_4)
+        self.btn_actualizarUsuarios.setGeometry(QtCore.QRect(900, 160, 26, 26))
+        font = QtGui.QFont()
+        font.setFamily("Roboto")
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.btn_actualizarUsuarios.setFont(font)
+        self.btn_actualizarUsuarios.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.btn_actualizarUsuarios.setStyleSheet("QPushButton{\n"
+"border:none;\n"
+"font-family: Roboto;\n"
+"border-radius:5px;\n"
+"text-align: center;\n"
+"color: #282830 ;\n"
+"background: #212325\n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"        color:rgb(116, 116, 138)\n"
+"\n"
+"}")
+        self.btn_actualizarUsuarios.setText("")
+        self.btn_actualizarUsuarios.setIcon(icon10)
+        self.btn_actualizarUsuarios.setIconSize(QtCore.QSize(14, 16))
+        self.btn_actualizarUsuarios.setCheckable(True)
+        self.btn_actualizarUsuarios.setObjectName("btn_actualizarUsuarios")
+        self.tableWidget_usuarios = QtWidgets.QTableWidget(self.frame_main_stock_4)
+        self.tableWidget_usuarios.setGeometry(QtCore.QRect(50, 190, 851, 451))
+        self.tableWidget_usuarios.setMaximumSize(QtCore.QSize(16777215, 489))
         self.tableWidget_usuarios.viewport().setProperty("cursor", QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.tableWidget_usuarios.setStyleSheet("QTableWidget{\n"
 "font-size: 11pt;\n"
 "margin-left: 0px;\n"
 "margin-top:15px;\n"
 "color: #000;\n"
-"font-family: Roboto;\n"
+"font-family: Cairo Semibold;\n"
 "text-align:center;\n"
 "}\n"
 "QheaderView::item\n"
@@ -1023,244 +1736,257 @@ class Ui_MainWindow(object):
         self.tableWidget_usuarios.setHorizontalHeaderItem(4, item)
         self.tableWidget_usuarios.horizontalHeader().setVisible(False)
         self.tableWidget_usuarios.horizontalHeader().setCascadingSectionResizes(True)
-        self.tableWidget_usuarios.horizontalHeader().setDefaultSectionSize(169)
+        self.tableWidget_usuarios.horizontalHeader().setDefaultSectionSize(170)
         self.tableWidget_usuarios.horizontalHeader().setSortIndicatorShown(True)
         self.tableWidget_usuarios.horizontalHeader().setStretchLastSection(True)
         self.tableWidget_usuarios.verticalHeader().setVisible(False)
         self.tableWidget_usuarios.verticalHeader().setDefaultSectionSize(41)
-        self.frame_18 = QtWidgets.QFrame(self.frame_17)
-        self.frame_18.setGeometry(QtCore.QRect(30, 9, 871, 41))
-        self.frame_18.setMinimumSize(QtCore.QSize(56, 41))
-        self.frame_18.setStyleSheet("background-color: #f2f2f5;\n"
-"\n"
-"border-radius:15px;")
-        self.frame_18.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_18.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_18.setObjectName("frame_18")
-        self.horizontalLayout_14 = QtWidgets.QHBoxLayout(self.frame_18)
-        self.horizontalLayout_14.setObjectName("horizontalLayout_14")
-        self.label_18 = QtWidgets.QLabel(self.frame_18)
-        font = QtGui.QFont()
-        font.setFamily("Roboto")
-        font.setPointSize(11)
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_18.setFont(font)
-        self.label_18.setStyleSheet("background: none;\n"
-"color: #282830 ;\n"
-"")
-        self.label_18.setObjectName("label_18")
-        self.horizontalLayout_14.addWidget(self.label_18, 0, QtCore.Qt.AlignLeft)
-        self.label_19 = QtWidgets.QLabel(self.frame_18)
-        font = QtGui.QFont()
-        font.setFamily("Roboto")
-        font.setPointSize(11)
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_19.setFont(font)
-        self.label_19.setStyleSheet("background: none;\n"
-"color: #282830 ;\n"
-"\n"
-"")
-        self.label_19.setObjectName("label_19")
-        self.horizontalLayout_14.addWidget(self.label_19, 0, QtCore.Qt.AlignLeft)
-        self.label_20 = QtWidgets.QLabel(self.frame_18)
-        font = QtGui.QFont()
-        font.setFamily("Roboto")
-        font.setPointSize(11)
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_20.setFont(font)
-        self.label_20.setStyleSheet("background: none;\n"
-"color: #282830 ;\n"
-"")
-        self.label_20.setObjectName("label_20")
-        self.horizontalLayout_14.addWidget(self.label_20, 0, QtCore.Qt.AlignLeft)
-        self.label_21 = QtWidgets.QLabel(self.frame_18)
-        font = QtGui.QFont()
-        font.setFamily("Roboto")
-        font.setPointSize(11)
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_21.setFont(font)
-        self.label_21.setStyleSheet("background: none;\n"
-"color: #282830 ;\n"
-"")
-        self.label_21.setObjectName("label_21")
-        self.horizontalLayout_14.addWidget(self.label_21, 0, QtCore.Qt.AlignLeft)
-        self.label_22 = QtWidgets.QLabel(self.frame_18)
-        font = QtGui.QFont()
-        font.setFamily("Roboto")
-        font.setPointSize(11)
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_22.setFont(font)
-        self.label_22.setStyleSheet("background: none;\n"
-"color: #282830 ;\n"
-"")
-        self.label_22.setObjectName("label_22")
-        self.horizontalLayout_14.addWidget(self.label_22, 0, QtCore.Qt.AlignLeft)
-        self.btn_actualizarUsuarios = QtWidgets.QPushButton(self.frame_17)
-        self.btn_actualizarUsuarios.setGeometry(QtCore.QRect(900, 20, 31, 21))
-        self.btn_actualizarUsuarios.setMinimumSize(QtCore.QSize(0, 21))
-        self.btn_actualizarUsuarios.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.btn_actualizarUsuarios.setText("")
-        self.btn_actualizarUsuarios.setIcon(icon7)
-        self.btn_actualizarUsuarios.setIconSize(QtCore.QSize(33, 16))
-        self.btn_actualizarUsuarios.setObjectName("btn_actualizarUsuarios")
-        self.verticalLayout_21.addWidget(self.frame_17)
-        self.verticalLayout_17.addWidget(self.bottom_stock_2)
-        self.verticalLayout_11.addWidget(self.container_stock_2)
+        self.verticalLayout_12.addWidget(self.frame_main_stock_4)
+        self.verticalLayout_11.addWidget(self.frame_3)
         self.stackedWidget_main.addWidget(self.page_usuarios)
-        self.page_posicionesAlojamiento = QtWidgets.QWidget()
-        self.page_posicionesAlojamiento.setObjectName("page_posicionesAlojamiento")
-        self.label_posicion = QtWidgets.QLabel(self.page_posicionesAlojamiento)
-        self.label_posicion.setGeometry(QtCore.QRect(370, 20, 101, 71))
-        font = QtGui.QFont()
-        font.setPointSize(15)
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_posicion.setFont(font)
-        self.label_posicion.setObjectName("label_posicion")
-        self.stackedWidget_main.addWidget(self.page_posicionesAlojamiento)
-        self.page_deposito = QtWidgets.QWidget()
-        self.page_deposito.setObjectName("page_deposito")
-        self.verticalLayout_5 = QtWidgets.QVBoxLayout(self.page_deposito)
+        self.page_lotes = QtWidgets.QWidget()
+        self.page_lotes.setObjectName("page_lotes")
+        self.verticalLayout_4 = QtWidgets.QVBoxLayout(self.page_lotes)
+        self.verticalLayout_4.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout_4.setSpacing(0)
+        self.verticalLayout_4.setObjectName("verticalLayout_4")
+        self.frame = QtWidgets.QFrame(self.page_lotes)
+        self.frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame.setObjectName("frame")
+        self.verticalLayout_5 = QtWidgets.QVBoxLayout(self.frame)
         self.verticalLayout_5.setContentsMargins(0, 0, 0, 0)
         self.verticalLayout_5.setSpacing(0)
         self.verticalLayout_5.setObjectName("verticalLayout_5")
-        self.frame_2 = QtWidgets.QFrame(self.page_deposito)
-        self.frame_2.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_2.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_2.setObjectName("frame_2")
-        self.frame_3 = QtWidgets.QFrame(self.frame_2)
-        self.frame_3.setGeometry(QtCore.QRect(120, 90, 650, 500))
-        self.frame_3.setMinimumSize(QtCore.QSize(600, 250))
-        self.frame_3.setMaximumSize(QtCore.QSize(650, 500))
-        self.frame_3.setStyleSheet("border: 2px solid black;")
-        self.frame_3.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_3.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_3.setObjectName("frame_3")
-        self.gridLayout = QtWidgets.QGridLayout(self.frame_3)
-        self.gridLayout.setObjectName("gridLayout")
-        self.top_frame_stock_4 = QtWidgets.QFrame(self.frame_2)
-        self.top_frame_stock_4.setGeometry(QtCore.QRect(0, 0, 628, 80))
-        self.top_frame_stock_4.setMinimumSize(QtCore.QSize(0, 80))
-        self.top_frame_stock_4.setMaximumSize(QtCore.QSize(628, 70))
-        self.top_frame_stock_4.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.top_frame_stock_4.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.top_frame_stock_4.setObjectName("top_frame_stock_4")
-        self.frame_24 = QtWidgets.QFrame(self.top_frame_stock_4)
-        self.frame_24.setGeometry(QtCore.QRect(0, 13, 941, 70))
-        self.frame_24.setMinimumSize(QtCore.QSize(354, 70))
-        self.frame_24.setMaximumSize(QtCore.QSize(16777215, 50))
-        self.frame_24.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_24.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_24.setObjectName("frame_24")
-        self.verticalLayout_33 = QtWidgets.QVBoxLayout(self.frame_24)
-        self.verticalLayout_33.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayout_33.setSpacing(0)
-        self.verticalLayout_33.setObjectName("verticalLayout_33")
-        self.groupBox_5 = QtWidgets.QGroupBox(self.frame_24)
-        self.groupBox_5.setMinimumSize(QtCore.QSize(429, 0))
-        self.groupBox_5.setTitle("")
-        self.groupBox_5.setObjectName("groupBox_5")
-        self.label_34 = QtWidgets.QLabel(self.groupBox_5)
-        self.label_34.setGeometry(QtCore.QRect(100, 10, 81, 51))
-        self.label_34.setMinimumSize(QtCore.QSize(66, 0))
-        self.label_34.setMaximumSize(QtCore.QSize(120, 16777215))
+        self.frame_main_stock_2 = QtWidgets.QFrame(self.frame)
+        self.frame_main_stock_2.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_main_stock_2.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_main_stock_2.setObjectName("frame_main_stock_2")
+        self.lineEdit_6 = QtWidgets.QLineEdit(self.frame_main_stock_2)
+        self.lineEdit_6.setGeometry(QtCore.QRect(700, 90, 193, 26))
+        font = QtGui.QFont()
+        font.setFamily("Cairo")
+        font.setPointSize(10)
+        self.lineEdit_6.setFont(font)
+        self.lineEdit_6.setStyleSheet("background:#f5f5f5;\n"
+"color:#818489;\n"
+"padding-left: 7px;\n"
+"border-radius: 5px;")
+        self.lineEdit_6.setFrame(True)
+        self.lineEdit_6.setObjectName("lineEdit_6")
+        self.pushButton_20 = QtWidgets.QPushButton(self.frame_main_stock_2)
+        self.pushButton_20.setGeometry(QtCore.QRect(900, 90, 26, 26))
         font = QtGui.QFont()
         font.setFamily("Roboto")
-        font.setPointSize(18)
+        font.setPointSize(10)
         font.setBold(True)
         font.setWeight(75)
-        self.label_34.setFont(font)
-        self.label_34.setStyleSheet("color: #282830 ;\n"
+        self.pushButton_20.setFont(font)
+        self.pushButton_20.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.pushButton_20.setStyleSheet("QPushButton{\n"
+"border:none;\n"
+"font-family: Roboto;\n"
+"border-radius:5px;\n"
+"text-align: center;\n"
+"color: #282830 ;\n"
+"background: #212325\n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"        color:rgb(116, 116, 138)\n"
+"\n"
+"}")
+        self.pushButton_20.setText("")
+        self.pushButton_20.setIcon(icon11)
+        self.pushButton_20.setIconSize(QtCore.QSize(14, 16))
+        self.pushButton_20.setCheckable(True)
+        self.pushButton_20.setObjectName("pushButton_20")
+        self.frame_34 = QtWidgets.QFrame(self.frame_main_stock_2)
+        self.frame_34.setGeometry(QtCore.QRect(40, 130, 851, 47))
+        self.frame_34.setMinimumSize(QtCore.QSize(82, 41))
+        self.frame_34.setStyleSheet("background-color: #212325;\n"
+"color:#fff;\n"
+"border-radius:8px;\n"
+"padding-left:4px;")
+        self.frame_34.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_34.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_34.setObjectName("frame_34")
+        self.horizontalLayout_17 = QtWidgets.QHBoxLayout(self.frame_34)
+        self.horizontalLayout_17.setObjectName("horizontalLayout_17")
+        self.label_51 = QtWidgets.QLabel(self.frame_34)
+        font = QtGui.QFont()
+        font.setFamily("Cairo")
+        font.setPointSize(13)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_51.setFont(font)
+        self.label_51.setStyleSheet("background: none;\n"
+"color: #fff ;\n"
 "")
-        self.label_34.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
-        self.label_34.setObjectName("label_34")
-        self.pushButton_11 = QtWidgets.QPushButton(self.groupBox_5)
-        self.pushButton_11.setGeometry(QtCore.QRect(40, 10, 49, 40))
-        self.pushButton_11.setMaximumSize(QtCore.QSize(60, 60))
-        self.pushButton_11.setStyleSheet("margin-left:5px")
-        self.pushButton_11.setText("")
-        icon9 = QtGui.QIcon()
-        icon9.addPixmap(QtGui.QPixmap(":/img/rack.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_11.setIcon(icon9)
-        self.pushButton_11.setIconSize(QtCore.QSize(40, 40))
-        self.pushButton_11.setObjectName("pushButton_11")
-        self.newArea_btn = QtWidgets.QPushButton(self.groupBox_5)
-        self.newArea_btn.setGeometry(QtCore.QRect(270, 20, 101, 31))
-        self.newArea_btn.setMinimumSize(QtCore.QSize(0, 26))
+        self.label_51.setObjectName("label_51")
+        self.horizontalLayout_17.addWidget(self.label_51, 0, QtCore.Qt.AlignLeft)
+        self.label_52 = QtWidgets.QLabel(self.frame_34)
         font = QtGui.QFont()
-        font.setFamily("Roboto")
-        font.setPointSize(9)
+        font.setFamily("Cairo")
+        font.setPointSize(13)
         font.setBold(True)
         font.setWeight(75)
-        self.newArea_btn.setFont(font)
-        self.newArea_btn.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.newArea_btn.setStyleSheet("QPushButton{\n"
-"background-color: rgb(71, 71, 103);\n"
-"color:#fff;\n"
-"padding-left:10px;\n"
-"border-radius: 5px;\n"
-"text-align:left;\n"
+        self.label_52.setFont(font)
+        self.label_52.setStyleSheet("background: none;\n"
+"color: #fff ;\n"
+"\n"
+"")
+        self.label_52.setObjectName("label_52")
+        self.horizontalLayout_17.addWidget(self.label_52, 0, QtCore.Qt.AlignLeft)
+        self.label_55 = QtWidgets.QLabel(self.frame_34)
+        font = QtGui.QFont()
+        font.setFamily("Cairo")
+        font.setPointSize(13)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_55.setFont(font)
+        self.label_55.setStyleSheet("background: none;\n"
+"color: #fff ;\n"
+"")
+        self.label_55.setObjectName("label_55")
+        self.horizontalLayout_17.addWidget(self.label_55, 0, QtCore.Qt.AlignLeft)
+        self.label_56 = QtWidgets.QLabel(self.frame_34)
+        font = QtGui.QFont()
+        font.setFamily("Cairo")
+        font.setPointSize(13)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_56.setFont(font)
+        self.label_56.setStyleSheet("background: none;\n"
+"color: #fff ;\n"
+"")
+        self.label_56.setObjectName("label_56")
+        self.horizontalLayout_17.addWidget(self.label_56, 0, QtCore.Qt.AlignLeft)
+        self.label_57 = QtWidgets.QLabel(self.frame_34)
+        font = QtGui.QFont()
+        font.setFamily("Cairo")
+        font.setPointSize(13)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_57.setFont(font)
+        self.label_57.setStyleSheet("background: none;\n"
+"color: #fff ;\n"
+"")
+        self.label_57.setObjectName("label_57")
+        self.horizontalLayout_17.addWidget(self.label_57, 0, QtCore.Qt.AlignLeft)
+        self.label_58 = QtWidgets.QLabel(self.frame_main_stock_2)
+        self.label_58.setGeometry(QtCore.QRect(50, 90, 71, 20))
+        self.label_58.setMinimumSize(QtCore.QSize(66, 0))
+        self.label_58.setMaximumSize(QtCore.QSize(120, 16777215))
+        font = QtGui.QFont()
+        font.setFamily("Roboto")
+        font.setPointSize(21)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_58.setFont(font)
+        self.label_58.setStyleSheet("color: #282830 ;\n"
+"")
+        self.label_58.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
+        self.label_58.setObjectName("label_58")
+        self.btn_actualizarLotes = QtWidgets.QPushButton(self.frame_main_stock_2)
+        self.btn_actualizarLotes.setGeometry(QtCore.QRect(900, 140, 26, 26))
+        font = QtGui.QFont()
+        font.setFamily("Roboto")
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.btn_actualizarLotes.setFont(font)
+        self.btn_actualizarLotes.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.btn_actualizarLotes.setStyleSheet("QPushButton{\n"
+"border:none;\n"
+"font-family: Roboto;\n"
+"border-radius:5px;\n"
+"text-align: center;\n"
+"color: #282830 ;\n"
+"background: #212325\n"
+"\n"
 "}\n"
 "\n"
 "QPushButton:hover{\n"
-"background-color: rgba(71, 71, 103,180);\n"
+"        color:rgb(116, 116, 138)\n"
 "\n"
 "}")
-        self.newArea_btn.setIcon(icon5)
-        self.newArea_btn.setIconSize(QtCore.QSize(13, 13))
-        self.newArea_btn.setObjectName("newArea_btn")
-        self.newArea_btn_2 = QtWidgets.QPushButton(self.groupBox_5)
-        self.newArea_btn_2.setGeometry(QtCore.QRect(400, 20, 111, 31))
-        self.newArea_btn_2.setMinimumSize(QtCore.QSize(0, 26))
-        font = QtGui.QFont()
-        font.setFamily("Roboto")
-        font.setPointSize(9)
-        font.setBold(True)
-        font.setWeight(75)
-        self.newArea_btn_2.setFont(font)
-        self.newArea_btn_2.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.newArea_btn_2.setStyleSheet("QPushButton{\n"
-"background-color: rgb(71, 71, 103);\n"
-"color:#fff;\n"
-"padding-left:10px;\n"
-"border-radius: 5px;\n"
-"text-align:left;\n"
+        self.btn_actualizarLotes.setText("")
+        self.btn_actualizarLotes.setIcon(icon10)
+        self.btn_actualizarLotes.setIconSize(QtCore.QSize(14, 16))
+        self.btn_actualizarLotes.setCheckable(True)
+        self.btn_actualizarLotes.setObjectName("btn_actualizarLotes")
+        self.tableWidget_stock_3 = QtWidgets.QTableWidget(self.frame_main_stock_2)
+        self.tableWidget_stock_3.setGeometry(QtCore.QRect(50, 190, 851, 461))
+        self.tableWidget_stock_3.setMaximumSize(QtCore.QSize(16777215, 489))
+        self.tableWidget_stock_3.viewport().setProperty("cursor", QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.tableWidget_stock_3.setStyleSheet("QTableWidget{\n"
+"font-size: 11pt;\n"
+"margin-left: 0px;\n"
+"margin-top:15px;\n"
+"color: #000;\n"
+"font-family: Cairo Semibold;\n"
+"text-align:center;\n"
+"}\n"
+"QheaderView::item\n"
+"    {\n"
+"text-align:center;\n"
+"\n"
+"    }\n"
+"QHeaderView::section {\n"
+"    background-color: #394353;\n"
+"    border-radius: 11px;\n"
+"    color:#fff;\n"
+"    font-size: 9pt;\n"
+"    font-family:Roboto;\n"
 "}\n"
 "\n"
-"QPushButton:hover{\n"
-"background-color: rgba(71, 71, 103,180);\n"
+"QHeaderView::section:horizontal\n"
+"{\n"
+"    border-top: 1px solid #394353;\n"
 "\n"
+"}\n"
+"\n"
+"QHeaderView::section:vertical\n"
+"{\n"
+"\n"
+"    border-left: 1px solid #394353;\n"
 "}")
-        self.newArea_btn_2.setIcon(icon5)
-        self.newArea_btn_2.setIconSize(QtCore.QSize(13, 13))
-        self.newArea_btn_2.setObjectName("newArea_btn_2")
-        self.verticalLayout_33.addWidget(self.groupBox_5)
-        self.btn_actualizarAreas = QtWidgets.QPushButton(self.frame_2)
-        self.btn_actualizarAreas.setGeometry(QtCore.QRect(530, 40, 31, 21))
-        self.btn_actualizarAreas.setMinimumSize(QtCore.QSize(0, 21))
-        self.btn_actualizarAreas.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.btn_actualizarAreas.setText("")
-        self.btn_actualizarAreas.setIcon(icon7)
-        self.btn_actualizarAreas.setIconSize(QtCore.QSize(33, 16))
-        self.btn_actualizarAreas.setObjectName("btn_actualizarAreas")
-        self.verticalLayout_5.addWidget(self.frame_2)
-        self.stackedWidget_main.addWidget(self.page_deposito)
+        self.tableWidget_stock_3.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers)
+        self.tableWidget_stock_3.setShowGrid(False)
+        self.tableWidget_stock_3.setObjectName("tableWidget_stock_3")
+        self.tableWidget_stock_3.setColumnCount(5)
+        self.tableWidget_stock_3.setRowCount(0)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget_stock_3.setHorizontalHeaderItem(0, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget_stock_3.setHorizontalHeaderItem(1, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget_stock_3.setHorizontalHeaderItem(2, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget_stock_3.setHorizontalHeaderItem(3, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget_stock_3.setHorizontalHeaderItem(4, item)
+        self.tableWidget_stock_3.horizontalHeader().setVisible(False)
+        self.tableWidget_stock_3.horizontalHeader().setCascadingSectionResizes(True)
+        self.tableWidget_stock_3.horizontalHeader().setDefaultSectionSize(170)
+        self.tableWidget_stock_3.horizontalHeader().setSortIndicatorShown(True)
+        self.tableWidget_stock_3.horizontalHeader().setStretchLastSection(True)
+        self.tableWidget_stock_3.verticalHeader().setVisible(False)
+        self.tableWidget_stock_3.verticalHeader().setDefaultSectionSize(41)
+        self.verticalLayout_5.addWidget(self.frame_main_stock_2)
+        self.verticalLayout_4.addWidget(self.frame)
+        self.stackedWidget_main.addWidget(self.page_lotes)
         self.page_areas = QtWidgets.QWidget()
         self.page_areas.setObjectName("page_areas")
-        self.verticalLayout_13 = QtWidgets.QVBoxLayout(self.page_areas)
-        self.verticalLayout_13.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayout_13.setSpacing(0)
-        self.verticalLayout_13.setObjectName("verticalLayout_13")
-        self.frame_4 = QtWidgets.QFrame(self.page_areas)
-        self.frame_4.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_4.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_4.setObjectName("frame_4")
-        self.tableWidget_areas = QtWidgets.QTableWidget(self.frame_4)
+        self.verticalLayout_14 = QtWidgets.QVBoxLayout(self.page_areas)
+        self.verticalLayout_14.setObjectName("verticalLayout_14")
+        self.frame_12 = QtWidgets.QFrame(self.page_areas)
+        self.frame_12.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_12.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_12.setObjectName("frame_12")
+        self.tableWidget_areas = QtWidgets.QTableWidget(self.frame_12)
         self.tableWidget_areas.setGeometry(QtCore.QRect(20, 180, 891, 391))
         self.tableWidget_areas.setMaximumSize(QtCore.QSize(16777215, 422))
         self.tableWidget_areas.setStyleSheet("QTableWidget{\n"
@@ -1322,7 +2048,7 @@ class Ui_MainWindow(object):
         self.tableWidget_areas.horizontalHeader().setStretchLastSection(True)
         self.tableWidget_areas.verticalHeader().setVisible(False)
         self.tableWidget_areas.verticalHeader().setDefaultSectionSize(32)
-        self.frame_25 = QtWidgets.QFrame(self.frame_4)
+        self.frame_25 = QtWidgets.QFrame(self.frame_12)
         self.frame_25.setGeometry(QtCore.QRect(30, 110, 881, 41))
         self.frame_25.setMinimumSize(QtCore.QSize(56, 41))
         self.frame_25.setStyleSheet("background-color: #f2f2f5;\n"
@@ -1405,7 +2131,7 @@ class Ui_MainWindow(object):
 "")
         self.label_38.setObjectName("label_38")
         self.horizontalLayout_5.addWidget(self.label_38)
-        self.top_frame_stock_5 = QtWidgets.QFrame(self.frame_4)
+        self.top_frame_stock_5 = QtWidgets.QFrame(self.frame_12)
         self.top_frame_stock_5.setGeometry(QtCore.QRect(0, 0, 1234, 80))
         self.top_frame_stock_5.setMinimumSize(QtCore.QSize(1234, 80))
         self.top_frame_stock_5.setMaximumSize(QtCore.QSize(15000, 70))
@@ -1463,7 +2189,7 @@ class Ui_MainWindow(object):
 "background-color: rgba(71, 71, 103,180);\n"
 "\n"
 "}")
-        self.btn_newPosicion.setIcon(icon5)
+        self.btn_newPosicion.setIcon(icon9)
         self.btn_newPosicion.setIconSize(QtCore.QSize(13, 13))
         self.btn_newPosicion.setObjectName("btn_newPosicion")
         self.btn_modificarArea = QtWidgets.QPushButton(self.groupBox_12)
@@ -1495,159 +2221,228 @@ class Ui_MainWindow(object):
         self.btn_actualizarAreaInd.setMinimumSize(QtCore.QSize(0, 21))
         self.btn_actualizarAreaInd.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.btn_actualizarAreaInd.setText("")
-        self.btn_actualizarAreaInd.setIcon(icon7)
+        self.btn_actualizarAreaInd.setIcon(icon12)
         self.btn_actualizarAreaInd.setIconSize(QtCore.QSize(33, 16))
         self.btn_actualizarAreaInd.setObjectName("btn_actualizarAreaInd")
         self.verticalLayout_39.addWidget(self.groupBox_12)
-        self.verticalLayout_13.addWidget(self.frame_4)
+        self.verticalLayout_14.addWidget(self.frame_12)
         self.stackedWidget_main.addWidget(self.page_areas)
-        self.page_stock = QtWidgets.QWidget()
-        self.page_stock.setObjectName("page_stock")
-        self.verticalLayout_10 = QtWidgets.QVBoxLayout(self.page_stock)
-        self.verticalLayout_10.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayout_10.setSpacing(0)
-        self.verticalLayout_10.setObjectName("verticalLayout_10")
-        self.container_stock_3 = QtWidgets.QFrame(self.page_stock)
-        self.container_stock_3.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.container_stock_3.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.container_stock_3.setObjectName("container_stock_3")
-        self.verticalLayout_9 = QtWidgets.QVBoxLayout(self.container_stock_3)
+        self.page_movimientos = QtWidgets.QWidget()
+        self.page_movimientos.setObjectName("page_movimientos")
+        self.verticalLayout_9 = QtWidgets.QVBoxLayout(self.page_movimientos)
         self.verticalLayout_9.setContentsMargins(0, 0, 0, 0)
         self.verticalLayout_9.setSpacing(0)
         self.verticalLayout_9.setObjectName("verticalLayout_9")
-        self.top_frame_stock_3 = QtWidgets.QFrame(self.container_stock_3)
-        self.top_frame_stock_3.setMinimumSize(QtCore.QSize(0, 80))
-        self.top_frame_stock_3.setMaximumSize(QtCore.QSize(300, 70))
-        self.top_frame_stock_3.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.top_frame_stock_3.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.top_frame_stock_3.setObjectName("top_frame_stock_3")
-        self.frame_10 = QtWidgets.QFrame(self.top_frame_stock_3)
-        self.frame_10.setGeometry(QtCore.QRect(0, 13, 354, 70))
-        self.frame_10.setMinimumSize(QtCore.QSize(354, 70))
-        self.frame_10.setMaximumSize(QtCore.QSize(16777215, 50))
-        self.frame_10.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_10.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_10.setObjectName("frame_10")
-        self.verticalLayout_23 = QtWidgets.QVBoxLayout(self.frame_10)
-        self.verticalLayout_23.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayout_23.setSpacing(0)
-        self.verticalLayout_23.setObjectName("verticalLayout_23")
-        self.groupBox_4 = QtWidgets.QGroupBox(self.frame_10)
-        self.groupBox_4.setTitle("")
-        self.groupBox_4.setObjectName("groupBox_4")
-        self.label_11 = QtWidgets.QLabel(self.groupBox_4)
-        self.label_11.setGeometry(QtCore.QRect(80, 10, 120, 52))
-        self.label_11.setMinimumSize(QtCore.QSize(66, 0))
-        self.label_11.setMaximumSize(QtCore.QSize(120, 16777215))
+        self.frame_2 = QtWidgets.QFrame(self.page_movimientos)
+        self.frame_2.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_2.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_2.setObjectName("frame_2")
+        self.verticalLayout_10 = QtWidgets.QVBoxLayout(self.frame_2)
+        self.verticalLayout_10.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout_10.setSpacing(0)
+        self.verticalLayout_10.setObjectName("verticalLayout_10")
+        self.frame_main_stock_3 = QtWidgets.QFrame(self.frame_2)
+        self.frame_main_stock_3.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_main_stock_3.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_main_stock_3.setObjectName("frame_main_stock_3")
+        self.lineEdit_5 = QtWidgets.QLineEdit(self.frame_main_stock_3)
+        self.lineEdit_5.setGeometry(QtCore.QRect(700, 110, 193, 26))
+        font = QtGui.QFont()
+        font.setFamily("Cairo")
+        font.setPointSize(10)
+        self.lineEdit_5.setFont(font)
+        self.lineEdit_5.setStyleSheet("background:#f5f5f5;\n"
+"color:#818489;\n"
+"padding-left: 7px;\n"
+"border-radius: 5px;")
+        self.lineEdit_5.setFrame(True)
+        self.lineEdit_5.setObjectName("lineEdit_5")
+        self.pushButton_21 = QtWidgets.QPushButton(self.frame_main_stock_3)
+        self.pushButton_21.setGeometry(QtCore.QRect(900, 110, 26, 26))
         font = QtGui.QFont()
         font.setFamily("Roboto")
-        font.setPointSize(18)
+        font.setPointSize(10)
         font.setBold(True)
         font.setWeight(75)
-        self.label_11.setFont(font)
-        self.label_11.setStyleSheet("color: #282830 ;\n"
-"")
-        self.label_11.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
-        self.label_11.setObjectName("label_11")
-        self.pushButton_14 = QtWidgets.QPushButton(self.groupBox_4)
-        self.pushButton_14.setGeometry(QtCore.QRect(20, 9, 49, 40))
-        self.pushButton_14.setMaximumSize(QtCore.QSize(60, 60))
-        self.pushButton_14.setStyleSheet("margin-left:5px")
-        self.pushButton_14.setText("")
-        self.pushButton_14.setIcon(icon3)
-        self.pushButton_14.setIconSize(QtCore.QSize(40, 40))
-        self.pushButton_14.setObjectName("pushButton_14")
-        self.verticalLayout_23.addWidget(self.groupBox_4)
-        self.product_new_btn = QtWidgets.QPushButton(self.top_frame_stock_3)
-        self.product_new_btn.setGeometry(QtCore.QRect(160, 35, 131, 26))
-        self.product_new_btn.setMinimumSize(QtCore.QSize(0, 26))
-        font = QtGui.QFont()
-        font.setFamily("Roboto")
-        font.setPointSize(9)
-        font.setBold(True)
-        font.setWeight(75)
-        self.product_new_btn.setFont(font)
-        self.product_new_btn.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.product_new_btn.setStyleSheet("QPushButton{\n"
-"background-color: rgb(71, 71, 103);\n"
-"color:#fff;\n"
-"padding-right:15px;\n"
-"border-radius: 5px;\n"
-"text-align:right;\n"
+        self.pushButton_21.setFont(font)
+        self.pushButton_21.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.pushButton_21.setStyleSheet("QPushButton{\n"
+"border:none;\n"
+"font-family: Roboto;\n"
+"border-radius:5px;\n"
+"text-align: center;\n"
+"color: #282830 ;\n"
+"background: #212325\n"
+"\n"
 "}\n"
 "\n"
 "QPushButton:hover{\n"
-"background-color: rgba(71, 71, 103,180);\n"
+"        color:rgb(116, 116, 138)\n"
 "\n"
 "}")
-        self.product_new_btn.setIcon(icon5)
-        self.product_new_btn.setIconSize(QtCore.QSize(13, 13))
-        self.product_new_btn.setObjectName("product_new_btn")
-        self.verticalLayout_9.addWidget(self.top_frame_stock_3)
-        self.mid_stock_3 = QtWidgets.QFrame(self.container_stock_3)
-        self.mid_stock_3.setMaximumSize(QtCore.QSize(16777215, 70))
-        self.mid_stock_3.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.mid_stock_3.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.mid_stock_3.setObjectName("mid_stock_3")
-        self.verticalLayout_24 = QtWidgets.QVBoxLayout(self.mid_stock_3)
-        self.verticalLayout_24.setContentsMargins(0, 30, 0, 0)
-        self.verticalLayout_24.setSpacing(0)
-        self.verticalLayout_24.setObjectName("verticalLayout_24")
-        self.frame_11 = QtWidgets.QFrame(self.mid_stock_3)
-        self.frame_11.setMinimumSize(QtCore.QSize(0, 50))
-        self.frame_11.setMaximumSize(QtCore.QSize(16777215, 50))
-        self.frame_11.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_11.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_11.setObjectName("frame_11")
-        self.verticalLayout_25 = QtWidgets.QVBoxLayout(self.frame_11)
-        self.verticalLayout_25.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayout_25.setSpacing(0)
-        self.verticalLayout_25.setObjectName("verticalLayout_25")
-        self.groupBox_7 = QtWidgets.QGroupBox(self.frame_11)
-        self.groupBox_7.setMinimumSize(QtCore.QSize(0, 50))
-        self.groupBox_7.setStyleSheet("margin-left: 14px")
-        self.groupBox_7.setTitle("")
-        self.groupBox_7.setObjectName("groupBox_7")
-        self.btn_buscarP = QtWidgets.QPushButton(self.groupBox_7)
-        self.btn_buscarP.setGeometry(QtCore.QRect(18, 9, 32, 21))
-        self.btn_buscarP.setMinimumSize(QtCore.QSize(0, 21))
-        self.btn_buscarP.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.btn_buscarP.setText("")
-        self.btn_buscarP.setIcon(icon6)
-        self.btn_buscarP.setIconSize(QtCore.QSize(50, 50))
-        self.btn_buscarP.setObjectName("btn_buscarP")
-        self.buscar_input = QtWidgets.QLineEdit(self.groupBox_7)
-        self.buscar_input.setGeometry(QtCore.QRect(50, 10, 301, 20))
-        self.buscar_input.setMinimumSize(QtCore.QSize(0, 20))
-        self.buscar_input.setStyleSheet("font-family: Roboto;\n"
+        self.pushButton_21.setText("")
+        self.pushButton_21.setIcon(icon11)
+        self.pushButton_21.setIconSize(QtCore.QSize(14, 16))
+        self.pushButton_21.setCheckable(True)
+        self.pushButton_21.setObjectName("pushButton_21")
+        self.frame_35 = QtWidgets.QFrame(self.frame_main_stock_3)
+        self.frame_35.setGeometry(QtCore.QRect(40, 150, 851, 50))
+        self.frame_35.setMinimumSize(QtCore.QSize(156, 41))
+        self.frame_35.setStyleSheet("background-color: #212325;\n"
+"color:#fff;\n"
+"border-radius:8px;\n"
+"padding-left:4px;")
+        self.frame_35.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_35.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_35.setObjectName("frame_35")
+        self.label_59 = QtWidgets.QLabel(self.frame_35)
+        self.label_59.setGeometry(QtCore.QRect(13, 9, 61, 32))
+        font = QtGui.QFont()
+        font.setFamily("Cairo")
+        font.setPointSize(13)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_59.setFont(font)
+        self.label_59.setStyleSheet("background: none;\n"
+"color: #fff ;\n"
 "")
-        self.buscar_input.setText("")
-        self.buscar_input.setObjectName("buscar_input")
-        self.verticalLayout_25.addWidget(self.groupBox_7)
-        self.verticalLayout_24.addWidget(self.frame_11, 0, QtCore.Qt.AlignBottom)
-        self.verticalLayout_9.addWidget(self.mid_stock_3)
-        self.bottom_stock_3 = QtWidgets.QFrame(self.container_stock_3)
-        self.bottom_stock_3.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.bottom_stock_3.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.bottom_stock_3.setObjectName("bottom_stock_3")
-        self.verticalLayout_26 = QtWidgets.QVBoxLayout(self.bottom_stock_3)
-        self.verticalLayout_26.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayout_26.setSpacing(0)
-        self.verticalLayout_26.setObjectName("verticalLayout_26")
-        self.frame_19 = QtWidgets.QFrame(self.bottom_stock_3)
-        self.frame_19.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_19.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_19.setObjectName("frame_19")
-        self.tableWidget_stock_2 = QtWidgets.QTableWidget(self.frame_19)
-        self.tableWidget_stock_2.setGeometry(QtCore.QRect(30, 70, 871, 361))
-        self.tableWidget_stock_2.setMaximumSize(QtCore.QSize(16777215, 422))
-        self.tableWidget_stock_2.viewport().setProperty("cursor", QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.tableWidget_stock_2.setStyleSheet("QTableWidget{\n"
+        self.label_59.setObjectName("label_59")
+        self.label_60 = QtWidgets.QLabel(self.frame_35)
+        self.label_60.setGeometry(QtCore.QRect(130, 9, 97, 32))
+        font = QtGui.QFont()
+        font.setFamily("Cairo")
+        font.setPointSize(13)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_60.setFont(font)
+        self.label_60.setStyleSheet("background: none;\n"
+"color: #fff ;\n"
+"\n"
+"")
+        self.label_60.setObjectName("label_60")
+        self.label_61 = QtWidgets.QLabel(self.frame_35)
+        self.label_61.setGeometry(QtCore.QRect(280, 9, 76, 32))
+        font = QtGui.QFont()
+        font.setFamily("Cairo")
+        font.setPointSize(13)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_61.setFont(font)
+        self.label_61.setStyleSheet("background: none;\n"
+"color: #fff ;\n"
+"")
+        self.label_61.setObjectName("label_61")
+        self.label_62 = QtWidgets.QLabel(self.frame_35)
+        self.label_62.setGeometry(QtCore.QRect(610, 9, 56, 32))
+        font = QtGui.QFont()
+        font.setFamily("Cairo")
+        font.setPointSize(13)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_62.setFont(font)
+        self.label_62.setStyleSheet("background: none;\n"
+"color: #fff ;\n"
+"")
+        self.label_62.setObjectName("label_62")
+        self.label_63 = QtWidgets.QLabel(self.frame_35)
+        self.label_63.setGeometry(QtCore.QRect(740, 9, 63, 32))
+        font = QtGui.QFont()
+        font.setFamily("Cairo")
+        font.setPointSize(13)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_63.setFont(font)
+        self.label_63.setStyleSheet("background: none;\n"
+"color: #fff ;\n"
+"")
+        self.label_63.setObjectName("label_63")
+        self.label_65 = QtWidgets.QLabel(self.frame_35)
+        self.label_65.setGeometry(QtCore.QRect(410, 9, 156, 32))
+        font = QtGui.QFont()
+        font.setFamily("Cairo")
+        font.setPointSize(13)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_65.setFont(font)
+        self.label_65.setStyleSheet("background: none;\n"
+"color: #fff ;\n"
+"")
+        self.label_65.setObjectName("label_65")
+        self.new_ingreso_btn = QtWidgets.QPushButton(self.frame_main_stock_3)
+        self.new_ingreso_btn.setGeometry(QtCore.QRect(40, 110, 121, 26))
+        self.new_ingreso_btn.setMinimumSize(QtCore.QSize(0, 26))
+        font = QtGui.QFont()
+        font.setFamily("Cairo SemiBold")
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.new_ingreso_btn.setFont(font)
+        self.new_ingreso_btn.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.new_ingreso_btn.setStyleSheet("QPushButton{\n"
+"background-color: #055ffc;\n"
+"color:#fff;\n"
+"border-radius: 5px;\n"
+"text-align:center;\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"\n"
+"}")
+        self.new_ingreso_btn.setIcon(icon9)
+        self.new_ingreso_btn.setIconSize(QtCore.QSize(13, 13))
+        self.new_ingreso_btn.setObjectName("new_ingreso_btn")
+        self.label_64 = QtWidgets.QLabel(self.frame_main_stock_3)
+        self.label_64.setGeometry(QtCore.QRect(40, 70, 168, 20))
+        self.label_64.setMinimumSize(QtCore.QSize(66, 0))
+        self.label_64.setMaximumSize(QtCore.QSize(168, 16777215))
+        font = QtGui.QFont()
+        font.setFamily("Roboto")
+        font.setPointSize(21)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_64.setFont(font)
+        self.label_64.setStyleSheet("color: #282830 ;\n"
+"")
+        self.label_64.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
+        self.label_64.setObjectName("label_64")
+        self.btn_actualizarMov = QtWidgets.QPushButton(self.frame_main_stock_3)
+        self.btn_actualizarMov.setGeometry(QtCore.QRect(900, 160, 26, 26))
+        font = QtGui.QFont()
+        font.setFamily("Roboto")
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.btn_actualizarMov.setFont(font)
+        self.btn_actualizarMov.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.btn_actualizarMov.setStyleSheet("QPushButton{\n"
+"border:none;\n"
+"font-family: Roboto;\n"
+"border-radius:5px;\n"
+"text-align: center;\n"
+"color: #282830 ;\n"
+"background: #212325\n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"        color:rgb(116, 116, 138)\n"
+"\n"
+"}")
+        self.btn_actualizarMov.setText("")
+        self.btn_actualizarMov.setIcon(icon10)
+        self.btn_actualizarMov.setIconSize(QtCore.QSize(14, 16))
+        self.btn_actualizarMov.setCheckable(True)
+        self.btn_actualizarMov.setObjectName("btn_actualizarMov")
+        self.tableWidget_movimientos_2 = QtWidgets.QTableWidget(self.frame_main_stock_3)
+        self.tableWidget_movimientos_2.setGeometry(QtCore.QRect(50, 190, 911, 451))
+        self.tableWidget_movimientos_2.setMaximumSize(QtCore.QSize(16777215, 489))
+        self.tableWidget_movimientos_2.viewport().setProperty("cursor", QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.tableWidget_movimientos_2.setStyleSheet("QTableWidget{\n"
 "font-size: 11pt;\n"
 "margin-left: 0px;\n"
 "margin-top:15px;\n"
 "color: #000;\n"
-"font-family: Roboto;\n"
+"font-family: Cairo Semibold;\n"
 "text-align:center;\n"
 "}\n"
 "QheaderView::item\n"
@@ -1674,819 +2469,152 @@ class Ui_MainWindow(object):
 "\n"
 "    border-left: 1px solid #394353;\n"
 "}")
-        self.tableWidget_stock_2.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers)
-        self.tableWidget_stock_2.setShowGrid(False)
-        self.tableWidget_stock_2.setObjectName("tableWidget_stock_2")
-        self.tableWidget_stock_2.setColumnCount(5)
-        self.tableWidget_stock_2.setRowCount(0)
+        self.tableWidget_movimientos_2.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers)
+        self.tableWidget_movimientos_2.setShowGrid(False)
+        self.tableWidget_movimientos_2.setObjectName("tableWidget_movimientos_2")
+        self.tableWidget_movimientos_2.setColumnCount(6)
+        self.tableWidget_movimientos_2.setRowCount(0)
         item = QtWidgets.QTableWidgetItem()
-        self.tableWidget_stock_2.setHorizontalHeaderItem(0, item)
+        self.tableWidget_movimientos_2.setHorizontalHeaderItem(0, item)
         item = QtWidgets.QTableWidgetItem()
-        self.tableWidget_stock_2.setHorizontalHeaderItem(1, item)
+        self.tableWidget_movimientos_2.setHorizontalHeaderItem(1, item)
         item = QtWidgets.QTableWidgetItem()
-        self.tableWidget_stock_2.setHorizontalHeaderItem(2, item)
+        self.tableWidget_movimientos_2.setHorizontalHeaderItem(2, item)
         item = QtWidgets.QTableWidgetItem()
-        self.tableWidget_stock_2.setHorizontalHeaderItem(3, item)
+        self.tableWidget_movimientos_2.setHorizontalHeaderItem(3, item)
         item = QtWidgets.QTableWidgetItem()
-        self.tableWidget_stock_2.setHorizontalHeaderItem(4, item)
-        self.tableWidget_stock_2.horizontalHeader().setVisible(False)
-        self.tableWidget_stock_2.horizontalHeader().setCascadingSectionResizes(True)
-        self.tableWidget_stock_2.horizontalHeader().setDefaultSectionSize(169)
-        self.tableWidget_stock_2.horizontalHeader().setSortIndicatorShown(True)
-        self.tableWidget_stock_2.horizontalHeader().setStretchLastSection(True)
-        self.tableWidget_stock_2.verticalHeader().setVisible(False)
-        self.tableWidget_stock_2.verticalHeader().setDefaultSectionSize(41)
-        self.frame_20 = QtWidgets.QFrame(self.frame_19)
-        self.frame_20.setGeometry(QtCore.QRect(20, 9, 861, 41))
-        self.frame_20.setMinimumSize(QtCore.QSize(56, 41))
-        self.frame_20.setStyleSheet("background-color: #f2f2f5;\n"
-"\n"
-"border-radius:15px;")
-        self.frame_20.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_20.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_20.setObjectName("frame_20")
-        self.horizontalLayout_15 = QtWidgets.QHBoxLayout(self.frame_20)
-        self.horizontalLayout_15.setObjectName("horizontalLayout_15")
-        self.label_13 = QtWidgets.QLabel(self.frame_20)
+        self.tableWidget_movimientos_2.setHorizontalHeaderItem(4, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget_movimientos_2.setHorizontalHeaderItem(5, item)
+        self.tableWidget_movimientos_2.horizontalHeader().setVisible(False)
+        self.tableWidget_movimientos_2.horizontalHeader().setCascadingSectionResizes(True)
+        self.tableWidget_movimientos_2.horizontalHeader().setDefaultSectionSize(147)
+        self.tableWidget_movimientos_2.horizontalHeader().setSortIndicatorShown(True)
+        self.tableWidget_movimientos_2.horizontalHeader().setStretchLastSection(True)
+        self.tableWidget_movimientos_2.verticalHeader().setVisible(False)
+        self.tableWidget_movimientos_2.verticalHeader().setDefaultSectionSize(41)
+        self.new_egreso_btn = QtWidgets.QPushButton(self.frame_main_stock_3)
+        self.new_egreso_btn.setGeometry(QtCore.QRect(180, 110, 121, 26))
+        self.new_egreso_btn.setMinimumSize(QtCore.QSize(0, 26))
         font = QtGui.QFont()
-        font.setFamily("Roboto")
-        font.setPointSize(11)
+        font.setFamily("Cairo SemiBold")
+        font.setPointSize(10)
         font.setBold(True)
         font.setWeight(75)
-        self.label_13.setFont(font)
-        self.label_13.setStyleSheet("background: none;\n"
-"color: #282830 ;\n"
-"")
-        self.label_13.setObjectName("label_13")
-        self.horizontalLayout_15.addWidget(self.label_13, 0, QtCore.Qt.AlignLeft)
-        self.label_23 = QtWidgets.QLabel(self.frame_20)
-        font = QtGui.QFont()
-        font.setFamily("Roboto")
-        font.setPointSize(11)
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_23.setFont(font)
-        self.label_23.setStyleSheet("background: none;\n"
-"color: #282830 ;\n"
-"\n"
-"")
-        self.label_23.setObjectName("label_23")
-        self.horizontalLayout_15.addWidget(self.label_23, 0, QtCore.Qt.AlignLeft)
-        self.label_24 = QtWidgets.QLabel(self.frame_20)
-        font = QtGui.QFont()
-        font.setFamily("Roboto")
-        font.setPointSize(11)
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_24.setFont(font)
-        self.label_24.setStyleSheet("background: none;\n"
-"color: #282830 ;\n"
-"")
-        self.label_24.setObjectName("label_24")
-        self.horizontalLayout_15.addWidget(self.label_24, 0, QtCore.Qt.AlignLeft)
-        self.label_25 = QtWidgets.QLabel(self.frame_20)
-        font = QtGui.QFont()
-        font.setFamily("Roboto")
-        font.setPointSize(11)
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_25.setFont(font)
-        self.label_25.setStyleSheet("background: none;\n"
-"color: #282830 ;\n"
-"")
-        self.label_25.setObjectName("label_25")
-        self.horizontalLayout_15.addWidget(self.label_25, 0, QtCore.Qt.AlignLeft)
-        self.label_26 = QtWidgets.QLabel(self.frame_20)
-        font = QtGui.QFont()
-        font.setFamily("Roboto")
-        font.setPointSize(11)
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_26.setFont(font)
-        self.label_26.setStyleSheet("background: none;\n"
-"color: #282830 ;\n"
-"")
-        self.label_26.setObjectName("label_26")
-        self.horizontalLayout_15.addWidget(self.label_26, 0, QtCore.Qt.AlignLeft)
-        self.btn_actualizarStock = QtWidgets.QPushButton(self.frame_19)
-        self.btn_actualizarStock.setGeometry(QtCore.QRect(883, 20, 31, 21))
-        self.btn_actualizarStock.setMinimumSize(QtCore.QSize(0, 21))
-        self.btn_actualizarStock.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.btn_actualizarStock.setText("")
-        self.btn_actualizarStock.setIcon(icon7)
-        self.btn_actualizarStock.setIconSize(QtCore.QSize(33, 16))
-        self.btn_actualizarStock.setObjectName("btn_actualizarStock")
-        self.verticalLayout_26.addWidget(self.frame_19)
-        self.verticalLayout_9.addWidget(self.bottom_stock_3)
-        self.verticalLayout_10.addWidget(self.container_stock_3)
-        self.stackedWidget_main.addWidget(self.page_stock)
-        self.page_area = QtWidgets.QWidget()
-        self.page_area.setObjectName("page_area")
-        self.verticalLayout_15 = QtWidgets.QVBoxLayout(self.page_area)
-        self.verticalLayout_15.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayout_15.setSpacing(0)
-        self.verticalLayout_15.setObjectName("verticalLayout_15")
-        self.frame_7 = QtWidgets.QFrame(self.page_area)
-        self.frame_7.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_7.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_7.setObjectName("frame_7")
-        self.btn_crearDeposito = QtWidgets.QPushButton(self.frame_7)
-        self.btn_crearDeposito.setGeometry(QtCore.QRect(290, 20, 361, 81))
-        font = QtGui.QFont()
-        font.setFamily("Roboto")
-        font.setPointSize(18)
-        font.setBold(True)
-        font.setWeight(75)
-        self.btn_crearDeposito.setFont(font)
-        self.btn_crearDeposito.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.btn_crearDeposito.setStyleSheet("")
-        self.btn_crearDeposito.setObjectName("btn_crearDeposito")
-        self.textEdit = QtWidgets.QTextEdit(self.frame_7)
-        self.textEdit.setGeometry(QtCore.QRect(140, 290, 691, 71))
-        self.textEdit.setObjectName("textEdit")
-        self.label = QtWidgets.QLabel(self.frame_7)
-        self.label.setGeometry(QtCore.QRect(70, 150, 261, 21))
-        self.label.setObjectName("label")
-        self.label_2 = QtWidgets.QLabel(self.frame_7)
-        self.label_2.setGeometry(QtCore.QRect(70, 190, 47, 13))
-        self.label_2.setObjectName("label_2")
-        self.label_3 = QtWidgets.QLabel(self.frame_7)
-        self.label_3.setGeometry(QtCore.QRect(70, 240, 47, 13))
-        self.label_3.setObjectName("label_3")
-        self.spinBox_anchoarea = QtWidgets.QSpinBox(self.frame_7)
-        self.spinBox_anchoarea.setGeometry(QtCore.QRect(70, 210, 42, 22))
-        self.spinBox_anchoarea.setObjectName("spinBox_anchoarea")
-        self.spinBox_largoarea = QtWidgets.QSpinBox(self.frame_7)
-        self.spinBox_largoarea.setGeometry(QtCore.QRect(70, 260, 42, 22))
-        self.spinBox_largoarea.setObjectName("spinBox_largoarea")
-        self.verticalLayout_15.addWidget(self.frame_7)
-        self.stackedWidget_main.addWidget(self.page_area)
-        self.page_lotes = QtWidgets.QWidget()
-        self.page_lotes.setObjectName("page_lotes")
-        self.verticalLayout_4 = QtWidgets.QVBoxLayout(self.page_lotes)
-        self.verticalLayout_4.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayout_4.setSpacing(0)
-        self.verticalLayout_4.setObjectName("verticalLayout_4")
-        self.container_mov_3 = QtWidgets.QFrame(self.page_lotes)
-        self.container_mov_3.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.container_mov_3.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.container_mov_3.setObjectName("container_mov_3")
-        self.verticalLayout_34 = QtWidgets.QVBoxLayout(self.container_mov_3)
-        self.verticalLayout_34.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayout_34.setSpacing(0)
-        self.verticalLayout_34.setObjectName("verticalLayout_34")
-        self.top_frame_mov_3 = QtWidgets.QFrame(self.container_mov_3)
-        self.top_frame_mov_3.setMinimumSize(QtCore.QSize(1, 80))
-        self.top_frame_mov_3.setMaximumSize(QtCore.QSize(387, 70))
-        self.top_frame_mov_3.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.top_frame_mov_3.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.top_frame_mov_3.setObjectName("top_frame_mov_3")
-        self.frame_26 = QtWidgets.QFrame(self.top_frame_mov_3)
-        self.frame_26.setGeometry(QtCore.QRect(0, 13, 431, 70))
-        self.frame_26.setMinimumSize(QtCore.QSize(354, 70))
-        self.frame_26.setMaximumSize(QtCore.QSize(16777215, 50))
-        self.frame_26.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_26.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_26.setObjectName("frame_26")
-        self.verticalLayout_35 = QtWidgets.QVBoxLayout(self.frame_26)
-        self.verticalLayout_35.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayout_35.setSpacing(0)
-        self.verticalLayout_35.setObjectName("verticalLayout_35")
-        self.groupBox_10 = QtWidgets.QGroupBox(self.frame_26)
-        self.groupBox_10.setMinimumSize(QtCore.QSize(384, 0))
-        self.groupBox_10.setTitle("")
-        self.groupBox_10.setObjectName("groupBox_10")
-        self.label_40 = QtWidgets.QLabel(self.groupBox_10)
-        self.label_40.setGeometry(QtCore.QRect(90, 10, 152, 52))
-        self.label_40.setMinimumSize(QtCore.QSize(152, 0))
-        self.label_40.setMaximumSize(QtCore.QSize(120, 16777215))
-        font = QtGui.QFont()
-        font.setFamily("Roboto")
-        font.setPointSize(18)
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_40.setFont(font)
-        self.label_40.setStyleSheet("color: #282830 ;\n"
-"")
-        self.label_40.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
-        self.label_40.setObjectName("label_40")
-        self.pushButton_19 = QtWidgets.QPushButton(self.groupBox_10)
-        self.pushButton_19.setGeometry(QtCore.QRect(30, 9, 49, 40))
-        self.pushButton_19.setMaximumSize(QtCore.QSize(60, 60))
-        self.pushButton_19.setStyleSheet("margin-left:5px")
-        self.pushButton_19.setText("")
-        self.pushButton_19.setIcon(icon2)
-        self.pushButton_19.setIconSize(QtCore.QSize(40, 40))
-        self.pushButton_19.setObjectName("pushButton_19")
-        self.verticalLayout_35.addWidget(self.groupBox_10)
-        self.verticalLayout_34.addWidget(self.top_frame_mov_3)
-        self.mid_mov_3 = QtWidgets.QFrame(self.container_mov_3)
-        self.mid_mov_3.setMaximumSize(QtCore.QSize(16777215, 70))
-        self.mid_mov_3.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.mid_mov_3.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.mid_mov_3.setObjectName("mid_mov_3")
-        self.verticalLayout_36 = QtWidgets.QVBoxLayout(self.mid_mov_3)
-        self.verticalLayout_36.setContentsMargins(0, 30, 0, 0)
-        self.verticalLayout_36.setSpacing(0)
-        self.verticalLayout_36.setObjectName("verticalLayout_36")
-        self.frame_27 = QtWidgets.QFrame(self.mid_mov_3)
-        self.frame_27.setMinimumSize(QtCore.QSize(0, 50))
-        self.frame_27.setMaximumSize(QtCore.QSize(16777215, 50))
-        self.frame_27.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_27.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_27.setObjectName("frame_27")
-        self.verticalLayout_37 = QtWidgets.QVBoxLayout(self.frame_27)
-        self.verticalLayout_37.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayout_37.setSpacing(0)
-        self.verticalLayout_37.setObjectName("verticalLayout_37")
-        self.groupBox_11 = QtWidgets.QGroupBox(self.frame_27)
-        self.groupBox_11.setMinimumSize(QtCore.QSize(0, 50))
-        self.groupBox_11.setStyleSheet("margin-left: 14px")
-        self.groupBox_11.setTitle("")
-        self.groupBox_11.setObjectName("groupBox_11")
-        self.pushButton_20 = QtWidgets.QPushButton(self.groupBox_11)
-        self.pushButton_20.setGeometry(QtCore.QRect(18, 9, 31, 21))
-        self.pushButton_20.setMinimumSize(QtCore.QSize(0, 21))
-        self.pushButton_20.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.pushButton_20.setText("")
-        self.pushButton_20.setIcon(icon6)
-        self.pushButton_20.setIconSize(QtCore.QSize(52, 82))
-        self.pushButton_20.setObjectName("pushButton_20")
-        self.lineEdit_6 = QtWidgets.QLineEdit(self.groupBox_11)
-        self.lineEdit_6.setGeometry(QtCore.QRect(50, 10, 301, 20))
-        self.lineEdit_6.setMinimumSize(QtCore.QSize(0, 20))
-        self.lineEdit_6.setStyleSheet("font-family: Roboto;\n"
-"")
-        self.lineEdit_6.setText("")
-        self.lineEdit_6.setObjectName("lineEdit_6")
-        self.verticalLayout_37.addWidget(self.groupBox_11)
-        self.verticalLayout_36.addWidget(self.frame_27, 0, QtCore.Qt.AlignBottom)
-        self.verticalLayout_34.addWidget(self.mid_mov_3)
-        self.bottom_mov_3 = QtWidgets.QFrame(self.container_mov_3)
-        self.bottom_mov_3.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.bottom_mov_3.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.bottom_mov_3.setObjectName("bottom_mov_3")
-        self.verticalLayout_38 = QtWidgets.QVBoxLayout(self.bottom_mov_3)
-        self.verticalLayout_38.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayout_38.setSpacing(0)
-        self.verticalLayout_38.setObjectName("verticalLayout_38")
-        self.frame_28 = QtWidgets.QFrame(self.bottom_mov_3)
-        self.frame_28.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_28.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_28.setObjectName("frame_28")
-        self.tableWidget_lotes = QtWidgets.QTableWidget(self.frame_28)
-        self.tableWidget_lotes.setGeometry(QtCore.QRect(50, 60, 801, 421))
-        self.tableWidget_lotes.viewport().setProperty("cursor", QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.tableWidget_lotes.setStyleSheet("QTableWidget{\n"
-"font-size: 11pt;\n"
-"margin-top:15px;\n"
-"color: #000;\n"
-"font-family: Roboto;\n"
+        self.new_egreso_btn.setFont(font)
+        self.new_egreso_btn.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.new_egreso_btn.setStyleSheet("QPushButton{\n"
+"background-color: #055ffc;\n"
+"color:#fff;\n"
+"border-radius: 5px;\n"
 "text-align:center;\n"
 "}\n"
-"QHeaderView::section {\n"
-"    background-color: #394353;\n"
-"    border-radius: 11px;\n"
-"    color:#fff;\n"
-"    font-size: 9pt;\n"
-"    font-family:Roboto;\n"
-"    border-left: 1px solid #394353;\n"
 "\n"
-"}\n"
-"\n"
-"QHeaderView::section:horizontal\n"
-"{\n"
-"    border-top: 1px solid #394353;\n"
-"\n"
-"}\n"
-"\n"
-"QHeaderView::section:vertical\n"
-"{\n"
-"\n"
-"    border-left: 1px solid #394353;\n"
-"}")
-        self.tableWidget_lotes.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers)
-        self.tableWidget_lotes.setShowGrid(False)
-        self.tableWidget_lotes.setObjectName("tableWidget_lotes")
-        self.tableWidget_lotes.setColumnCount(5)
-        self.tableWidget_lotes.setRowCount(0)
-        item = QtWidgets.QTableWidgetItem()
-        self.tableWidget_lotes.setHorizontalHeaderItem(0, item)
-        item = QtWidgets.QTableWidgetItem()
-        self.tableWidget_lotes.setHorizontalHeaderItem(1, item)
-        item = QtWidgets.QTableWidgetItem()
-        self.tableWidget_lotes.setHorizontalHeaderItem(2, item)
-        item = QtWidgets.QTableWidgetItem()
-        self.tableWidget_lotes.setHorizontalHeaderItem(3, item)
-        item = QtWidgets.QTableWidgetItem()
-        self.tableWidget_lotes.setHorizontalHeaderItem(4, item)
-        self.tableWidget_lotes.horizontalHeader().setVisible(False)
-        self.tableWidget_lotes.horizontalHeader().setCascadingSectionResizes(True)
-        self.tableWidget_lotes.horizontalHeader().setDefaultSectionSize(160)
-        self.tableWidget_lotes.horizontalHeader().setSortIndicatorShown(True)
-        self.tableWidget_lotes.horizontalHeader().setStretchLastSection(True)
-        self.tableWidget_lotes.verticalHeader().setVisible(False)
-        self.tableWidget_lotes.verticalHeader().setDefaultSectionSize(41)
-        self.frame_29 = QtWidgets.QFrame(self.frame_28)
-        self.frame_29.setGeometry(QtCore.QRect(29, 9, 831, 41))
-        self.frame_29.setMinimumSize(QtCore.QSize(56, 41))
-        self.frame_29.setStyleSheet("background-color: #f2f2f5;\n"
-"\n"
-"border-radius:15px;")
-        self.frame_29.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_29.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_29.setObjectName("frame_29")
-        self.label_41 = QtWidgets.QLabel(self.frame_29)
-        self.label_41.setGeometry(QtCore.QRect(20, 10, 141, 18))
-        font = QtGui.QFont()
-        font.setFamily("Roboto")
-        font.setPointSize(11)
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_41.setFont(font)
-        self.label_41.setStyleSheet("background: none;\n"
-"color: #282830 ;\n"
-"")
-        self.label_41.setObjectName("label_41")
-        self.label_42 = QtWidgets.QLabel(self.frame_29)
-        self.label_42.setGeometry(QtCore.QRect(200, 10, 79, 18))
-        font = QtGui.QFont()
-        font.setFamily("Roboto")
-        font.setPointSize(11)
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_42.setFont(font)
-        self.label_42.setStyleSheet("background: none;\n"
-"color: #282830 ;\n"
-"\n"
-"")
-        self.label_42.setObjectName("label_42")
-        self.label_43 = QtWidgets.QLabel(self.frame_29)
-        self.label_43.setGeometry(QtCore.QRect(520, 10, 132, 18))
-        font = QtGui.QFont()
-        font.setFamily("Roboto")
-        font.setPointSize(11)
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_43.setFont(font)
-        self.label_43.setStyleSheet("background: none;\n"
-"color: #282830 ;\n"
-"")
-        self.label_43.setObjectName("label_43")
-        self.label_45 = QtWidgets.QLabel(self.frame_29)
-        self.label_45.setGeometry(QtCore.QRect(650, 10, 161, 18))
-        font = QtGui.QFont()
-        font.setFamily("Roboto")
-        font.setPointSize(11)
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_45.setFont(font)
-        self.label_45.setStyleSheet("background: none;\n"
-"color: #282830 ;\n"
-"")
-        self.label_45.setObjectName("label_45")
-        self.label_46 = QtWidgets.QLabel(self.frame_29)
-        self.label_46.setGeometry(QtCore.QRect(350, 10, 61, 18))
-        font = QtGui.QFont()
-        font.setFamily("Roboto")
-        font.setPointSize(11)
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_46.setFont(font)
-        self.label_46.setStyleSheet("background: none;\n"
-"color: #282830 ;\n"
-"\n"
-"")
-        self.label_46.setObjectName("label_46")
-        self.btn_actualizarLotes = QtWidgets.QPushButton(self.frame_28)
-        self.btn_actualizarLotes.setGeometry(QtCore.QRect(860, 20, 31, 21))
-        self.btn_actualizarLotes.setMinimumSize(QtCore.QSize(0, 21))
-        self.btn_actualizarLotes.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.btn_actualizarLotes.setText("")
-        self.btn_actualizarLotes.setIcon(icon7)
-        self.btn_actualizarLotes.setIconSize(QtCore.QSize(33, 16))
-        self.btn_actualizarLotes.setObjectName("btn_actualizarLotes")
-        self.verticalLayout_38.addWidget(self.frame_28)
-        self.verticalLayout_34.addWidget(self.bottom_mov_3)
-        self.verticalLayout_4.addWidget(self.container_mov_3)
-        self.stackedWidget_main.addWidget(self.page_lotes)
-        self.page_egreso = QtWidgets.QWidget()
-        self.page_egreso.setObjectName("page_egreso")
-        self.verticalLayout_14 = QtWidgets.QVBoxLayout(self.page_egreso)
-        self.verticalLayout_14.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayout_14.setSpacing(0)
-        self.verticalLayout_14.setObjectName("verticalLayout_14")
-        self.frame = QtWidgets.QFrame(self.page_egreso)
-        self.frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame.setObjectName("frame")
-        self.label_15 = QtWidgets.QLabel(self.frame)
-        self.label_15.setGeometry(QtCore.QRect(350, 20, 128, 40))
-        self.label_15.setMinimumSize(QtCore.QSize(128, 0))
-        self.label_15.setMaximumSize(QtCore.QSize(120, 40))
-        font = QtGui.QFont()
-        font.setFamily("Roboto")
-        font.setPointSize(20)
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_15.setFont(font)
-        self.label_15.setStyleSheet("color: #282830 ;\n"
-"border: none")
-        self.label_15.setAlignment(QtCore.Qt.AlignCenter)
-        self.label_15.setObjectName("label_15")
-        self.label_egr_ing = QtWidgets.QLabel(self.frame)
-        self.label_egr_ing.setGeometry(QtCore.QRect(40, 80, 131, 27))
-        font = QtGui.QFont()
-        font.setFamily("Roboto")
-        font.setPointSize(-1)
-        self.label_egr_ing.setFont(font)
-        self.label_egr_ing.setStyleSheet("font-family: Roboto;\n"
-"font-size: 14px;\n"
-"margin-top:10px;\n"
-"margin-left:10px\n"
-"\n"
-"")
-        self.label_egr_ing.setObjectName("label_egr_ing")
-        self.input_codigoProdEgreso = QtWidgets.QLineEdit(self.frame)
-        self.input_codigoProdEgreso.setGeometry(QtCore.QRect(40, 110, 121, 25))
-        self.input_codigoProdEgreso.setMinimumSize(QtCore.QSize(0, 0))
-        self.input_codigoProdEgreso.setMaximumSize(QtCore.QSize(16777215, 25))
-        self.input_codigoProdEgreso.setStyleSheet("QLineEdit{\n"
-"background-color: #fff;\n"
-"border: 0.5px solid #c1c1c1;\n"
-"border-radius: 3px;\n"
-"padding: 4 5px;\n"
-"color: rgb(0, 0, 0);\n"
-"font-family:Roboto;\n"
-"font-size:13px;\n"
-"font-weight: 400;\n"
-"margin-left: 10px;\n"
-"\n"
-"}\n"
-"")
-        self.input_codigoProdEgreso.setText("")
-        self.input_codigoProdEgreso.setPlaceholderText("")
-        self.input_codigoProdEgreso.setObjectName("input_codigoProdEgreso")
-        self.num_cantidadEgreso = QtWidgets.QSpinBox(self.frame)
-        self.num_cantidadEgreso.setGeometry(QtCore.QRect(200, 110, 121, 25))
-        self.num_cantidadEgreso.setStyleSheet("background-color: #fff;\n"
-"border-radius: 3px;\n"
-"padding: 4 5px;\n"
-"color: rgb(0, 0, 0);\n"
-"font-family:Roboto;\n"
-"border: none;\n"
-"font-size:13px;\n"
-"font-weight: 400;\n"
-"margin-left: 10px;\n"
-"")
-        self.num_cantidadEgreso.setMinimum(0)
-        self.num_cantidadEgreso.setMaximum(999)
-        self.num_cantidadEgreso.setObjectName("num_cantidadEgreso")
-        self.label_pasillos_2 = QtWidgets.QLabel(self.frame)
-        self.label_pasillos_2.setGeometry(QtCore.QRect(200, 80, 131, 27))
-        font = QtGui.QFont()
-        font.setFamily("Roboto")
-        font.setPointSize(-1)
-        self.label_pasillos_2.setFont(font)
-        self.label_pasillos_2.setStyleSheet("font-family: Roboto;\n"
-"font-size: 14px;\n"
-"margin-top:10px;\n"
-"margin-left:10px\n"
-"\n"
-"")
-        self.label_pasillos_2.setObjectName("label_pasillos_2")
-        self.btn_agregarProdEgreso = QtWidgets.QPushButton(self.frame)
-        self.btn_agregarProdEgreso.setGeometry(QtCore.QRect(340, 110, 121, 26))
-        font = QtGui.QFont()
-        font.setFamily("Roboto")
-        font.setPointSize(-1)
-        self.btn_agregarProdEgreso.setFont(font)
-        self.btn_agregarProdEgreso.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.btn_agregarProdEgreso.setStyleSheet("QPushButton{\n"
-"background-color: rgba(71, 71, 103);\n"
-"color: #fff;\n"
-"border-radius:5px;\n"
-"font-family:Roboto;\n"
-"font-size: 13px\n"
-"\n"
-"}\n"
 "QPushButton:hover{\n"
-"background-color: rgba(71, 71, 103,180);\n"
+"\n"
 "}")
-        self.btn_agregarProdEgreso.setObjectName("btn_agregarProdEgreso")
-        self.btn_actualizarProdEgreso = QtWidgets.QPushButton(self.frame)
-        self.btn_actualizarProdEgreso.setGeometry(QtCore.QRect(470, 190, 31, 21))
-        self.btn_actualizarProdEgreso.setMinimumSize(QtCore.QSize(0, 21))
-        self.btn_actualizarProdEgreso.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.btn_actualizarProdEgreso.setText("")
-        self.btn_actualizarProdEgreso.setIcon(icon7)
-        self.btn_actualizarProdEgreso.setIconSize(QtCore.QSize(33, 16))
-        self.btn_actualizarProdEgreso.setObjectName("btn_actualizarProdEgreso")
-        self.frame_31 = QtWidgets.QFrame(self.frame)
-        self.frame_31.setGeometry(QtCore.QRect(49, 180, 411, 41))
-        self.frame_31.setMinimumSize(QtCore.QSize(56, 41))
-        self.frame_31.setStyleSheet("background-color: #f2f2f5;\n"
-"border-radius:15px;")
-        self.frame_31.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_31.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_31.setObjectName("frame_31")
-        self.label_51 = QtWidgets.QLabel(self.frame_31)
-        self.label_51.setGeometry(QtCore.QRect(20, 10, 47, 18))
-        font = QtGui.QFont()
-        font.setFamily("Roboto")
-        font.setPointSize(11)
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_51.setFont(font)
-        self.label_51.setStyleSheet("background: none;\n"
-"color: #282830 ;\n"
-"")
-        self.label_51.setObjectName("label_51")
-        self.label_52 = QtWidgets.QLabel(self.frame_31)
-        self.label_52.setGeometry(QtCore.QRect(150, 10, 79, 18))
-        font = QtGui.QFont()
-        font.setFamily("Roboto")
-        font.setPointSize(11)
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_52.setFont(font)
-        self.label_52.setStyleSheet("background: none;\n"
-"color: #282830 ;\n"
-"\n"
-"")
-        self.label_52.setObjectName("label_52")
-        self.label_56 = QtWidgets.QLabel(self.frame_31)
-        self.label_56.setGeometry(QtCore.QRect(310, 10, 61, 18))
-        font = QtGui.QFont()
-        font.setFamily("Roboto")
-        font.setPointSize(11)
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_56.setFont(font)
-        self.label_56.setStyleSheet("background: none;\n"
-"color: #282830 ;\n"
-"\n"
-"")
-        self.label_56.setObjectName("label_56")
-        self.tableWidget_lotes_2 = QtWidgets.QTableWidget(self.frame_31)
-        self.tableWidget_lotes_2.setGeometry(QtCore.QRect(0, 30, 801, 351))
-        self.tableWidget_lotes_2.viewport().setProperty("cursor", QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.tableWidget_lotes_2.setStyleSheet("QTableWidget{\n"
-"font-size: 11pt;\n"
-"margin-top:15px;\n"
-"color: #000;\n"
-"font-family: Roboto;\n"
-"text-align:center;\n"
-"}\n"
-"QHeaderView::section {\n"
-"    background-color: #394353;\n"
-"    border-radius: 11px;\n"
-"    color:#fff;\n"
-"    font-size: 9pt;\n"
-"    font-family:Roboto;\n"
-"    border-left: 1px solid #394353;\n"
-"\n"
-"}\n"
-"\n"
-"QHeaderView::section:horizontal\n"
-"{\n"
-"    border-top: 1px solid #394353;\n"
-"\n"
-"}\n"
-"\n"
-"QHeaderView::section:vertical\n"
-"{\n"
-"\n"
-"    border-left: 1px solid #394353;\n"
-"}")
-        self.tableWidget_lotes_2.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers)
-        self.tableWidget_lotes_2.setShowGrid(False)
-        self.tableWidget_lotes_2.setObjectName("tableWidget_lotes_2")
-        self.tableWidget_lotes_2.setColumnCount(5)
-        self.tableWidget_lotes_2.setRowCount(0)
-        item = QtWidgets.QTableWidgetItem()
-        self.tableWidget_lotes_2.setHorizontalHeaderItem(0, item)
-        item = QtWidgets.QTableWidgetItem()
-        self.tableWidget_lotes_2.setHorizontalHeaderItem(1, item)
-        item = QtWidgets.QTableWidgetItem()
-        self.tableWidget_lotes_2.setHorizontalHeaderItem(2, item)
-        item = QtWidgets.QTableWidgetItem()
-        self.tableWidget_lotes_2.setHorizontalHeaderItem(3, item)
-        item = QtWidgets.QTableWidgetItem()
-        self.tableWidget_lotes_2.setHorizontalHeaderItem(4, item)
-        self.tableWidget_lotes_2.horizontalHeader().setVisible(False)
-        self.tableWidget_lotes_2.horizontalHeader().setCascadingSectionResizes(True)
-        self.tableWidget_lotes_2.horizontalHeader().setDefaultSectionSize(160)
-        self.tableWidget_lotes_2.horizontalHeader().setSortIndicatorShown(True)
-        self.tableWidget_lotes_2.horizontalHeader().setStretchLastSection(True)
-        self.tableWidget_lotes_2.verticalHeader().setVisible(False)
-        self.tableWidget_lotes_2.verticalHeader().setDefaultSectionSize(41)
-        self.tableWidget_egreso = QtWidgets.QTableWidget(self.frame)
-        self.tableWidget_egreso.setGeometry(QtCore.QRect(50, 240, 461, 351))
-        self.tableWidget_egreso.viewport().setProperty("cursor", QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.tableWidget_egreso.setStyleSheet("QTableWidget{\n"
-"font-size: 11pt;\n"
-"margin-top:15px;\n"
-"color: #000;\n"
-"font-family: Roboto;\n"
-"text-align:center;\n"
-"}\n"
-"QHeaderView::section {\n"
-"    background-color: #394353;\n"
-"    border-radius: 11px;\n"
-"    color:#fff;\n"
-"    font-size: 9pt;\n"
-"    font-family:Roboto;\n"
-"    border-left: 1px solid #394353;\n"
-"\n"
-"}\n"
-"\n"
-"QHeaderView::section:horizontal\n"
-"{\n"
-"    border-top: 1px solid #394353;\n"
-"\n"
-"}\n"
-"\n"
-"QHeaderView::section:vertical\n"
-"{\n"
-"\n"
-"    border-left: 1px solid #394353;\n"
-"}")
-        self.tableWidget_egreso.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers)
-        self.tableWidget_egreso.setShowGrid(False)
-        self.tableWidget_egreso.setObjectName("tableWidget_egreso")
-        self.tableWidget_egreso.setColumnCount(3)
-        self.tableWidget_egreso.setRowCount(0)
-        item = QtWidgets.QTableWidgetItem()
-        self.tableWidget_egreso.setHorizontalHeaderItem(0, item)
-        item = QtWidgets.QTableWidgetItem()
-        self.tableWidget_egreso.setHorizontalHeaderItem(1, item)
-        item = QtWidgets.QTableWidgetItem()
-        self.tableWidget_egreso.setHorizontalHeaderItem(2, item)
-        self.tableWidget_egreso.horizontalHeader().setVisible(False)
-        self.tableWidget_egreso.horizontalHeader().setCascadingSectionResizes(True)
-        self.tableWidget_egreso.horizontalHeader().setDefaultSectionSize(150)
-        self.tableWidget_egreso.horizontalHeader().setSortIndicatorShown(True)
-        self.tableWidget_egreso.horizontalHeader().setStretchLastSection(True)
-        self.tableWidget_egreso.verticalHeader().setVisible(False)
-        self.tableWidget_egreso.verticalHeader().setDefaultSectionSize(41)
-        self.lista_egreso = QtWidgets.QListWidget(self.frame)
-        self.lista_egreso.setGeometry(QtCore.QRect(560, 210, 361, 391))
-        font = QtGui.QFont()
-        font.setFamily("Roboto")
-        font.setPointSize(16)
-        self.lista_egreso.setFont(font)
-        self.lista_egreso.setStyleSheet("background-color: #f2f2f5;\n"
-"")
-        self.lista_egreso.setAutoScrollMargin(16)
-        self.lista_egreso.setEditTriggers(QtWidgets.QAbstractItemView.DoubleClicked)
-        self.lista_egreso.setBatchSize(100)
-        self.lista_egreso.setObjectName("lista_egreso")
-        self.label_16 = QtWidgets.QLabel(self.frame)
-        self.label_16.setGeometry(QtCore.QRect(680, 170, 128, 40))
-        self.label_16.setMinimumSize(QtCore.QSize(128, 0))
-        self.label_16.setMaximumSize(QtCore.QSize(120, 40))
-        font = QtGui.QFont()
-        font.setFamily("Roboto")
-        font.setPointSize(19)
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_16.setFont(font)
-        self.label_16.setStyleSheet("color: #282830 ;\n"
-"border: none")
-        self.label_16.setAlignment(QtCore.Qt.AlignCenter)
-        self.label_16.setObjectName("label_16")
-        self.btn_eliminarProdEgreso = QtWidgets.QPushButton(self.frame)
-        self.btn_eliminarProdEgreso.setGeometry(QtCore.QRect(480, 110, 121, 26))
-        font = QtGui.QFont()
-        font.setFamily("Roboto")
-        font.setPointSize(-1)
-        self.btn_eliminarProdEgreso.setFont(font)
-        self.btn_eliminarProdEgreso.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.btn_eliminarProdEgreso.setStyleSheet("QPushButton{\n"
-"background-color: rgba(71, 71, 103);\n"
-"color: #fff;\n"
-"border-radius:5px;\n"
-"font-family:Roboto;\n"
-"font-size: 13px\n"
-"\n"
-"}\n"
-"QPushButton:hover{\n"
-"background-color: rgba(71, 71, 103,180);\n"
-"}")
-        self.btn_eliminarProdEgreso.setObjectName("btn_eliminarProdEgreso")
-        self.verticalLayout_14.addWidget(self.frame)
-        self.stackedWidget_main.addWidget(self.page_egreso)
-        self.page_areaIndividual = QtWidgets.QWidget()
-        self.page_areaIndividual.setObjectName("page_areaIndividual")
-        self.verticalLayout_16 = QtWidgets.QVBoxLayout(self.page_areaIndividual)
-        self.verticalLayout_16.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayout_16.setSpacing(0)
-        self.verticalLayout_16.setObjectName("verticalLayout_16")
-        self.frame_8 = QtWidgets.QFrame(self.page_areaIndividual)
-        self.frame_8.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_8.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_8.setObjectName("frame_8")
-        self.verticalLayout_22 = QtWidgets.QVBoxLayout(self.frame_8)
-        self.verticalLayout_22.setObjectName("verticalLayout_22")
-        self.frame_32 = QtWidgets.QFrame(self.frame_8)
-        self.frame_32.setMaximumSize(QtCore.QSize(16777215, 100))
-        self.frame_32.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_32.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_32.setObjectName("frame_32")
-        self.horizontalLayout_2 = QtWidgets.QHBoxLayout(self.frame_32)
-        self.horizontalLayout_2.setObjectName("horizontalLayout_2")
-        self.label_nombre_area = QtWidgets.QLabel(self.frame_32)
-        self.label_nombre_area.setMinimumSize(QtCore.QSize(211, 0))
-        self.label_nombre_area.setMaximumSize(QtCore.QSize(120, 40))
-        font = QtGui.QFont()
-        font.setFamily("Roboto")
-        font.setPointSize(20)
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_nombre_area.setFont(font)
-        self.label_nombre_area.setStyleSheet("color: #282830 ;\n"
-"border: none")
-        self.label_nombre_area.setAlignment(QtCore.Qt.AlignCenter)
-        self.label_nombre_area.setObjectName("label_nombre_area")
-        self.horizontalLayout_2.addWidget(self.label_nombre_area)
-        self.verticalLayout_22.addWidget(self.frame_32)
-        self.frame_9 = QtWidgets.QFrame(self.frame_8)
-        self.frame_9.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_9.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_9.setObjectName("frame_9")
-        self.frame_area = QtWidgets.QFrame(self.frame_9)
-        self.frame_area.setGeometry(QtCore.QRect(180, 40, 591, 400))
-        self.frame_area.setMinimumSize(QtCore.QSize(500, 350))
-        self.frame_area.setMaximumSize(QtCore.QSize(600, 400))
-        self.frame_area.setStyleSheet("border: 2px solid black")
-        self.frame_area.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_area.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_area.setObjectName("frame_area")
-        self.gridLayout_2 = QtWidgets.QGridLayout(self.frame_area)
-        self.gridLayout_2.setObjectName("gridLayout_2")
-        self.pushButton = QtWidgets.QPushButton(self.frame_9)
-        self.pushButton.setGeometry(QtCore.QRect(40, 30, 75, 23))
-        self.pushButton.setStyleSheet("background: #000;\n"
-"color: white")
-        self.pushButton.setObjectName("pushButton")
-        self.verticalLayout_22.addWidget(self.frame_9)
-        self.verticalLayout_16.addWidget(self.frame_8)
-        self.stackedWidget_main.addWidget(self.page_areaIndividual)
+        self.new_egreso_btn.setIcon(icon9)
+        self.new_egreso_btn.setIconSize(QtCore.QSize(13, 13))
+        self.new_egreso_btn.setObjectName("new_egreso_btn")
+        self.verticalLayout_10.addWidget(self.frame_main_stock_3)
+        self.verticalLayout_9.addWidget(self.frame_2)
+        self.stackedWidget_main.addWidget(self.page_movimientos)
         self.verticalLayout_2.addWidget(self.stackedWidget_main)
-        self.horizontalLayout.addWidget(self.righ_frame)
+        self.horizontalLayout.addWidget(self.right_frame)
         self.verticalLayout.addWidget(self.main_frame)
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
-        self.stackedWidget_3.setCurrentIndex(1)
-        self.stackedWidget_main.setCurrentIndex(2)
+        self.stackedWidget_3.setCurrentIndex(0)
+        self.stackedWidget_main.setCurrentIndex(9)
         self.lista_egreso.setCurrentRow(-1)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.products_btn.setText(_translate("MainWindow", "Productos"))
-        self.deposito_btn.setText(_translate("MainWindow", "Áreas"))
-        self.users_btn.setText(_translate("MainWindow", "Usuarios"))
-        self.products_btn_stock_5.setText(_translate("MainWindow", "Juan Ignacio"))
-        self.inicio_btn.setText(_translate("MainWindow", "Inicio"))
-        self.label_8.setText(_translate("MainWindow", "BullSoft"))
-        self.label_7.setText(_translate("MainWindow", "Productos"))
-        self.products_btn_stock_7.setText(_translate("MainWindow", "Stock"))
-        self.label_9.setText(_translate("MainWindow", "Productos"))
+        self.label_15.setText(_translate("MainWindow", "Productos"))
         self.products_btn_movimiento.setText(_translate("MainWindow", "Movimientos"))
-        self.products_btn_lotes.setText(_translate("MainWindow", "Lotes"))
         self.products_btn_stock.setText(_translate("MainWindow", "Stock"))
-        self.exit_btn.setText(_translate("MainWindow", "Salir"))
+        self.products_btn_lotes.setText(_translate("MainWindow", "Lotes"))
         self.label_10.setText(_translate("MainWindow", "Depósito"))
         self.label_12.setText(_translate("MainWindow", "Áreas"))
-        self.label_27.setText(_translate("MainWindow", "Movimientos"))
-        self.new_ingreso_btn.setText(_translate("MainWindow", "Ingreso"))
-        self.new_egreso_btn.setText(_translate("MainWindow", "Egreso"))
-        self.lineEdit_5.setPlaceholderText(_translate("MainWindow", "Buscar Movimientos por código, descripción,tipo o fecha"))
-        item = self.tableWidget_movimientos_2.horizontalHeaderItem(0)
+        self.inicio_btn_2.setText(_translate("MainWindow", "Inicio"))
+        self.products_btn_2.setText(_translate("MainWindow", "Productos"))
+        self.deposito_btn_2.setText(_translate("MainWindow", "Áreas"))
+        self.users_btn_2.setText(_translate("MainWindow", "Usuarios"))
+        self.exit_btn.setText(_translate("MainWindow", "Salir"))
+        self.label_72.setText(_translate("MainWindow", "Áreas"))
+        self.newArea_btn.setText(_translate("MainWindow", "Nueva Área"))
+        self.newArea_btn_2.setText(_translate("MainWindow", "Eliminar Área"))
+        self.label_posicion.setText(_translate("MainWindow", "TextLabel"))
+        item = self.tableWidget_niveles.horizontalHeaderItem(0)
+        item.setText(_translate("MainWindow", "Código"))
+        item = self.tableWidget_niveles.horizontalHeaderItem(1)
+        item.setText(_translate("MainWindow", "Volumen"))
+        item = self.tableWidget_niveles.horizontalHeaderItem(2)
+        item.setText(_translate("MainWindow", "Límite de Peso"))
+        item = self.tableWidget_niveles.horizontalHeaderItem(3)
+        item.setText(_translate("MainWindow", "Disponibilidad"))
+        self.label_73.setText(_translate("MainWindow", "Crear Depósito"))
+        self.label_2.setText(_translate("MainWindow", "Ancho"))
+        self.label_3.setText(_translate("MainWindow", "Largo"))
+        self.label_74.setText(_translate("MainWindow", "Elegir la cantidad de espacios disponibles para áreas"))
+        self.btn_crearDeposito.setText(_translate("MainWindow", "Crear Depósito"))
+        self.label_nombre_area.setText(_translate("MainWindow", "Nombre Área"))
+        self.btn_nuevaEstanteria.setText(_translate("MainWindow", "Nueva Posición"))
+        self.pushButton.setText(_translate("MainWindow", "volver"))
+        self.buscar_input.setPlaceholderText(_translate("MainWindow", "Buscar productos"))
+        self.label_47.setText(_translate("MainWindow", "Código"))
+        self.label_48.setText(_translate("MainWindow", "Descripción"))
+        self.label_49.setText(_translate("MainWindow", "Marca"))
+        self.label_50.setText(_translate("MainWindow", "Cantidad"))
+        self.label_53.setText(_translate("MainWindow", "Primer Vencimiento"))
+        self.product_new_btn.setText(_translate("MainWindow", "Nuevo Producto "))
+        self.label_54.setText(_translate("MainWindow", "Stock"))
+        item = self.tableWidget_stock_2.horizontalHeaderItem(0)
         item.setText(_translate("MainWindow", "New Column"))
-        item = self.tableWidget_movimientos_2.horizontalHeaderItem(1)
+        item = self.tableWidget_stock_2.horizontalHeaderItem(1)
         item.setText(_translate("MainWindow", "New Column"))
-        item = self.tableWidget_movimientos_2.horizontalHeaderItem(2)
+        item = self.tableWidget_stock_2.horizontalHeaderItem(2)
         item.setText(_translate("MainWindow", "New Column"))
-        item = self.tableWidget_movimientos_2.horizontalHeaderItem(3)
+        item = self.tableWidget_stock_2.horizontalHeaderItem(3)
         item.setText(_translate("MainWindow", "New Column"))
-        item = self.tableWidget_movimientos_2.horizontalHeaderItem(4)
+        item = self.tableWidget_stock_2.horizontalHeaderItem(4)
         item.setText(_translate("MainWindow", "New Column"))
-        item = self.tableWidget_movimientos_2.horizontalHeaderItem(5)
+        self.label_16.setText(_translate("MainWindow", "Egreso"))
+        self.label_egr_ing.setText(_translate("MainWindow", "Código"))
+        self.label_pasillos_2.setText(_translate("MainWindow", "Cantidad"))
+        self.btn_agregarProdEgreso.setText(_translate("MainWindow", "Agregar"))
+        self.label_75.setText(_translate("MainWindow", "Código"))
+        self.label_76.setText(_translate("MainWindow", "Descripción"))
+        self.label_77.setText(_translate("MainWindow", "Cantidad"))
+        item = self.tableWidget_lotes_2.horizontalHeaderItem(0)
         item.setText(_translate("MainWindow", "New Column"))
-        self.label_28.setText(_translate("MainWindow", "Código"))
-        self.label_29.setText(_translate("MainWindow", "Descripción"))
-        self.label_30.setText(_translate("MainWindow", "Tipo de Movimiento"))
-        self.label_32.setText(_translate("MainWindow", " Motivo"))
-        self.label_31.setText(_translate("MainWindow", " Fecha "))
-        self.label_33.setText(_translate("MainWindow", "Cantidad"))
-        self.label_17.setText(_translate("MainWindow", "Usuarios"))
+        item = self.tableWidget_lotes_2.horizontalHeaderItem(1)
+        item.setText(_translate("MainWindow", "New Column"))
+        item = self.tableWidget_lotes_2.horizontalHeaderItem(2)
+        item.setText(_translate("MainWindow", "New Column"))
+        item = self.tableWidget_lotes_2.horizontalHeaderItem(3)
+        item.setText(_translate("MainWindow", "New Column"))
+        item = self.tableWidget_lotes_2.horizontalHeaderItem(4)
+        item.setText(_translate("MainWindow", "New Column"))
+        item = self.tableWidget_egreso.horizontalHeaderItem(0)
+        item.setText(_translate("MainWindow", "New Column"))
+        item = self.tableWidget_egreso.horizontalHeaderItem(1)
+        item.setText(_translate("MainWindow", "New Column"))
+        item = self.tableWidget_egreso.horizontalHeaderItem(2)
+        item.setText(_translate("MainWindow", "New Column"))
+        self.label_17.setText(_translate("MainWindow", "Picking"))
+        self.btn_eliminarProdEgreso.setText(_translate("MainWindow", "Eliminar"))
+        self.lineEdit_3.setPlaceholderText(_translate("MainWindow", "Buscar usuarios"))
+        self.label_66.setText(_translate("MainWindow", "DNI"))
+        self.label_67.setText(_translate("MainWindow", "Nombre"))
+        self.label_68.setText(_translate("MainWindow", "Apellido"))
+        self.label_69.setText(_translate("MainWindow", "Tipo"))
+        self.label_70.setText(_translate("MainWindow", "Fecha de Nacimiento"))
         self.user_new_btn.setText(_translate("MainWindow", "Nuevo Usuario"))
-        self.lineEdit_3.setPlaceholderText(_translate("MainWindow", "Buscar usuarios por DNI, nombre o apellido"))
+        self.label_71.setText(_translate("MainWindow", "Usuarios"))
         item = self.tableWidget_usuarios.horizontalHeaderItem(0)
         item.setText(_translate("MainWindow", "New Column"))
         item = self.tableWidget_usuarios.horizontalHeaderItem(1)
@@ -2497,15 +2625,23 @@ class Ui_MainWindow(object):
         item.setText(_translate("MainWindow", "New Column"))
         item = self.tableWidget_usuarios.horizontalHeaderItem(4)
         item.setText(_translate("MainWindow", "New Column"))
-        self.label_18.setText(_translate("MainWindow", "Código"))
-        self.label_19.setText(_translate("MainWindow", "Nombre"))
-        self.label_20.setText(_translate("MainWindow", "Apellido"))
-        self.label_21.setText(_translate("MainWindow", "Tipo"))
-        self.label_22.setText(_translate("MainWindow", "Fecha de Nacimiento"))
-        self.label_posicion.setText(_translate("MainWindow", "TextLabel"))
-        self.label_34.setText(_translate("MainWindow", "Áreas"))
-        self.newArea_btn.setText(_translate("MainWindow", "Nueva Área"))
-        self.newArea_btn_2.setText(_translate("MainWindow", "Eliminar Área"))
+        self.lineEdit_6.setPlaceholderText(_translate("MainWindow", "Buscar lote por producto"))
+        self.label_51.setText(_translate("MainWindow", "Código"))
+        self.label_52.setText(_translate("MainWindow", "Descripción"))
+        self.label_55.setText(_translate("MainWindow", "Cantidad"))
+        self.label_56.setText(_translate("MainWindow", "Lote"))
+        self.label_57.setText(_translate("MainWindow", "Primer Vencimiento"))
+        self.label_58.setText(_translate("MainWindow", "Lotes"))
+        item = self.tableWidget_stock_3.horizontalHeaderItem(0)
+        item.setText(_translate("MainWindow", "New Column"))
+        item = self.tableWidget_stock_3.horizontalHeaderItem(1)
+        item.setText(_translate("MainWindow", "New Column"))
+        item = self.tableWidget_stock_3.horizontalHeaderItem(2)
+        item.setText(_translate("MainWindow", "New Column"))
+        item = self.tableWidget_stock_3.horizontalHeaderItem(3)
+        item.setText(_translate("MainWindow", "New Column"))
+        item = self.tableWidget_stock_3.horizontalHeaderItem(4)
+        item.setText(_translate("MainWindow", "New Column"))
         item = self.tableWidget_areas.horizontalHeaderItem(0)
         item.setText(_translate("MainWindow", "New Column"))
         item = self.tableWidget_areas.horizontalHeaderItem(1)
@@ -2527,72 +2663,28 @@ class Ui_MainWindow(object):
         self.label_area_mod.setText(_translate("MainWindow", "Label"))
         self.btn_newPosicion.setText(_translate("MainWindow", "Posicion de Alojamiento"))
         self.btn_modificarArea.setText(_translate("MainWindow", "Modificar Área"))
-        self.label_11.setText(_translate("MainWindow", "Stock"))
-        self.product_new_btn.setText(_translate("MainWindow", "Nuevo Producto"))
-        self.buscar_input.setPlaceholderText(_translate("MainWindow", "Buscar Productos por nombre o palabra clave"))
-        item = self.tableWidget_stock_2.horizontalHeaderItem(0)
+        self.lineEdit_5.setPlaceholderText(_translate("MainWindow", "Buscar movimientos"))
+        self.label_59.setText(_translate("MainWindow", "Código"))
+        self.label_60.setText(_translate("MainWindow", "Descripción"))
+        self.label_61.setText(_translate("MainWindow", "Cantidad"))
+        self.label_62.setText(_translate("MainWindow", "Fecha"))
+        self.label_63.setText(_translate("MainWindow", "Motivo"))
+        self.label_65.setText(_translate("MainWindow", "Tipo de Movimiento"))
+        self.new_ingreso_btn.setText(_translate("MainWindow", "Nuevo Ingreso "))
+        self.label_64.setText(_translate("MainWindow", "Movimientos"))
+        item = self.tableWidget_movimientos_2.horizontalHeaderItem(0)
         item.setText(_translate("MainWindow", "New Column"))
-        item = self.tableWidget_stock_2.horizontalHeaderItem(1)
+        item = self.tableWidget_movimientos_2.horizontalHeaderItem(1)
         item.setText(_translate("MainWindow", "New Column"))
-        item = self.tableWidget_stock_2.horizontalHeaderItem(2)
+        item = self.tableWidget_movimientos_2.horizontalHeaderItem(2)
         item.setText(_translate("MainWindow", "New Column"))
-        item = self.tableWidget_stock_2.horizontalHeaderItem(3)
+        item = self.tableWidget_movimientos_2.horizontalHeaderItem(3)
         item.setText(_translate("MainWindow", "New Column"))
-        item = self.tableWidget_stock_2.horizontalHeaderItem(4)
+        item = self.tableWidget_movimientos_2.horizontalHeaderItem(4)
         item.setText(_translate("MainWindow", "New Column"))
-        self.label_13.setText(_translate("MainWindow", "Código"))
-        self.label_23.setText(_translate("MainWindow", "Descripción"))
-        self.label_24.setText(_translate("MainWindow", "Marca"))
-        self.label_25.setText(_translate("MainWindow", "Cantidad"))
-        self.label_26.setText(_translate("MainWindow", "Primer Vencimiento"))
-        self.btn_crearDeposito.setText(_translate("MainWindow", "CREAR DEPÓSITO"))
-        self.label.setText(_translate("MainWindow", "Elegir la cantidad de espacios disponibles para áreas"))
-        self.label_2.setText(_translate("MainWindow", "Ancho"))
-        self.label_3.setText(_translate("MainWindow", "Largo"))
-        self.label_40.setText(_translate("MainWindow", "Lotes"))
-        self.lineEdit_6.setPlaceholderText(_translate("MainWindow", "Buscar Lote por id del producto"))
-        item = self.tableWidget_lotes.horizontalHeaderItem(0)
+        item = self.tableWidget_movimientos_2.horizontalHeaderItem(5)
         item.setText(_translate("MainWindow", "New Column"))
-        item = self.tableWidget_lotes.horizontalHeaderItem(1)
-        item.setText(_translate("MainWindow", "New Column"))
-        item = self.tableWidget_lotes.horizontalHeaderItem(2)
-        item.setText(_translate("MainWindow", "New Column"))
-        item = self.tableWidget_lotes.horizontalHeaderItem(3)
-        item.setText(_translate("MainWindow", "New Column"))
-        item = self.tableWidget_lotes.horizontalHeaderItem(4)
-        item.setText(_translate("MainWindow", "New Column"))
-        self.label_41.setText(_translate("MainWindow", "Código del Producto"))
-        self.label_42.setText(_translate("MainWindow", "Descripción"))
-        self.label_43.setText(_translate("MainWindow", "Lote"))
-        self.label_45.setText(_translate("MainWindow", " Fecha de Vencimiento"))
-        self.label_46.setText(_translate("MainWindow", "Cantidad"))
-        self.label_15.setText(_translate("MainWindow", "Egreso"))
-        self.label_egr_ing.setText(_translate("MainWindow", "Código"))
-        self.label_pasillos_2.setText(_translate("MainWindow", "Cantidad"))
-        self.btn_agregarProdEgreso.setText(_translate("MainWindow", "Agregar"))
-        self.label_51.setText(_translate("MainWindow", "Código"))
-        self.label_52.setText(_translate("MainWindow", "Descripción"))
-        self.label_56.setText(_translate("MainWindow", "Cantidad"))
-        item = self.tableWidget_lotes_2.horizontalHeaderItem(0)
-        item.setText(_translate("MainWindow", "New Column"))
-        item = self.tableWidget_lotes_2.horizontalHeaderItem(1)
-        item.setText(_translate("MainWindow", "New Column"))
-        item = self.tableWidget_lotes_2.horizontalHeaderItem(2)
-        item.setText(_translate("MainWindow", "New Column"))
-        item = self.tableWidget_lotes_2.horizontalHeaderItem(3)
-        item.setText(_translate("MainWindow", "New Column"))
-        item = self.tableWidget_lotes_2.horizontalHeaderItem(4)
-        item.setText(_translate("MainWindow", "New Column"))
-        item = self.tableWidget_egreso.horizontalHeaderItem(0)
-        item.setText(_translate("MainWindow", "New Column"))
-        item = self.tableWidget_egreso.horizontalHeaderItem(1)
-        item.setText(_translate("MainWindow", "New Column"))
-        item = self.tableWidget_egreso.horizontalHeaderItem(2)
-        item.setText(_translate("MainWindow", "New Column"))
-        self.label_16.setText(_translate("MainWindow", "Picking"))
-        self.btn_eliminarProdEgreso.setText(_translate("MainWindow", "Eliminar"))
-        self.label_nombre_area.setText(_translate("MainWindow", "Nombre Área"))
-        self.pushButton.setText(_translate("MainWindow", "volver"))
+        self.new_egreso_btn.setText(_translate("MainWindow", "Nuevo Egreso "))
 import img_rc
 
 
