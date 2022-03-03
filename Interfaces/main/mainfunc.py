@@ -544,7 +544,7 @@ class Modern(QMainWindow):
         self.listar_segmentos(globalArea)
 
     def new_posicion(self, btn):
-        self.newPosicionAlojamiento = Pa(area)
+        self.newPosicionAlojamiento = Pa(globalArea)
         self.newPosicionAlojamiento.show()
 
     def modificar_area(self, btn):

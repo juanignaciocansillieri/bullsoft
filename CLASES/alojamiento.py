@@ -217,11 +217,9 @@ def mostrar_filas_area(area):
     query = "SELECT codigo FROM alojamiento WHERE area=%s"
     cursor.execute(query,area)
     a.commit()
-    b = cursor.fetchall()
-    b = str(b[0][0])
-    n = int(b)
+    data = cursor.fetchall()
     c.close_connection(a)
-    return n
+    return data
 
     def listar_alojamiento_disponibles_area(area):
         a = c.start_connection()
@@ -312,10 +310,21 @@ def verificar_posicion(codigo):
     cursor.execute(query, codigo)
     data = cursor.fetchall()
     a.commit()
+    data=int(data[0][0])
     if data == 0:
         return 1
     else:
         return 0
+
+def listar_alojamiento_disponibles_area(area):
+    a = c.start_connection()
+    cursor = a.cursor()
+    query = "SELECT codigo FROM alojamiento WHERE area=%s"
+    cursor.execute(query, area)
+    a.commit()
+    data = cursor.fetchall()
+    c.close_connection(a)
+    return data
 
 def pick(producto):
     nal=contar_filas()

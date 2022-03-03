@@ -175,8 +175,8 @@ def crear_tabla():  # crea una tabla (al iniciar por primera vez el programa se 
     marca VARCHAR(20) NOT NULL,
     descripcion VARCHAR(50) NOT NULL,
     ubicacion VARCHAR(20) NOT NULL,
-    fragil BINARY(1) NOT NULL,
-    foto VARCHAR(100) NOT NULL,
+    fragil BINARY(1),
+    foto VARCHAR(100),
     peso INT NOT NULL,
     volumen INT NOT NULL,
     precio INT

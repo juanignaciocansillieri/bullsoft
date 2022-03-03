@@ -62,7 +62,7 @@ class ProductWindow(QMainWindow):
             return None
         else:
             pr.Productos(codigo, marca, cantidad, descripcion, posicion, lote, venc, condicion, fragil, defaultImg,
-                         peso, largo, ancho, altura)
+                         peso,volumen)
 
         self.close()
 
@@ -95,7 +95,7 @@ class ProductWindow(QMainWindow):
         for ar in areas:
             self.ui.area_comboBox.addItem(ar[0])
         area_seleccionada = self.ui.area_comboBox.currentText()
-        posiciones = p.Alojamiento.listar_alojamiento_disponibles_area(area_seleccionada)
+        posiciones = p.listar_alojamiento_disponibles_area(area_seleccionada)
         for pos in posiciones:
             self.ui.posicion_comboBox.addItem(pos[0])
 

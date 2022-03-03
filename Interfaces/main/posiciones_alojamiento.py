@@ -10,6 +10,7 @@ area = ""
 class PosicionAlojamiento(QMainWindow):
 
     def __init__(self, nombre_area):
+        self.area=nombre_area
         super(PosicionAlojamiento, self).__init__()
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
@@ -33,7 +34,7 @@ class PosicionAlojamiento(QMainWindow):
         alto = self.ui.alto_num.value()
         largo = self.ui.largo_num.value()
         limite = self.ui.limite_num.value()
-        posicion=self.ui.comboBox_area().currentText()
+        posicion=self.ui.comboBox_area.currentText()
         if al.verificar_posicion(posicion)==1:
             al.Alojamiento.modificar_alojamiento(posicion,largo,ancho,alto,limite)
         else:
@@ -43,7 +44,6 @@ class PosicionAlojamiento(QMainWindow):
 
     # RELLENAR CAMPOS
     def cbox_posicion(self):
-        global area
-        data=al.contar_filas_area(area)
+        data=al.mostrar_filas_area(self.area)
         for codigos in data:
-            self.ui.comboBox_pasillo.addItem(codigos)
+            self.ui.comboBox_area.addItem(codigos[0])
