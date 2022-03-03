@@ -7,14 +7,12 @@ from DB import conexion as c
 
 class Area:
 
-    def __init__(self, nombre, identificador,posicion, pasillos, segmentos,columnas,niveles,entrada,salida):
+    def __init__(self, nombre, identificador,posicion, pasillos, segmentos,entrada,salida):
         self.nombre = nombre
         self.identificador = identificador
         self.posicion=posicion
         self.pasillos = pasillos
         self.segmentos = segmentos
-        self.columnas=columnas
-        self.niveles=niveles
         self.entrada=entrada
         self.salida=salida
         self.disponibilidad = 100
@@ -25,8 +23,8 @@ class Area:
         a = c.start_connection()
         cursor = a.cursor()
         try:
-            query = "INSERT INTO area(nombre,identificador,posicion,pasillos,segmentos,columnas,niveles,disponibilidad) VALUES (%s,%s,%s,%s,%s,%s,%s,%s) "
-            values = (self.nombre, self.identificador,self.posicion, self.pasillos, self.segmentos, self.columnas,self.niveles,self.disponibilidad)
+            query = "INSERT INTO area(nombre,identificador,posicion,pasillos,segmentos,disponibilidad) VALUES (%s,%s,%s,%s,%s,%s) "
+            values = (self.nombre, self.identificador,self.posicion, self.pasillos, self.segmentos,self.disponibilidad)
             cursor.execute(query, values)
             a.commit()
             print("se dio alta al area correctamente")
@@ -34,7 +32,7 @@ class Area:
             print("Hubo un error:", err)
         c.close_connection(a)
 
-    def modificar_area(nombre, iden , posicion, pasillos, segmentos,columnas,niveles, entrada, salida):
+    def modificar_area(nombre, iden , posicion, pasillos, segmentos, entrada, salida):
         a = c.start_connection()
         cursor = a.cursor()
         query = "SELECT idarea FROM area WHERE nombre=%s"
@@ -70,14 +68,6 @@ class Area:
                 a.commit()
                 query = "UPDATE area SET segmentos=%s WHERE idarea=%s"
                 values = (segmentos, ida)
-                cursor.execute(query, values)
-                a.commit()
-                query = "UPDATE area SET columnas=%s WHERE idarea=%s"
-                values = (columnas, ida)
-                cursor.execute(query, values)
-                a.commit()
-                query = "UPDATE area SET niveles=%s WHERE idarea=%s"
-                values = (niveles, ida)
                 cursor.execute(query, values)
                 a.commit()
                 query = "UPDATE area SET entrada=%s WHERE idarea=%s"
@@ -134,7 +124,7 @@ class Area:
         cursor.execute(query, nombre)
         data = cursor.fetchall()
         a.commit()
-        if area == "None":
+        if data == "None":
             print("no se encontro el area indicado")
             return 0
         else:
@@ -242,7 +232,7 @@ def contar_segmentos(area):
     c.close_connection(a)
     return n
 
-def contar_columnas(are):
+def contar_columnas(area):
     a = c.start_connection()
     cursor = a.cursor()
     query = "SELECT columnas FROM area WHERE=%s"
@@ -287,12 +277,12 @@ def ver_posicion(area):
     a = c.start_connection()
     cursor = a.cursor()
     query = "SELECT posicion FROM area where nombre=%s"
-    cursor.execute(query,nombre)
+    cursor.execute(query,area)
     a.commit()
     b = cursor.fetchall()
     nombre=str(b[0][0])
+    c.close_connection()
     return nombre
-    c.close_connection(a)
 
 def ver_e():
     a = c.start_connection()
@@ -320,6 +310,29 @@ def ver_s():
         return b
     c.close_connection(a)
 
+def ver_segmentos(area):
+    a = c.start_connection()
+    cursor = a.cursor()
+    query = "SELECT segmentos FROM area where nombre=%s"
+    cursor.execute(query,area)
+    a.commit()
+    b = cursor.fetchall()
+    data=str(b[0][0])
+    c.close_connection(a)
+    return data
+
+def ver_pasillos(area):
+    a = c.start_connection()
+    cursor = a.cursor()
+    query = "SELECT pasillos FROM area where nombre=%s"
+    cursor.execute(query,area)
+    a.commit()
+    b = cursor.fetchall()
+    data=str(b[0][0])
+    c.close_connection(a)
+    return data
+
+""""
 def ver_area_siguiente(area):
     data=mz.importar_datos_matriz()
     nfilas=data[0][0]
@@ -342,4 +355,4 @@ def ver_area_siguiente(area):
                     pos = str(str(ifilas) + "x" + str(icol))
                     return ver_area_posicion(pos)
             ifilas=ifilas+1
-
+"""

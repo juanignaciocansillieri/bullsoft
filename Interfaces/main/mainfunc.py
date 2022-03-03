@@ -120,6 +120,7 @@ class Modern(QMainWindow):
         self.ui.tableWidget_usuarios.doubleClicked.connect(self.seleccionarusuario)
         self.ui.tableWidget_usuarios.doubleClicked.connect(self.mostrar_bm_user)
 
+
         ########################## DEPOSITOS ##################################
 
         #self.ui.deposito_btn.clicked.connect(self.mostra_areas)
@@ -145,6 +146,7 @@ class Modern(QMainWindow):
         self.ui.btn_modificarArea.clicked.connect(lambda: self.modificar_area(globalArea))
         self.ui.newArea_btn_2.clicked.connect(self.mostrar_borrar_area)
         self.ui.btn_nuevaEstanteria.clicked.connect(self.mostrar_nueva_estanteria)
+        self.ui.btn_actualizarNiveles.clicked.connect(self.listar_niveles)
 
         ##########################       ##################################
 
@@ -610,10 +612,14 @@ class Modern(QMainWindow):
     def listar_niveles(self):
         global globalPosicion
         global globalArea
-        niveles = int(es.contar_nieveles(globalArea,globalPosicion))
+        table_row = 0
+        posicion = globalPosicion.split(sep="-")
+        niveles = int(es.contar_niveles(globalArea,posicion[2]))
+
         for n in range(niveles):
-            item = self.ui.tableWidget_niveles.verticalHeaderItem(n)
-            item.setText("Nivel " + str(n))
+            item = QtWidgets.QTableWidgetItem()
+            self.ui.tableWidget_niveles.setVerticalHeaderItem(n,item)
+            item.setText("Nivel " + str(n+1))
     # CREAR DEPÓSITO
     def crear_deposito(self):
 
@@ -623,7 +629,6 @@ class Modern(QMainWindow):
         for x in range(largo_area):
             for y in range(ancho_area):
                 mz.crear_matriz_areas(x+1,y+1)
-
 
 
     # LISTAR USUARIOS EN TABLA

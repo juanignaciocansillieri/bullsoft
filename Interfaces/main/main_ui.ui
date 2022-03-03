@@ -1646,7 +1646,7 @@ color: #fff ;
 </string>
                  </property>
                  <property name="text">
-                  <string>Código EAN</string>
+                  <string>Código Posición</string>
                  </property>
                 </widget>
                </item>
