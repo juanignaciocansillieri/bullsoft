@@ -47,12 +47,12 @@ class ProductWindow(QMainWindow):
         condicion = self.ui.area_comboBox.currentText()
         posicion = self.ui.posicion_comboBox.currentText()
 
+        volumen = self.ui.num_volumen.value()
+        precio = self.ui.num_precio.value()
         peso = self.ui.peso_num.value()
-        ancho = self.ui.ancho_num.value()
-        altura = self.ui.altura_num.value()
-        largo = self.ui.largo_num.value()
 
-        if codigo == "" or descripcion == "" or cantidad == 0 or marca == "" or venc == "" or lote == "" or peso == "" or ancho == "" or largo == "" or altura == "":
+
+        if codigo == "" or descripcion == "" or cantidad == 0 or marca == "" or venc == "" or lote == "" or precio == "" or volumen == "" or peso == "":
             QtWidgets.QMessageBox.critical(self, "Error", "Ingrese todos los datos")
             return None
         data = pr.Productos.verificar(codigo)
@@ -62,7 +62,7 @@ class ProductWindow(QMainWindow):
             return None
         else:
             pr.Productos(codigo, marca, cantidad, descripcion, posicion, lote, venc, condicion, fragil, defaultImg,
-                         peso, largo, ancho, altura)
+                         peso, volumen, precio)
 
         self.close()
 
@@ -82,9 +82,8 @@ class ProductWindow(QMainWindow):
         self.ui.cantidad_num.setValue("")
         self.ui.lote_input.setText("")
         self.ui.peso_num.setValue("")
-        self.ui.ancho_num.setValue("")
-        self.ui.largo_num.setValue("")
-        self.ui.altura_num.setValue("")
+        self.ui.num_precio.setValue("")
+        self.ui.num_volumen.setValue("")
         self.ui.marca_input.setText("")
         self.ui.venc_date.setDate("")
         self.ui.descripcion_input.setText("")

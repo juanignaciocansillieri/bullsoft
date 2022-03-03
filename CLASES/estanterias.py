@@ -90,3 +90,14 @@ class Estanterias:
                 iniveles=iniveles+1
             iniveles=0
             icolumnas=icolumnas+1
+
+    def contar_niveles(area, posicion):
+                a = c.start_connection()
+                cursor = a.cursor()
+                query = "SELECT niveles FROM estanterias where area=%s and posicion=%s"
+                cursor.execute(query, (area, posicion))
+                a.commit()
+                b = cursor.fetchall()
+                b = b[0][0]
+                c.close_connection(a)
+                return b

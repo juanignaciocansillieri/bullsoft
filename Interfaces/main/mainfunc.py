@@ -6,7 +6,7 @@ from PyQt5 import QtGui
 from PyQt5 import QtWidgets
 from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
-from CLASES import usuarios as u, productos as p, area as ar, movimientos as m, lotes as l, alojamiento as al
+from CLASES import usuarios as u, productos as p, area as ar, movimientos as m, lotes as l, alojamiento as al,estanterias as es
 from DB import loginDB,conexion as conex
 from Interfaces.main.bm_producto import Ui_MainWindow as Ui_Bm
 from Interfaces.main.bm_user_ui import Ui_MainWindow as Bmu
@@ -596,6 +596,14 @@ class Modern(QMainWindow):
     def listar_productos_posicion(self):
         global globalPosicion
         self.ui.label_posicion.setText(globalPosicion)
+
+    def listar_niveles(self):
+        global globalPosicion
+        global globalArea
+        niveles = int(es.contar_nieveles(globalArea,globalPosicion))
+        for n in range(niveles):
+            item = self.ui.tableWidget_niveles.verticalHeaderItem(n)
+            item.setText("Nivel " + str(n))
     # CREAR DEPÓSITO
     def crear_deposito(self):
 
@@ -726,11 +734,10 @@ class BMProduct(QMainWindow):
             self.ui.fragil_no.setChecked(1)
 
         self.ui.peso_num.setValue(atributos[9])
-        self.ui.largo_num.setValue(atributos[10])
-        self.ui.ancho_num.setValue(atributos[11])
-        self.ui.altura_num.setValue(atributos[12])
+        self.ui.num_volumen.setValue(atributos[10])
+        self.ui.num_precio.setValue(atributos[11])
         self.cbox()
-        self.ui.estado_cbox.setCurrentText(atributos[13])
+        self.ui.estado_cbox.setCurrentText(atributos[12])
         self.ui.ubicacion_cbox.setCurrentText(atributos[4])
 
     def modificar_producto(self):
@@ -748,12 +755,11 @@ class BMProduct(QMainWindow):
             fragil = "0"
 
         peso = self.ui.peso_num.value()
-        ancho = self.ui.ancho_num.value()
-        altura = self.ui.altura_num.value()
-        largo = self.ui.largo_num.value()
+        volumen = self.ui.num_volumen.value()
+        precio = self.ui.num_precio.value()
         foto = defaultImg
         p.Productos.modificar_produc(codigoViejo, codigo, marca, descripcion, ubicacion, condicion, fragil, foto, peso,
-                                     largo, ancho, altura)
+                                     volumen,precio)
         self.close()
 
     def borrar_producto(self):

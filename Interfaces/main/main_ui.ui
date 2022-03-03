@@ -1204,7 +1204,7 @@ border:none</string>
           <item>
            <widget class="QStackedWidget" name="stackedWidget_main">
             <property name="currentIndex">
-             <number>3</number>
+             <number>1</number>
             </property>
             <widget class="QWidget" name="page_deposito">
              <layout class="QVBoxLayout" name="verticalLayout_13">
@@ -1468,9 +1468,9 @@ QPushButton:hover{
              <widget class="QLabel" name="label_posicion">
               <property name="geometry">
                <rect>
-                <x>410</x>
+                <x>0</x>
                 <y>20</y>
-                <width>111</width>
+                <width>981</width>
                 <height>71</height>
                </rect>
               </property>
@@ -1485,45 +1485,620 @@ QPushButton:hover{
               <property name="text">
                <string>TextLabel</string>
               </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
              </widget>
              <widget class="QTableWidget" name="tableWidget_niveles">
               <property name="geometry">
                <rect>
                 <x>30</x>
-                <y>130</y>
-                <width>871</width>
-                <height>231</height>
+                <y>170</y>
+                <width>931</width>
+                <height>201</height>
                </rect>
               </property>
+              <property name="styleSheet">
+               <string notr="true">QTableWidget{
+font-size: 11pt;
+margin-left: 0px;
+margin-top:15px;
+color: #000;
+font-family: Cairo Semibold;
+text-align:center;
+border:none
+
+}
+QheaderView::item
+    {
+text-align:center;
+
+    }
+QHeaderView::section {
+	background-color: #fff;
+	border-radius: 5px;
+	color:#000;
+    font-size: 12pt;
+	font-family:Cairo;
+    font-weight: bold;
+
+
+}
+</string>
+              </property>
+              <property name="editTriggers">
+               <set>QAbstractItemView::AnyKeyPressed</set>
+              </property>
+              <property name="showGrid">
+               <bool>false</bool>
+              </property>
+              <attribute name="horizontalHeaderVisible">
+               <bool>false</bool>
+              </attribute>
               <attribute name="horizontalHeaderDefaultSectionSize">
-               <number>206</number>
+               <number>213</number>
+              </attribute>
+              <attribute name="horizontalHeaderHighlightSections">
+               <bool>false</bool>
               </attribute>
               <attribute name="horizontalHeaderMinimumSectionSize">
                <number>50</number>
               </attribute>
+              <attribute name="verticalHeaderVisible">
+               <bool>true</bool>
+              </attribute>
+              <attribute name="verticalHeaderCascadingSectionResizes">
+               <bool>false</bool>
+              </attribute>
               <attribute name="verticalHeaderDefaultSectionSize">
                <number>42</number>
               </attribute>
+              <attribute name="verticalHeaderHighlightSections">
+               <bool>true</bool>
+              </attribute>
               <column>
                <property name="text">
-                <string>Código</string>
+                <string>New Column</string>
                </property>
               </column>
               <column>
                <property name="text">
-                <string>Volumen</string>
+                <string>New Column</string>
                </property>
               </column>
               <column>
                <property name="text">
-                <string>Límite de Peso</string>
+                <string>New Column</string>
                </property>
               </column>
               <column>
                <property name="text">
-                <string>Disponibilidad</string>
+                <string>New Column</string>
                </property>
               </column>
+             </widget>
+             <widget class="QPushButton" name="btn_volver_niveles">
+              <property name="geometry">
+               <rect>
+                <x>40</x>
+                <y>60</y>
+                <width>75</width>
+                <height>23</height>
+               </rect>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QPushButton{
+background-color: #055ffc;
+color:#fff;
+border-radius: 5px;
+text-align:center;
+}
+
+QPushButton:hover{
+
+}</string>
+              </property>
+              <property name="text">
+               <string>volver</string>
+              </property>
+             </widget>
+             <widget class="QFrame" name="frame_37">
+              <property name="geometry">
+               <rect>
+                <x>90</x>
+                <y>140</y>
+                <width>841</width>
+                <height>41</height>
+               </rect>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>156</width>
+                <height>41</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background-color: #212325;
+color:#fff;
+border-radius:8px;
+padding-left:4px;</string>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
+              </property>
+              <layout class="QHBoxLayout" name="horizontalLayout_2">
+               <item>
+                <widget class="QLabel" name="label_78">
+                 <property name="font">
+                  <font>
+                   <family>Cairo</family>
+                   <pointsize>13</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">background: none;
+color: #fff ;
+</string>
+                 </property>
+                 <property name="text">
+                  <string>Código EAN</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="label_79">
+                 <property name="font">
+                  <font>
+                   <family>Cairo</family>
+                   <pointsize>13</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">background: none;
+color: #fff ;
+
+</string>
+                 </property>
+                 <property name="text">
+                  <string>Volumen</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="label_80">
+                 <property name="font">
+                  <font>
+                   <family>Cairo</family>
+                   <pointsize>13</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">background: none;
+color: #fff ;
+</string>
+                 </property>
+                 <property name="text">
+                  <string>Límite de Peso</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="label_81">
+                 <property name="font">
+                  <font>
+                   <family>Cairo</family>
+                   <pointsize>13</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">background: none;
+color: #fff ;
+</string>
+                 </property>
+                 <property name="text">
+                  <string>Disponibilidad</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QPushButton" name="btn_actualizarNiveles">
+              <property name="geometry">
+               <rect>
+                <x>940</x>
+                <y>148</y>
+                <width>26</width>
+                <height>26</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <family>Roboto</family>
+                <pointsize>10</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="cursor">
+               <cursorShape>PointingHandCursor</cursorShape>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QPushButton{
+border:none;
+font-family: Roboto;
+border-radius:5px;
+text-align: center;
+color: #282830 ;
+background: #212325
+
+}
+
+QPushButton:hover{
+		color:rgb(116, 116, 138)
+
+}</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="icon">
+               <iconset resource="img/img.qrc">
+                <normaloff>:/img/lupa y actualizar_actualizar.png</normaloff>:/img/lupa y actualizar_actualizar.png</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>14</width>
+                <height>16</height>
+               </size>
+              </property>
+              <property name="checkable">
+               <bool>true</bool>
+              </property>
+             </widget>
+             <widget class="QFrame" name="frame_38">
+              <property name="geometry">
+               <rect>
+                <x>30</x>
+                <y>400</y>
+                <width>901</width>
+                <height>41</height>
+               </rect>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>82</width>
+                <height>41</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background-color: #212325;
+color:#fff;
+border-radius:8px;
+padding-left:4px;</string>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
+              </property>
+              <layout class="QHBoxLayout" name="horizontalLayout_19">
+               <item alignment="Qt::AlignLeft">
+                <widget class="QLabel" name="label_82">
+                 <property name="font">
+                  <font>
+                   <family>Cairo</family>
+                   <pointsize>13</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">background: none;
+color: #fff ;
+</string>
+                 </property>
+                 <property name="text">
+                  <string>Código EAN</string>
+                 </property>
+                </widget>
+               </item>
+               <item alignment="Qt::AlignLeft">
+                <widget class="QLabel" name="label_83">
+                 <property name="font">
+                  <font>
+                   <family>Cairo</family>
+                   <pointsize>13</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">background: none;
+color: #fff ;
+
+</string>
+                 </property>
+                 <property name="text">
+                  <string>Descripción</string>
+                 </property>
+                </widget>
+               </item>
+               <item alignment="Qt::AlignLeft">
+                <widget class="QLabel" name="label_84">
+                 <property name="font">
+                  <font>
+                   <family>Cairo</family>
+                   <pointsize>13</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">background: none;
+color: #fff ;
+</string>
+                 </property>
+                 <property name="text">
+                  <string>Marca</string>
+                 </property>
+                </widget>
+               </item>
+               <item alignment="Qt::AlignLeft">
+                <widget class="QLabel" name="label_85">
+                 <property name="font">
+                  <font>
+                   <family>Cairo</family>
+                   <pointsize>13</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">background: none;
+color: #fff ;
+</string>
+                 </property>
+                 <property name="text">
+                  <string>Cantidad</string>
+                 </property>
+                </widget>
+               </item>
+               <item alignment="Qt::AlignLeft">
+                <widget class="QLabel" name="label_86">
+                 <property name="font">
+                  <font>
+                   <family>Cairo</family>
+                   <pointsize>13</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">background: none;
+color: #fff ;
+</string>
+                 </property>
+                 <property name="text">
+                  <string>Primer Vencimiento</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QTableWidget" name="tableWidget_prodNiveles">
+              <property name="geometry">
+               <rect>
+                <x>40</x>
+                <y>430</y>
+                <width>921</width>
+                <height>251</height>
+               </rect>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>489</height>
+               </size>
+              </property>
+              <property name="cursor" stdset="0">
+               <cursorShape>PointingHandCursor</cursorShape>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QTableWidget{
+font-size: 11pt;
+margin-left: 0px;
+margin-top:15px;
+color: #000;
+font-family: Cairo Semibold;
+text-align:center;
+}
+QheaderView::item
+    {
+text-align:center;
+
+    }
+QHeaderView::section {
+    background-color: #394353;
+	border-radius: 11px;
+	color:#fff;
+    font-size: 9pt;
+	font-family:Roboto;
+}
+
+QHeaderView::section:horizontal
+{
+    border-top: 1px solid #394353;
+
+}
+
+QHeaderView::section:vertical
+{
+
+    border-left: 1px solid #394353;
+}</string>
+              </property>
+              <property name="editTriggers">
+               <set>QAbstractItemView::NoEditTriggers</set>
+              </property>
+              <property name="showGrid">
+               <bool>false</bool>
+              </property>
+              <attribute name="horizontalHeaderVisible">
+               <bool>false</bool>
+              </attribute>
+              <attribute name="horizontalHeaderCascadingSectionResizes">
+               <bool>true</bool>
+              </attribute>
+              <attribute name="horizontalHeaderDefaultSectionSize">
+               <number>185</number>
+              </attribute>
+              <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+               <bool>true</bool>
+              </attribute>
+              <attribute name="horizontalHeaderStretchLastSection">
+               <bool>true</bool>
+              </attribute>
+              <attribute name="verticalHeaderVisible">
+               <bool>false</bool>
+              </attribute>
+              <attribute name="verticalHeaderDefaultSectionSize">
+               <number>41</number>
+              </attribute>
+              <row>
+               <property name="text">
+                <string>New Row</string>
+               </property>
+              </row>
+              <row>
+               <property name="text">
+                <string>New Row</string>
+               </property>
+              </row>
+              <row>
+               <property name="text">
+                <string>New Row</string>
+               </property>
+              </row>
+              <row>
+               <property name="text">
+                <string>New Row</string>
+               </property>
+              </row>
+              <column>
+               <property name="text">
+                <string>New Column</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>New Column</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>New Column</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>New Column</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>New Column</string>
+               </property>
+              </column>
+              <item row="0" column="0">
+               <property name="text">
+                <string>a</string>
+               </property>
+              </item>
+              <item row="0" column="1">
+               <property name="text">
+                <string>a</string>
+               </property>
+              </item>
+              <item row="0" column="2">
+               <property name="text">
+                <string>a</string>
+               </property>
+              </item>
+              <item row="0" column="3">
+               <property name="text">
+                <string>a</string>
+               </property>
+              </item>
+              <item row="0" column="4">
+               <property name="text">
+                <string>a</string>
+               </property>
+              </item>
+             </widget>
+             <widget class="QPushButton" name="btn_actualizarProdNiveles">
+              <property name="geometry">
+               <rect>
+                <x>940</x>
+                <y>410</y>
+                <width>26</width>
+                <height>26</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <family>Roboto</family>
+                <pointsize>10</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="cursor">
+               <cursorShape>PointingHandCursor</cursorShape>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QPushButton{
+border:none;
+font-family: Roboto;
+border-radius:5px;
+text-align: center;
+color: #282830 ;
+background: #212325
+
+}
+
+QPushButton:hover{
+		color:rgb(116, 116, 138)
+
+}</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="icon">
+               <iconset resource="img/img.qrc">
+                <normaloff>:/img/lupa y actualizar_actualizar.png</normaloff>:/img/lupa y actualizar_actualizar.png</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>14</width>
+                <height>16</height>
+               </size>
+              </property>
+              <property name="checkable">
+               <bool>true</bool>
+              </property>
              </widget>
             </widget>
             <widget class="QWidget" name="page_area">
@@ -1954,6 +2529,59 @@ QPushButton:hover{
                       <width>13</width>
                       <height>13</height>
                      </size>
+                    </property>
+                   </widget>
+                   <widget class="QPushButton" name="btn_actualizar_estanteria">
+                    <property name="geometry">
+                     <rect>
+                      <x>630</x>
+                      <y>60</y>
+                      <width>26</width>
+                      <height>26</height>
+                     </rect>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Roboto</family>
+                      <pointsize>10</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="cursor">
+                     <cursorShape>PointingHandCursor</cursorShape>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">QPushButton{
+border:none;
+font-family: Roboto;
+border-radius:5px;
+text-align: center;
+color: #282830 ;
+background: #212325
+
+}
+
+QPushButton:hover{
+		color:rgb(116, 116, 138)
+
+}</string>
+                    </property>
+                    <property name="text">
+                     <string/>
+                    </property>
+                    <property name="icon">
+                     <iconset resource="img/img.qrc">
+                      <normaloff>:/img/lupa y actualizar_actualizar.png</normaloff>:/img/lupa y actualizar_actualizar.png</iconset>
+                    </property>
+                    <property name="iconSize">
+                     <size>
+                      <width>14</width>
+                      <height>16</height>
+                     </size>
+                    </property>
+                    <property name="checkable">
+                     <bool>true</bool>
                     </property>
                    </widget>
                   </widget>
@@ -2783,7 +3411,7 @@ QPushButton:hover{
                   <rect>
                    <x>49</x>
                    <y>180</y>
-                   <width>411</width>
+                   <width>401</width>
                    <height>41</height>
                   </rect>
                  </property>
@@ -2808,7 +3436,7 @@ border-radius:15px;</string>
                    <rect>
                     <x>20</x>
                     <y>10</y>
-                    <width>47</width>
+                    <width>81</width>
                     <height>18</height>
                    </rect>
                   </property>
@@ -2826,7 +3454,7 @@ color: #fff ;
 </string>
                   </property>
                   <property name="text">
-                   <string>Código</string>
+                   <string>Código EAN</string>
                   </property>
                  </widget>
                  <widget class="QLabel" name="label_76">
@@ -3067,7 +3695,7 @@ QHeaderView::section:vertical
                 <widget class="QListWidget" name="lista_egreso">
                  <property name="geometry">
                   <rect>
-                   <x>560</x>
+                   <x>590</x>
                    <y>210</y>
                    <width>361</width>
                    <height>391</height>
@@ -3099,7 +3727,7 @@ QHeaderView::section:vertical
                 <widget class="QLabel" name="label_17">
                  <property name="geometry">
                   <rect>
-                   <x>680</x>
+                   <x>700</x>
                    <y>170</y>
                    <width>128</width>
                    <height>40</height>
@@ -3168,6 +3796,65 @@ QPushButton:hover{
                  </property>
                  <property name="text">
                   <string>Eliminar</string>
+                 </property>
+                </widget>
+                <widget class="QPushButton" name="btn_volver_egreso">
+                 <property name="geometry">
+                  <rect>
+                   <x>50</x>
+                   <y>30</y>
+                   <width>75</width>
+                   <height>23</height>
+                  </rect>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QPushButton{
+background-color: #055ffc;
+color:#fff;
+border-radius: 5px;
+text-align:center;
+}
+
+QPushButton:hover{
+
+}</string>
+                 </property>
+                 <property name="text">
+                  <string>volver</string>
+                 </property>
+                </widget>
+                <widget class="QPushButton" name="btn_confirmarPicking">
+                 <property name="geometry">
+                  <rect>
+                   <x>40</x>
+                   <y>650</y>
+                   <width>121</width>
+                   <height>26</height>
+                  </rect>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Cairo</family>
+                   <pointsize>10</pointsize>
+                  </font>
+                 </property>
+                 <property name="cursor">
+                  <cursorShape>PointingHandCursor</cursorShape>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QPushButton{
+background-color: #055ffc;
+color:#fff;
+border-radius: 5px;
+text-align:center;
+}
+
+QPushButton:hover{
+
+}</string>
+                 </property>
+                 <property name="text">
+                  <string>Confirmar</string>
                  </property>
                 </widget>
                </widget>
@@ -3866,7 +4553,7 @@ color: #fff ;
 </string>
                        </property>
                        <property name="text">
-                        <string>Código</string>
+                        <string>Código EAN</string>
                        </property>
                       </widget>
                      </item>
@@ -4801,7 +5488,7 @@ padding-left:4px;</string>
                       <rect>
                        <x>13</x>
                        <y>9</y>
-                       <width>61</width>
+                       <width>111</width>
                        <height>32</height>
                       </rect>
                      </property>
@@ -4819,13 +5506,13 @@ color: #fff ;
 </string>
                      </property>
                      <property name="text">
-                      <string>Código</string>
+                      <string>Código EAN</string>
                      </property>
                     </widget>
                     <widget class="QLabel" name="label_60">
                      <property name="geometry">
                       <rect>
-                       <x>130</x>
+                       <x>140</x>
                        <y>9</y>
                        <width>97</width>
                        <height>32</height>
