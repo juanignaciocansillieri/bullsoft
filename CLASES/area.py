@@ -267,7 +267,7 @@ def contar_niveles(area):
     return n
 
 
-def ver_area_posicion(posicion):
+def confirmar_area_disponible(posicion):
     a = c.start_connection()
     cursor = a.cursor()
     query = "SELECT nombre FROM area where posicion=%s"
@@ -279,7 +279,7 @@ def ver_area_posicion(posicion):
     if posicion!=b:
         return 0
     else:
-        return b
+        return 1
     c.close_connection(a)
 
 

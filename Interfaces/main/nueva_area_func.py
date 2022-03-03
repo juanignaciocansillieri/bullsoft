@@ -57,7 +57,7 @@ class NewArea(QMainWindow):
             else:
                 entrada=0
                 salida=1
-        if ar.ver_area_posicion(posicion) == 1:
+        if ar.confirmar_area_disponible(posicion) == 1:
             a.Area.modificar_area(nom, ide , posicion, pasillo, segmento, 0, 0,entrada,salida)
         else:
             QtWidgets.QMessageBox.critical(self, "Error", "Espacio ya ocupado")

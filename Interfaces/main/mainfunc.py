@@ -14,7 +14,7 @@ from Interfaces.main.create_user_func import UsuarioWindow
 from Interfaces.main.delete_area import BorrarArea
 from Interfaces.main.egreso_func import NewEgreso
 from Interfaces.main.ingreso_func import NewIngreso
-from Interfaces.main.main import Ui_MainWindow
+from Interfaces.main.new_main import Ui_MainWindow
 from Interfaces.main.modificar_area import ModificarArea as Ma
 from Interfaces.main.nueva_area import Ui_MainWindow as Na
 from Interfaces.main.nueva_area_func import NewArea

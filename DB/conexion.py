@@ -162,8 +162,8 @@ def crear_tabla():  # crea una tabla (al iniciar por primera vez el programa se 
     posicion VARCHAR(20) NOT NULL,
     pasillos VARCHAR(20) NOT NULL,
     segmentos VARCHAR(20) NOT NULL,
-    columnas VARCHAR(20) NOT NULL,
-    niveles VARCHAR(20) NOT NULL,
+    #columnas VARCHAR(20) NOT NULL,
+    #niveles VARCHAR(20) NOT NULL,
     entrada INT,
     salida INT,
     disponibilidad VARCHAR(5) NOT NULL
@@ -175,11 +175,11 @@ def crear_tabla():  # crea una tabla (al iniciar por primera vez el programa se 
     marca VARCHAR(20) NOT NULL,
     descripcion VARCHAR(50) NOT NULL,
     ubicacion VARCHAR(20) NOT NULL,
-    condicion VARCHAR(20) NOT NULL,
     fragil BINARY(1) NOT NULL,
     foto VARCHAR(100) NOT NULL,
     peso INT NOT NULL,
-    volumen INT NOT NULL
+    volumen INT NOT NULL,
+    precio INT
     );"""
 
     q13 = """CREATE TABLE IF NOT EXISTS movimientos (
@@ -189,6 +189,15 @@ def crear_tabla():  # crea una tabla (al iniciar por primera vez el programa se 
     cantidad INT NOT NULL,
     motivo VARCHAR(20) NOT NULL,
     fecha DATE NOT NULL
+    );"""
+
+    q16 = """CREATE TABLE IF NOT EXISTS estanterias (
+    idestanterias INT UNSIGNED AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    codigo VARCHAR(20) NOT NULL,
+    area VARCHAR(20) NOT NULL,
+    pasillo VARCHAR()20 NOT NULL,
+    columnas VARCHAR(20) NOT NULL,
+    niveles VARCHAR(20) NOT NULL,
     );"""
 
     con = first_connection()
@@ -209,6 +218,7 @@ def crear_tabla():  # crea una tabla (al iniciar por primera vez el programa se 
         cur.execute(q12)
         cur.execute(q13)
         cur.execute(q14)
+        cur.execute(q16)
         cur.close()
     except pymysql.err.OperationalError as err:
         print("Hubo un error:", err)
