@@ -5,7 +5,7 @@ from DB import conexion as c
 
 
 class Productos:
-    def __init__(self, codigo, marca, cantidad, descripcion, ubicacion, fechalote, vencimiento, condicion, fragil, foto,
+    def __init__(self, codigo, marca, cantidad, descripcion, ubicacion, fechalote, vencimiento, fragil, foto,
                  peso,volumen, precio):
         self.codigo = codigo
         self.marca = marca
@@ -15,7 +15,6 @@ class Productos:
         self.foto = foto
         self.fechalote = fechalote
         self.vencimiento = vencimiento
-        self.condicion = condicion
         self.fragil = fragil
         self.peso = peso
         self.volumen=volumen
@@ -26,15 +25,13 @@ class Productos:
         a = c.start_connection()
         cursor = a.cursor()
         try:
-            query = "INSERT INTO productos (codigo, marca, descripcion,ubicacion,condicion,fragil,foto,peso," \
+            query = "INSERT INTO productos (codigo, marca, descripcion,ubicacion,fragil,foto,peso," \
                     "volumen,precio) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s) "
-            values = (self.codigo, self.marca, self.descripcion, self.ubicacion, self.condicion, self.fragil, self.foto,
+            values = (self.codigo, self.marca, self.descripcion, self.ubicacion, self.fragil, self.foto,
                       self.peso, self.volumen,self.precio)
             cursor.execute(query, values)
             a.commit()
             lotes.Lote(self.codigo, self.cantidad, self.fechalote, self.vencimiento)
-            alojamiento.Alojamiento.ab_alojamiento(self.codigo)
-
             print("se dio alta producto correctamente")
 
         except pymysql.err.OperationalError as err:
@@ -50,7 +47,7 @@ class Productos:
         lotes.Lote.eliminar_prod_lote(codigo)
         print("Se elimino producto correctamente")
 
-    def modificar_produc(codigov, codigon, marca, descripcion, ubicacion, condicion, fragil, foto, peso,volumen, precio):
+    def modificar_produc(codigov, codigon, marca, descripcion, ubicacion, fragil, foto, peso,volumen, precio):
         a = c.start_connection()
         cursor = a.cursor()
         query = "SELECT idproductos FROM productos WHERE codigo=%s"
@@ -79,10 +76,6 @@ class Productos:
                 a.commit()
                 query = "UPDATE productos set foto=%s WHERE idproductos=%s"
                 values = (foto, idp)
-                cursor.execute(query, values)
-                a.commit()
-                query = "UPDATE productos set condicion=%s WHERE idproductos=%s"
-                values = (condicion, idp)
                 cursor.execute(query, values)
                 a.commit()
                 query = "UPDATE productos set fragil=%s WHERE idproductos=%s"
@@ -306,6 +299,21 @@ def ver_precio(codigo):
     cursor = a.cursor()
     query = "SELECT precio FROM productos WHERE codigo=%s"
     cursor.execute(query, codigo)
+    data = cursor.fetchall()
+    a.commit()
+    if data == "None":
+        print("no se encontro el producto indicado")
+        return 0
+    else:
+        data = data[0]
+        return data
+    c.close_connection(a)
+
+def ver_posicion(codigo):
+    a = c.start_connection()
+    cursor = a.cursor()
+    query = "SELECT posicion FROM productos WHERE codigo=%s"
+    cursor.execute(query, posicion)
     data = cursor.fetchall()
     a.commit()
     if data == "None":

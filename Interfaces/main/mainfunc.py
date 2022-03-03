@@ -115,7 +115,6 @@ class Modern(QMainWindow):
         else:
             self.ui.users_btn.clicked.connect(
                 lambda: QtWidgets.QMessageBox.critical(self, "Error", "No tiene los permisos suficientes"))
-            # Abrir ventana para ver el producto individual
         self.ui.tableWidget_usuarios.doubleClicked.connect(self.seleccionarusuario)
         self.ui.tableWidget_usuarios.doubleClicked.connect(self.mostrar_bm_user)
 
@@ -123,12 +122,14 @@ class Modern(QMainWindow):
 
         #self.ui.deposito_btn.clicked.connect(self.mostra_areas)
         ## Abrir Pagina Depositos ##
-        verificar_deposito = conex.verificar_deposito()
-        if (verificar_deposito == 0):
+        verificar_deposito = int(conex.verificar_deposito())
+        if (verificar_deposito== 0):
             self.ui.deposito_btn.clicked.connect(lambda: self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_area))
             print("dep0", verificar_deposito)
+            self.mostra_areas()
         else:
             print("dep1", verificar_deposito)
+            self.mostra_areas()
             self.ui.deposito_btn.clicked.connect(lambda: self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_deposito))
         self.ui.deposito_btn.clicked.connect(lambda: self.ui.stackedWidget_3.setCurrentWidget(self.ui.deposito_subpage))
         self.ui.newArea_btn.clicked.connect(self.mostrar_new_area)
@@ -150,9 +151,12 @@ class Modern(QMainWindow):
         if (verificar_deposito == 0):
             self.ui.deposito_btn.clicked.connect(lambda: self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_area))
             print("dep0", verificar_deposito)
+            self.mostra_areas()
         else:
             print("dep1", verificar_deposito)
             self.ui.deposito_btn.clicked.connect(lambda: self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_deposito))
+            self.mostra_areas()
+
 
 
     def click_a(self,event):
@@ -177,6 +181,7 @@ class Modern(QMainWindow):
     def mostrar_new_area(self):
         self.newArea = NewArea()
         self.newArea.show()
+        self.mostra_areas()
 
     def mostrar_ingreso(self):
         self.newMovimiento = NewIngreso()
@@ -226,6 +231,20 @@ class Modern(QMainWindow):
         self.ui.input_codigoProdEgreso.setText("")
         #self.ui.num_cantidadEgreso.
         n_egreso=n_egreso+1
+        self.act_egreso()
+
+    def borrar_egreso(self):
+        global n_egreso
+        global tupla_egreso
+        codigo = self.ui.input_codigoProdEgreso.text()
+        n=len(tupla_egreso)
+        i=0
+        while i<n:
+            if tupla_egreso[i][0] ==codigo:
+                tupla_egreso.pop(i)
+        print(tupla_egreso)
+        self.ui.input_codigoProdEgreso.setText("")
+        n_egreso = n_egreso - 1
         self.act_egreso()
 
     def act_egreso(self):

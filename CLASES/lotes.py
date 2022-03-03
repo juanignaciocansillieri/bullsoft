@@ -1,5 +1,7 @@
 from DB import conexion as c
 import pymysql
+from CLASES import alojamiento, productos
+
 
 
 class Lote:
@@ -20,6 +22,9 @@ class Lote:
             values = (self.idproducto, self.cantidad, self.fechalote, self.vencimiento)
             cursor.execute(query, values)
             a.commit()
+            vol=productos.ver_vol(self.idproducto)*self.cantidad
+            pos=productos.ver_posicion(self.idproducto)
+            alojamiento.modificar_dispo_ingreso(pos,vol)
             print("se dio alta al lote correctamente")
         except pymysql.err.OperationalError as err:
             print("Hubo un error:", err)
