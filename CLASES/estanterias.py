@@ -91,25 +91,56 @@ class Estanterias:
             iniveles=0
             icolumnas=icolumnas+1
 
-def verificar_segmentos(segmento):
-        a = c.start_connection()
-        cursor = a.cursor()
-        query = "SELECT codigo FROM estanterias where posicion=%s"
-        cursor.execute(query,segmento)
-        a.commit()
-        b = cursor.fetchall()
-        if b == "None":
-            return 1
-        else:
-            return 0
+def verificar_segmentos(area,posicion):
+    a = c.start_connection()
+    cursor = a.cursor()
+    query = "SELECT * FROM estanterias where area=%s and posicion=%s"
+    cursor.execute(query,(area,posicion))
+    a.commit()
+    b = cursor.fetchall()
+    print(area,posicion,b)
+    if str(b) == "()":
         c.close_connection(a)
-def contar_niveles(area, posicion):
-                a = c.start_connection()
-                cursor = a.cursor()
-                query = "SELECT niveles FROM estanterias where area=%s and posicion=%s"
-                cursor.execute(query, (area, posicion))
-                a.commit()
-                b = cursor.fetchall()
-                b = b[0][0]
-                c.close_connection(a)
-                return b
+        return 1
+    else:
+        c.close_connection(a)
+        return 0
+
+
+
+
+def contar_estanterias_area(area):
+    a = c.start_connection()
+    cursor = a.cursor()
+    query = "SELECT count(*) FROM estanterias where area=%s"
+    cursor.execute(query, area)
+    a.commit()
+    b = cursor.fetchall()
+    b = b[0][0]
+    n = int(b)
+    c.close_connection(a)
+    return n
+
+def mostrar_columnas(area,posicion):
+    a = c.start_connection()
+    cursor = a.cursor()
+    query = "SELECT columnas FROM estanterias where area=%s and posicion=%s"
+    cursor.execute(query, (area,posicion))
+    a.commit()
+    b = cursor.fetchall()
+    b=b[0][0]
+    c.close_connection(a)
+    return b
+
+def contar_niveles(area,posicion):
+    a = c.start_connection()
+    cursor = a.cursor()
+    query = "SELECT niveles FROM estanterias where area=%s and posicion=%s"
+    cursor.execute(query, (area,posicion))
+    a.commit()
+    b = cursor.fetchall()
+    b=b[0][0]
+    c.close_connection(a)
+    return b
+
+
