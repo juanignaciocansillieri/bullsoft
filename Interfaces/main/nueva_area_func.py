@@ -58,7 +58,7 @@ class NewArea(QMainWindow):
                 entrada=0
                 salida=1
         if ar.confirmar_area_disponible(posicion) == 1:
-            a.Area.modificar_area(nom, ide , posicion, pasillo, segmento, 0, 0,entrada,salida)
+            a.Area.modificar_area(nom, ide , posicion, pasillo, segmento,entrada,salida)
         else:
             QtWidgets.QMessageBox.critical(self, "Error", "Espacio ya ocupado")
             return None
@@ -70,5 +70,5 @@ class NewArea(QMainWindow):
         medidas = mz.importar_datos_matriz()
         for x in range(medidas[0][0]):
             for y in range(medidas[0][1]):
-                self.ui.comboBox.addItem('{}x{}'.format(x+1, y+1))
+                self.ui.comboBox.addItem('{}x{}'.format(y+1, x+1))
 

@@ -21,12 +21,12 @@ class Alojamiento:
         self.volumen = self.largo * self.ancho * self.alto
         self.disponibilidad = 100
         self.posicion = str(
-            str(area) + "" + str(pasillo) + "" + str(self.segmento) + ""+ "" + str(columna) + "" + str(
+            str(area) + "-" + str(pasillo) + "-" + str(self.segmento) + "-"+ str(columna) + "-" + str(
                 nivel))
         self.pasillo = pasillo
         self.limite = limite
         self.codigo = str(
-            str(area) + "" + str(pasillo) + "" + str(self.segmento) + "" "" + str(columna) + "" + str(
+            str(area) + "-" + str(pasillo) + "-" + str(self.segmento) + "-" + str(columna) + "-" + str(
                 nivel))
         print(self.codigo)
         self.alta_alojamiento()

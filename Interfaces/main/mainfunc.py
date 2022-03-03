@@ -14,12 +14,13 @@ from Interfaces.main.create_user_func import UsuarioWindow
 from Interfaces.main.delete_area import BorrarArea
 from Interfaces.main.egreso_func import NewEgreso
 from Interfaces.main.ingreso_func import NewIngreso
-from Interfaces.main.new_main import Ui_MainWindow
+from Interfaces.main.main import Ui_MainWindow
 from Interfaces.main.modificar_area import ModificarArea as Ma
 from Interfaces.main.nueva_area import Ui_MainWindow as Na
 from Interfaces.main.nueva_area_func import NewArea
 from Interfaces.main.nuevoProduct_func import ProductWindow
 from Interfaces.main.posiciones_alojamiento import PosicionAlojamiento as Pa
+from Interfaces.main.nueva_estanteria_func import Nueva_estanteria as ne
 from CLASES import matriz as mz
 
 globalPosicion = ""
@@ -142,6 +143,7 @@ class Modern(QMainWindow):
         self.ui.btn_newPosicion.clicked.connect(lambda: self.new_posicion(globalArea))
         self.ui.btn_modificarArea.clicked.connect(lambda: self.modificar_area(globalArea))
         self.ui.newArea_btn_2.clicked.connect(self.mostrar_borrar_area)
+        self.ui.btn_nuevaEstanteria.clicked.connect(self.mostrar_nueva_estanteria)
 
         ##########################       ##################################
 
@@ -194,6 +196,10 @@ class Modern(QMainWindow):
     def mostrar_borrar_area(self):
         self.borrarArea = BorrarArea()
         self.borrarArea.show()
+
+    def mostrar_nueva_estanteria(self):
+        self.nueva_estanteria = ne(globalArea)
+        self.nueva_estanteria.show()
 
     ## Listar Productos en la tabla
     def listar_productos(self):

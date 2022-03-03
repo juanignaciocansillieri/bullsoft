@@ -195,9 +195,10 @@ def crear_tabla():  # crea una tabla (al iniciar por primera vez el programa se 
     idestanterias INT UNSIGNED AUTO_INCREMENT PRIMARY KEY NOT NULL,
     codigo VARCHAR(20) NOT NULL,
     area VARCHAR(20) NOT NULL,
-    pasillo VARCHAR()20 NOT NULL,
+    pasillo VARCHAR(20) NOT NULL,
+    posicion VARCHAR(20) NOT NULL,
     columnas VARCHAR(20) NOT NULL,
-    niveles VARCHAR(20) NOT NULL,
+    niveles VARCHAR(20) NOT NULL
     );"""
 
     con = first_connection()

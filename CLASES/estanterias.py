@@ -5,11 +5,11 @@ from DB import conexion as c
 
 
 class Estanterias:
-    def __init__(self, codigo,area,pasillo,segmento,columnas,niveles):
+    def __init__(self, codigo,area,pasillo,posicion,columnas,niveles):
         self.codigo=codigo
         self.area=area
         self.pasillo=pasillo
-        self.segmento = segmento
+        self.segmento = posicion
         self.columnas=columnas
         self.niveles=niveles
         self.alta_estanteria()
@@ -19,7 +19,7 @@ class Estanterias:
         a = c.start_connection()
         cursor = a.cursor()
         try:
-            query = "INSERT INTO estanterias (codigo, area, pasillo,segmento,columnas,niveles) VALUES (%s,%s,%s,%s,%s,%s) "
+            query = "INSERT INTO estanterias (codigo, area, pasillo,posicion,columnas,niveles) VALUES (%s,%s,%s,%s,%s,%s) "
             values = (self.codigo, self.area,self.pasillo,self.segmento,self.columnas,self.niveles)
             cursor.execute(query, values)
             a.commit()
@@ -90,3 +90,16 @@ class Estanterias:
                 iniveles=iniveles+1
             iniveles=0
             icolumnas=icolumnas+1
+
+def verificar_segmentos(segmento):
+    a = c.start_connection()
+    cursor = a.cursor()
+    query = "SELECT codigo FROM estanterias where posicion=%s"
+    cursor.execute(query,segmento)
+    a.commit()
+    b = cursor.fetchall()
+    if b == "None":
+        return 1
+    else:
+        return 0
+    c.close_connection(a)
