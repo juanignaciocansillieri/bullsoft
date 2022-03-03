@@ -41,7 +41,7 @@ class NewArea(QMainWindow):
             QtWidgets.QMessageBox.critical(self, "Error", "Llene todos los campos")
             return None
         if segmento<(pasillo*2)-1 or segmento>pasillo*2:
-            QtWidgets.QMessageBox.critical(self, "Error", "Para esa cantidad de pasillos solo puede tener "+str((pasillo*2)-1)+" o "+str(pasilloasillo*2)+" estanterias")
+            QtWidgets.QMessageBox.critical(self, "Error", "Para esa cantidad de pasillos solo puede tener "+str((pasillo*2)-1)+" o "+str(pasillo*2)+" estanterias")
             return None
         if self.ui.radioButton.isChecked()==True:
             if ar.ver_e()==0:
