@@ -211,6 +211,44 @@ def contar_filas():
         c.close_connection(a)
         return n
 
+def mostrar_filas_area(area):
+    a = c.start_connection()
+    cursor = a.cursor()
+    query = "SELECT codigo FROM alojamiento WHERE area=%s"
+    cursor.execute(query,area)
+    a.commit()
+    b = cursor.fetchall()
+    b = str(b[0][0])
+    n = int(b)
+    c.close_connection(a)
+    return n
+
+    def listar_alojamiento_disponibles_area(area):
+        a = c.start_connection()
+        cursor = a.cursor()
+        try:
+            query = "SELECT codigo,largo,ancho,alto,volumen,pasillo,disponibilidad,posicion,limite FROM alojamiento WHERE disponibilidad=0 and area=%s"
+            cursor.execute(query, area)
+            productos = cursor.fetchall()
+
+            a.commit()
+        except pymysql.err.OperationalError as err:
+            print("Hubo un error:", err)
+        c.close_connection(a)
+        return productos
+
+    def contar_filas_disponibles_area(area):
+        a = c.start_connection()
+        cursor = a.cursor()
+        query = "SELECT COUNT(*) FROM alojamiento where disponibilidad=0 and area=%s"
+        cursor.execute(query, area)
+        a.commit()
+        b = cursor.fetchall()
+        b = str(b[0][0])
+        n = int(b)
+        c.close_connection(a)
+        return n
+
 def contar_nivel(nombre):
     a = c.start_connection()
     cursor = a.cursor()
@@ -267,6 +305,17 @@ def ver_dispo(codigo):
     else:
         return data
 
+def verificar_posicion(codigo):
+    a = c.start_connection()
+    cursor = a.cursor()
+    query = "SELECT volumen FROM alojamiento WHERE codigo=%s"
+    cursor.execute(query, codigo)
+    data = cursor.fetchall()
+    a.commit()
+    if data == 0:
+        return 1
+    else:
+        return 0
 
 def pick(producto):
     nal=contar_filas()
