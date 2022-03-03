@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(1192, 686)
+        MainWindow.resize(1192, 703)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.verticalLayout = QtWidgets.QVBoxLayout(self.centralwidget)
@@ -898,6 +898,29 @@ class Ui_MainWindow(object):
         self.btn_nuevaEstanteria.setIcon(icon9)
         self.btn_nuevaEstanteria.setIconSize(QtCore.QSize(13, 13))
         self.btn_nuevaEstanteria.setObjectName("btn_nuevaEstanteria")
+        self.btn_newPosicion = QtWidgets.QPushButton(self.frame_32)
+        self.btn_newPosicion.setGeometry(QtCore.QRect(500, 60, 121, 26))
+        self.btn_newPosicion.setMinimumSize(QtCore.QSize(0, 26))
+        font = QtGui.QFont()
+        font.setFamily("Cairo SemiBold")
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.btn_newPosicion.setFont(font)
+        self.btn_newPosicion.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.btn_newPosicion.setStyleSheet("QPushButton{\n"
+"background-color: #055ffc;\n"
+"color:#fff;\n"
+"border-radius: 5px;\n"
+"text-align:center;\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"\n"
+"}")
+        self.btn_newPosicion.setIcon(icon9)
+        self.btn_newPosicion.setIconSize(QtCore.QSize(13, 13))
+        self.btn_newPosicion.setObjectName("btn_newPosicion")
         self.verticalLayout_22.addWidget(self.frame_32)
         self.frame_11 = QtWidgets.QFrame(self.frame_10)
         self.frame_11.setFrameShape(QtWidgets.QFrame.StyledPanel)
@@ -2167,31 +2190,6 @@ class Ui_MainWindow(object):
 "")
         self.label_area_mod.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
         self.label_area_mod.setObjectName("label_area_mod")
-        self.btn_newPosicion = QtWidgets.QPushButton(self.groupBox_12)
-        self.btn_newPosicion.setGeometry(QtCore.QRect(360, 26, 181, 26))
-        self.btn_newPosicion.setMinimumSize(QtCore.QSize(0, 26))
-        font = QtGui.QFont()
-        font.setFamily("Roboto")
-        font.setPointSize(9)
-        font.setBold(True)
-        font.setWeight(75)
-        self.btn_newPosicion.setFont(font)
-        self.btn_newPosicion.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.btn_newPosicion.setStyleSheet("QPushButton{\n"
-"background-color: rgb(71, 71, 103);\n"
-"color:#fff;\n"
-"padding-right:15px;\n"
-"border-radius: 5px;\n"
-"text-align:right;\n"
-"}\n"
-"\n"
-"QPushButton:hover{\n"
-"background-color: rgba(71, 71, 103,180);\n"
-"\n"
-"}")
-        self.btn_newPosicion.setIcon(icon9)
-        self.btn_newPosicion.setIconSize(QtCore.QSize(13, 13))
-        self.btn_newPosicion.setObjectName("btn_newPosicion")
         self.btn_modificarArea = QtWidgets.QPushButton(self.groupBox_12)
         self.btn_modificarArea.setGeometry(QtCore.QRect(230, 26, 111, 26))
         self.btn_modificarArea.setMinimumSize(QtCore.QSize(0, 26))
@@ -2526,7 +2524,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
         self.stackedWidget_3.setCurrentIndex(0)
-        self.stackedWidget_main.setCurrentIndex(9)
+        self.stackedWidget_main.setCurrentIndex(3)
         self.lista_egreso.setCurrentRow(-1)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
@@ -2562,7 +2560,8 @@ class Ui_MainWindow(object):
         self.label_74.setText(_translate("MainWindow", "Elegir la cantidad de espacios disponibles para áreas"))
         self.btn_crearDeposito.setText(_translate("MainWindow", "Crear Depósito"))
         self.label_nombre_area.setText(_translate("MainWindow", "Nombre Área"))
-        self.btn_nuevaEstanteria.setText(_translate("MainWindow", "Nueva Posición"))
+        self.btn_nuevaEstanteria.setText(_translate("MainWindow", "Nueva Estantería"))
+        self.btn_newPosicion.setText(_translate("MainWindow", "Nueva Posición"))
         self.pushButton.setText(_translate("MainWindow", "volver"))
         self.buscar_input.setPlaceholderText(_translate("MainWindow", "Buscar productos"))
         self.label_47.setText(_translate("MainWindow", "Código"))
@@ -2661,7 +2660,6 @@ class Ui_MainWindow(object):
         self.label_39.setText(_translate("MainWindow", "Ubicación"))
         self.label_38.setText(_translate("MainWindow", "Primer Vencimiento"))
         self.label_area_mod.setText(_translate("MainWindow", "Label"))
-        self.btn_newPosicion.setText(_translate("MainWindow", "Posicion de Alojamiento"))
         self.btn_modificarArea.setText(_translate("MainWindow", "Modificar Área"))
         self.lineEdit_5.setPlaceholderText(_translate("MainWindow", "Buscar movimientos"))
         self.label_59.setText(_translate("MainWindow", "Código"))
