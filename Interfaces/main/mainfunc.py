@@ -1,3 +1,5 @@
+import re
+
 import pymysql
 from PIL import Image
 import os
@@ -22,6 +24,7 @@ from Interfaces.main.nuevoProduct_func import ProductWindow
 from Interfaces.main.posiciones_alojamiento import PosicionAlojamiento as Pa
 from Interfaces.main.nueva_estanteria_func import Nueva_estanteria as ne
 from CLASES import matriz as mz
+from CLASES import  estanterias
 
 globalPosicion = ""
 defaultImg = ""
@@ -564,15 +567,15 @@ class Modern(QMainWindow):
         child = self.ui.gridLayout_2.count()
         print(child)
         print(area)
-        niveles = 3# momentaneo ##cuantas columnas tiene esa estanteria en esa area
+        niveles = 0 ##cuantas columnas tiene esa estanteria en esa area
         pasillos = int(area[0][3])
-        segmentos = int(area[0][4]) ##cuantas estanterias tiene el area
+        segmentos = estanterias.contar_estanterias_area(globalArea) ##cuantas estanterias tiene el area
         vacio = 0
         i = 1
         if child >0:
             for i in reversed(range(self.ui.gridLayout_2.count())):
                 self.ui.gridLayout_2.itemAt(i).widget().deleteLater()
-
+        i=1
         for x in range(segmentos):
             frame = QtWidgets.QFrame(self.ui.frame_area)
             frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
@@ -580,8 +583,8 @@ class Modern(QMainWindow):
             frame.setMaximumSize(QtCore.QSize(50, 200))
             vertical_layout = QtWidgets.QVBoxLayout(frame)
             self.ui.gridLayout_2.addWidget(frame,1,i)
-            ###NIVELES VA ACA
-            for y in range(niveles):
+            niveles=estanterias.mostrar_columnas(globalArea,i)
+            for y in range(int(niveles)):
                 btn_area = QtWidgets.QPushButton(self.ui.frame)
                 btn_area.setMaximumSize(QtCore.QSize(40, 40))
                 btn_area.setObjectName(globalArea + "-" + str(x+1) + "-" + str(y+1))

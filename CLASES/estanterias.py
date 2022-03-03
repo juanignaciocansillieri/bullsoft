@@ -91,15 +91,44 @@ class Estanterias:
             iniveles=0
             icolumnas=icolumnas+1
 
-def verificar_segmentos(segmento):
+def verificar_segmentos(area,posicion):
     a = c.start_connection()
     cursor = a.cursor()
-    query = "SELECT codigo FROM estanterias where posicion=%s"
-    cursor.execute(query,segmento)
+    query = "SELECT * FROM estanterias where area=%s and posicion=%s"
+    cursor.execute(query,(area,posicion))
     a.commit()
     b = cursor.fetchall()
-    if b == "None":
+    print(area,posicion,b)
+    if str(b) == "()":
+        c.close_connection(a)
         return 1
     else:
+        c.close_connection(a)
         return 0
+
+
+
+
+def contar_estanterias_area(area):
+    a = c.start_connection()
+    cursor = a.cursor()
+    query = "SELECT count(*) FROM estanterias where area=%s"
+    cursor.execute(query, area)
+    a.commit()
+    b = cursor.fetchall()
+    b = b[0][0]
+    n = int(b)
     c.close_connection(a)
+    return n
+
+def mostrar_columnas(area,posicion):
+    a = c.start_connection()
+    cursor = a.cursor()
+    query = "SELECT columnas FROM estanterias where area=%s and posicion=%s"
+    cursor.execute(query, (area,posicion))
+    a.commit()
+    b = cursor.fetchall()
+    b=b[0][0]
+    c.close_connection(a)
+    return b
+
