@@ -11,7 +11,7 @@ class Estanterias:
         self.pasillo=pasillo
         self.segmento = segmento
         self.columnas=columnas
-        self.niveles=nivels
+        self.niveles=niveles
         self.alta_estanteria()
         self.crear_alojamientos()
 

@@ -287,12 +287,12 @@ def ver_posicion(area):
     a = c.start_connection()
     cursor = a.cursor()
     query = "SELECT posicion FROM area where nombre=%s"
-    cursor.execute(query,nombre)
+    cursor.execute(query,area)
     a.commit()
     b = cursor.fetchall()
     nombre=str(b[0][0])
+    c.close_connection()
     return nombre
-    c.close_connection(a)
 
 def ver_e():
     a = c.start_connection()
@@ -319,6 +319,28 @@ def ver_s():
     else:
         return b
     c.close_connection(a)
+
+def ver_segmentos(area):
+    a = c.start_connection()
+    cursor = a.cursor()
+    query = "SELECT segmento FROM area where nombre=%s"
+    cursor.execute(query,area)
+    a.commit()
+    b = cursor.fetchall()
+    nombre=str(b[0][0])
+    c.close_connection(a)
+    return nombre
+
+def ver_pasillos(area):
+    a = c.start_connection()
+    cursor = a.cursor()
+    query = "SELECT pasillo FROM area where nombre=%s"
+    cursor.execute(query,area)
+    a.commit()
+    b = cursor.fetchall()
+    nombre=str(b[0][0])
+    c.close_connection(a)
+    return nombre
 
 def ver_area_siguiente(area):
     data=mz.importar_datos_matriz()
