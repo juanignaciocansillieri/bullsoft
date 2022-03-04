@@ -620,6 +620,8 @@ class Modern(QMainWindow):
             item = QtWidgets.QTableWidgetItem()
             self.ui.tableWidget_niveles.setVerticalHeaderItem(n,item)
             item.setText("Nivel " + str(n+1))
+
+
     # CREAR DEPÓSITO
     def crear_deposito(self):
         ancho_area = self.ui.spinBox_anchoarea.value()
