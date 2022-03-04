@@ -437,7 +437,15 @@ def busc_pos(area,segmento,columna):
     else:
         return data
 
-
+def mostrar_al(area,posicion,columna):
+    a = c.start_connection()
+    cursor = a.cursor()
+    query = "SELECT codigo,volumen,limite,disponibilidad,nivel FROM alojamiento WHERE area=%s and segmento=%s and columna=%s"
+    cursor.execute(query, (area, posicion, columna))
+    data = cursor.fetchall()
+    a.commit()
+    c.close_connection(a)
+    return data
 
 """
 def asignacion_de_ubicacion():

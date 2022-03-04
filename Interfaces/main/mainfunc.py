@@ -611,6 +611,7 @@ class Modern(QMainWindow):
             i += 1
 
 
+
     def button_released2(self):
         global globalPosicion
         sending_button = self.sender()
@@ -620,6 +621,7 @@ class Modern(QMainWindow):
         globalPosicion = nombre_posicion
         print(globalPosicion)
         self.listar_productos_posicion()
+        self.listar_niveles()
 
 
 
@@ -632,12 +634,28 @@ class Modern(QMainWindow):
         global globalArea
         table_row = 0
         posicion = globalPosicion.split(sep="-")
-        niveles = int(es.contar_niveles(globalArea,posicion[2]))
-
-        for n in range(niveles):
+        area=posicion[0]
+        segmento=posicion[1]
+        columna=posicion[2]
+        niveles = int(es.contar_niveles(globalArea,columna))
+        self.ui.tableWidget_niveles.setRowCount(niveles)
+        data = al.mostrar_al(area, segmento, columna)
+        i=0
+        for n in data:
             item = QtWidgets.QTableWidgetItem()
-            self.ui.tableWidget_niveles.setVerticalHeaderItem(n,item)
-            item.setText("Nivel " + str(n+1))
+            print(n)
+            self.ui.tableWidget_niveles.setVerticalHeaderItem(i,item)
+            self.ui.tableWidget_niveles.setItem(
+                table_row, 0, QtWidgets.QTableWidgetItem(n[0]))
+            self.ui.tableWidget_niveles.setItem(
+                table_row, 1, QtWidgets.QTableWidgetItem(n[1]))
+            self.ui.tableWidget_niveles.setItem(
+                table_row, 2, QtWidgets.QTableWidgetItem(n[2]))
+            self.ui.tableWidget_niveles.setItem(
+                table_row, 3, QtWidgets.QTableWidgetItem(n[3]))
+
+            i=+1
+            item.setText("Nivel " + str(i+1))
 
 
     # CREAR DEPÓSITO
