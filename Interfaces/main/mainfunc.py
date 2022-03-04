@@ -61,15 +61,23 @@ class Modern(QMainWindow):
         ## Abrir Pagina Productos ##
         self.ui.products_btn.clicked.connect(
             lambda: self.ui.stackedWidget_3.setCurrentWidget(self.ui.product_subpage))
+        self.ui.products_btn_2.clicked.connect(
+            lambda: self.ui.stackedWidget_3.setCurrentWidget(self.ui.product_subpage))
         self.ui.products_btn.clicked.connect(self.listar_productos)
         self.ui.products_btn_stock.clicked.connect(self.listar_productos)
         # Abrir Pag Stock
         self.ui.products_btn.clicked.connect(
             lambda: self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_stock))
+        self.ui.products_btn_2.clicked.connect(
+            lambda: self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_stock))
         self.ui.products_btn_stock.clicked.connect(
+            lambda: self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_stock))
+        self.ui.products_btn_stock_2.clicked.connect(
             lambda: self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_stock))
         # Abrir Pag Movimientos
         self.ui.products_btn_movimiento.clicked.connect(
+            lambda: self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_movimientos))
+        self.ui.products_btn_movimientos_2.clicked.connect(
             lambda: self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_movimientos))
         self.ui.products_btn_movimiento.clicked.connect(self.listar_movimientos)
         self.ui.new_egreso_btn.clicked.connect(lambda: self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_egreso))
@@ -80,6 +88,8 @@ class Modern(QMainWindow):
         self.ui.pushButton_21.clicked.connect(self.buscar_movimiento)
         # Abrir Pag Lotes
         self.ui.products_btn_lotes.clicked.connect(
+            lambda: self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_lotes))
+        self.ui.products_btn_lotes_2.clicked.connect(
             lambda: self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_lotes))
         self.ui.pushButton_20.clicked.connect(self.listar_lotes)
 
@@ -111,6 +121,8 @@ class Modern(QMainWindow):
             ## Abrir Pagina Usuarios ##
             self.ui.users_btn.clicked.connect(
                 lambda: self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_usuarios))
+            self.ui.users_btn_2.clicked.connect(
+                lambda: self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_usuarios))
             self.ui.users_btn.clicked.connect(lambda: self.ui.stackedWidget_3.setCurrentWidget(self.ui.user_subpage))
 
             self.ui.btn_actualizarUsuarios.clicked.connect(self.listar_usuarios)
@@ -128,18 +140,24 @@ class Modern(QMainWindow):
         verificar_deposito = int(conex.verificar_deposito())
         if (verificar_deposito== 0):
             self.ui.deposito_btn.clicked.connect(lambda: self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_area))
+            self.ui.deposito_btn_2.clicked.connect(lambda: self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_area))
             print("dep0", verificar_deposito)
             self.mostra_areas()
         else:
             print("dep1", verificar_deposito)
             self.mostra_areas()
             self.ui.deposito_btn.clicked.connect(lambda: self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_deposito))
+            self.ui.deposito_btn_2.clicked.connect(lambda: self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_deposito))
+
+
         self.ui.deposito_btn.clicked.connect(lambda: self.ui.stackedWidget_3.setCurrentWidget(self.ui.deposito_subpage))
+        self.ui.deposito_btn_2.clicked.connect(lambda: self.ui.stackedWidget_3.setCurrentWidget(self.ui.deposito_subpage))
         self.ui.newArea_btn.clicked.connect(self.mostrar_new_area)
         self.ui.label_12.mousePressEvent = self.click_a
         self.ui.btn_actualizarAreas.clicked.connect(self.mostra_areas)
         #self.ui.btn_actualizarAreas.clicked.connect(self.crear_deposito)
         self.ui.btn_crearDeposito.clicked.connect(self.crear_deposito)
+        self.ui.btn_crearDeposito.clicked.connect(lambda: self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_deposito))
 
         self.ui.btn_actualizarAreaInd.clicked.connect(lambda: self.listar_areas(globalArea))
         self.ui.btn_newPosicion.clicked.connect(lambda: self.new_posicion(globalArea))
