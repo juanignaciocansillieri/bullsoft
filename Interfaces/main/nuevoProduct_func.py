@@ -61,7 +61,7 @@ class ProductWindow(QMainWindow):
             QtWidgets.QMessageBox.critical(self, "Error", "Codigo Existente")
             return None
         else:
-            pr.Productos(codigo, marca, cantidad, descripcion, posicion, lote, venc, condicion, fragil, defaultImg,
+            pr.Productos(codigo, marca, cantidad, descripcion, posicion, lote, venc, fragil, defaultImg,
                          peso, volumen, precio)
 
         self.close()

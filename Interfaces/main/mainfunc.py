@@ -32,6 +32,7 @@ DNI = ""
 globalArea = ""
 nombreNuevo = ""
 n_egreso=0
+nivelId = ""
 tupla_egreso=[]
 
 
@@ -165,6 +166,9 @@ class Modern(QMainWindow):
         self.ui.newArea_btn_2.clicked.connect(self.mostrar_borrar_area)
         self.ui.btn_nuevaEstanteria.clicked.connect(self.mostrar_nueva_estanteria)
         self.ui.btn_actualizarNiveles.clicked.connect(self.listar_niveles)
+        self.ui.tableWidget_niveles.doubleClicked.connect(self.seleccionar_niveles)
+        self.ui.tableWidget_niveles.doubleClicked.connect(self.listar_productos_niveles)
+
 
         ##########################       ##################################
 
@@ -629,35 +633,69 @@ class Modern(QMainWindow):
         global globalPosicion
         self.ui.label_posicion.setText(globalPosicion)
 
+    def listar_productos_niveles(self):
+        global nivelId
+        print(nivelId)
+        products = p.listar_productos_ubicacion(nivelId)
+        print(products)
+        n = p.contar_productos_ubicacion(nivelId)
+        print(n)
+        self.ui.tableWidget_prodNiveles.setRowCount(n)
+        table_row = 0
+
+        for row in products:
+            print("row",row)
+            self.ui.tableWidget_prodNiveles.setItem(
+                table_row, 0, QtWidgets.QTableWidgetItem(row[0]))
+            self.ui.tableWidget_prodNiveles.setItem(
+                table_row, 1, QtWidgets.QTableWidgetItem(row[1]))
+            self.ui.tableWidget_prodNiveles.setItem(
+                table_row, 2, QtWidgets.QTableWidgetItem(row[2]))
+            self.ui.tableWidget_prodNiveles.setItem(
+                table_row, 3, QtWidgets.QTableWidgetItem(str(l.Lote.obtener_cantidades(row[0]))))
+
+            self.ui.tableWidget_prodNiveles.setItem(
+                table_row, 4, QtWidgets.QTableWidgetItem(str(l.Lote.obtener_fecha(row[0]))))
+
+            table_row += 1
     def listar_niveles(self):
         global globalPosicion
         global globalArea
-        table_row = 0
+        table_row_i = 0
+        print("gP",globalPosicion)
         posicion = globalPosicion.split(sep="-")
         area=posicion[0]
+
+        print("columna",area)
         segmento=posicion[1]
+        print("columna",segmento)
         columna=posicion[2]
+        print("columna",columna)
         niveles = int(es.contar_niveles(globalArea,columna))
         self.ui.tableWidget_niveles.setRowCount(niveles)
         data = al.mostrar_al(area, segmento, columna)
-        i=0
+        print("data",data)
         for n in data:
+            self.ui.tableWidget_niveles.setItem(
+                table_row_i, 0, QtWidgets.QTableWidgetItem(n[0]))
+            self.ui.tableWidget_niveles.setItem(
+                table_row_i, 1, QtWidgets.QTableWidgetItem(n[1]))
+            self.ui.tableWidget_niveles.setItem(
+                table_row_i, 2, QtWidgets.QTableWidgetItem(n[2]))
+            self.ui.tableWidget_niveles.setItem(
+                table_row_i, 3, QtWidgets.QTableWidgetItem(n[3]))
+            table_row_i+=1
+
+        for x in range(niveles):
             item = QtWidgets.QTableWidgetItem()
-            print(n)
-            self.ui.tableWidget_niveles.setVerticalHeaderItem(i,item)
-            self.ui.tableWidget_niveles.setItem(
-                table_row, 0, QtWidgets.QTableWidgetItem(n[0]))
-            self.ui.tableWidget_niveles.setItem(
-                table_row, 1, QtWidgets.QTableWidgetItem(n[1]))
-            self.ui.tableWidget_niveles.setItem(
-                table_row, 2, QtWidgets.QTableWidgetItem(n[2]))
-            self.ui.tableWidget_niveles.setItem(
-                table_row, 3, QtWidgets.QTableWidgetItem(n[3]))
+            item.setText("Nivel " + str(x))
+            self.ui.tableWidget_niveles.setVerticalHeaderItem(x,item)
 
-            i=+1
-            item.setText("Nivel " + str(i+1))
-
-
+    def seleccionar_niveles(self):
+        global nivelId
+        lista_niveles = []
+        lista_niveles.append(self.ui.tableWidget_niveles.item(self.ui.tableWidget_niveles.currentRow(), 0).text())
+        nivelId = lista_niveles[0]
     # CREAR DEPÓSITO
     def crear_deposito(self):
         ancho_area = self.ui.spinBox_anchoarea.value()
