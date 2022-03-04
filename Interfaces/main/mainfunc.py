@@ -622,7 +622,6 @@ class Modern(QMainWindow):
             item.setText("Nivel " + str(n+1))
     # CREAR DEPÓSITO
     def crear_deposito(self):
-
         ancho_area = self.ui.spinBox_anchoarea.value()
         largo_area = self.ui.spinBox_largoarea.value()
         mz.alta_datos_matriz(ancho_area,largo_area)
