@@ -86,7 +86,7 @@ class Estanterias:
         icolumnas=0
         while icolumnas<self.columnas:
             while iniveles<self.niveles:
-                alojamiento.Alojamiento(0,0,0,self.area,self.pasillo,self.segmento,iniveles,0,icolumnas)
+                alojamiento.Alojamiento(0,0,0,self.area,self.pasillo,self.segmento,iniveles+1,0,icolumnas+1)
                 iniveles=iniveles+1
             iniveles=0
             icolumnas=icolumnas+1
