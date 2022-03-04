@@ -124,14 +124,6 @@ class Productos:
         else:
             return data
 
-    def buscar_productArea(param):
-        a = c.start_connection()
-        cursor = a.cursor()
-        query = ("SELECT codigo,descripcion,marca,ubicacion  FROM productos WHERE condicion = %s")
-        cursor.execute(query, param)
-        data = cursor.fetchall()
-        a.commit()
-        return data
 
     def verificar(param):
         a = c.start_connection()
@@ -153,14 +145,6 @@ class Productos:
         a.commit()
         return data
 
-    def buscar_product_rows_area(param):
-        a = c.start_connection()
-        cursor = a.cursor()
-        query = "SELECT codigo,descripcion,marca,ubicacion  FROM productos WHERE condicion=%s"
-        data = cursor.execute(query, param)
-        a.commit()
-        return data
-
     def mostrar_product(codigo):
         a = c.start_connection()
         cursor = a.cursor()
@@ -176,7 +160,7 @@ class Productos:
         else:
             return data
 
-
+"""
 def listar_prod_area(param):
     a = c.start_connection()
     cursor = a.cursor()
@@ -190,13 +174,13 @@ def listar_prod_area(param):
         print("Hubo un error:", err)
     c.close_connection(a)
     return productos
-
+"""
 
 def listar_prod():
     a = c.start_connection()
     cursor = a.cursor()
     try:
-        query = "SELECT codigo,descripcion,marca, condicion FROM productos"
+        query = "SELECT codigo,descripcion,marca FROM productos"
         cursor.execute(query)
         productos = cursor.fetchall()
         a.commit()
@@ -323,6 +307,27 @@ def ver_posicion(codigo):
         data = data[0]
         return data
     c.close_connection(a)
+
+def contar_productos_ubicacion(ubicacion):
+    a = c.start_connection()
+    cursor = a.cursor()
+    query = "SELECT count(*) FROM productos WHERE ubicacion=%s"
+    cursor.execute(query, ubicacion)
+    data = cursor.fetchall()
+    a.commit()
+    data=int(data[0][0])
+    c.close_connection(a)
+    return data
+
+def listar_productos_ubicacion(ubicacion):
+    a = c.start_connection()
+    cursor = a.cursor()
+    query = "SELECT p.codigo, p.descripcion, p.marca, l.cantidad,l.vencimiento FROM productos p JOIN lote l ON p.codigo = l.idproducto WHERE ubicacion=%s"
+    cursor.execute(query, ubicacion)
+    data = cursor.fetchall()
+    a.commit()
+    c.close_connection(a)
+    return data
 
 def contar_productos_ubicacion(ubicacion):
         a = c.start_connection()
