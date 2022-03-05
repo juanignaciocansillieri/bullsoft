@@ -84,6 +84,7 @@ class Modern(QMainWindow):
         self.ui.new_egreso_btn.clicked.connect(lambda: self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_egreso))
         self.ui.btn_agregarProdEgreso.clicked.connect(self.guardar_egreso)
         self.ui.btn_actualizarProdEgreso.clicked.connect(self.act_egreso)
+        self.ui.btn_eliminarProdEgreso.clicked.connect(self.borrar_egreso)
         self.ui.new_ingreso_btn.clicked.connect(self.mostrar_ingreso)
         self.ui.btn_actualizarMov.clicked.connect(self.listar_movimientos)
         self.ui.pushButton_21.clicked.connect(self.buscar_movimiento)
@@ -335,6 +336,9 @@ class Modern(QMainWindow):
         global  n_egreso
         global tupla_egreso
         codigo=self.ui.input_codigoProdEgreso.text()
+        if codigo=="":
+            QtWidgets.QMessageBox.critical(self, "Error", "Ingrese un codigo")
+            return None
         if p.ver_desc(codigo)==0:
             QtWidgets.QMessageBox.critical(self, "Error", "Producto no encontrado")
             return None
@@ -344,10 +348,10 @@ class Modern(QMainWindow):
             return None
         desc=p.ver_desc(codigo)
         t = [str(codigo), desc[0], str(cantidad)]
-        tupla_egreso = tupla_egreso + [t]
-        print(tupla_egreso)
+        tupla_egreso.append(t)
+        #print(tupla_egreso)
         self.ui.input_codigoProdEgreso.setText("")
-        #self.ui.num_cantidadEgreso.
+        self.ui.num_cantidadEgreso.setValue(0)
         n_egreso=n_egreso+1
         self.act_egreso()
 
@@ -355,18 +359,31 @@ class Modern(QMainWindow):
         global n_egreso
         global tupla_egreso
         codigo = self.ui.input_codigoProdEgreso.text()
+        if codigo=="":
+            QtWidgets.QMessageBox.critical(self, "Error", "Ingrese un codigo")
+            return None
         n=len(tupla_egreso)
+        print(tupla_egreso)
         i=0
         while i<n:
             if tupla_egreso[i][0] ==codigo:
+                print(i)
+                print(tupla_egreso[i][0],codigo)
                 tupla_egreso.pop(i)
+                i=n+1
+            else: i=i+1
+        if i==n:
+            QtWidgets.QMessageBox.critical(self, "Error", "Producto no encontrado")
+            return None
+
         print(tupla_egreso)
         self.ui.input_codigoProdEgreso.setText("")
+        self.ui.num_cantidadEgreso.setValue(0)
         n_egreso = n_egreso - 1
         self.act_egreso()
 
     def act_egreso(self):
-        print("actualizar")
+        #print("actualizar")
         global tupla_egreso
         table_row = 0
         for row in tupla_egreso:
