@@ -410,6 +410,9 @@ class Modern(QMainWindow):
     def confirmar_egreso(self):
         global tupla_egreso
         global n_egreso
+        if n_egreso==0:
+            QtWidgets.QMessageBox.critical(self, "Error", "Agregue productos antes de confirmar")
+            return None
         n = len(tupla_egreso)
         i = 0
         lc=[]
