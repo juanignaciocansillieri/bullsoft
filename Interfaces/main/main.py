@@ -1571,20 +1571,6 @@ class Ui_MainWindow(object):
         self.frame_9.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_9.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_9.setObjectName("frame_9")
-        self.label_16 = QtWidgets.QLabel(self.frame_9)
-        self.label_16.setGeometry(QtCore.QRect(400, 20, 128, 40))
-        self.label_16.setMinimumSize(QtCore.QSize(128, 0))
-        self.label_16.setMaximumSize(QtCore.QSize(120, 40))
-        font = QtGui.QFont()
-        font.setFamily("Cairo")
-        font.setPointSize(22)
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_16.setFont(font)
-        self.label_16.setStyleSheet("color: #282830 ;\n"
-"border: none")
-        self.label_16.setAlignment(QtCore.Qt.AlignCenter)
-        self.label_16.setObjectName("label_16")
         self.label_egr_ing = QtWidgets.QLabel(self.frame_9)
         self.label_egr_ing.setGeometry(QtCore.QRect(40, 70, 131, 27))
         font = QtGui.QFont()
@@ -1819,20 +1805,8 @@ class Ui_MainWindow(object):
         self.tableWidget_egreso.horizontalHeader().setStretchLastSection(True)
         self.tableWidget_egreso.verticalHeader().setVisible(False)
         self.tableWidget_egreso.verticalHeader().setDefaultSectionSize(41)
-        self.lista_egreso = QtWidgets.QListWidget(self.frame_9)
-        self.lista_egreso.setGeometry(QtCore.QRect(590, 120, 361, 481))
-        font = QtGui.QFont()
-        font.setFamily("Roboto")
-        font.setPointSize(16)
-        self.lista_egreso.setFont(font)
-        self.lista_egreso.setStyleSheet("background-color: #f2f2f5;\n"
-"")
-        self.lista_egreso.setAutoScrollMargin(16)
-        self.lista_egreso.setEditTriggers(QtWidgets.QAbstractItemView.DoubleClicked)
-        self.lista_egreso.setBatchSize(100)
-        self.lista_egreso.setObjectName("lista_egreso")
         self.label_17 = QtWidgets.QLabel(self.frame_9)
-        self.label_17.setGeometry(QtCore.QRect(700, 70, 128, 40))
+        self.label_17.setGeometry(QtCore.QRect(650, 20, 128, 40))
         self.label_17.setMinimumSize(QtCore.QSize(128, 0))
         self.label_17.setMaximumSize(QtCore.QSize(120, 40))
         font = QtGui.QFont()
@@ -1965,6 +1939,296 @@ class Ui_MainWindow(object):
 "margin-left: 10px;\n"
 "")
         self.fecha_vencimiento_egreso.setObjectName("fecha_vencimiento_egreso")
+        self.label_18 = QtWidgets.QLabel(self.frame_9)
+        self.label_18.setGeometry(QtCore.QRect(220, 20, 128, 40))
+        self.label_18.setMinimumSize(QtCore.QSize(128, 0))
+        self.label_18.setMaximumSize(QtCore.QSize(120, 40))
+        font = QtGui.QFont()
+        font.setFamily("Roboto")
+        font.setPointSize(19)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_18.setFont(font)
+        self.label_18.setStyleSheet("color: #282830 ;\n"
+"border: none")
+        self.label_18.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_18.setObjectName("label_18")
+        self.line_3 = QtWidgets.QFrame(self.frame_9)
+        self.line_3.setGeometry(QtCore.QRect(470, 0, 1, 701))
+        self.line_3.setStyleSheet("background:  rgb(208, 208, 208);")
+        self.line_3.setFrameShape(QtWidgets.QFrame.VLine)
+        self.line_3.setFrameShadow(QtWidgets.QFrame.Sunken)
+        self.line_3.setObjectName("line_3")
+        self.frame_39 = QtWidgets.QFrame(self.frame_9)
+        self.frame_39.setGeometry(QtCore.QRect(480, 80, 501, 41))
+        self.frame_39.setMinimumSize(QtCore.QSize(56, 41))
+        self.frame_39.setStyleSheet("background-color: #212325;\n"
+"border-radius:15px;")
+        self.frame_39.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_39.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_39.setObjectName("frame_39")
+        self.label_87 = QtWidgets.QLabel(self.frame_39)
+        self.label_87.setGeometry(QtCore.QRect(10, 10, 31, 18))
+        font = QtGui.QFont()
+        font.setFamily("Cairo")
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_87.setFont(font)
+        self.label_87.setStyleSheet("background: none;\n"
+"color: #fff ;\n"
+"")
+        self.label_87.setObjectName("label_87")
+        self.label_88 = QtWidgets.QLabel(self.frame_39)
+        self.label_88.setGeometry(QtCore.QRect(84, 10, 31, 18))
+        font = QtGui.QFont()
+        font.setFamily("Cairo")
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_88.setFont(font)
+        self.label_88.setStyleSheet("background: none;\n"
+"color: #fff ;\n"
+"\n"
+"")
+        self.label_88.setObjectName("label_88")
+        self.label_89 = QtWidgets.QLabel(self.frame_39)
+        self.label_89.setGeometry(QtCore.QRect(374, 10, 41, 18))
+        font = QtGui.QFont()
+        font.setFamily("Cairo")
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_89.setFont(font)
+        self.label_89.setStyleSheet("background: none;\n"
+"color: #fff ;\n"
+"\n"
+"")
+        self.label_89.setObjectName("label_89")
+        self.tableWidget_lotes_3 = QtWidgets.QTableWidget(self.frame_39)
+        self.tableWidget_lotes_3.setGeometry(QtCore.QRect(0, 30, 801, 351))
+        self.tableWidget_lotes_3.viewport().setProperty("cursor", QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.tableWidget_lotes_3.setStyleSheet("QTableWidget{\n"
+"font-size: 11pt;\n"
+"margin-top:15px;\n"
+"color: #000;\n"
+"font-family: Roboto;\n"
+"text-align:center;\n"
+"}\n"
+"QHeaderView::section {\n"
+"    background-color: #394353;\n"
+"    border-radius: 11px;\n"
+"    color:#fff;\n"
+"    font-size: 9pt;\n"
+"    font-family:Roboto;\n"
+"    border-left: 1px solid #394353;\n"
+"\n"
+"}\n"
+"\n"
+"QHeaderView::section:horizontal\n"
+"{\n"
+"    border-top: 1px solid #394353;\n"
+"\n"
+"}\n"
+"\n"
+"QHeaderView::section:vertical\n"
+"{\n"
+"\n"
+"    border-left: 1px solid #394353;\n"
+"}")
+        self.tableWidget_lotes_3.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers)
+        self.tableWidget_lotes_3.setShowGrid(False)
+        self.tableWidget_lotes_3.setObjectName("tableWidget_lotes_3")
+        self.tableWidget_lotes_3.setColumnCount(5)
+        self.tableWidget_lotes_3.setRowCount(0)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget_lotes_3.setHorizontalHeaderItem(0, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget_lotes_3.setHorizontalHeaderItem(1, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget_lotes_3.setHorizontalHeaderItem(2, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget_lotes_3.setHorizontalHeaderItem(3, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget_lotes_3.setHorizontalHeaderItem(4, item)
+        self.tableWidget_lotes_3.horizontalHeader().setVisible(False)
+        self.tableWidget_lotes_3.horizontalHeader().setCascadingSectionResizes(True)
+        self.tableWidget_lotes_3.horizontalHeader().setDefaultSectionSize(160)
+        self.tableWidget_lotes_3.horizontalHeader().setSortIndicatorShown(True)
+        self.tableWidget_lotes_3.horizontalHeader().setStretchLastSection(True)
+        self.tableWidget_lotes_3.verticalHeader().setVisible(False)
+        self.tableWidget_lotes_3.verticalHeader().setDefaultSectionSize(41)
+        self.label_90 = QtWidgets.QLabel(self.frame_39)
+        self.label_90.setGeometry(QtCore.QRect(53, 10, 31, 18))
+        font = QtGui.QFont()
+        font.setFamily("Cairo")
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_90.setFont(font)
+        self.label_90.setStyleSheet("background: none;\n"
+"color: #fff ;\n"
+"\n"
+"")
+        self.label_90.setObjectName("label_90")
+        self.label_91 = QtWidgets.QLabel(self.frame_39)
+        self.label_91.setGeometry(QtCore.QRect(112, 10, 31, 18))
+        font = QtGui.QFont()
+        font.setFamily("Cairo")
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_91.setFont(font)
+        self.label_91.setStyleSheet("background: none;\n"
+"color: #fff ;\n"
+"\n"
+"")
+        self.label_91.setObjectName("label_91")
+        self.label_92 = QtWidgets.QLabel(self.frame_39)
+        self.label_92.setGeometry(QtCore.QRect(200, 40, 31, 18))
+        font = QtGui.QFont()
+        font.setFamily("Cairo")
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_92.setFont(font)
+        self.label_92.setStyleSheet("background: none;\n"
+"color: #fff ;\n"
+"\n"
+"")
+        self.label_92.setObjectName("label_92")
+        self.label_93 = QtWidgets.QLabel(self.frame_39)
+        self.label_93.setGeometry(QtCore.QRect(138, 10, 31, 18))
+        font = QtGui.QFont()
+        font.setFamily("Cairo")
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_93.setFont(font)
+        self.label_93.setStyleSheet("background: none;\n"
+"color: #fff ;\n"
+"\n"
+"")
+        self.label_93.setObjectName("label_93")
+        self.label_94 = QtWidgets.QLabel(self.frame_39)
+        self.label_94.setGeometry(QtCore.QRect(174, 10, 41, 18))
+        font = QtGui.QFont()
+        font.setFamily("Cairo")
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_94.setFont(font)
+        self.label_94.setStyleSheet("background: none;\n"
+"color: #fff ;\n"
+"\n"
+"")
+        self.label_94.setObjectName("label_94")
+        self.label_95 = QtWidgets.QLabel(self.frame_39)
+        self.label_95.setGeometry(QtCore.QRect(265, 10, 71, 18))
+        font = QtGui.QFont()
+        font.setFamily("Cairo")
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_95.setFont(font)
+        self.label_95.setStyleSheet("background: none;\n"
+"color: #fff ;\n"
+"\n"
+"")
+        self.label_95.setObjectName("label_95")
+        self.label_96 = QtWidgets.QLabel(self.frame_39)
+        self.label_96.setGeometry(QtCore.QRect(456, 10, 31, 18))
+        font = QtGui.QFont()
+        font.setFamily("Cairo")
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_96.setFont(font)
+        self.label_96.setStyleSheet("background: none;\n"
+"color: #fff ;\n"
+"\n"
+"")
+        self.label_96.setObjectName("label_96")
+        self.tableWidget_picking = QtWidgets.QTableWidget(self.frame_9)
+        self.tableWidget_picking.setGeometry(QtCore.QRect(471, 130, 501, 351))
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        self.tableWidget_picking.setFont(font)
+        self.tableWidget_picking.viewport().setProperty("cursor", QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.tableWidget_picking.setStyleSheet("QTableWidget{\n"
+"font-size: 8pt;\n"
+"margin-top:15px;\n"
+"color: #000;\n"
+"text-align:center;\n"
+"}\n"
+"QHeaderView::section {\n"
+"    background-color: #394353;\n"
+"    border-radius: 11px;\n"
+"    color:#fff;\n"
+"    border-left: 1px solid #394353;\n"
+"\n"
+"}\n"
+"\n"
+"QHeaderView::section:horizontal\n"
+"{\n"
+"    border-top: 1px solid #394353;\n"
+"\n"
+"}\n"
+"\n"
+"QHeaderView::section:vertical\n"
+"{\n"
+"\n"
+"    border-left: 1px solid #394353;\n"
+"}")
+        self.tableWidget_picking.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers)
+        self.tableWidget_picking.setShowGrid(False)
+        self.tableWidget_picking.setObjectName("tableWidget_picking")
+        self.tableWidget_picking.setColumnCount(9)
+        self.tableWidget_picking.setRowCount(0)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget_picking.setHorizontalHeaderItem(0, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget_picking.setHorizontalHeaderItem(1, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget_picking.setHorizontalHeaderItem(2, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget_picking.setHorizontalHeaderItem(3, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget_picking.setHorizontalHeaderItem(4, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget_picking.setHorizontalHeaderItem(5, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget_picking.setHorizontalHeaderItem(6, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget_picking.setHorizontalHeaderItem(7, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget_picking.setHorizontalHeaderItem(8, item)
+        self.tableWidget_picking.horizontalHeader().setVisible(False)
+        self.tableWidget_picking.horizontalHeader().setCascadingSectionResizes(True)
+        self.tableWidget_picking.horizontalHeader().setDefaultSectionSize(23)
+        self.tableWidget_picking.horizontalHeader().setMinimumSectionSize(1)
+        self.tableWidget_picking.horizontalHeader().setSortIndicatorShown(False)
+        self.tableWidget_picking.horizontalHeader().setStretchLastSection(False)
+        self.tableWidget_picking.verticalHeader().setVisible(False)
+        self.tableWidget_picking.verticalHeader().setDefaultSectionSize(41)
+        self.btn_confirmarPicking_2 = QtWidgets.QPushButton(self.frame_9)
+        self.btn_confirmarPicking_2.setGeometry(QtCore.QRect(500, 580, 121, 26))
+        font = QtGui.QFont()
+        font.setFamily("Cairo")
+        font.setPointSize(10)
+        self.btn_confirmarPicking_2.setFont(font)
+        self.btn_confirmarPicking_2.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.btn_confirmarPicking_2.setStyleSheet("QPushButton{\n"
+"background-color: #055ffc;\n"
+"color:#fff;\n"
+"border-radius: 5px;\n"
+"text-align:center;\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"\n"
+"}")
+        self.btn_confirmarPicking_2.setObjectName("btn_confirmarPicking_2")
         self.verticalLayout_15.addWidget(self.frame_9)
         self.stackedWidget_main.addWidget(self.page_egreso)
         self.page_usuarios = QtWidgets.QWidget()
@@ -2981,8 +3245,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
         self.stackedWidget_3.setCurrentIndex(0)
-        self.stackedWidget_main.setCurrentIndex(3)
-        self.lista_egreso.setCurrentRow(-1)
+        self.stackedWidget_main.setCurrentIndex(5)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
@@ -3056,7 +3319,6 @@ class Ui_MainWindow(object):
         item.setText(_translate("MainWindow", "New Column"))
         item = self.tableWidget_stock_2.horizontalHeaderItem(4)
         item.setText(_translate("MainWindow", "New Column"))
-        self.label_16.setText(_translate("MainWindow", "Egreso"))
         self.label_egr_ing.setText(_translate("MainWindow", "Código"))
         self.label_pasillos_2.setText(_translate("MainWindow", "Cantidad"))
         self.btn_agregarProdEgreso.setText(_translate("MainWindow", "Agregar"))
@@ -3084,6 +3346,46 @@ class Ui_MainWindow(object):
         self.btn_confirmarPicking.setText(_translate("MainWindow", "Confirmar"))
         self.label_egr_ing_2.setText(_translate("MainWindow", "Fecha de Vencimiento"))
         self.label_pasillos_3.setText(_translate("MainWindow", "Motivo"))
+        self.label_18.setText(_translate("MainWindow", "Egreso"))
+        self.label_87.setText(_translate("MainWindow", "Área"))
+        self.label_88.setText(_translate("MainWindow", "Est."))
+        self.label_89.setText(_translate("MainWindow", "Lote"))
+        item = self.tableWidget_lotes_3.horizontalHeaderItem(0)
+        item.setText(_translate("MainWindow", "New Column"))
+        item = self.tableWidget_lotes_3.horizontalHeaderItem(1)
+        item.setText(_translate("MainWindow", "New Column"))
+        item = self.tableWidget_lotes_3.horizontalHeaderItem(2)
+        item.setText(_translate("MainWindow", "New Column"))
+        item = self.tableWidget_lotes_3.horizontalHeaderItem(3)
+        item.setText(_translate("MainWindow", "New Column"))
+        item = self.tableWidget_lotes_3.horizontalHeaderItem(4)
+        item.setText(_translate("MainWindow", "New Column"))
+        self.label_90.setText(_translate("MainWindow", "Pas."))
+        self.label_91.setText(_translate("MainWindow", "Col."))
+        self.label_92.setText(_translate("MainWindow", "Niv."))
+        self.label_93.setText(_translate("MainWindow", "Niv."))
+        self.label_94.setText(_translate("MainWindow", "Código"))
+        self.label_95.setText(_translate("MainWindow", "Descripción"))
+        self.label_96.setText(_translate("MainWindow", "Cant."))
+        item = self.tableWidget_picking.horizontalHeaderItem(0)
+        item.setText(_translate("MainWindow", "New Column"))
+        item = self.tableWidget_picking.horizontalHeaderItem(1)
+        item.setText(_translate("MainWindow", "New Column"))
+        item = self.tableWidget_picking.horizontalHeaderItem(2)
+        item.setText(_translate("MainWindow", "New Column"))
+        item = self.tableWidget_picking.horizontalHeaderItem(3)
+        item.setText(_translate("MainWindow", "New Column"))
+        item = self.tableWidget_picking.horizontalHeaderItem(4)
+        item.setText(_translate("MainWindow", "New Column"))
+        item = self.tableWidget_picking.horizontalHeaderItem(5)
+        item.setText(_translate("MainWindow", "New Column"))
+        item = self.tableWidget_picking.horizontalHeaderItem(6)
+        item.setText(_translate("MainWindow", "New Column"))
+        item = self.tableWidget_picking.horizontalHeaderItem(7)
+        item.setText(_translate("MainWindow", "New Column"))
+        item = self.tableWidget_picking.horizontalHeaderItem(8)
+        item.setText(_translate("MainWindow", "New Column"))
+        self.btn_confirmarPicking_2.setText(_translate("MainWindow", "Confirmar"))
         self.lineEdit_3.setPlaceholderText(_translate("MainWindow", "Buscar usuarios"))
         self.label_66.setText(_translate("MainWindow", "DNI"))
         self.label_67.setText(_translate("MainWindow", "Nombre"))
