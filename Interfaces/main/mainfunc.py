@@ -85,6 +85,7 @@ class Modern(QMainWindow):
         self.ui.btn_agregarProdEgreso.clicked.connect(self.guardar_egreso)
         self.ui.btn_actualizarProdEgreso.clicked.connect(self.act_egreso)
         self.ui.btn_eliminarProdEgreso.clicked.connect(self.borrar_egreso)
+        self.ui.btn_confirmarPicking.clicked.connect(self.confirmar_egreso)
         self.ui.new_ingreso_btn.clicked.connect(self.mostrar_ingreso)
         self.ui.btn_actualizarMov.clicked.connect(self.listar_movimientos)
         self.ui.pushButton_21.clicked.connect(self.buscar_movimiento)
@@ -346,6 +347,9 @@ class Modern(QMainWindow):
         if int(cantidad)<=0:
             QtWidgets.QMessageBox.critical(self, "Error", "Ingrese una cantidad correcta")
             return None
+        if cantidad<l.Lote.obtener_cantidades(codigo):
+            QtWidgets.QMessageBox.critical(self, "Error", "Cantidad no disponible")
+            return None
         desc=p.ver_desc(codigo)
         t = [str(codigo), desc[0], str(cantidad)]
         tupla_egreso.append(t)
@@ -387,6 +391,7 @@ class Modern(QMainWindow):
         global tupla_egreso
         table_row = 0
         for row in tupla_egreso:
+            print(tupla_egreso)
             self.ui.tableWidget_egreso.setRowCount(n_egreso)
             self.ui.tableWidget_egreso.setItem(
                 table_row, 0, QtWidgets.QTableWidgetItem(str(row[0])))
@@ -399,13 +404,25 @@ class Modern(QMainWindow):
 
     def confirmar_egreso(self):
         global tupla_egreso
+        global n_egreso
         n = len(tupla_egreso)
         i = 0
+        lc=[]
         while i < n:
-            codigo = tupla_egreso[i]
-            cantidad = tupla_egreso[i + 2]
-            l.fifo(codigo, cantidad)
-            i = i + 3
+            codigo = tupla_egreso[i][0]
+            lc.append(codigo)
+            cantidad = tupla_egreso[i][2]
+            #l.fifo(codigo, cantidad)
+            #m.Movimientos(1,codigo,cantidad,motivo,fecha)
+            i = i +1
+
+        rp=p.pick_posiciones(lc)
+        pick = al.pick_(rp)
+        print(lc)
+        print(rp)
+        print(pick)
+
+
         return 0
 
     ## Listar Movimientos en la tabla

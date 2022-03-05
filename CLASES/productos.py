@@ -255,6 +255,27 @@ def buscar_prod_posicion(posicion):
         return data
     c.close_connection(a)
 
+def pick_posiciones(lc):
+    rp=[]
+    for data in lc:
+        p = ver_posicion(data)
+        rp.append(p)
+    return rp
+"""
+def pick_productos(lc,pick):
+    n=len(lc)
+    ld=[]
+    for i in lc:
+        for j in pick:
+            desc=buscar_prod_pick(j,i)
+            lc.remove(i)
+            pick.remove(j)
+            print(desc)
+            ld.append(desc)
+    print("descripciones",ld)
+    return ld
+"""
+
 def buscar_prod_pick(posicion,codigo):
     a = c.start_connection()
     cursor = a.cursor()
@@ -262,6 +283,7 @@ def buscar_prod_pick(posicion,codigo):
     cursor.execute(query, (posicion,codigo))
     data = cursor.fetchall()
     a.commit()
+    print(data)
     data = data
     c.close_connection(a)
     return data
@@ -289,7 +311,7 @@ def ver_posicion(codigo):
     cursor.execute(query, codigo)
     data = cursor.fetchall()
     a.commit()
-    data = data
+    data = data[0][0]
     return data
     c.close_connection(a)
 

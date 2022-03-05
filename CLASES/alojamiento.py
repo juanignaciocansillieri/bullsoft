@@ -371,7 +371,6 @@ def pick_(lp):
         for j in lp:
             if i==j:
                 pick.append(j)
-
     return pick
 
 

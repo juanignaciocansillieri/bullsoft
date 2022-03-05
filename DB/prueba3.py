@@ -5,32 +5,30 @@ i=0
 rp=[]
 cod=[]
 while i<n:
-    p=productos.ver_posicion(i+1)
-    #print(p)
     cod.append(i+1)
-    rp.append(p)
     i+=1
-rp2=[]
-for data in rp:
-    rp2.append(data[0][0])
+print("cod",cod)
+rp2=productos.pick_posiciones(cod)
 
-print(rp2)
-print(re)
-#print(cod)
+print("rp",rp2)
+#print(re)
+
+
 
 pick=alojamiento.pick_(rp2)
-print(pick)
+print("pick",pick)
 i=0
 j=0
-#print(n)
-#pick2=[]
-"""
+print(n)
+pick2=[]
+
 while i< n:
    while j<n:
-       pick2.append(productos.buscar_prod_pick(pick2[i],j))
-       print(productos.buscar_prod_pick(i+1,j+1))
+       prod=productos.buscar_prod_pick()
+       pick2.append()
+       print()
        j=j+1
 j=0
 i=i+1
 print(pick2)
-"""
+
