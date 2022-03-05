@@ -81,9 +81,11 @@ class Modern(QMainWindow):
         self.ui.products_btn_movimientos_2.clicked.connect(
             lambda: self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_movimientos))
         self.ui.products_btn_movimiento.clicked.connect(self.listar_movimientos)
-        self.ui.new_egreso_btn.clicked.connect(lambda: self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_egreso))
+        self.ui.new_egreso_btn.clicked.connect(self.mostrar_egreso)
         self.ui.btn_agregarProdEgreso.clicked.connect(self.guardar_egreso)
         self.ui.btn_actualizarProdEgreso.clicked.connect(self.act_egreso)
+        self.ui.btn_eliminarProdEgreso.clicked.connect(self.borrar_egreso)
+        self.ui.btn_confirmarPicking.clicked.connect(self.confirmar_egreso)
         self.ui.new_ingreso_btn.clicked.connect(self.mostrar_ingreso)
         self.ui.btn_actualizarMov.clicked.connect(self.listar_movimientos)
         self.ui.pushButton_21.clicked.connect(self.buscar_movimiento)
@@ -296,8 +298,12 @@ class Modern(QMainWindow):
         self.newMovimiento.show()
 
     def mostrar_egreso(self):
-        self.newEgreso = NewEgreso()
-        self.newEgreso.show()
+        global  n_egreso
+        global tupla_egreso
+        n_egreso=0
+        tupla_egreso=[]
+        self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_egreso)
+        self.act_egreso()
 
     def mostrar_borrar_area(self):
         self.borrarArea = BorrarArea()
@@ -335,13 +341,25 @@ class Modern(QMainWindow):
         global  n_egreso
         global tupla_egreso
         codigo=self.ui.input_codigoProdEgreso.text()
+        if codigo=="":
+            QtWidgets.QMessageBox.critical(self, "Error", "Ingrese un codigo")
+            return None
+        if p.ver_desc(codigo)==0:
+            QtWidgets.QMessageBox.critical(self, "Error", "Producto no encontrado")
+            return None
         cantidad=self.ui.num_cantidadEgreso.text()
+        if int(cantidad)<=0:
+            QtWidgets.QMessageBox.critical(self, "Error", "Ingrese una cantidad correcta")
+            return None
+        #if cantidad<l.Lote.obtener_cantidades(codigo):
+        #    QtWidgets.QMessageBox.critical(self, "Error", "Cantidad no disponible")
+        #    return None
         desc=p.ver_desc(codigo)
-        t = [str(codigo), desc, str(cantidad)]
-        tupla_egreso = tupla_egreso + [t]
-        print(tupla_egreso)
+        t = [str(codigo), desc[0], str(cantidad)]
+        tupla_egreso.append(t)
+        #print(tupla_egreso)
         self.ui.input_codigoProdEgreso.setText("")
-        #self.ui.num_cantidadEgreso.
+        self.ui.num_cantidadEgreso.setValue(0)
         n_egreso=n_egreso+1
         self.act_egreso()
 
@@ -349,22 +367,37 @@ class Modern(QMainWindow):
         global n_egreso
         global tupla_egreso
         codigo = self.ui.input_codigoProdEgreso.text()
+        if codigo=="":
+            QtWidgets.QMessageBox.critical(self, "Error", "Ingrese un codigo")
+            return None
         n=len(tupla_egreso)
+        print(tupla_egreso)
         i=0
         while i<n:
             if tupla_egreso[i][0] ==codigo:
+                print(i)
+                print(tupla_egreso[i][0],codigo)
                 tupla_egreso.pop(i)
+                i=n+1
+            else: i=i+1
+        if i==n:
+            QtWidgets.QMessageBox.critical(self, "Error", "Producto no encontrado")
+            return None
+
         print(tupla_egreso)
         self.ui.input_codigoProdEgreso.setText("")
+        self.ui.num_cantidadEgreso.setValue(0)
         n_egreso = n_egreso - 1
         self.act_egreso()
 
     def act_egreso(self):
-        print("actualizar")
+        #print("actualizar")
         global tupla_egreso
+        global n_egreso
+        self.ui.tableWidget_egreso.setRowCount(n_egreso)
         table_row = 0
+        print("n greso",n_egreso)
         for row in tupla_egreso:
-            self.ui.tableWidget_egreso.setRowCount(n_egreso)
             self.ui.tableWidget_egreso.setItem(
                 table_row, 0, QtWidgets.QTableWidgetItem(str(row[0])))
             self.ui.tableWidget_egreso.setItem(
@@ -376,13 +409,25 @@ class Modern(QMainWindow):
 
     def confirmar_egreso(self):
         global tupla_egreso
+        global n_egreso
         n = len(tupla_egreso)
         i = 0
+        lc=[]
         while i < n:
-            codigo = tupla_egreso[i]
-            cantidad = tupla_egreso[i + 2]
-            l.fifo(codigo, cantidad)
-            i = i + 3
+            codigo = tupla_egreso[i][0]
+            lc.append(codigo)
+            cantidad = tupla_egreso[i][2]
+            #l.fifo(codigo, cantidad)
+            #m.Movimientos(1,codigo,cantidad,motivo,fecha)
+            i = i +1
+
+        rp=p.pick_posiciones(lc)
+        pick = al.pick_(rp)
+        print(lc)
+        print(rp)
+        print(pick)
+
+
         return 0
 
     ## Listar Movimientos en la tabla

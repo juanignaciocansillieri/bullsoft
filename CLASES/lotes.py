@@ -164,7 +164,7 @@ class Lote:
             query = "SELECT vencimiento FROM lote WHERE idproducto=%s ORDER BY vencimiento"
             cursor.execute(query, idproducto)
             param = cursor.fetchall()
-            param = param[0][0]
+            #param=param[0][0]
             a.commit()
         except pymysql.err.OperationalError as err:
             param = ""
@@ -190,7 +190,7 @@ class Lote:
         cursor.execute(query, idproducto)
         idlote = cursor.fetchall()
         idlote = idlote[0][0]
-        if idlote == "none":
+        if idlote == "()":
             return 0
         else:
 
