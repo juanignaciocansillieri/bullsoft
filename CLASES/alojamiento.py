@@ -18,7 +18,7 @@ class Alojamiento:
         self.segmento = segmento
         self.columna = columna
         self.nivel = nivel
-        self.volumen = self.largo * self.ancho * self.alto
+        self.volumen = int(self.largo) * int(self.ancho) * int(self.alto)
         self.disponibilidad = 100
         self.posicion = str(
             str(area) + "-" + str(pasillo) + "-" + str(segmento) + "-"+ str(columna) + "-" + str(
@@ -389,8 +389,8 @@ def modificar_dispo_ingreso(codigo,volumen):
         cursor.execute(query, codigo)
         data = cursor.fetchall()
         a.commit()
-        dispo=data[0]
-        if(dispo<100):
+        dispo=data[0][0]
+        if(int(dispo)<100):
 
             query = "SELECT volumen FROM alojamiento WHERE codigo=%s"
             cursor.execute(query, codigo)

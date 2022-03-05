@@ -812,12 +812,13 @@ class Modern(QMainWindow):
         posicion = globalPosicion.split(sep="-")
         area=posicion[0]
 
-        print("columna",area)
+        print("area",area)
         segmento=posicion[1]
-        print("columna",segmento)
+        print("segmento",segmento)
         columna=posicion[2]
         print("columna",columna)
-        niveles = int(es.contar_niveles(globalArea,columna))
+        print("ga",globalArea)
+        niveles = int(es.contar_niveles(globalArea,segmento))
         self.ui.tableWidget_niveles.setRowCount(niveles)
         data = al.mostrar_al(area, segmento, columna)
         print("data",data)
