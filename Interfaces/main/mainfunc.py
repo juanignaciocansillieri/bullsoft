@@ -81,7 +81,7 @@ class Modern(QMainWindow):
         self.ui.products_btn_movimientos_2.clicked.connect(
             lambda: self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_movimientos))
         self.ui.products_btn_movimiento.clicked.connect(self.listar_movimientos)
-        self.ui.new_egreso_btn.clicked.connect(lambda: self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_egreso))
+        self.ui.new_egreso_btn.clicked.connect(self.mostrar_egreso)
         self.ui.btn_agregarProdEgreso.clicked.connect(self.guardar_egreso)
         self.ui.btn_actualizarProdEgreso.clicked.connect(self.act_egreso)
         self.ui.btn_eliminarProdEgreso.clicked.connect(self.borrar_egreso)
@@ -298,8 +298,12 @@ class Modern(QMainWindow):
         self.newMovimiento.show()
 
     def mostrar_egreso(self):
-        self.newEgreso = NewEgreso()
-        self.newEgreso.show()
+        global  n_egreso
+        global tupla_egreso
+        n_egreso=0
+        tupla_egreso=[]
+        self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_egreso)
+        self.act_egreso()
 
     def mostrar_borrar_area(self):
         self.borrarArea = BorrarArea()
@@ -347,9 +351,9 @@ class Modern(QMainWindow):
         if int(cantidad)<=0:
             QtWidgets.QMessageBox.critical(self, "Error", "Ingrese una cantidad correcta")
             return None
-        if cantidad<l.Lote.obtener_cantidades(codigo):
-            QtWidgets.QMessageBox.critical(self, "Error", "Cantidad no disponible")
-            return None
+        #if cantidad<l.Lote.obtener_cantidades(codigo):
+        #    QtWidgets.QMessageBox.critical(self, "Error", "Cantidad no disponible")
+        #    return None
         desc=p.ver_desc(codigo)
         t = [str(codigo), desc[0], str(cantidad)]
         tupla_egreso.append(t)
@@ -389,10 +393,11 @@ class Modern(QMainWindow):
     def act_egreso(self):
         #print("actualizar")
         global tupla_egreso
+        global n_egreso
+        self.ui.tableWidget_egreso.setRowCount(n_egreso)
         table_row = 0
+        print("n greso",n_egreso)
         for row in tupla_egreso:
-            print(tupla_egreso)
-            self.ui.tableWidget_egreso.setRowCount(n_egreso)
             self.ui.tableWidget_egreso.setItem(
                 table_row, 0, QtWidgets.QTableWidgetItem(str(row[0])))
             self.ui.tableWidget_egreso.setItem(
