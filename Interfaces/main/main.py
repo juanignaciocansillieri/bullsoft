@@ -604,12 +604,12 @@ class Ui_MainWindow(object):
         self.frame_7.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_7.setObjectName("frame_7")
         self.label_72 = QtWidgets.QLabel(self.frame_7)
-        self.label_72.setGeometry(QtCore.QRect(130, 50, 81, 31))
+        self.label_72.setGeometry(QtCore.QRect(130, 50, 91, 31))
         self.label_72.setMinimumSize(QtCore.QSize(66, 0))
         self.label_72.setMaximumSize(QtCore.QSize(16777215, 16777215))
         font = QtGui.QFont()
-        font.setFamily("Roboto")
-        font.setPointSize(22)
+        font.setFamily("Cairo")
+        font.setPointSize(23)
         font.setBold(True)
         font.setWeight(75)
         self.label_72.setFont(font)
@@ -1460,12 +1460,12 @@ class Ui_MainWindow(object):
         self.product_new_btn.setIconSize(QtCore.QSize(13, 13))
         self.product_new_btn.setObjectName("product_new_btn")
         self.label_54 = QtWidgets.QLabel(self.frame_main_stock)
-        self.label_54.setGeometry(QtCore.QRect(40, 70, 71, 20))
+        self.label_54.setGeometry(QtCore.QRect(40, 70, 81, 31))
         self.label_54.setMinimumSize(QtCore.QSize(66, 0))
         self.label_54.setMaximumSize(QtCore.QSize(120, 16777215))
         font = QtGui.QFont()
-        font.setFamily("Roboto")
-        font.setPointSize(21)
+        font.setFamily("Cairo")
+        font.setPointSize(22)
         font.setBold(True)
         font.setWeight(75)
         self.label_54.setFont(font)
@@ -1572,7 +1572,7 @@ class Ui_MainWindow(object):
         self.frame_9.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_9.setObjectName("frame_9")
         self.label_16 = QtWidgets.QLabel(self.frame_9)
-        self.label_16.setGeometry(QtCore.QRect(380, 20, 128, 40))
+        self.label_16.setGeometry(QtCore.QRect(400, 20, 128, 40))
         self.label_16.setMinimumSize(QtCore.QSize(128, 0))
         self.label_16.setMaximumSize(QtCore.QSize(120, 40))
         font = QtGui.QFont()
@@ -1586,20 +1586,18 @@ class Ui_MainWindow(object):
         self.label_16.setAlignment(QtCore.Qt.AlignCenter)
         self.label_16.setObjectName("label_16")
         self.label_egr_ing = QtWidgets.QLabel(self.frame_9)
-        self.label_egr_ing.setGeometry(QtCore.QRect(40, 80, 131, 27))
+        self.label_egr_ing.setGeometry(QtCore.QRect(40, 70, 131, 27))
         font = QtGui.QFont()
-        font.setFamily("Roboto")
-        font.setPointSize(-1)
+        font.setFamily("Cairo")
+        font.setPointSize(10)
         self.label_egr_ing.setFont(font)
-        self.label_egr_ing.setStyleSheet("font-family: Roboto;\n"
-"font-size: 14px;\n"
-"margin-top:10px;\n"
+        self.label_egr_ing.setStyleSheet("margin-top:10px;\n"
 "margin-left:10px\n"
 "\n"
 "")
         self.label_egr_ing.setObjectName("label_egr_ing")
         self.input_codigoProdEgreso = QtWidgets.QLineEdit(self.frame_9)
-        self.input_codigoProdEgreso.setGeometry(QtCore.QRect(40, 110, 121, 25))
+        self.input_codigoProdEgreso.setGeometry(QtCore.QRect(40, 100, 141, 25))
         self.input_codigoProdEgreso.setMinimumSize(QtCore.QSize(0, 0))
         self.input_codigoProdEgreso.setMaximumSize(QtCore.QSize(16777215, 25))
         self.input_codigoProdEgreso.setStyleSheet("QLineEdit{\n"
@@ -1620,7 +1618,7 @@ class Ui_MainWindow(object):
         self.input_codigoProdEgreso.setPlaceholderText("")
         self.input_codigoProdEgreso.setObjectName("input_codigoProdEgreso")
         self.num_cantidadEgreso = QtWidgets.QSpinBox(self.frame_9)
-        self.num_cantidadEgreso.setGeometry(QtCore.QRect(200, 110, 121, 25))
+        self.num_cantidadEgreso.setGeometry(QtCore.QRect(200, 100, 121, 25))
         self.num_cantidadEgreso.setStyleSheet("background:#f5f5f5;\n"
 "border-radius: 3px;\n"
 "padding: 4 5px;\n"
@@ -1635,20 +1633,18 @@ class Ui_MainWindow(object):
         self.num_cantidadEgreso.setMaximum(999)
         self.num_cantidadEgreso.setObjectName("num_cantidadEgreso")
         self.label_pasillos_2 = QtWidgets.QLabel(self.frame_9)
-        self.label_pasillos_2.setGeometry(QtCore.QRect(200, 80, 131, 27))
+        self.label_pasillos_2.setGeometry(QtCore.QRect(200, 70, 131, 27))
         font = QtGui.QFont()
-        font.setFamily("Roboto")
-        font.setPointSize(-1)
+        font.setFamily("Cairo")
+        font.setPointSize(10)
         self.label_pasillos_2.setFont(font)
-        self.label_pasillos_2.setStyleSheet("font-family: Roboto;\n"
-"font-size: 14px;\n"
-"margin-top:10px;\n"
+        self.label_pasillos_2.setStyleSheet("margin-top:10px;\n"
 "margin-left:10px\n"
 "\n"
 "")
         self.label_pasillos_2.setObjectName("label_pasillos_2")
         self.btn_agregarProdEgreso = QtWidgets.QPushButton(self.frame_9)
-        self.btn_agregarProdEgreso.setGeometry(QtCore.QRect(340, 110, 121, 26))
+        self.btn_agregarProdEgreso.setGeometry(QtCore.QRect(340, 100, 121, 26))
         font = QtGui.QFont()
         font.setFamily("Cairo")
         font.setPointSize(10)
@@ -1676,7 +1672,7 @@ class Ui_MainWindow(object):
         self.btn_actualizarProdEgreso.setIconSize(QtCore.QSize(33, 16))
         self.btn_actualizarProdEgreso.setObjectName("btn_actualizarProdEgreso")
         self.frame_31 = QtWidgets.QFrame(self.frame_9)
-        self.frame_31.setGeometry(QtCore.QRect(49, 180, 401, 41))
+        self.frame_31.setGeometry(QtCore.QRect(49, 210, 411, 41))
         self.frame_31.setMinimumSize(QtCore.QSize(56, 41))
         self.frame_31.setStyleSheet("background-color: #212325;\n"
 "border-radius:15px;")
@@ -1775,7 +1771,7 @@ class Ui_MainWindow(object):
         self.tableWidget_lotes_2.verticalHeader().setVisible(False)
         self.tableWidget_lotes_2.verticalHeader().setDefaultSectionSize(41)
         self.tableWidget_egreso = QtWidgets.QTableWidget(self.frame_9)
-        self.tableWidget_egreso.setGeometry(QtCore.QRect(50, 240, 461, 351))
+        self.tableWidget_egreso.setGeometry(QtCore.QRect(50, 270, 461, 351))
         self.tableWidget_egreso.viewport().setProperty("cursor", QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.tableWidget_egreso.setStyleSheet("QTableWidget{\n"
 "font-size: 11pt;\n"
@@ -1824,7 +1820,7 @@ class Ui_MainWindow(object):
         self.tableWidget_egreso.verticalHeader().setVisible(False)
         self.tableWidget_egreso.verticalHeader().setDefaultSectionSize(41)
         self.lista_egreso = QtWidgets.QListWidget(self.frame_9)
-        self.lista_egreso.setGeometry(QtCore.QRect(590, 210, 361, 391))
+        self.lista_egreso.setGeometry(QtCore.QRect(590, 120, 361, 481))
         font = QtGui.QFont()
         font.setFamily("Roboto")
         font.setPointSize(16)
@@ -1836,7 +1832,7 @@ class Ui_MainWindow(object):
         self.lista_egreso.setBatchSize(100)
         self.lista_egreso.setObjectName("lista_egreso")
         self.label_17 = QtWidgets.QLabel(self.frame_9)
-        self.label_17.setGeometry(QtCore.QRect(700, 170, 128, 40))
+        self.label_17.setGeometry(QtCore.QRect(700, 70, 128, 40))
         self.label_17.setMinimumSize(QtCore.QSize(128, 0))
         self.label_17.setMaximumSize(QtCore.QSize(120, 40))
         font = QtGui.QFont()
@@ -1850,14 +1846,14 @@ class Ui_MainWindow(object):
         self.label_17.setAlignment(QtCore.Qt.AlignCenter)
         self.label_17.setObjectName("label_17")
         self.btn_eliminarProdEgreso = QtWidgets.QPushButton(self.frame_9)
-        self.btn_eliminarProdEgreso.setGeometry(QtCore.QRect(480, 110, 121, 26))
+        self.btn_eliminarProdEgreso.setGeometry(QtCore.QRect(340, 150, 121, 26))
         font = QtGui.QFont()
         font.setFamily("Cairo")
         font.setPointSize(10)
         self.btn_eliminarProdEgreso.setFont(font)
         self.btn_eliminarProdEgreso.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.btn_eliminarProdEgreso.setStyleSheet("QPushButton{\n"
-"background-color: #055ffc;\n"
+"background-color:rgb(223, 14, 35);\n"
 "color:#fff;\n"
 "border-radius: 5px;\n"
 "text-align:center;\n"
@@ -1886,7 +1882,7 @@ class Ui_MainWindow(object):
 "}")
         self.btn_confirmarPicking.setObjectName("btn_confirmarPicking")
         self.btn_volver_egreso = QtWidgets.QPushButton(self.frame_9)
-        self.btn_volver_egreso.setGeometry(QtCore.QRect(50, 30, 26, 26))
+        self.btn_volver_egreso.setGeometry(QtCore.QRect(50, 30, 41, 26))
         font = QtGui.QFont()
         font.setFamily("Roboto")
         font.setPointSize(10)
@@ -1913,6 +1909,62 @@ class Ui_MainWindow(object):
         self.btn_volver_egreso.setIconSize(QtCore.QSize(14, 16))
         self.btn_volver_egreso.setCheckable(True)
         self.btn_volver_egreso.setObjectName("btn_volver_egreso")
+        self.input_motivo_egreso = QtWidgets.QLineEdit(self.frame_9)
+        self.input_motivo_egreso.setGeometry(QtCore.QRect(200, 150, 121, 25))
+        self.input_motivo_egreso.setMinimumSize(QtCore.QSize(0, 0))
+        self.input_motivo_egreso.setMaximumSize(QtCore.QSize(16777215, 25))
+        self.input_motivo_egreso.setStyleSheet("QLineEdit{\n"
+"background:#f5f5f5;\n"
+"border-radius: 3px;\n"
+"padding: 4 5px;\n"
+"color: rgb(0, 0, 0);\n"
+"font-family:Roboto;\n"
+"font-size:13px;\n"
+"font-weight: 400;\n"
+"margin-left: 10px;\n"
+"border: 1px solid #f5f5f5;\n"
+"margin-left: 10px;\n"
+"\n"
+"}\n"
+"")
+        self.input_motivo_egreso.setText("")
+        self.input_motivo_egreso.setPlaceholderText("")
+        self.input_motivo_egreso.setObjectName("input_motivo_egreso")
+        self.label_egr_ing_2 = QtWidgets.QLabel(self.frame_9)
+        self.label_egr_ing_2.setGeometry(QtCore.QRect(40, 120, 141, 27))
+        font = QtGui.QFont()
+        font.setFamily("Cairo")
+        font.setPointSize(10)
+        self.label_egr_ing_2.setFont(font)
+        self.label_egr_ing_2.setStyleSheet("margin-top:10px;\n"
+"margin-left:10px\n"
+"\n"
+"")
+        self.label_egr_ing_2.setObjectName("label_egr_ing_2")
+        self.label_pasillos_3 = QtWidgets.QLabel(self.frame_9)
+        self.label_pasillos_3.setGeometry(QtCore.QRect(200, 120, 131, 27))
+        font = QtGui.QFont()
+        font.setFamily("Cairo")
+        font.setPointSize(10)
+        self.label_pasillos_3.setFont(font)
+        self.label_pasillos_3.setStyleSheet("margin-top:10px;\n"
+"margin-left:10px\n"
+"\n"
+"")
+        self.label_pasillos_3.setObjectName("label_pasillos_3")
+        self.fecha_vencimiento_egreso = QtWidgets.QDateEdit(self.frame_9)
+        self.fecha_vencimiento_egreso.setGeometry(QtCore.QRect(40, 150, 141, 25))
+        self.fecha_vencimiento_egreso.setStyleSheet("background:#f5f5f5;\n"
+"border-radius: 3px;\n"
+"padding: 4 5px;\n"
+"color: rgb(0, 0, 0);\n"
+"font-family:Roboto;\n"
+"border: none;\n"
+"font-size:13px;\n"
+"font-weight: 400;\n"
+"margin-left: 10px;\n"
+"")
+        self.fecha_vencimiento_egreso.setObjectName("fecha_vencimiento_egreso")
         self.verticalLayout_15.addWidget(self.frame_9)
         self.stackedWidget_main.addWidget(self.page_egreso)
         self.page_usuarios = QtWidgets.QWidget()
@@ -2070,12 +2122,12 @@ class Ui_MainWindow(object):
         self.user_new_btn.setIconSize(QtCore.QSize(13, 13))
         self.user_new_btn.setObjectName("user_new_btn")
         self.label_71 = QtWidgets.QLabel(self.frame_main_stock_4)
-        self.label_71.setGeometry(QtCore.QRect(40, 70, 111, 20))
+        self.label_71.setGeometry(QtCore.QRect(40, 70, 111, 31))
         self.label_71.setMinimumSize(QtCore.QSize(66, 0))
         self.label_71.setMaximumSize(QtCore.QSize(120, 16777215))
         font = QtGui.QFont()
-        font.setFamily("Roboto")
-        font.setPointSize(21)
+        font.setFamily("Cairo")
+        font.setPointSize(22)
         font.setBold(True)
         font.setWeight(75)
         self.label_71.setFont(font)
@@ -2795,12 +2847,12 @@ class Ui_MainWindow(object):
         self.new_ingreso_btn.setIconSize(QtCore.QSize(13, 13))
         self.new_ingreso_btn.setObjectName("new_ingreso_btn")
         self.label_64 = QtWidgets.QLabel(self.frame_main_stock_3)
-        self.label_64.setGeometry(QtCore.QRect(40, 70, 168, 20))
+        self.label_64.setGeometry(QtCore.QRect(40, 70, 168, 31))
         self.label_64.setMinimumSize(QtCore.QSize(66, 0))
         self.label_64.setMaximumSize(QtCore.QSize(168, 16777215))
         font = QtGui.QFont()
-        font.setFamily("Roboto")
-        font.setPointSize(21)
+        font.setFamily("Cairo")
+        font.setPointSize(22)
         font.setBold(True)
         font.setWeight(75)
         self.label_64.setFont(font)
@@ -2929,7 +2981,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
         self.stackedWidget_3.setCurrentIndex(0)
-        self.stackedWidget_main.setCurrentIndex(9)
+        self.stackedWidget_main.setCurrentIndex(3)
         self.lista_egreso.setCurrentRow(-1)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
@@ -3030,6 +3082,8 @@ class Ui_MainWindow(object):
         self.label_17.setText(_translate("MainWindow", "Picking"))
         self.btn_eliminarProdEgreso.setText(_translate("MainWindow", "Eliminar"))
         self.btn_confirmarPicking.setText(_translate("MainWindow", "Confirmar"))
+        self.label_egr_ing_2.setText(_translate("MainWindow", "Fecha de Vencimiento"))
+        self.label_pasillos_3.setText(_translate("MainWindow", "Motivo"))
         self.lineEdit_3.setPlaceholderText(_translate("MainWindow", "Buscar usuarios"))
         self.label_66.setText(_translate("MainWindow", "DNI"))
         self.label_67.setText(_translate("MainWindow", "Nombre"))

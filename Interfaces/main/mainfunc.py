@@ -201,6 +201,10 @@ class Modern(QMainWindow):
             self.ui.products_btn.setChecked(True)
             self.ui.products_btn_2.setChecked(True)
             self.ui.products_btn_stock_2.setChecked(True)
+            self.ui.products_btn_lotes.setChecked(False)
+            self.ui.products_btn_lotes_2.setChecked(False)
+            self.ui.products_btn_movimientos_2.setChecked(False)
+            self.ui.products_btn_movimiento.setChecked(False)
 
     def checkear_boton_stock(self):
         self.ui.products_btn_stock.setChecked(True)
