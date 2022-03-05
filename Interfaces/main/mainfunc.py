@@ -153,6 +153,7 @@ class Modern(QMainWindow):
             self.ui.deposito_btn.clicked.connect(lambda: self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_deposito))
             self.ui.deposito_btn_2.clicked.connect(lambda: self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_deposito))
 
+        self.ui.btn_confirmarPicking.clicked.connect(self.width_tabla)
 
         self.ui.deposito_btn.clicked.connect(lambda: self.ui.stackedWidget_3.setCurrentWidget(self.ui.deposito_subpage))
         self.ui.deposito_btn_2.clicked.connect(lambda: self.ui.stackedWidget_3.setCurrentWidget(self.ui.deposito_subpage))
@@ -201,6 +202,10 @@ class Modern(QMainWindow):
             self.ui.products_btn.setChecked(True)
             self.ui.products_btn_2.setChecked(True)
             self.ui.products_btn_stock_2.setChecked(True)
+            self.ui.products_btn_lotes.setChecked(False)
+            self.ui.products_btn_lotes_2.setChecked(False)
+            self.ui.products_btn_movimientos_2.setChecked(False)
+            self.ui.products_btn_movimiento.setChecked(False)
 
     def checkear_boton_stock(self):
         self.ui.products_btn_stock.setChecked(True)
@@ -743,7 +748,18 @@ class Modern(QMainWindow):
                 vertical_layout.addWidget(btn_area)
                 btn_area.released.connect(self.button_released2)
             i += 1
-
+    def width_tabla(self):
+        header = self.ui.tableWidget_picking.horizontalHeader()
+        header.setStretchLastSection(False)
+        self.ui.tableWidget_picking.setColumnWidth(0, 68)
+        self.ui.tableWidget_picking.setColumnWidth(1, 25)
+        self.ui.tableWidget_picking.setColumnWidth(2, 25)
+        self.ui.tableWidget_picking.setColumnWidth(3, 25)
+        self.ui.tableWidget_picking.setColumnWidth(4, 35)
+        self.ui.tableWidget_picking.setColumnWidth(5, 92)
+        self.ui.tableWidget_picking.setColumnWidth(6, 115)
+        self.ui.tableWidget_picking.setColumnWidth(7, 90)
+        self.ui.tableWidget_picking.setColumnWidth(8, 25)
 
 
     def button_released2(self):
