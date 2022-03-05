@@ -415,6 +415,8 @@ class Modern(QMainWindow):
     def confirmar_egreso(self):
         global tupla_egreso
         global n_egreso
+        fecha=self.ui.fecha_vencimiento_egreso.date().toString("yyyy/MM/dd")
+        motivo=self.ui.input_motivo_egreso.text()
         if n_egreso==0:
             QtWidgets.QMessageBox.critical(self, "Error", "Agregue productos antes de confirmar")
             return None
@@ -426,7 +428,7 @@ class Modern(QMainWindow):
             lc.append(codigo)
             cantidad = tupla_egreso[i][2]
             #l.fifo(codigo, cantidad)
-            #m.Movimientos(1,codigo,cantidad,motivo,fecha)
+            m.Movimientos(1,codigo,cantidad,motivo,fecha)
             i = i +1
 
         rp=p.pick_posiciones(lc)
@@ -434,8 +436,28 @@ class Modern(QMainWindow):
         print(lc)
         print(rp)
         print(pick)
+        self.listar_pick(pick,lc)
+        return 0
 
-
+    def listar_pick(self,pick,lc):
+        self.ui.tableWidget_picking.setRowCount(n_egreso)
+        for row in pick:
+            self.ui.tableWidget_picking.setItem(
+                table_row, 0, QtWidgets.QTableWidgetItem(str(row[1])))
+            self.ui.tableWidget_picking.setItem(
+                table_row, 1, QtWidgets.QTableWidgetItem(str(row[2])))
+            self.ui.tableWidget_picking.setItem(
+                table_row, 2, QtWidgets.QTableWidgetItem(str(row[3])))
+            self.ui.tableWidget_picking.setItem(
+                table_row, 4, QtWidgets.QTableWidgetItem(str(row[5])))
+            self.ui.tableWidget_picking.setItem(
+                table_row, 5, QtWidgets.QTableWidgetItem(str(row[1])))
+            self.ui.tableWidget_picking.setItem(
+                table_row, 6, QtWidgets.QTableWidgetItem(str(row[2])))
+            self.ui.tableWidget_picking.setItem(
+                table_row, 7, QtWidgets.QTableWidgetItem(str(row[3])))
+            self.ui.tableWidget_picking.setItem(
+                table_row, 8, QtWidgets.QTableWidgetItem(str(row[5])))
         return 0
 
     ## Listar Movimientos en la tabla
