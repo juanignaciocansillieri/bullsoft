@@ -93,7 +93,8 @@ class Modern(QMainWindow):
         self.ui.products_btn_lotes_2.clicked.connect(
             lambda: self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_lotes))
         self.ui.pushButton_20.clicked.connect(self.listar_lotes)
-
+        self.ui.btn_volver_niveles.clicked.connect(lambda: self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_areaIndividual))
+        self.ui.users_btn_2.clicked.connect(lambda: self.ui.stackedWidget_3.setCurrentWidget(self.ui.user_subpage))
         # Listamos productos al iniciar la ventana
 
         n = p.contar_filas()
@@ -156,10 +157,11 @@ class Modern(QMainWindow):
         self.ui.newArea_btn.clicked.connect(self.mostrar_new_area)
         self.ui.label_12.mousePressEvent = self.click_a
         self.ui.btn_actualizarAreas.clicked.connect(self.mostra_areas)
+        self.ui.btn_actualizar_estanteria.clicked.connect(lambda: self.listar_segmentos(globalArea))
         #self.ui.btn_actualizarAreas.clicked.connect(self.crear_deposito)
-        self.ui.btn_crearDeposito.clicked.connect(self.crear_deposito)
         self.ui.btn_crearDeposito.clicked.connect(lambda: self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_deposito))
-
+        self.ui.btn_crearDeposito.clicked.connect(self.crear_deposito)
+        self.ui.btn_crearDeposito.clicked.connect(self.mostra_areas)
         self.ui.btn_actualizarAreaInd.clicked.connect(lambda: self.listar_areas(globalArea))
         self.ui.btn_newPosicion.clicked.connect(lambda: self.new_posicion(globalArea))
         self.ui.btn_modificarArea.clicked.connect(lambda: self.modificar_area(globalArea))
@@ -168,10 +170,89 @@ class Modern(QMainWindow):
         self.ui.btn_actualizarNiveles.clicked.connect(self.listar_niveles)
         self.ui.tableWidget_niveles.doubleClicked.connect(self.seleccionar_niveles)
         self.ui.tableWidget_niveles.doubleClicked.connect(self.listar_productos_niveles)
+        self.ui.products_btn.clicked.connect(self.checkear_boton_prod)
+        self.ui.products_btn_2.clicked.connect(self.checkear_boton_prod)
+        self.ui.users_btn_2.clicked.connect(self.checkear_boton_users)
+        self.ui.users_btn.clicked.connect(self.checkear_boton_users)
+        self.ui.inicio_btn.clicked.connect(self.checkear_boton_inicio)
+        self.ui.inicio_btn_2.clicked.connect(self.checkear_boton_inicio)
+        self.ui.deposito_btn.clicked.connect(self.checkear_boton_areas)
+        self.ui.deposito_btn_2.clicked.connect(self.checkear_boton_areas)
+        self.ui.products_btn_stock.clicked.connect(self.checkear_boton_stock)
+        self.ui.products_btn_stock_2.clicked.connect(self.checkear_boton_stock)
+        self.ui.products_btn_movimiento.clicked.connect(self.checkear_boton_movimientos)
+        self.ui.products_btn_movimientos_2.clicked.connect(self.checkear_boton_movimientos)
+        self.ui.products_btn_lotes.clicked.connect(self.checkear_boton_lotes)
+        self.ui.products_btn_lotes_2.clicked.connect(self.checkear_boton_lotes)
+
 
 
         ##########################       ##################################
+    def checkear_boton_prod(self):
 
+            self.ui.users_btn.setChecked(False)
+            self.ui.users_btn_2.setChecked(False)
+            self.ui.inicio_btn.setChecked(False)
+            self.ui.inicio_btn_2.setChecked(False)
+            self.ui.deposito_btn.setChecked(False)
+            self.ui.deposito_btn_2.setChecked(False)
+            self.ui.products_btn.setChecked(True)
+            self.ui.products_btn_2.setChecked(True)
+            self.ui.products_btn_stock_2.setChecked(True)
+
+    def checkear_boton_stock(self):
+        self.ui.products_btn_stock.setChecked(True)
+        self.ui.products_btn_stock_2.setChecked(True)
+        self.ui.products_btn_movimiento.setChecked(False)
+        self.ui.products_btn_movimientos_2.setChecked(False)
+        self.ui.products_btn_lotes.setChecked(False)
+        self.ui.products_btn_lotes_2.setChecked(False)
+    def checkear_boton_movimientos(self):
+        self.ui.products_btn_stock.setChecked(False)
+        self.ui.products_btn_stock_2.setChecked(False)
+        self.ui.products_btn_movimiento.setChecked(True)
+        self.ui.products_btn_movimientos_2.setChecked(True)
+        self.ui.products_btn_lotes.setChecked(False)
+        self.ui.products_btn_lotes_2.setChecked(False)
+    def checkear_boton_lotes(self):
+        self.ui.products_btn_stock.setChecked(False)
+        self.ui.products_btn_stock_2.setChecked(False)
+        self.ui.products_btn_movimiento.setChecked(False)
+        self.ui.products_btn_movimientos_2.setChecked(False)
+        self.ui.products_btn_lotes.setChecked(True)
+        self.ui.products_btn_lotes_2.setChecked(True)
+
+
+    def checkear_boton_areas(self):
+            self.ui.products_btn.setChecked(False)
+            self.ui.products_btn_2.setChecked(False)
+            self.ui.products_btn_stock_2.setChecked(False)
+            self.ui.users_btn.setChecked(False)
+            self.ui.users_btn_2.setChecked(False)
+            self.ui.inicio_btn.setChecked(False)
+            self.ui.inicio_btn_2.setChecked(False)
+            self.ui.deposito_btn.setChecked(True)
+            self.ui.deposito_btn_2.setChecked(True)
+    def checkear_boton_users(self):
+            self.ui.products_btn.setChecked(False)
+            self.ui.products_btn_2.setChecked(False)
+            self.ui.products_btn_stock_2.setChecked(False)
+            self.ui.users_btn.setChecked(True)
+            self.ui.users_btn_2.setChecked(True)
+            self.ui.inicio_btn.setChecked(False)
+            self.ui.inicio_btn_2.setChecked(False)
+            self.ui.deposito_btn.setChecked(False)
+            self.ui.deposito_btn_2.setChecked(False)
+    def checkear_boton_inicio(self):
+            self.ui.products_btn.setChecked(False)
+            self.ui.products_btn_2.setChecked(False)
+            self.ui.products_btn_stock_2.setChecked(False)
+            self.ui.users_btn.setChecked(False)
+            self.ui.users_btn_2.setChecked(False)
+            self.ui.inicio_btn.setChecked(True)
+            self.ui.inicio_btn_2.setChecked(True)
+            self.ui.deposito_btn.setChecked(False)
+            self.ui.deposito_btn_2.setChecked(False)
 
     def verificar_deposito_creado(self):
         verificar_deposito = conex.verificar_deposito()
@@ -493,8 +574,10 @@ class Modern(QMainWindow):
         areas = ar.Area.listar_area()
         n = ar.contar_filas()
         print(n,child)
+
         for i in reversed(range(self.ui.verticalLayout_7.count())):
             self.ui.verticalLayout_7.itemAt(i).widget().deleteLater()
+
         for a in areas:
                     frame = QtWidgets.QFrame(self.ui.frame_3)
                     frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
@@ -527,43 +610,40 @@ class Modern(QMainWindow):
                     vertical_layout.addWidget(self.label, 0, QtCore.Qt.AlignHCenter | QtCore.Qt.AlignVCenter)
                     vertical_layout.addWidget(self.btn, 0, QtCore.Qt.AlignHCenter | QtCore.Qt.AlignVCenter)
 
-                    if child < n:
-                        if child == n - 1:
-                            self.agregar_area_creada()
-                        else:
-                                print(a)
-                                self.btn2 = QtWidgets.QPushButton(self.ui.frame_14)
-                                self.btn2.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-                                self.btn2.setStyleSheet("QPushButton{\n"
-                                                        "border:none;\n"
-                                                        "font-family: Roboto;\n"
-                                                        "border-radius:5px;\n"
-                                                        "margin-right:20px;\n"
-                                                        "text-align: center;\n"
-                                                        "color: #000 ;\n"
-                                                        "padding:5px;\n"
-                                                        "\n"
-                                                        "\n"
-                                                        "}\n"
-                                                        "\n"
-                                                        "QPushButton:hover{\n"
-                                                        "    background-color: rgba(105, 105, 226, 50);\n"
-                                                        "}")
-                                self.btn2.setObjectName(a[0])
-                                self.btn2.setText(a[0])
-                                self.ui.verticalLayout_7.addWidget(self.btn2)
-                                font = QtGui.QFont()
-                                font.setFamily("Roboto")
-                                font.setPointSize(10)
-                                font.setBold(True)
-                                font.setWeight(75)
-                                self.btn2.setFont(font)
-                                self.btn2.released.connect(self.button_released)
-                    elif child > n:
-                            for i in reversed(range(self.ui.verticalLayout_7.count())):
-                                self.ui.verticalLayout_7.itemAt(i).widget().deleteLater()
-                            for i in reversed(range(self.ui.gridLayout.count())):
-                                self.ui.gridLayout.itemAt(i).widget().deleteLater()
+
+                    self.btn2 = QtWidgets.QPushButton(self.ui.frame_14)
+                    self.btn2.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+                    self.btn2.setStyleSheet("QPushButton{\n"
+                                            "border:none;\n"
+                                            "font-family: Cairo;\n"
+                                            "font-weight: Regular;\n"
+                                            "border-radius:5px;\n"
+                                            #"margin-right:20px;\n"
+                                            "text-align: center;\n"
+                                            "color: #818489 ;\n"
+                                            #"padding:5px;\n"
+
+                                            "}\n"
+                                            "\n"
+                                            "QPushButton:hover{\n"
+                                            "font-weight: bold;\n"
+                                            "background:rgba(129, 132, 137, 20);\n"
+                                            "}")
+                    self.btn2.setObjectName(a[0])
+                    self.btn2.setText(a[0])
+                    self.ui.verticalLayout_7.addWidget(self.btn2)
+                    font = QtGui.QFont()
+                    font.setFamily("Roboto")
+                    font.setPointSize(10)
+                    font.setBold(True)
+                    font.setWeight(75)
+                    self.btn2.setFont(font)
+                    self.btn2.released.connect(self.button_released)
+                    if child > n:
+                        for i in reversed(range(self.ui.verticalLayout_7.count())):
+                            self.ui.verticalLayout_7.itemAt(i).widget().deleteLater()
+                        for i in reversed(range(self.ui.gridLayout.count())):
+                            self.ui.gridLayout.itemAt(i).widget().deleteLater()
 
 
     def button_released(self):
@@ -604,11 +684,13 @@ class Modern(QMainWindow):
             for i in reversed(range(self.ui.gridLayout_2.count())):
                 self.ui.gridLayout_2.itemAt(i).widget().deleteLater()
         i=1
-        for x in range(segmentos):
+
+        #if pasillos == segmentos or pasillos == segmentos-1:
+        for x in range(segmentos+pasillos):
             frame = QtWidgets.QFrame(self.ui.frame_area)
             frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
             frame.setFrameShadow(QtWidgets.QFrame.Raised)
-            frame.setMaximumSize(QtCore.QSize(50, 200))
+            frame.setMaximumSize(QtCore.QSize(50, 350))
             vertical_layout = QtWidgets.QVBoxLayout(frame)
             self.ui.gridLayout_2.addWidget(frame,1,i)
             niveles=estanterias.mostrar_columnas(globalArea,i)
@@ -1036,4 +1118,3 @@ if __name__ == "__main__":
     window = Modern(1)
     window.show()
     sys.exit(app.exec())
-

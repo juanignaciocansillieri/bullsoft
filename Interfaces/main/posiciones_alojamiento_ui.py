@@ -24,15 +24,13 @@ class Ui_MainWindow(object):
         self.frame_2 = QtWidgets.QFrame(self.centralwidget)
         self.frame_2.setMinimumSize(QtCore.QSize(0, 300))
         self.frame_2.setMaximumSize(QtCore.QSize(16777215, 16777215))
-        self.frame_2.setStyleSheet("background: #fff;\n"
-"")
+        self.frame_2.setStyleSheet("background: #f5f5f5")
         self.frame_2.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_2.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_2.setObjectName("frame_2")
         self.largo_num = QtWidgets.QSpinBox(self.frame_2)
         self.largo_num.setGeometry(QtCore.QRect(110, 130, 121, 25))
-        self.largo_num.setStyleSheet("background-color: #fff;\n"
-"border-radius: 3px;\n"
+        self.largo_num.setStyleSheet("background:#fff;border-radius: 3px;\n"
 "padding: 4 5px;\n"
 "color: rgb(0, 0, 0);\n"
 "font-family:Roboto;\n"
@@ -49,8 +47,6 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setFamily("Roboto")
         font.setPointSize(-1)
-        font.setBold(True)
-        font.setWeight(75)
         self.label_segmento.setFont(font)
         self.label_segmento.setStyleSheet("font-family: Roboto;\n"
 "font-size: 14px;\n"
@@ -124,7 +120,7 @@ class Ui_MainWindow(object):
 "}")
         self.modificar_btn.setObjectName("modificar_btn")
         self.comboBox_area = QtWidgets.QComboBox(self.frame_2)
-        self.comboBox_area.setGeometry(QtCore.QRect(320, 130, 121, 25))
+        self.comboBox_area.setGeometry(QtCore.QRect(320, 130, 151, 25))
         self.comboBox_area.setStyleSheet("background-color: #fff;\n"
 "border-radius: 3px;\n"
 "padding: 4 5px;\n"
@@ -141,8 +137,6 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setFamily("Roboto")
         font.setPointSize(-1)
-        font.setBold(True)
-        font.setWeight(75)
         self.label_alto.setFont(font)
         self.label_alto.setStyleSheet("font-family: Roboto;\n"
 "font-size: 14px;\n"
@@ -156,8 +150,6 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setFamily("Roboto")
         font.setPointSize(-1)
-        font.setBold(True)
-        font.setWeight(75)
         self.label_Area.setFont(font)
         self.label_Area.setStyleSheet("font-family: Roboto;\n"
 "font-size: 14px;\n"
@@ -171,8 +163,6 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setFamily("Roboto")
         font.setPointSize(-1)
-        font.setBold(True)
-        font.setWeight(75)
         self.label_ancho.setFont(font)
         self.label_ancho.setStyleSheet("font-family: Roboto;\n"
 "font-size: 14px;\n"
@@ -186,8 +176,6 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setFamily("Roboto")
         font.setPointSize(-1)
-        font.setBold(True)
-        font.setWeight(75)
         self.label_limite.setFont(font)
         self.label_limite.setStyleSheet("font-family: Roboto;\n"
 "font-size: 14px;\n"

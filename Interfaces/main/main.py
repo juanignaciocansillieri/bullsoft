@@ -122,7 +122,7 @@ class Ui_MainWindow(object):
         self.products_btn_lotes_2.setCheckable(True)
         self.products_btn_lotes_2.setObjectName("products_btn_lotes_2")
         self.products_btn_movimiento = QtWidgets.QPushButton(self.product_subpage)
-        self.products_btn_movimiento.setGeometry(QtCore.QRect(90, 108, 81, 31))
+        self.products_btn_movimiento.setGeometry(QtCore.QRect(90, 108, 91, 31))
         font = QtGui.QFont()
         font.setFamily("Cairo")
         font.setPointSize(11)
@@ -244,7 +244,7 @@ class Ui_MainWindow(object):
         self.frame_13.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_13.setObjectName("frame_13")
         self.label_10 = QtWidgets.QLabel(self.frame_13)
-        self.label_10.setGeometry(QtCore.QRect(0, 10, 200, 40))
+        self.label_10.setGeometry(QtCore.QRect(0, 10, 201, 40))
         self.label_10.setMinimumSize(QtCore.QSize(128, 0))
         self.label_10.setMaximumSize(QtCore.QSize(208, 40))
         font = QtGui.QFont()
@@ -720,7 +720,11 @@ class Ui_MainWindow(object):
         self.label_posicion.setAlignment(QtCore.Qt.AlignCenter)
         self.label_posicion.setObjectName("label_posicion")
         self.tableWidget_niveles = QtWidgets.QTableWidget(self.page_posicionesAlojamiento)
-        self.tableWidget_niveles.setGeometry(QtCore.QRect(30, 170, 931, 201))
+        self.tableWidget_niveles.setGeometry(QtCore.QRect(40, 170, 921, 201))
+        font = QtGui.QFont()
+        font.setFamily("Cairo Semibold")
+        font.setPointSize(11)
+        self.tableWidget_niveles.setFont(font)
         self.tableWidget_niveles.setStyleSheet("QTableWidget{\n"
 "font-size: 11pt;\n"
 "margin-left: 0px;\n"
@@ -764,23 +768,10 @@ class Ui_MainWindow(object):
         self.tableWidget_niveles.horizontalHeader().setDefaultSectionSize(213)
         self.tableWidget_niveles.horizontalHeader().setHighlightSections(False)
         self.tableWidget_niveles.horizontalHeader().setMinimumSectionSize(50)
-        self.tableWidget_niveles.verticalHeader().setVisible(True)
+        self.tableWidget_niveles.verticalHeader().setVisible(False)
         self.tableWidget_niveles.verticalHeader().setCascadingSectionResizes(False)
         self.tableWidget_niveles.verticalHeader().setDefaultSectionSize(42)
         self.tableWidget_niveles.verticalHeader().setHighlightSections(True)
-        self.btn_volver_niveles = QtWidgets.QPushButton(self.page_posicionesAlojamiento)
-        self.btn_volver_niveles.setGeometry(QtCore.QRect(40, 60, 75, 23))
-        self.btn_volver_niveles.setStyleSheet("QPushButton{\n"
-"background-color: #055ffc;\n"
-"color:#fff;\n"
-"border-radius: 5px;\n"
-"text-align:center;\n"
-"}\n"
-"\n"
-"QPushButton:hover{\n"
-"\n"
-"}")
-        self.btn_volver_niveles.setObjectName("btn_volver_niveles")
         self.frame_37 = QtWidgets.QFrame(self.page_posicionesAlojamiento)
         self.frame_37.setGeometry(QtCore.QRect(90, 140, 841, 41))
         self.frame_37.setMinimumSize(QtCore.QSize(156, 41))
@@ -944,7 +935,7 @@ class Ui_MainWindow(object):
         self.label_86.setObjectName("label_86")
         self.horizontalLayout_19.addWidget(self.label_86, 0, QtCore.Qt.AlignLeft)
         self.tableWidget_prodNiveles = QtWidgets.QTableWidget(self.page_posicionesAlojamiento)
-        self.tableWidget_prodNiveles.setGeometry(QtCore.QRect(40, 430, 921, 251))
+        self.tableWidget_prodNiveles.setGeometry(QtCore.QRect(40, 430, 931, 251))
         self.tableWidget_prodNiveles.setMaximumSize(QtCore.QSize(16777215, 489))
         self.tableWidget_prodNiveles.viewport().setProperty("cursor", QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.tableWidget_prodNiveles.setStyleSheet("QTableWidget{\n"
@@ -983,15 +974,7 @@ class Ui_MainWindow(object):
         self.tableWidget_prodNiveles.setShowGrid(False)
         self.tableWidget_prodNiveles.setObjectName("tableWidget_prodNiveles")
         self.tableWidget_prodNiveles.setColumnCount(5)
-        self.tableWidget_prodNiveles.setRowCount(4)
-        item = QtWidgets.QTableWidgetItem()
-        self.tableWidget_prodNiveles.setVerticalHeaderItem(0, item)
-        item = QtWidgets.QTableWidgetItem()
-        self.tableWidget_prodNiveles.setVerticalHeaderItem(1, item)
-        item = QtWidgets.QTableWidgetItem()
-        self.tableWidget_prodNiveles.setVerticalHeaderItem(2, item)
-        item = QtWidgets.QTableWidgetItem()
-        self.tableWidget_prodNiveles.setVerticalHeaderItem(3, item)
+        self.tableWidget_prodNiveles.setRowCount(0)
         item = QtWidgets.QTableWidgetItem()
         self.tableWidget_prodNiveles.setHorizontalHeaderItem(0, item)
         item = QtWidgets.QTableWidgetItem()
@@ -1002,16 +985,6 @@ class Ui_MainWindow(object):
         self.tableWidget_prodNiveles.setHorizontalHeaderItem(3, item)
         item = QtWidgets.QTableWidgetItem()
         self.tableWidget_prodNiveles.setHorizontalHeaderItem(4, item)
-        item = QtWidgets.QTableWidgetItem()
-        self.tableWidget_prodNiveles.setItem(0, 0, item)
-        item = QtWidgets.QTableWidgetItem()
-        self.tableWidget_prodNiveles.setItem(0, 1, item)
-        item = QtWidgets.QTableWidgetItem()
-        self.tableWidget_prodNiveles.setItem(0, 2, item)
-        item = QtWidgets.QTableWidgetItem()
-        self.tableWidget_prodNiveles.setItem(0, 3, item)
-        item = QtWidgets.QTableWidgetItem()
-        self.tableWidget_prodNiveles.setItem(0, 4, item)
         self.tableWidget_prodNiveles.horizontalHeader().setVisible(False)
         self.tableWidget_prodNiveles.horizontalHeader().setCascadingSectionResizes(True)
         self.tableWidget_prodNiveles.horizontalHeader().setDefaultSectionSize(185)
@@ -1047,6 +1020,36 @@ class Ui_MainWindow(object):
         self.btn_actualizarProdNiveles.setIconSize(QtCore.QSize(14, 16))
         self.btn_actualizarProdNiveles.setCheckable(True)
         self.btn_actualizarProdNiveles.setObjectName("btn_actualizarProdNiveles")
+        self.btn_volver_niveles = QtWidgets.QPushButton(self.page_posicionesAlojamiento)
+        self.btn_volver_niveles.setGeometry(QtCore.QRect(20, 43, 26, 26))
+        font = QtGui.QFont()
+        font.setFamily("Roboto")
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.btn_volver_niveles.setFont(font)
+        self.btn_volver_niveles.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.btn_volver_niveles.setStyleSheet("QPushButton{\n"
+"border:none;\n"
+"font-family: Roboto;\n"
+"border-radius:5px;\n"
+"text-align: center;\n"
+"color: #282830 ;\n"
+"background: #212325\n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"        color:rgb(116, 116, 138)\n"
+"\n"
+"}")
+        self.btn_volver_niveles.setText("")
+        icon11 = QtGui.QIcon()
+        icon11.addPixmap(QtGui.QPixmap("img/icono_volver.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.btn_volver_niveles.setIcon(icon11)
+        self.btn_volver_niveles.setIconSize(QtCore.QSize(14, 16))
+        self.btn_volver_niveles.setCheckable(True)
+        self.btn_volver_niveles.setObjectName("btn_volver_niveles")
         self.stackedWidget_main.addWidget(self.page_posicionesAlojamiento)
         self.page_area = QtWidgets.QWidget()
         self.page_area.setObjectName("page_area")
@@ -1262,6 +1265,34 @@ class Ui_MainWindow(object):
         self.btn_actualizar_estanteria.setIconSize(QtCore.QSize(14, 16))
         self.btn_actualizar_estanteria.setCheckable(True)
         self.btn_actualizar_estanteria.setObjectName("btn_actualizar_estanteria")
+        self.pushButton = QtWidgets.QPushButton(self.frame_32)
+        self.pushButton.setGeometry(QtCore.QRect(10, 60, 26, 26))
+        font = QtGui.QFont()
+        font.setFamily("Roboto")
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.pushButton.setFont(font)
+        self.pushButton.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.pushButton.setStyleSheet("QPushButton{\n"
+"border:none;\n"
+"font-family: Roboto;\n"
+"border-radius:5px;\n"
+"text-align: center;\n"
+"color: #282830 ;\n"
+"background: #212325\n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"        color:rgb(116, 116, 138)\n"
+"\n"
+"}")
+        self.pushButton.setText("")
+        self.pushButton.setIcon(icon11)
+        self.pushButton.setIconSize(QtCore.QSize(14, 16))
+        self.pushButton.setCheckable(True)
+        self.pushButton.setObjectName("pushButton")
         self.verticalLayout_22.addWidget(self.frame_32)
         self.frame_11 = QtWidgets.QFrame(self.frame_10)
         self.frame_11.setFrameShape(QtWidgets.QFrame.StyledPanel)
@@ -1277,19 +1308,6 @@ class Ui_MainWindow(object):
         self.frame_area.setObjectName("frame_area")
         self.gridLayout_2 = QtWidgets.QGridLayout(self.frame_area)
         self.gridLayout_2.setObjectName("gridLayout_2")
-        self.pushButton = QtWidgets.QPushButton(self.frame_11)
-        self.pushButton.setGeometry(QtCore.QRect(40, 30, 75, 23))
-        self.pushButton.setStyleSheet("QPushButton{\n"
-"background-color: #055ffc;\n"
-"color:#fff;\n"
-"border-radius: 5px;\n"
-"text-align:center;\n"
-"}\n"
-"\n"
-"QPushButton:hover{\n"
-"\n"
-"}")
-        self.pushButton.setObjectName("pushButton")
         self.verticalLayout_22.addWidget(self.frame_11)
         self.verticalLayout_16.addWidget(self.frame_10)
         self.stackedWidget_main.addWidget(self.page_areaIndividual)
@@ -1339,9 +1357,9 @@ class Ui_MainWindow(object):
 "\n"
 "}")
         self.btn_buscarP.setText("")
-        icon11 = QtGui.QIcon()
-        icon11.addPixmap(QtGui.QPixmap(":/img/lupa y actualizar_lupa.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.btn_buscarP.setIcon(icon11)
+        icon12 = QtGui.QIcon()
+        icon12.addPixmap(QtGui.QPixmap(":/img/lupa y actualizar_lupa.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.btn_buscarP.setIcon(icon12)
         self.btn_buscarP.setIconSize(QtCore.QSize(14, 16))
         self.btn_buscarP.setCheckable(True)
         self.btn_buscarP.setObjectName("btn_buscarP")
@@ -1652,9 +1670,9 @@ class Ui_MainWindow(object):
         self.btn_actualizarProdEgreso.setMinimumSize(QtCore.QSize(0, 21))
         self.btn_actualizarProdEgreso.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.btn_actualizarProdEgreso.setText("")
-        icon12 = QtGui.QIcon()
-        icon12.addPixmap(QtGui.QPixmap(":/img/refresh.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.btn_actualizarProdEgreso.setIcon(icon12)
+        icon13 = QtGui.QIcon()
+        icon13.addPixmap(QtGui.QPixmap(":/img/refresh.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.btn_actualizarProdEgreso.setIcon(icon13)
         self.btn_actualizarProdEgreso.setIconSize(QtCore.QSize(33, 16))
         self.btn_actualizarProdEgreso.setObjectName("btn_actualizarProdEgreso")
         self.frame_31 = QtWidgets.QFrame(self.frame_9)
@@ -1849,19 +1867,6 @@ class Ui_MainWindow(object):
 "\n"
 "}")
         self.btn_eliminarProdEgreso.setObjectName("btn_eliminarProdEgreso")
-        self.btn_volver_egreso = QtWidgets.QPushButton(self.frame_9)
-        self.btn_volver_egreso.setGeometry(QtCore.QRect(50, 30, 75, 23))
-        self.btn_volver_egreso.setStyleSheet("QPushButton{\n"
-"background-color: #055ffc;\n"
-"color:#fff;\n"
-"border-radius: 5px;\n"
-"text-align:center;\n"
-"}\n"
-"\n"
-"QPushButton:hover{\n"
-"\n"
-"}")
-        self.btn_volver_egreso.setObjectName("btn_volver_egreso")
         self.btn_confirmarPicking = QtWidgets.QPushButton(self.frame_9)
         self.btn_confirmarPicking.setGeometry(QtCore.QRect(40, 650, 121, 26))
         font = QtGui.QFont()
@@ -1880,6 +1885,34 @@ class Ui_MainWindow(object):
 "\n"
 "}")
         self.btn_confirmarPicking.setObjectName("btn_confirmarPicking")
+        self.btn_volver_egreso = QtWidgets.QPushButton(self.frame_9)
+        self.btn_volver_egreso.setGeometry(QtCore.QRect(50, 30, 26, 26))
+        font = QtGui.QFont()
+        font.setFamily("Roboto")
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.btn_volver_egreso.setFont(font)
+        self.btn_volver_egreso.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.btn_volver_egreso.setStyleSheet("QPushButton{\n"
+"border:none;\n"
+"font-family: Roboto;\n"
+"border-radius:5px;\n"
+"text-align: center;\n"
+"color: #282830 ;\n"
+"background: #212325\n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"        color:rgb(116, 116, 138)\n"
+"\n"
+"}")
+        self.btn_volver_egreso.setText("")
+        self.btn_volver_egreso.setIcon(icon11)
+        self.btn_volver_egreso.setIconSize(QtCore.QSize(14, 16))
+        self.btn_volver_egreso.setCheckable(True)
+        self.btn_volver_egreso.setObjectName("btn_volver_egreso")
         self.verticalLayout_15.addWidget(self.frame_9)
         self.stackedWidget_main.addWidget(self.page_egreso)
         self.page_usuarios = QtWidgets.QWidget()
@@ -1936,7 +1969,7 @@ class Ui_MainWindow(object):
 "\n"
 "}")
         self.btn_buscarU.setText("")
-        self.btn_buscarU.setIcon(icon11)
+        self.btn_buscarU.setIcon(icon12)
         self.btn_buscarU.setIconSize(QtCore.QSize(14, 16))
         self.btn_buscarU.setCheckable(True)
         self.btn_buscarU.setObjectName("btn_buscarU")
@@ -2193,7 +2226,7 @@ class Ui_MainWindow(object):
 "\n"
 "}")
         self.pushButton_20.setText("")
-        self.pushButton_20.setIcon(icon11)
+        self.pushButton_20.setIcon(icon12)
         self.pushButton_20.setIconSize(QtCore.QSize(14, 16))
         self.pushButton_20.setCheckable(True)
         self.pushButton_20.setObjectName("pushButton_20")
@@ -2312,11 +2345,11 @@ class Ui_MainWindow(object):
         self.btn_actualizarLotes.setIconSize(QtCore.QSize(14, 16))
         self.btn_actualizarLotes.setCheckable(True)
         self.btn_actualizarLotes.setObjectName("btn_actualizarLotes")
-        self.tableWidget_stock_3 = QtWidgets.QTableWidget(self.frame_main_stock_2)
-        self.tableWidget_stock_3.setGeometry(QtCore.QRect(50, 190, 851, 461))
-        self.tableWidget_stock_3.setMaximumSize(QtCore.QSize(16777215, 489))
-        self.tableWidget_stock_3.viewport().setProperty("cursor", QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.tableWidget_stock_3.setStyleSheet("QTableWidget{\n"
+        self.tableWidget_lotes = QtWidgets.QTableWidget(self.frame_main_stock_2)
+        self.tableWidget_lotes.setGeometry(QtCore.QRect(50, 190, 851, 461))
+        self.tableWidget_lotes.setMaximumSize(QtCore.QSize(16777215, 489))
+        self.tableWidget_lotes.viewport().setProperty("cursor", QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.tableWidget_lotes.setStyleSheet("QTableWidget{\n"
 "font-size: 11pt;\n"
 "margin-left: 0px;\n"
 "margin-top:15px;\n"
@@ -2348,28 +2381,28 @@ class Ui_MainWindow(object):
 "\n"
 "    border-left: 1px solid #394353;\n"
 "}")
-        self.tableWidget_stock_3.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers)
-        self.tableWidget_stock_3.setShowGrid(False)
-        self.tableWidget_stock_3.setObjectName("tableWidget_stock_3")
-        self.tableWidget_stock_3.setColumnCount(5)
-        self.tableWidget_stock_3.setRowCount(0)
+        self.tableWidget_lotes.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers)
+        self.tableWidget_lotes.setShowGrid(False)
+        self.tableWidget_lotes.setObjectName("tableWidget_lotes")
+        self.tableWidget_lotes.setColumnCount(5)
+        self.tableWidget_lotes.setRowCount(0)
         item = QtWidgets.QTableWidgetItem()
-        self.tableWidget_stock_3.setHorizontalHeaderItem(0, item)
+        self.tableWidget_lotes.setHorizontalHeaderItem(0, item)
         item = QtWidgets.QTableWidgetItem()
-        self.tableWidget_stock_3.setHorizontalHeaderItem(1, item)
+        self.tableWidget_lotes.setHorizontalHeaderItem(1, item)
         item = QtWidgets.QTableWidgetItem()
-        self.tableWidget_stock_3.setHorizontalHeaderItem(2, item)
+        self.tableWidget_lotes.setHorizontalHeaderItem(2, item)
         item = QtWidgets.QTableWidgetItem()
-        self.tableWidget_stock_3.setHorizontalHeaderItem(3, item)
+        self.tableWidget_lotes.setHorizontalHeaderItem(3, item)
         item = QtWidgets.QTableWidgetItem()
-        self.tableWidget_stock_3.setHorizontalHeaderItem(4, item)
-        self.tableWidget_stock_3.horizontalHeader().setVisible(False)
-        self.tableWidget_stock_3.horizontalHeader().setCascadingSectionResizes(True)
-        self.tableWidget_stock_3.horizontalHeader().setDefaultSectionSize(170)
-        self.tableWidget_stock_3.horizontalHeader().setSortIndicatorShown(True)
-        self.tableWidget_stock_3.horizontalHeader().setStretchLastSection(True)
-        self.tableWidget_stock_3.verticalHeader().setVisible(False)
-        self.tableWidget_stock_3.verticalHeader().setDefaultSectionSize(41)
+        self.tableWidget_lotes.setHorizontalHeaderItem(4, item)
+        self.tableWidget_lotes.horizontalHeader().setVisible(False)
+        self.tableWidget_lotes.horizontalHeader().setCascadingSectionResizes(True)
+        self.tableWidget_lotes.horizontalHeader().setDefaultSectionSize(170)
+        self.tableWidget_lotes.horizontalHeader().setSortIndicatorShown(True)
+        self.tableWidget_lotes.horizontalHeader().setStretchLastSection(True)
+        self.tableWidget_lotes.verticalHeader().setVisible(False)
+        self.tableWidget_lotes.verticalHeader().setDefaultSectionSize(41)
         self.verticalLayout_5.addWidget(self.frame_main_stock_2)
         self.verticalLayout_4.addWidget(self.frame)
         self.stackedWidget_main.addWidget(self.page_lotes)
@@ -2591,7 +2624,7 @@ class Ui_MainWindow(object):
         self.btn_actualizarAreaInd.setMinimumSize(QtCore.QSize(0, 21))
         self.btn_actualizarAreaInd.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.btn_actualizarAreaInd.setText("")
-        self.btn_actualizarAreaInd.setIcon(icon12)
+        self.btn_actualizarAreaInd.setIcon(icon13)
         self.btn_actualizarAreaInd.setIconSize(QtCore.QSize(33, 16))
         self.btn_actualizarAreaInd.setObjectName("btn_actualizarAreaInd")
         self.verticalLayout_39.addWidget(self.groupBox_12)
@@ -2651,7 +2684,7 @@ class Ui_MainWindow(object):
 "\n"
 "}")
         self.pushButton_21.setText("")
-        self.pushButton_21.setIcon(icon11)
+        self.pushButton_21.setIcon(icon12)
         self.pushButton_21.setIconSize(QtCore.QSize(14, 16))
         self.pushButton_21.setCheckable(True)
         self.pushButton_21.setObjectName("pushButton_21")
@@ -2896,7 +2929,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
         self.stackedWidget_3.setCurrentIndex(0)
-        self.stackedWidget_main.setCurrentIndex(1)
+        self.stackedWidget_main.setCurrentIndex(9)
         self.lista_egreso.setCurrentRow(-1)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
@@ -2926,7 +2959,6 @@ class Ui_MainWindow(object):
         item.setText(_translate("MainWindow", "New Column"))
         item = self.tableWidget_niveles.horizontalHeaderItem(3)
         item.setText(_translate("MainWindow", "New Column"))
-        self.btn_volver_niveles.setText(_translate("MainWindow", "volver"))
         self.label_78.setText(_translate("MainWindow", "Código Posición"))
         self.label_79.setText(_translate("MainWindow", "Volumen"))
         self.label_80.setText(_translate("MainWindow", "Límite de Peso"))
@@ -2936,14 +2968,6 @@ class Ui_MainWindow(object):
         self.label_84.setText(_translate("MainWindow", "Marca"))
         self.label_85.setText(_translate("MainWindow", "Cantidad"))
         self.label_86.setText(_translate("MainWindow", "Primer Vencimiento"))
-        item = self.tableWidget_prodNiveles.verticalHeaderItem(0)
-        item.setText(_translate("MainWindow", "New Row"))
-        item = self.tableWidget_prodNiveles.verticalHeaderItem(1)
-        item.setText(_translate("MainWindow", "New Row"))
-        item = self.tableWidget_prodNiveles.verticalHeaderItem(2)
-        item.setText(_translate("MainWindow", "New Row"))
-        item = self.tableWidget_prodNiveles.verticalHeaderItem(3)
-        item.setText(_translate("MainWindow", "New Row"))
         item = self.tableWidget_prodNiveles.horizontalHeaderItem(0)
         item.setText(_translate("MainWindow", "New Column"))
         item = self.tableWidget_prodNiveles.horizontalHeaderItem(1)
@@ -2954,19 +2978,6 @@ class Ui_MainWindow(object):
         item.setText(_translate("MainWindow", "New Column"))
         item = self.tableWidget_prodNiveles.horizontalHeaderItem(4)
         item.setText(_translate("MainWindow", "New Column"))
-        __sortingEnabled = self.tableWidget_prodNiveles.isSortingEnabled()
-        self.tableWidget_prodNiveles.setSortingEnabled(False)
-        item = self.tableWidget_prodNiveles.item(0, 0)
-        item.setText(_translate("MainWindow", "a"))
-        item = self.tableWidget_prodNiveles.item(0, 1)
-        item.setText(_translate("MainWindow", "a"))
-        item = self.tableWidget_prodNiveles.item(0, 2)
-        item.setText(_translate("MainWindow", "a"))
-        item = self.tableWidget_prodNiveles.item(0, 3)
-        item.setText(_translate("MainWindow", "a"))
-        item = self.tableWidget_prodNiveles.item(0, 4)
-        item.setText(_translate("MainWindow", "a"))
-        self.tableWidget_prodNiveles.setSortingEnabled(__sortingEnabled)
         self.label_73.setText(_translate("MainWindow", "Crear Depósito"))
         self.label_2.setText(_translate("MainWindow", "Ancho"))
         self.label_3.setText(_translate("MainWindow", "Largo"))
@@ -2975,7 +2986,6 @@ class Ui_MainWindow(object):
         self.label_nombre_area.setText(_translate("MainWindow", "Nombre Área"))
         self.btn_nuevaEstanteria.setText(_translate("MainWindow", "Nueva Estantería"))
         self.btn_newPosicion.setText(_translate("MainWindow", "Nueva Posición"))
-        self.pushButton.setText(_translate("MainWindow", "volver"))
         self.buscar_input.setPlaceholderText(_translate("MainWindow", "Buscar productos"))
         self.label_47.setText(_translate("MainWindow", "Código"))
         self.label_48.setText(_translate("MainWindow", "Descripción"))
@@ -3019,7 +3029,6 @@ class Ui_MainWindow(object):
         item.setText(_translate("MainWindow", "New Column"))
         self.label_17.setText(_translate("MainWindow", "Picking"))
         self.btn_eliminarProdEgreso.setText(_translate("MainWindow", "Eliminar"))
-        self.btn_volver_egreso.setText(_translate("MainWindow", "volver"))
         self.btn_confirmarPicking.setText(_translate("MainWindow", "Confirmar"))
         self.lineEdit_3.setPlaceholderText(_translate("MainWindow", "Buscar usuarios"))
         self.label_66.setText(_translate("MainWindow", "DNI"))
@@ -3046,15 +3055,15 @@ class Ui_MainWindow(object):
         self.label_56.setText(_translate("MainWindow", "Lote"))
         self.label_57.setText(_translate("MainWindow", "Primer Vencimiento"))
         self.label_58.setText(_translate("MainWindow", "Lotes"))
-        item = self.tableWidget_stock_3.horizontalHeaderItem(0)
+        item = self.tableWidget_lotes.horizontalHeaderItem(0)
         item.setText(_translate("MainWindow", "New Column"))
-        item = self.tableWidget_stock_3.horizontalHeaderItem(1)
+        item = self.tableWidget_lotes.horizontalHeaderItem(1)
         item.setText(_translate("MainWindow", "New Column"))
-        item = self.tableWidget_stock_3.horizontalHeaderItem(2)
+        item = self.tableWidget_lotes.horizontalHeaderItem(2)
         item.setText(_translate("MainWindow", "New Column"))
-        item = self.tableWidget_stock_3.horizontalHeaderItem(3)
+        item = self.tableWidget_lotes.horizontalHeaderItem(3)
         item.setText(_translate("MainWindow", "New Column"))
-        item = self.tableWidget_stock_3.horizontalHeaderItem(4)
+        item = self.tableWidget_lotes.horizontalHeaderItem(4)
         item.setText(_translate("MainWindow", "New Column"))
         item = self.tableWidget_areas.horizontalHeaderItem(0)
         item.setText(_translate("MainWindow", "New Column"))

@@ -457,3 +457,13 @@ class Ui_MainWindow(object):
         self.label_5.setText(_translate("MainWindow", "Nuevo Producto"))
         self.label_marca_2.setText(_translate("MainWindow", "Precio"))
 import img_rc
+
+
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+    MainWindow = QtWidgets.QMainWindow()
+    ui = Ui_MainWindow()
+    ui.setupUi(MainWindow)
+    MainWindow.show()
+    sys.exit(app.exec_())

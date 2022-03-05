@@ -249,7 +249,7 @@ QPushButton:hover{
              <rect>
               <x>90</x>
               <y>108</y>
-              <width>81</width>
+              <width>91</width>
               <height>31</height>
              </rect>
             </property>
@@ -487,7 +487,7 @@ font-weight: bold
                  <rect>
                   <x>0</x>
                   <y>10</y>
-                  <width>200</width>
+                  <width>201</width>
                   <height>40</height>
                  </rect>
                 </property>
@@ -1204,7 +1204,7 @@ border:none</string>
           <item>
            <widget class="QStackedWidget" name="stackedWidget_main">
             <property name="currentIndex">
-             <number>1</number>
+             <number>9</number>
             </property>
             <widget class="QWidget" name="page_deposito">
              <layout class="QVBoxLayout" name="verticalLayout_13">
@@ -1492,11 +1492,17 @@ QPushButton:hover{
              <widget class="QTableWidget" name="tableWidget_niveles">
               <property name="geometry">
                <rect>
-                <x>30</x>
+                <x>40</x>
                 <y>170</y>
-                <width>931</width>
+                <width>921</width>
                 <height>201</height>
                </rect>
+              </property>
+              <property name="font">
+               <font>
+                <family>Cairo Semibold</family>
+                <pointsize>11</pointsize>
+               </font>
               </property>
               <property name="styleSheet">
                <string notr="true">QTableWidget{
@@ -1545,7 +1551,7 @@ QHeaderView::section {
                <number>50</number>
               </attribute>
               <attribute name="verticalHeaderVisible">
-               <bool>true</bool>
+               <bool>false</bool>
               </attribute>
               <attribute name="verticalHeaderCascadingSectionResizes">
                <bool>false</bool>
@@ -1576,31 +1582,6 @@ QHeaderView::section {
                 <string>New Column</string>
                </property>
               </column>
-             </widget>
-             <widget class="QPushButton" name="btn_volver_niveles">
-              <property name="geometry">
-               <rect>
-                <x>40</x>
-                <y>60</y>
-                <width>75</width>
-                <height>23</height>
-               </rect>
-              </property>
-              <property name="styleSheet">
-               <string notr="true">QPushButton{
-background-color: #055ffc;
-color:#fff;
-border-radius: 5px;
-text-align:center;
-}
-
-QPushButton:hover{
-
-}</string>
-              </property>
-              <property name="text">
-               <string>volver</string>
-              </property>
              </widget>
              <widget class="QFrame" name="frame_37">
               <property name="geometry">
@@ -1902,7 +1883,7 @@ color: #fff ;
                <rect>
                 <x>40</x>
                 <y>430</y>
-                <width>921</width>
+                <width>931</width>
                 <height>251</height>
                </rect>
               </property>
@@ -1976,26 +1957,6 @@ QHeaderView::section:vertical
               <attribute name="verticalHeaderDefaultSectionSize">
                <number>41</number>
               </attribute>
-              <row>
-               <property name="text">
-                <string>New Row</string>
-               </property>
-              </row>
-              <row>
-               <property name="text">
-                <string>New Row</string>
-               </property>
-              </row>
-              <row>
-               <property name="text">
-                <string>New Row</string>
-               </property>
-              </row>
-              <row>
-               <property name="text">
-                <string>New Row</string>
-               </property>
-              </row>
               <column>
                <property name="text">
                 <string>New Column</string>
@@ -2021,31 +1982,6 @@ QHeaderView::section:vertical
                 <string>New Column</string>
                </property>
               </column>
-              <item row="0" column="0">
-               <property name="text">
-                <string>a</string>
-               </property>
-              </item>
-              <item row="0" column="1">
-               <property name="text">
-                <string>a</string>
-               </property>
-              </item>
-              <item row="0" column="2">
-               <property name="text">
-                <string>a</string>
-               </property>
-              </item>
-              <item row="0" column="3">
-               <property name="text">
-                <string>a</string>
-               </property>
-              </item>
-              <item row="0" column="4">
-               <property name="text">
-                <string>a</string>
-               </property>
-              </item>
              </widget>
              <widget class="QPushButton" name="btn_actualizarProdNiveles">
               <property name="geometry">
@@ -2089,6 +2025,59 @@ QPushButton:hover{
               <property name="icon">
                <iconset resource="img/img.qrc">
                 <normaloff>:/img/lupa y actualizar_actualizar.png</normaloff>:/img/lupa y actualizar_actualizar.png</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>14</width>
+                <height>16</height>
+               </size>
+              </property>
+              <property name="checkable">
+               <bool>true</bool>
+              </property>
+             </widget>
+             <widget class="QPushButton" name="btn_volver_niveles">
+              <property name="geometry">
+               <rect>
+                <x>20</x>
+                <y>43</y>
+                <width>26</width>
+                <height>26</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <family>Roboto</family>
+                <pointsize>10</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="cursor">
+               <cursorShape>PointingHandCursor</cursorShape>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QPushButton{
+border:none;
+font-family: Roboto;
+border-radius:5px;
+text-align: center;
+color: #282830 ;
+background: #212325
+
+}
+
+QPushButton:hover{
+		color:rgb(116, 116, 138)
+
+}</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="icon">
+               <iconset>
+                <normaloff>img/icono_volver.png</normaloff>img/icono_volver.png</iconset>
               </property>
               <property name="iconSize">
                <size>
@@ -2584,6 +2573,59 @@ QPushButton:hover{
                      <bool>true</bool>
                     </property>
                    </widget>
+                   <widget class="QPushButton" name="pushButton">
+                    <property name="geometry">
+                     <rect>
+                      <x>10</x>
+                      <y>60</y>
+                      <width>26</width>
+                      <height>26</height>
+                     </rect>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Roboto</family>
+                      <pointsize>10</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="cursor">
+                     <cursorShape>PointingHandCursor</cursorShape>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">QPushButton{
+border:none;
+font-family: Roboto;
+border-radius:5px;
+text-align: center;
+color: #282830 ;
+background: #212325
+
+}
+
+QPushButton:hover{
+		color:rgb(116, 116, 138)
+
+}</string>
+                    </property>
+                    <property name="text">
+                     <string/>
+                    </property>
+                    <property name="icon">
+                     <iconset>
+                      <normaloff>img/icono_volver.png</normaloff>img/icono_volver.png</iconset>
+                    </property>
+                    <property name="iconSize">
+                     <size>
+                      <width>14</width>
+                      <height>16</height>
+                     </size>
+                    </property>
+                    <property name="checkable">
+                     <bool>true</bool>
+                    </property>
+                   </widget>
                   </widget>
                  </item>
                  <item>
@@ -2625,31 +2667,6 @@ QPushButton:hover{
                      <enum>QFrame::Raised</enum>
                     </property>
                     <layout class="QGridLayout" name="gridLayout_2"/>
-                   </widget>
-                   <widget class="QPushButton" name="pushButton">
-                    <property name="geometry">
-                     <rect>
-                      <x>40</x>
-                      <y>30</y>
-                      <width>75</width>
-                      <height>23</height>
-                     </rect>
-                    </property>
-                    <property name="styleSheet">
-                     <string notr="true">QPushButton{
-background-color: #055ffc;
-color:#fff;
-border-radius: 5px;
-text-align:center;
-}
-
-QPushButton:hover{
-
-}</string>
-                    </property>
-                    <property name="text">
-                     <string>volver</string>
-                    </property>
                    </widget>
                   </widget>
                  </item>
@@ -3798,31 +3815,6 @@ QPushButton:hover{
                   <string>Eliminar</string>
                  </property>
                 </widget>
-                <widget class="QPushButton" name="btn_volver_egreso">
-                 <property name="geometry">
-                  <rect>
-                   <x>50</x>
-                   <y>30</y>
-                   <width>75</width>
-                   <height>23</height>
-                  </rect>
-                 </property>
-                 <property name="styleSheet">
-                  <string notr="true">QPushButton{
-background-color: #055ffc;
-color:#fff;
-border-radius: 5px;
-text-align:center;
-}
-
-QPushButton:hover{
-
-}</string>
-                 </property>
-                 <property name="text">
-                  <string>volver</string>
-                 </property>
-                </widget>
                 <widget class="QPushButton" name="btn_confirmarPicking">
                  <property name="geometry">
                   <rect>
@@ -3855,6 +3847,59 @@ QPushButton:hover{
                  </property>
                  <property name="text">
                   <string>Confirmar</string>
+                 </property>
+                </widget>
+                <widget class="QPushButton" name="btn_volver_egreso">
+                 <property name="geometry">
+                  <rect>
+                   <x>50</x>
+                   <y>30</y>
+                   <width>26</width>
+                   <height>26</height>
+                  </rect>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Roboto</family>
+                   <pointsize>10</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="cursor">
+                  <cursorShape>PointingHandCursor</cursorShape>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QPushButton{
+border:none;
+font-family: Roboto;
+border-radius:5px;
+text-align: center;
+color: #282830 ;
+background: #212325
+
+}
+
+QPushButton:hover{
+		color:rgb(116, 116, 138)
+
+}</string>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="icon">
+                  <iconset>
+                   <normaloff>img/icono_volver.png</normaloff>img/icono_volver.png</iconset>
+                 </property>
+                 <property name="iconSize">
+                  <size>
+                   <width>14</width>
+                   <height>16</height>
+                  </size>
+                 </property>
+                 <property name="checkable">
+                  <bool>true</bool>
                  </property>
                 </widget>
                </widget>
@@ -4733,7 +4778,7 @@ QPushButton:hover{
                      <bool>true</bool>
                     </property>
                    </widget>
-                   <widget class="QTableWidget" name="tableWidget_stock_3">
+                   <widget class="QTableWidget" name="tableWidget_lotes">
                     <property name="geometry">
                      <rect>
                       <x>50</x>
