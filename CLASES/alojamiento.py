@@ -21,13 +21,13 @@ class Alojamiento:
         self.volumen = self.largo * self.ancho * self.alto
         self.disponibilidad = 100
         self.posicion = str(
-            str(area) + "-" + str(pasillo) + "-" + str(segmento) + "-"+ str(columna+1) + "-" + str(
-                nivel+1))
+            str(area) + "-" + str(pasillo) + "-" + str(segmento) + "-"+ str(columna) + "-" + str(
+                nivel))
         self.pasillo = pasillo
         self.limite = limite
         self.codigo = str(
-            str(area) + "-" + str(pasillo) + "-" + str(segmento) + "-" + str(columna+1) + "-" + str(
-                nivel+1))
+            str(area) + "-" + str(pasillo) + "-" + str(segmento) + "-" + str(columna) + "-" + str(
+                nivel))
         print(self.codigo)
         self.alta_alojamiento()
         print("se creo alojamiento correctamente")
@@ -326,23 +326,53 @@ def listar_alojamiento_disponibles_area(area):
     c.close_connection(a)
     return data
 
-def pick(producto):
-    nal=contar_filas()
-    ial=0
-    nar=a.contar_filas()
-    iar=0
-    nseg=a.contar_segmentos()
-    iseg=0
-    ncol=a.contar_columnas()
-    icol=0
-    nniv=contar_nivel()
-    iniv=0
-    inicio=a.ver_e()
-    posicioninicio=a.ver_posicion(inicio)
-    print(posicioninicio)
-    #while iar<nar:
-     #   while iseg<nseg:
+def ver_area(codigo):
+    a = c.start_connection()
+    cursor = a.cursor()
+    query = "SELECT area FROM alojamiento WHERE codigo=%s"
+    cursor.execute(query, codigo)
+    a.commit()
+    data = cursor.fetchall()
+    data=data[0][0]
+    c.close_connection(a)
+    return data
 
+def select_from_area(area):
+    a = c.start_connection()
+    cursor = a.cursor()
+    query = "SELECT codigo FROM alojamiento WHERE area=%s"
+    cursor.execute(query, area)
+    a.commit()
+    data = cursor.fetchall()
+    c.close_connection(a)
+    return data
+
+def pick_recorrido():
+    recorrido_areas = area.ver_recorrido()
+    n = len(recorrido_areas)
+    final = recorrido_areas[n - 1]
+    inicio = recorrido_areas[n - 2]
+    recorrido_alojamiento=[]
+    n = n - 2
+    i = 0
+    while i < n:
+        recorrido_alojamiento.append(select_from_area(area.ver_area_posicion(recorrido_areas[i])))
+        i += 1
+    recorrido_alojamiento2=[]
+    for data in recorrido_alojamiento:
+        for data2 in data:
+            recorrido_alojamiento2.append(data2[0])
+    return recorrido_alojamiento2
+
+def pick_(lp):
+    pick=[]
+    lr=pick_recorrido()
+    for i in lr:
+        for j in lp:
+            if i==j:
+                pick.append(j)
+
+    return pick
 
 
 
