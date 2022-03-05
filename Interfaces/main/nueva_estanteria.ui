@@ -50,8 +50,15 @@
          <height>22</height>
         </rect>
        </property>
+       <property name="font">
+        <font>
+         <family>Cairo</family>
+         <pointsize>9</pointsize>
+        </font>
+       </property>
        <property name="styleSheet">
-        <string notr="true">border: 1px solid #b8b9bd</string>
+        <string notr="true">border: 1px solid #b8b9bd;
+background:#fff;</string>
        </property>
       </widget>
       <widget class="QComboBox" name="cbox_pasillo">
@@ -59,12 +66,19 @@
         <rect>
          <x>210</x>
          <y>110</y>
-         <width>111</width>
+         <width>131</width>
          <height>21</height>
         </rect>
        </property>
+       <property name="font">
+        <font>
+         <family>Cairo</family>
+         <pointsize>9</pointsize>
+        </font>
+       </property>
        <property name="styleSheet">
-        <string notr="true">border: 1px solid #b8b9bd</string>
+        <string notr="true">border: 1px solid #b8b9bd;
+background:#fff;</string>
        </property>
       </widget>
       <widget class="QSpinBox" name="num_niveles">
@@ -76,8 +90,15 @@
          <height>22</height>
         </rect>
        </property>
+       <property name="font">
+        <font>
+         <family>Cairo</family>
+         <pointsize>9</pointsize>
+        </font>
+       </property>
        <property name="styleSheet">
-        <string notr="true">border: 1px solid #b8b9bd</string>
+        <string notr="true">background:#fff;
+border: 1px solid #b8b9bd</string>
        </property>
       </widget>
       <widget class="QComboBox" name="cbox_posicion">
@@ -85,12 +106,19 @@
         <rect>
          <x>210</x>
          <y>180</y>
-         <width>111</width>
+         <width>131</width>
          <height>22</height>
         </rect>
        </property>
+       <property name="font">
+        <font>
+         <family>Cairo</family>
+         <pointsize>9</pointsize>
+        </font>
+       </property>
        <property name="styleSheet">
-        <string notr="true">border: 1px solid #b8b9bd</string>
+        <string notr="true">border: 1px solid #b8b9bd;
+background:#fff;</string>
        </property>
       </widget>
       <widget class="QLabel" name="label">
