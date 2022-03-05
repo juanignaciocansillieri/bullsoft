@@ -281,7 +281,18 @@ def ver_posicion(area):
     a.commit()
     b = cursor.fetchall()
     nombre=str(b[0][0])
-    c.close_connection()
+    c.close_connection(a)
+    return nombre
+
+def ver_area_posicion(posicion):
+    a = c.start_connection()
+    cursor = a.cursor()
+    query = "SELECT nombre FROM area where posicion=%s"
+    cursor.execute(query,posicion)
+    a.commit()
+    b = cursor.fetchall()
+    nombre=str(b[0][0])
+    c.close_connection(a)
     return nombre
 
 def ver_e():
@@ -291,7 +302,7 @@ def ver_e():
     cursor.execute(query)
     a.commit()
     b = cursor.fetchall()
-    if b == "None":
+    if str(b) == "()":
         return 0
     else:
         return b
@@ -304,7 +315,7 @@ def ver_s():
     cursor.execute(query)
     a.commit()
     b = cursor.fetchall()
-    if b == "None":
+    if str(b) == "()":
         return 0
     else:
         return b
@@ -332,27 +343,55 @@ def ver_pasillos(area):
     c.close_connection(a)
     return data
 
-""""
-def ver_area_siguiente(area):
-    data=mz.importar_datos_matriz()
-    nfilas=data[0][0]
-    ifilas=0
-    ncolumnas=data[0][1]
-    icol=0
-    data=ver_posicion(area)
 
-    if fila!=nfilas:
-        while ifilas>nfilas:
-            if(icol==ncolumnas):
-                icol=ncolumnas*2
-                while icol>ncolumnas:
-                    icol=icol-1
-                    pos = str(str(ifilas) + "x" + str(icol))
-                    return ver_area_posicion(pos)
-            else:
-                while icol<ncolumnas:
-                    icol=icol+1
-                    pos = str(str(ifilas) + "x" + str(icol))
-                    return ver_area_posicion(pos)
-            ifilas=ifilas+1
-"""
+def ver_recorrido():
+    a = c.start_connection()
+    cursor = a.cursor()
+    n=contar_filas()
+    inicio=ver_e()
+    if inicio==0:
+        query = "SELECT posicion FROM area where idarea=%s"
+        cursor.execute(query, 1)
+        a.commit()
+        b = cursor.fetchall()
+        inicio = str(b[0][0])
+    final=ver_s()
+    if final==0:
+        query = "SELECT posicion FROM area where idarea=%s"
+        cursor.execute(query, n)
+        a.commit()
+        b = cursor.fetchall()
+        final = str(b[0][0])
+
+    query = "SELECT posicion FROM area where idarea=%s"
+    cursor.execute(query, n)
+    a.commit()
+    b = cursor.fetchall()
+    xy2 = str(b[0][0])
+    xy2=xy2.split(sep="x")
+    x2=int(xy2[0])
+    y2=int(xy2[1])
+
+    posiciones=[]
+    i=0
+    x,y=1,1
+    while y<=y2:
+        if x<x2:
+            while x<=x2:
+                xy=str(str(x)+"x"+str(y))
+                posiciones.append(xy)
+                x=x+1
+        else:
+            while x>=1:
+                xy = str(str(x) + "x" + str(y))
+                posiciones.append(xy)
+                x=x-1
+        if x>x2:
+            x=x-1
+        else:
+            x=x+1
+        y=y+1
+    posiciones.append(inicio)
+    posiciones.append(final)
+    c.close_connection(a)
+    return posiciones

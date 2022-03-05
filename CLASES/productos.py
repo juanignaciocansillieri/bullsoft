@@ -160,21 +160,6 @@ class Productos:
         else:
             return data
 
-"""
-def listar_prod_area(param):
-    a = c.start_connection()
-    cursor = a.cursor()
-    try:
-        query = "SELECT codigo,descripcion,marca,condicion FROM productos WHERE condicion=%s"
-        cursor.execute(query, param)
-        productos = cursor.fetchall()
-        a.commit()
-    except pymysql.err.OperationalError as err:
-        productos = ""
-        print("Hubo un error:", err)
-    c.close_connection(a)
-    return productos
-"""
 
 def listar_prod():
     a = c.start_connection()
@@ -266,7 +251,7 @@ def ver_vol(codigo):
 def buscar_prod_posicion(posicion):
     a = c.start_connection()
     cursor = a.cursor()
-    query = "SELECT * FROM productos WHERE ubicacion=%s"
+    query = "SELECT descripcion FROM productos WHERE ubicacion=%s"
     cursor.execute(query, posicion)
     data = cursor.fetchall()
     a.commit()
@@ -277,6 +262,18 @@ def buscar_prod_posicion(posicion):
         data = data[0]
         return data
     c.close_connection(a)
+
+def buscar_prod_pick(posicion,codigo):
+    a = c.start_connection()
+    cursor = a.cursor()
+    query = "SELECT descripcion FROM productos WHERE ubicacion=%s and codigo=%s"
+    cursor.execute(query, (posicion,codigo))
+    data = cursor.fetchall()
+    a.commit()
+    data = data
+    c.close_connection(a)
+    return data
+
 
 def ver_precio(codigo):
     a = c.start_connection()
@@ -296,17 +293,19 @@ def ver_precio(codigo):
 def ver_posicion(codigo):
     a = c.start_connection()
     cursor = a.cursor()
-    query = "SELECT posicion FROM productos WHERE codigo=%s"
+    query = "SELECT ubicacion FROM productos WHERE codigo=%s"
     cursor.execute(query, codigo)
     data = cursor.fetchall()
     a.commit()
-    if data == "None":
-        print("no se encontro el producto indicado")
-        return 0
-    else:
-        data = data[0]
-        return data
+    data = data
+    return data
     c.close_connection(a)
+
+def ver_area(codigo):
+    posicion=ver_posicion(codigo)
+    area=alojamiento.ver_area(posicion)
+    return area
+
 
 def contar_productos_ubicacion(ubicacion):
     a = c.start_connection()
