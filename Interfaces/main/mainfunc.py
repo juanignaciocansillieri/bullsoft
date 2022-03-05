@@ -725,7 +725,7 @@ class Modern(QMainWindow):
         i=1
 
         #if pasillos == segmentos or pasillos == segmentos-1:
-        for x in range(segmentos+pasillos):
+        for x in range(segmentos):
             frame = QtWidgets.QFrame(self.ui.frame_area)
             frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
             frame.setFrameShadow(QtWidgets.QFrame.Raised)

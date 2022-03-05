@@ -338,6 +338,7 @@ def listar_productos_ubicacion(ubicacion):
     query = "SELECT p.codigo, p.descripcion, p.marca, l.cantidad,l.vencimiento FROM productos p JOIN lote l ON p.codigo = l.idproducto WHERE ubicacion=%s"
     cursor.execute(query, ubicacion)
     data = cursor.fetchall()
+    data=data[0][0]
     a.commit()
     c.close_connection(a)
     return data
