@@ -122,9 +122,9 @@ class Area:
         cursor = a.cursor()
         query = "SELECT nombre FROM area WHERE identificador=%s"
         cursor.execute(query, nombre)
-        data = cursor.fetchall()
+        data = cursor.fetchone()
         a.commit()
-        if data == "None":
+        if data == None:
             print("no se encontro el area indicado")
             return 0
         else:
@@ -137,11 +137,11 @@ class Area:
         cursor.execute(query, nombre)
         data = cursor.fetchall()
         a.commit()
-        #if area == "None":
-        #    print("no se encontro el area indicado")
-        #    return 0
-        #else:
-        return data
+        if data == "()":
+            print("no se encontro el area indicado")
+            return 0
+        else:
+            return data
 
 
 def ver_nombre(nombre):

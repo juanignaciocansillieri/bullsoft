@@ -16,14 +16,15 @@ for data in rp:
 
 print(rp2)
 print(re)
-print(cod)
+#print(cod)
 
 pick=alojamiento.pick_(rp2)
 print(pick)
 i=0
 j=0
-print(n)
-pick2=[]
+#print(n)
+#pick2=[]
+"""
 while i< n:
    while j<n:
        pick2.append(productos.buscar_prod_pick(pick2[i],j))
@@ -32,4 +33,4 @@ while i< n:
 j=0
 i=i+1
 print(pick2)
-
+"""

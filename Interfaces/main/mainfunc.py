@@ -254,9 +254,15 @@ class Modern(QMainWindow):
         global  n_egreso
         global tupla_egreso
         codigo=self.ui.input_codigoProdEgreso.text()
+        if p.ver_desc(codigo)==0:
+            QtWidgets.QMessageBox.critical(self, "Error", "Producto no encontrado")
+            return None
         cantidad=self.ui.num_cantidadEgreso.text()
+        if int(cantidad)<=0:
+            QtWidgets.QMessageBox.critical(self, "Error", "Ingrese una cantidad correcta")
+            return None
         desc=p.ver_desc(codigo)
-        t = [str(codigo), desc, str(cantidad)]
+        t = [str(codigo), desc[0], str(cantidad)]
         tupla_egreso = tupla_egreso + [t]
         print(tupla_egreso)
         self.ui.input_codigoProdEgreso.setText("")

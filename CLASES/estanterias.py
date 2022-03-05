@@ -45,7 +45,7 @@ class Estanterias:
         cursor.execute(query, values)
         a.commit()
         b = cursor.fetchall()
-        if b == "None":
+        if b == "()":
             print("no se encontro la estanteria indicado")
             return 0
         else:

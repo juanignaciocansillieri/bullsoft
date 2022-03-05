@@ -54,8 +54,8 @@ class Productos:
         values = codigov
         cursor.execute(query, values)
         a.commit()
-        b = cursor.fetchall()
-        if b == "None":
+        b = cursor.fetchone()
+        if b == None:
             print("no se encontro el producto indicado")
             return 0
         else:
@@ -118,11 +118,7 @@ class Productos:
         cursor.execute(query, (param, param, param))
         data = cursor.fetchall()
         a.commit()
-        if data == "None":
-            print("no se encontro el producto indicado")
-            return 0
-        else:
-            return data
+        return data
 
 
     def verificar(param):
@@ -131,11 +127,7 @@ class Productos:
         query = "SELECT * FROM productos WHERE codigo = %s"
         product = cursor.execute(query, param)
         a.commit()
-        if product == "None":
-            print("no se encontro el producto indicado")
-            return 0
-        else:
-            return product
+        return product
 
     def buscar_product_rows(param):
         a = c.start_connection()
@@ -154,7 +146,7 @@ class Productos:
         data = cursor.fetchall()
         a.commit()
 
-        if data == "None":
+        if data == "()":
             print("no se encontro el producto indicado")
             return 0
         else:
@@ -224,9 +216,9 @@ def ver_desc(codigo):
     cursor = a.cursor()
     query = "SELECT descripcion FROM productos WHERE codigo=%s"
     cursor.execute(query,codigo)
-    data = cursor.fetchall()
+    data = cursor.fetchone()
     a.commit()
-    if data == "None":
+    if data == None:
         print("no se encontro el producto indicado")
         return 0
     else:
@@ -238,9 +230,9 @@ def ver_vol(codigo):
     cursor = a.cursor()
     query = "SELECT volumen FROM productos WHERE codigo=%s"
     cursor.execute(query,codigo)
-    data = cursor.fetchall()
+    data = cursor.fetchone()
     a.commit()
-    if data == "None":
+    if data == None:
         print("no se encontro el producto indicado")
         return 0
     else:
@@ -255,7 +247,7 @@ def buscar_prod_posicion(posicion):
     cursor.execute(query, posicion)
     data = cursor.fetchall()
     a.commit()
-    if data == "None":
+    if data == "()":
         print("no se encontro el producto indicado")
         return 0
     else:
@@ -280,9 +272,9 @@ def ver_precio(codigo):
     cursor = a.cursor()
     query = "SELECT precio FROM productos WHERE codigo=%s"
     cursor.execute(query, codigo)
-    data = cursor.fetchall()
+    data = cursor.fetchone()
     a.commit()
-    if data == "None":
+    if data == None:
         print("no se encontro el producto indicado")
         return 0
     else:

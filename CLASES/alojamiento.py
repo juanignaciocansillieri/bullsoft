@@ -135,7 +135,7 @@ class Alojamiento:
         cursor.execute(query, codigo)
         data = cursor.fetchall()
         a.commit()
-        if data == "None":
+        if data == "()":
             print("no se encontro el alojamietno indicado")
             return 0
         else:
@@ -295,9 +295,9 @@ def ver_dispo(codigo):
     cursor = a.cursor()
     query = "SELECT disponibilidad FROM alojamiento WHERE codigo=%s"
     cursor.execute(query, codigo)
-    data = cursor.fetchall()
+    data = cursor.fetchone()
     a.commit()
-    if data == "None":
+    if data == None:
         print("no se encontro el alojamietno indicado")
         return 0
     else:
