@@ -3344,7 +3344,7 @@ class Ui_MainWindow(object):
         self.label_17.setText(_translate("MainWindow", "Picking"))
         self.btn_eliminarProdEgreso.setText(_translate("MainWindow", "Eliminar"))
         self.btn_confirmarPicking.setText(_translate("MainWindow", "Confirmar"))
-        self.label_egr_ing_2.setText(_translate("MainWindow", "Fecha de Vencimiento"))
+        self.label_egr_ing_2.setText(_translate("MainWindow", "Fecha "))
         self.label_pasillos_3.setText(_translate("MainWindow", "Motivo"))
         self.label_18.setText(_translate("MainWindow", "Egreso"))
         self.label_87.setText(_translate("MainWindow", "Área"))

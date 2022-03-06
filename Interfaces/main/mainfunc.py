@@ -729,7 +729,31 @@ class Modern(QMainWindow):
                 self.ui.gridLayout_2.itemAt(i).widget().deleteLater()
         i=1
 
-        #if pasillos == segmentos or pasillos == segmentos-1:
+        if pasillos == segmentos or pasillos == segmentos-1:
+            for x in range(segmentos):
+                frame = QtWidgets.QFrame(self.ui.frame_area)
+                frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
+                frame.setFrameShadow(QtWidgets.QFrame.Raised)
+                frame.setMaximumSize(QtCore.QSize(50, 350))
+                frame_pasillo = QtWidgets.QFrame(self.ui.frame_area)
+                frame_pasillo.setFrameShape(QtWidgets.QFrame.StyledPanel)
+                frame_pasillo.setFrameShadow(QtWidgets.QFrame.Raised)
+                frame_pasillo.setMaximumSize(QtCore.QSize(50, 350))
+                frame_pasillo.setStyleSheet("border:1px solid red")
+                vertical_layout = QtWidgets.QVBoxLayout(frame)
+                if x % 2 != 2:
+                    self.ui.gridLayout_2.addWidget(frame_pasillo, 1, i)
+                else:
+                    self.ui.gridLayout_2.addWidget(frame, 1, i)
+                niveles = estanterias.mostrar_columnas(globalArea, i)
+                for y in range(int(niveles)):
+                    btn_area = QtWidgets.QPushButton(self.ui.frame)
+                    btn_area.setMaximumSize(QtCore.QSize(40, 40))
+                    btn_area.setObjectName(globalArea + "-" + str(x + 1) + "-" + str(y + 1))
+                    vertical_layout.addWidget(btn_area)
+                    btn_area.released.connect(self.button_released2)
+
+
         for x in range(segmentos):
             frame = QtWidgets.QFrame(self.ui.frame_area)
             frame.setFrameShape(QtWidgets.QFrame.StyledPanel)

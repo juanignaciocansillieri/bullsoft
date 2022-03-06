@@ -3892,7 +3892,7 @@ margin-left:10px
 </string>
                  </property>
                  <property name="text">
-                  <string>Fecha de Vencimiento</string>
+                  <string>Fecha </string>
                  </property>
                 </widget>
                 <widget class="QLabel" name="label_pasillos_3">
