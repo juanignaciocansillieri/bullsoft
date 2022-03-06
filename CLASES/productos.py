@@ -216,13 +216,13 @@ def ver_desc(codigo):
     cursor = a.cursor()
     query = "SELECT descripcion FROM productos WHERE codigo=%s"
     cursor.execute(query,codigo)
-    data = cursor.fetchone()
+    data = cursor.fetchall()
     a.commit()
-    if data == None:
+    if data == "()":
         print("no se encontro el producto indicado")
         return 0
     else:
-        return data
+        return data[0]
     c.close_connection(a)
 
 def ver_vol(codigo):

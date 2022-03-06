@@ -441,6 +441,8 @@ class Modern(QMainWindow):
 
     def listar_pick(self,pick,lc):
         self.ui.tableWidget_picking.setRowCount(n_egreso)
+        n=n_egreso
+        table_row = 0
         for row in pick:
             codigo=row.split(sep="-")
             producto=p.buscar_prod_pos(row)
@@ -451,24 +453,28 @@ class Modern(QMainWindow):
             self.ui.tableWidget_picking.setItem(
                 table_row, 2, QtWidgets.QTableWidgetItem(str(codigo[2])))
             self.ui.tableWidget_picking.setItem(
-                table_row, 3, QtWidgets.QTableWidgetItem(str(codgio[3])))
+                table_row, 3, QtWidgets.QTableWidgetItem(str(codigo[3])))
             self.ui.tableWidget_picking.setItem(
                 table_row, 4, QtWidgets.QTableWidgetItem(str(codigo[4])))
             self.ui.tableWidget_picking.setItem(
                 table_row, 5, QtWidgets.QTableWidgetItem(str(producto)))
             self.ui.tableWidget_picking.setItem(
-                table_row, 6, QtWidgets.QTableWidgetItem(str(p.ver_desc(producto))))
+                table_row, 6, QtWidgets.QTableWidgetItem(str(p.ver_desc(producto)[0])))
             self.ui.tableWidget_picking.setItem(
                 table_row, 7, QtWidgets.QTableWidgetItem(str(l.lote_vencimiento(producto))))
+            i=0
             while i < n:
                 codigo = tupla_egreso[i][0]
                 cantidad = tupla_egreso[i][2]
+                print(codigo,cantidad)
                 if codigo==producto:
                     cantidad2=cantidad
                     i=n+1
                 i = i + 1
+            print(cantidad2)
             self.ui.tableWidget_picking.setItem(
-                table_row, 6, QtWidgets.QTableWidgetItem(str(cantidad2)))
+                table_row, 8, QtWidgets.QTableWidgetItem(str(cantidad2)))
+            table_row+=1
         return 0
 
     ## Listar Movimientos en la tabla
