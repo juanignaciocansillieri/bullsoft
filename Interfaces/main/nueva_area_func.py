@@ -1,3 +1,5 @@
+import time
+
 from PyQt5.QtWidgets import *
 
 from CLASES import area as a
@@ -37,21 +39,24 @@ class NewArea(QMainWindow):
         print(posicion)
         entrada=0
         salida=0
-        if(nom=="" or ide==""):
+        if a.Area.mostrar_area(nom)!=0:
+            QtWidgets.QMessageBox.critical(self, "Error", "Nombre existente")
+            return None
+        if(nom=="" or ide=="" or posicion==""):
             QtWidgets.QMessageBox.critical(self, "Error", "Llene todos los campos")
             return None
         if segmento<(pasillo*2)-1 or segmento>pasillo*2:
             QtWidgets.QMessageBox.critical(self, "Error", "Para esa cantidad de pasillos solo puede tener "+str((pasillo*2)-1)+" o "+str(pasillo*2)+" estanterias")
             return None
         if self.ui.radioButton.isChecked()==True:
-            if ar.ver_e()==0:
+            if ar.ver_e()!=0:
                 QtWidgets.QMessageBox.critical(self, "Error", "Entrada ya ocupada")
                 return None
             else:
                 entrada=1
                 salida=0
         if self.ui.radioButton_2.isChecked() == True:
-            if ar.ver_s()==0:
+            if ar.ver_s()!=0:
                 QtWidgets.QMessageBox.critical(self, "Error", "Salida ya ocupada")
                 return None
             else:
@@ -67,8 +72,14 @@ class NewArea(QMainWindow):
 
 
     def posicion_cbox(self):
+        areas=a.Area.listar_area()
+        print("AREAS: ",areas)
         medidas = mz.importar_datos_matriz()
-        for x in range(medidas[0][0]):
-            for y in range(medidas[0][1]):
-                self.ui.comboBox.addItem('{}x{}'.format(y+1, x+1))
-
+        i=0
+        for x in areas:
+            if x[0]==x[2]:
+                self.ui.comboBox.addItem(x[2])
+                i+=1
+        if i==0:
+            QtWidgets.QMessageBox.critical(self, "Error", "No hay posiciones para crear areas")
+            return 0

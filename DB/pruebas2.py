@@ -1,79 +1,58 @@
-# p.crear_vector()
 
 from DB import conexion as c
+from CLASES import area,estanterias,alojamiento,productos,lotes,matriz,usuarios
 
-# a=c.start_connection()
 c.borrar_tabla()
 c.crear_tabla()
-# c.contar_filas_tabla()
-# c.close_connection()
 
-# nombre=input("ingrese el nombre:")
-# apellido=input("ingrese el apellido:")
-# dni=input("ingrese el dni:")
-# tipo=input("ingrese el tipo(1/0):")
-# puesto=input("ingrese el peusto:")
-# nacimiento=input("ingrese el fecha de nacimiento:")
+matriz.alta_datos_matriz(2,2)
 
+#nombre, identificador,posicion, pasillos, segmentos,entrada,salida
 
-# aa=1234567
-# aa=str(aa)
-# nn=len(aa)
-# print(nn)
+area.Area("p1", "p1","1x1", "1", "2","0","0")
+area.Area("p2", "p2","1x2", "1", "2","0","0")
+area.Area("p3", "p3","2x1", "1", "2","0","0")
+area.Area("p4", "p4","2x2", "1", "2","0","0")
+
+#codigo,area,pasillo,posicion,columnas,niveles
+
+estanterias.Estanterias("p1-1-1","p1","1","1","3","3")
+estanterias.Estanterias("p2-1-1","p2","1","1","2","2")
+estanterias.Estanterias("p3-1-1","p3","1","1","3","1")
+
+#largo, ancho, alto, area, pasillo, segmento, nivel, limite, columna
 """
-aa=us.usuarios("alex","arraya","123",1,"gerente","1999/05/14","alex@gmail.com")
-aa.alta_usuario()
-aa.alta_login("asd")
-bb=us.usuarios("juan","cansillieri","456",1,"productor","1999/07/20","juan@gmail.com")
-bb.alta_usuario()
-bb.alta_login("zxc")
-cc=us.usuarios("nicolas","rija","789",0,"asistente","1999/04/26","nico@gmail.com")
-cc.alta_usuario()
-cc.alta_login("qwe")
-
-
-dd=pr.productos("365","queso","ilolay","10","clasica","147","2021/07/25",1,0,0,"..","50","100","60","120")
-dd.alta_producto()
-ee=pr.productos("124","yerba","canaria","100","0000","258","2021/09/10",0,0,0,"..","50","100","60","30")
-ee.alta_producto()
-ff=pr.productos("476","salame","paladini","50","integral","369","2021/08/05",0,0,0,"..","50","100","60","50")
-ff.alta_producto()
+alojamiento.Alojamiento("0", "0", "0", "p1", "1", "1", "1", "0", "1")
+alojamiento.Alojamiento("0", "0", "0", "p1", "1", "1", "2", "0", "1")
+alojamiento.Alojamiento("0", "0", "0", "p1", "1", "1", "3", "0", "1")
+alojamiento.Alojamiento("0", "0", "0", "p1", "1", "1", "1", "0", "2")
+alojamiento.Alojamiento("0", "0", "0", "p1", "1", "1", "2", "0", "2")
+alojamiento.Alojamiento("0", "0", "0", "p1", "1", "1", "3", "0", "2")
+alojamiento.Alojamiento("0", "0", "0", "p1", "1", "1", "1", "0", "3")
+alojamiento.Alojamiento("0", "0", "0", "p1", "1", "1", "2", "0", "3")
+alojamiento.Alojamiento("0", "0", "0", "p1", "1", "1", "3", "0", "3")
+alojamiento.Alojamiento("0", "0", "0", "p2", "1", "1", "1", "0", "1")
+alojamiento.Alojamiento("0", "0", "0", "p2", "1", "1", "2", "0", "1")
+alojamiento.Alojamiento("0", "0", "0", "p2", "1", "1", "1", "0", "2")
+alojamiento.Alojamiento("0", "0", "0", "p2", "1", "1", "2", "0", "2")
+alojamiento.Alojamiento("0", "0", "0", "p3", "1", "1", "1", "0", "1")
+alojamiento.Alojamiento("0", "0", "0", "p3", "1", "1", "1", "0", "2")
+alojamiento.Alojamiento("0", "0", "0", "p3", "1", "1", "1", "0", "3")
 """
-"""
+#codigo, marca, cantidad, descripcion, ubicacion, fechalote, vencimiento, fragil, foto,peso,volumen, precio
 
-#lista=productos.buscar_productos()
-#print(lista)
+productos.Productos("1", "1", "1", "p1", "p1-1-1-1-1", "1", "2020-01-01", "0", "0","1","1", "1")
+productos.Productos("2", "2", "2", "p2", "p1-1-1-2-1", "2", "2020-01-01", "0", "0","2","2", "2")
+productos.Productos("3", "3", "3", "p3", "p1-1-1-2-3", "3", "2020-01-01", "0", "0","3","3", "3")
+productos.Productos("4", "4", "4", "p4", "p3-1-1-2-1", "4", "2020-01-01", "0", "0","4","4", "4")
+productos.Productos("5", "5", "5", "p5", "p2-1-1-1-1", "5", "2020-01-01", "0", "0","5","5", "5")
+productos.Productos("6", "6", "6", "p6", "p3-1-1-3-1", "6", "2020-01-01", "0", "0","6","6", "6")
+productos.Productos("7", "7", "7", "p7", "p1-1-1-2-1", "7", "2020-01-01", "0", "0","7","7", "7")
+productos.Productos("8", "8", "8", "p8", "p1-1-1-1-1", "8", "2020-01-01", "0", "0","8","8", "8")
+productos.Productos("9", "9", "9", "p9", "p2-1-1-1-2", "9", "2020-01-01", "0", "0","9","9", "9")
 
+#nombre, apellido, dni, tipo, puesto, nacimiento, mail, foto
 
-#gg=mz.matriz(3,3,3)
-
-
-
-#al.generacion_posicion("12 1 5")
-
-#from DB import ABM_usuarios as abmuser
-#abmuser.crear_usuario(nombre,apellido,tipo,1,puesto,nacimiento)
-#abmuser.borrar_usuario(nombre,apellido)
-#abmuser.ab_usuario(nombre,apellido)
-#abmuser.mostrar_usuario(nombre="alex",apellido="arraya")
-#abmuser.mostrar2__usuario(nombre="alex",apellido="arraya")
-
-#from CLASES import usuarios as u
-#u1=u.usuarios(nombre,apellido,dni,tipo,puesto,nacimiento)
-#u1.alta_usuario()
-
-#from DB import login as log
-#log.log_in(132,132)
-
-"""
-
-# aa=15
-# bb=16
-# cc=20
-# union=str(aa)+str(bb)+str(cc)
-# print(union)
-"""
-
-#print(us.ver_tipo(154))
-
-"""
+usuarios.Usuarios("p1", "p1", "p1", "1", "1", "2020-01-01", "p1", "p1")
+usuarios.Usuarios("p2", "p2", "p2", "0", "2", "2020-01-01", "p2", "p2")
+usuarios.Usuarios("p3", "p3", "p3", "0", "2", "2020-01-01", "p3", "p2")

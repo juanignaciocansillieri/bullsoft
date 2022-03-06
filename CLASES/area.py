@@ -46,10 +46,6 @@ class Area:
         else:
             ida = str(b[0][0])
             try:
-                #query = "UPDATE matrizarea SET area=%s WHERE codigo=%s"
-                #values = (nombre, posicion)
-                #cursor.execute(query, values)
-                #a.commit()
                 query = "UPDATE area SET nombre=%s WHERE idarea=%s"
                 values = (nombre, ida)
                 cursor.execute(query, values)
@@ -162,7 +158,7 @@ def ver_nombre(nombre):
         a.commit()
         b = cursor.fetchall()
         b = str(b)
-        print(b)
+        #print(b)
         if b == nombre:
             i = n + 1
         else:
@@ -194,7 +190,7 @@ def ver_iden(iden):
         a.commit()
         b = cursor.fetchall()
         b = str(b)
-        print(b)
+        #print(b)
         if b == iden:
             i = n + 1
         else:
@@ -265,7 +261,7 @@ def confirmar_area_disponible(posicion):
     a.commit()
     b = cursor.fetchall()
     b=str(b[0][0])
-    print (b,posicion)
+    #print (b,posicion)
     if posicion!=b:
         return 0
     else:

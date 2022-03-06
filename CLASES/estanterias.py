@@ -84,8 +84,8 @@ class Estanterias:
     def crear_alojamientos(self):
         iniveles=0
         icolumnas=0
-        while icolumnas<self.columnas:
-            while iniveles<self.niveles:
+        while int(icolumnas)<int(self.columnas):
+            while int(iniveles)<int(self.niveles):
                 alojamiento.Alojamiento(0,0,0,self.area,self.pasillo,self.segmento,iniveles+1,0,icolumnas+1)
                 iniveles=iniveles+1
             iniveles=0
@@ -98,7 +98,7 @@ def verificar_segmentos(area,posicion):
     cursor.execute(query,(area,posicion))
     a.commit()
     b = cursor.fetchall()
-    print(area,posicion,b)
+    #print(area,posicion,b)
     if str(b) == "()":
         c.close_connection(a)
         return 1
