@@ -1,6 +1,6 @@
 
 from DB import conexion as c
-from CLASES import area,estanterias,alojamiento,productos,lotes,matriz
+from CLASES import area,estanterias,alojamiento,productos,lotes,matriz,usuarios
 
 c.borrar_tabla()
 c.crear_tabla()
@@ -50,3 +50,9 @@ productos.Productos("6", "6", "6", "p6", "p3-1-1-3-1", "6", "2020-01-01", "0", "
 productos.Productos("7", "7", "7", "p7", "p1-1-1-2-1", "7", "2020-01-01", "0", "0","7","7", "7")
 productos.Productos("8", "8", "8", "p8", "p1-1-1-1-1", "8", "2020-01-01", "0", "0","8","8", "8")
 productos.Productos("9", "9", "9", "p9", "p2-1-1-1-2", "9", "2020-01-01", "0", "0","9","9", "9")
+
+#nombre, apellido, dni, tipo, puesto, nacimiento, mail, foto
+
+usuarios.Usuarios("p1", "p1", "p1", "1", "1", "2020-01-01", "p1", "p1")
+usuarios.Usuarios("p2", "p2", "p2", "0", "2", "2020-01-01", "p2", "p2")
+usuarios.Usuarios("p3", "p3", "p3", "0", "2", "2020-01-01", "p3", "p2")

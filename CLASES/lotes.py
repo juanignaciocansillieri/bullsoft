@@ -163,7 +163,7 @@ def obtener_fecha(idproducto):
         query = "SELECT vencimiento FROM lote WHERE idproducto=%s ORDER BY vencimiento"
         cursor.execute(query, idproducto)
         param = cursor.fetchall()
-        param=param
+        param=param[0][0]
         a.commit()
     except pymysql.err.OperationalError as err:
         param = ""

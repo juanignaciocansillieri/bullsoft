@@ -96,7 +96,9 @@ class Modern(QMainWindow):
             lambda: self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_lotes))
         self.ui.pushButton_20.clicked.connect(self.listar_lotes)
         self.ui.btn_volver_niveles.clicked.connect(lambda: self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_areaIndividual))
-        self.ui.users_btn_2.clicked.connect(lambda: self.ui.stackedWidget_3.setCurrentWidget(self.ui.user_subpage))
+        self.ui.users_btn_2.clicked.connect(lambda: self.ui.stackedWidget_3.setCurrentWidget(self.ui.user_subpage) )
+        self.ui.users_btn_2.clicked.connect(self.listar_usuarios)
+        self.ui.users_btn.clicked.connect(self.listar_usuarios)
         # Listamos productos al iniciar la ventana
 
         n = p.contar_filas()
