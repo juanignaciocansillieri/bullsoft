@@ -745,11 +745,15 @@ class Modern(QMainWindow):
 
     def button_released(self):
         global globalArea
-        self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_areaIndividual)
         sending_button = self.sender()
         nombre_area = str(sending_button.objectName())
-        globalArea = nombre_area
-        self.listar_segmentos(globalArea)
+        if ar.ver_pasillos(nombre_area)==0:
+            QtWidgets.QMessageBox.critical(self, "Error", "Cree el area para poder ingresar")
+            return None
+        else:
+            self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_areaIndividual)
+            globalArea = nombre_area
+            self.listar_segmentos(globalArea)
 
     def new_posicion(self, btn):
         self.newPosicionAlojamiento = Pa(globalArea)

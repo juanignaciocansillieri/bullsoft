@@ -39,7 +39,7 @@ class NewArea(QMainWindow):
         print(posicion)
         entrada=0
         salida=0
-        if a.Area.mostrar_area(nom)!=0:
+        if a.ver_nombre(nom)!=0:
             QtWidgets.QMessageBox.critical(self, "Error", "Nombre existente")
             return None
         if(nom=="" or ide=="" or posicion==""):

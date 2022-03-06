@@ -124,7 +124,7 @@ def crear_tabla():  # crea una tabla (al iniciar por primera vez el programa se 
     );"""
 
     q8 = """ CREATE TABLE IF NOT EXISTS matrizarea (
-    idmatrizarea INT UNSIGNED AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    idalojamiento INT UNSIGNED AUTO_INCREMENT PRIMARY KEY NOT NULL,
     codigo VARCHAR(20) NOT NULL,
     area VARCHAR(20) NOT NULL,
     fila VARCHAR(20) NOT NULL,
