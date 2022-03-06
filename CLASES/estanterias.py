@@ -98,7 +98,7 @@ def verificar_segmentos(area,posicion):
     cursor.execute(query,(area,posicion))
     a.commit()
     b = cursor.fetchall()
-    print(area,posicion,b)
+    #print(area,posicion,b)
     if str(b) == "()":
         c.close_connection(a)
         return 1

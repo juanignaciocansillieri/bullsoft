@@ -28,7 +28,6 @@ class Alojamiento:
         self.codigo = str(
             str(area) + "-" + str(pasillo) + "-" + str(segmento) + "-" + str(columna) + "-" + str(
                 nivel))
-        print(self.codigo)
         self.alta_alojamiento()
         print("se creo alojamiento correctamente")
 
@@ -158,7 +157,6 @@ class Alojamiento:
 
 
     def listar_posicion_alojamiento(area):
-        print(area)
         a = c.start_connection()
         cursor = a.cursor()
         try:
@@ -277,7 +275,6 @@ def ver_codigo(codigo):
         a.commit()
         b = cursor.fetchall()
         b = str(b)
-        print(b)
         if b == codigo:
             i = n + 1
         else:
@@ -347,7 +344,7 @@ def select_from_area(area):
     c.close_connection(a)
     return data
 
-def pick_recorrido():
+def pick_recorrido(): #obetiene recorrido de posiciones en orden
     recorrido_areas = area.ver_recorrido()
     n = len(recorrido_areas)
     final = recorrido_areas[n - 1]
@@ -374,14 +371,11 @@ def pick_(lp):
     return pick
 
 
-
-
-
-
-
-
-
-def modificar_dispo_ingreso(codigo,volumen):
+def modificar_dispo_ingreso(prod,cantidad):
+    codigo=p.ver_posicion(prod)
+    v=int(p.ver_vol(prod))
+    print(v,cantidad)
+    volumen=v*cantidad
     a = c.start_connection()
     cursor = a.cursor()
     try:
@@ -389,19 +383,19 @@ def modificar_dispo_ingreso(codigo,volumen):
         cursor.execute(query, codigo)
         data = cursor.fetchall()
         a.commit()
-        dispo=data[0][0]
-        if(int(dispo)<100):
+        dispo=int(data[0][0])
+        if(int(dispo)<=100):
 
             query = "SELECT volumen FROM alojamiento WHERE codigo=%s"
             cursor.execute(query, codigo)
             data = cursor.fetchall()
             a.commit()
-            vol=data[0]
+            vol=int(data[0][0])
 
             x=(vol*100)/volumen
 
-            dispo=dispo-x
-            if (dispo <100):
+            dispo=dispo-int(x)
+            if (dispo <=100):
 
                 query = "UPDATE alojamiento set disponibilidad=%s WHERE codigo=%s"
                 values = (dispo, codigo)
@@ -419,7 +413,8 @@ def modificar_dispo_ingreso(codigo,volumen):
         print("Hubo un error:", err)
     c.close_connection(a)
 
-def modificar_dispo_egreso(codigo,prod,cantidad):
+def modificar_dispo_egreso(prod,cantidad):
+    codigo=p.ver_posicion(prod)
     a = c.start_connection()
     cursor = a.cursor()
     try:
@@ -427,14 +422,15 @@ def modificar_dispo_egreso(codigo,prod,cantidad):
         cursor.execute(query, codigo)
         data = cursor.fetchall()
         a.commit()
-        dispo = data[0]
-        if (dispo < 100):
+        dispo = int(data[0][0])
+        if (dispo <= 100):
 
-            query = "SELECT volumen FROM producto WHERE codigo=%s"
+            query = "SELECT volumen FROM productos WHERE codigo=%s"
             cursor.execute(query, prod)
             data = cursor.fetchall()
             a.commit()
-            vol = data[0]*cantidad
+            data=int(data[0][0])
+            vol = int(data*cantidad)
 
             x = (vol * 100) / vol
 
@@ -476,35 +472,4 @@ def mostrar_al(area,posicion,columna):
     c.close_connection(a)
     return data
 
-"""
-def asignacion_de_ubicacion():
-    a=c.start_connection()
-    cursor=a.cursor()
-    try:
-        query = "SELECT COUNT (*) FROM alojamiento where disponibilidad = %s"
-        values = 1
-        cursor.execute(query,values)
-        a.commit()
-        n=int(cursor.fetchall())
-        i=0
-        ii=0
-        while i<n:
-            query = "SELECT codigo FROM alojamiento WHERE idmatriz = %s and disponibilidad = 1"
-            values = ii
-            cursor.execute(query,values)
-            a.commit()
-            codigo=cursor.fetchall()
-            codigo=str(codigo[0][0])
-            if i==n-1 and codigo == "none":
-                print("no hay alojamiento disponibles")
-                pass
-            else: 
-                query = "UPDATE alojamiento SET disponibilidad=0 WHERE codigo=%s"
-                values = codigo
-                cursor.execute(query,values)
-                a.commit()
-                return codigo        
-    except pymysql.err.OperationalError as err:
-        print("Hubo un error:", err)
-    c.close_connection(a)
-        """
+

@@ -4,7 +4,7 @@ from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import *
 
 from Interfaces.main.ingreso import Ui_MainWindow
-from CLASES import movimientos as m, lotes as l, productos as p
+from CLASES import movimientos as m, lotes as l, productos as p, alojamiento as al
 
 
 class NewIngreso(QMainWindow):
@@ -30,17 +30,21 @@ class NewIngreso(QMainWindow):
         cod = self.ui.codigo_producto_input.text()
         fecha_igreso = self.ui.fecha_date.date().toString("yyyy/MM/dd")
         venc = self.ui.fecha_date_2.date().toString("yyyy/MM/dd")
-        codigo = p.Productos.mostrar_product(cod)
-        lote_v = l.Lote.verificar(lote)
-
-        if codigo == "":
+        if cod == "" or p.ver_desc(cod) ==0:
             QtWidgets.QMessageBox.critical(self, "Error", "Código Inexistente")
-        if lote_v == 1:
-            QtWidgets.QMessageBox.critical(self, "Error", "Lote Existente")
-        else:
-            l.Lote(cod, cantidad, lote, venc)
-            m.Movimientos(tipo, cod, cantidad, "Ingreso", fecha_igreso)
-            self.close()
+            return None
+        if lote=="" or cantidad==0:
+            QtWidgets.QMessageBox.critical(self, "Error", "Ingrese todos los datos")
+            return None
+        if l.verificar(lote) == 0:
+            QtWidgets.QMessageBox.critical(self, "Error", "Lote ya existe")
+            return None
+        l.Lote(cod, cantidad, lote, venc)
+        m.Movimientos(tipo, cod, cantidad, "Ingreso", fecha_igreso)
+        if al.modificar_dispo_ingreso(cod,cantidad) == 0 or al.modificar_dispo_ingreso(cod,cantidad)==1:
+            QtWidgets.QMessageBox.critical(self, "Error", "No hay disponibilidad disponible")
+            return None
+        self.close()
 
 
 if __name__ == "__main__":

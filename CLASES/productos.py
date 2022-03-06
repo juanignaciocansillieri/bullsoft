@@ -38,119 +38,111 @@ class Productos:
             print("Hubo un error:", err)
         c.close_connection(a)
 
-    def borrar_producto(codigo):
-        a = c.start_connection()
-        cursor = a.cursor()
-        query = "DELETE from productos WHERE codigo =%s"
-        cursor.execute(query, codigo)
-        a.commit()
-        lotes.Lote.eliminar_prod_lote(codigo)
-        print("Se elimino producto correctamente")
+def borrar_producto(codigo):
+    a = c.start_connection()
+    cursor = a.cursor()
+    query = "DELETE from productos WHERE codigo =%s"
+    cursor.execute(query, codigo)
+    a.commit()
+    lotes.Lote.eliminar_prod_lote(codigo)
+    print("Se elimino producto correctamente")
 
-    def modificar_produc(codigov, codigon, marca, descripcion, ubicacion, fragil, foto, peso,volumen, precio):
-        a = c.start_connection()
-        cursor = a.cursor()
-        query = "SELECT idproductos FROM productos WHERE codigo=%s"
-        values = codigov
-        cursor.execute(query, values)
-        a.commit()
-        b = cursor.fetchone()
-        if b == None:
-            print("no se encontro el producto indicado")
-            return 0
-        else:
-            idp = str(b[0][0])
+def modificar_produc(codigov, codigon, marca, descripcion, ubicacion, fragil, foto, peso,volumen, precio):
+    a = c.start_connection()
+    cursor = a.cursor()
+    query = "SELECT idproductos FROM productos WHERE codigo=%s"
+    values = codigov
+    cursor.execute(query, values)
+    a.commit()
+    b = cursor.fetchone()
+    if b == None:
+        print("no se encontro el producto indicado")
+        return 0
+    else:
+        idp = str(b[0][0])
 
-            try:
-                query = "UPDATE productos set codigo=%s WHERE idproductos=%s"
-                values = (codigon, idp)
-                cursor.execute(query, values)
-                a.commit()
-                query = "UPDATE productos set marca=%s WHERE idproductos=%s"
-                values = (marca, idp)
-                cursor.execute(query, values)
-                a.commit()
-                query = "UPDATE productos set descripcion=%s WHERE idproductos=%s"
-                values = (descripcion, idp)
-                cursor.execute(query, values)
-                a.commit()
-                query = "UPDATE productos set foto=%s WHERE idproductos=%s"
-                values = (foto, idp)
-                cursor.execute(query, values)
-                a.commit()
-                query = "UPDATE productos set fragil=%s WHERE idproductos=%s"
-                values = (fragil, idp)
-                cursor.execute(query, values)
-                a.commit()
-                query = "SELECT ubicacion from productos  WHERE idproductos=%s"
-                values = idp
-                cursor.execute(query, values)
-                ubicacionv = cursor.fetchall()
-                ubicacionv = str(ubicacionv[0][0])
-                a.commit()
-                query = "UPDATE productos set ubicacion=%s WHERE idproductos=%s"
-                values = (ubicacion, idp)
-                cursor.execute(query, values)
-                a.commit()
-                #
-                query = "UPDATE productos set peso=%s WHERE idproductos=%s"
-                values = (peso, idp)
-                cursor.execute(query, values)
-                a.commit()
-                query = "UPDATE productos set volumen=%s WHERE idproductos=%s"
-                values = (volumen, idp)
-                cursor.execute(query, values)
-                a.commit()
-                query = "UPDATE productos set precio=%s WHERE idproductos=%s"
-                values = (precio, idp)
-                cursor.execute(query, values)
-                a.commit()
-                lotes.Lote.mod_idpruct(codigov, codigon)
-                print("se MODIFICO producto correctamente")
-            except pymysql.err.OperationalError as err:
-                print("Hubo un error:", err)
-            c.close_connection(a)
+        try:
+            query = "UPDATE productos set codigo=%s WHERE idproductos=%s"
+            values = (codigon, idp)
+            cursor.execute(query, values)
+            a.commit()
+            query = "UPDATE productos set marca=%s WHERE idproductos=%s"
+            values = (marca, idp)
+            cursor.execute(query, values)
+            a.commit()
+            query = "UPDATE productos set descripcion=%s WHERE idproductos=%s"
+            values = (descripcion, idp)
+            cursor.execute(query, values)
+            a.commit()
+            query = "UPDATE productos set foto=%s WHERE idproductos=%s"
+            values = (foto, idp)
+            cursor.execute(query, values)
+            a.commit()
+            query = "UPDATE productos set fragil=%s WHERE idproductos=%s"
+            values = (fragil, idp)
+            cursor.execute(query, values)
+            a.commit()
+            query = "SELECT ubicacion from productos  WHERE idproductos=%s"
+            values = idp
+            cursor.execute(query, values)
+            ubicacionv = cursor.fetchall()
+            ubicacionv = str(ubicacionv[0][0])
+            a.commit()
+            query = "UPDATE productos set ubicacion=%s WHERE idproductos=%s"
+            values = (ubicacion, idp)
+            cursor.execute(query, values)
+            a.commit()
+            #
+            query = "UPDATE productos set peso=%s WHERE idproductos=%s"
+            values = (peso, idp)
+            cursor.execute(query, values)
+            a.commit()
+            query = "UPDATE productos set volumen=%s WHERE idproductos=%s"
+            values = (volumen, idp)
+            cursor.execute(query, values)
+            a.commit()
+            query = "UPDATE productos set precio=%s WHERE idproductos=%s"
+            values = (precio, idp)
+            cursor.execute(query, values)
+            a.commit()
+            lotes.Lote.mod_idpruct(codigov, codigon)
+            print("se MODIFICO producto correctamente")
+        except pymysql.err.OperationalError as err:
+            print("Hubo un error:", err)
+        c.close_connection(a)
 
-    def buscar_product(param):
-        a = c.start_connection()
-        cursor = a.cursor()
-        query = ("SELECT codigo,descripcion,marca FROM productos WHERE codigo=%s or descripcion=%s or marca=%s")
-        cursor.execute(query, (param, param, param))
-        data = cursor.fetchall()
-        a.commit()
+def buscar_product(param):
+    a = c.start_connection()
+    cursor = a.cursor()
+    query = ("SELECT codigo,descripcion,marca FROM productos WHERE codigo=%s or descripcion=%s or marca=%s")
+    cursor.execute(query, (param, param, param))
+    data = cursor.fetchall()
+    a.commit()
+    return data
+
+
+def buscar_product_rows(param):
+    a = c.start_connection()
+    cursor = a.cursor()
+    query = "SELECT codigo,descripcion,marca FROM productos WHERE codigo=%s or descripcion=%s or marca=%s"
+    data = cursor.execute(query, (param, param, param))
+    a.commit()
+    return data
+
+def mostrar_product(codigo):
+    a = c.start_connection()
+    cursor = a.cursor()
+    query = (
+        "SELECT p.codigo, p.marca, l.cantidad, p.descripcion,p.ubicacion, l.fechalote, l.vencimiento,p.fragil,p.foto,p.peso,p.volumen,p.precio FROM productos p JOIN lote l ON p.codigo = l.idproducto WHERE codigo=%s")
+    cursor.execute(query, codigo)
+    data = cursor.fetchall()
+    a.commit()
+
+    if data == "()":
+        print("no se encontro el producto indicado")
+        return 0
+    else:
         return data
-
-
-    def verificar(param):
-        a = c.start_connection()
-        cursor = a.cursor()
-        query = "SELECT * FROM productos WHERE codigo = %s"
-        product = cursor.execute(query, param)
-        a.commit()
-        return product
-
-    def buscar_product_rows(param):
-        a = c.start_connection()
-        cursor = a.cursor()
-        query = "SELECT codigo,descripcion,marca FROM productos WHERE codigo=%s or descripcion=%s or marca=%s"
-        data = cursor.execute(query, (param, param, param))
-        a.commit()
-        return data
-
-    def mostrar_product(codigo):
-        a = c.start_connection()
-        cursor = a.cursor()
-        query = (
-            "SELECT p.codigo, p.marca, l.cantidad, p.descripcion,p.ubicacion, l.fechalote, l.vencimiento,p.fragil,p.foto,p.peso,p.volumen,p.precio FROM productos p JOIN lote l ON p.codigo = l.idproducto WHERE codigo=%s")
-        cursor.execute(query, codigo)
-        data = cursor.fetchall()
-        a.commit()
-
-        if data == "()":
-            print("no se encontro el producto indicado")
-            return 0
-        else:
-            return data
 
 
 def listar_prod():
@@ -215,6 +207,21 @@ def ver_desc(codigo):
     a = c.start_connection()
     cursor = a.cursor()
     query = "SELECT descripcion FROM productos WHERE codigo=%s"
+    cursor.execute(query,str(codigo))
+    data = cursor.fetchall()
+    a.commit()
+    if str(data) == "()":
+        print("no se encontro el producto indicado")
+        return 0
+    else:
+        c.close_connection(a)
+        return data[0][0]
+
+
+def ver_vol(codigo):
+    a = c.start_connection()
+    cursor = a.cursor()
+    query = "SELECT volumen FROM productos WHERE codigo=%s"
     cursor.execute(query,codigo)
     data = cursor.fetchall()
     a.commit()
@@ -222,21 +229,7 @@ def ver_desc(codigo):
         print("no se encontro el producto indicado")
         return 0
     else:
-        return data[0]
-    c.close_connection(a)
-
-def ver_vol(codigo):
-    a = c.start_connection()
-    cursor = a.cursor()
-    query = "SELECT volumen FROM productos WHERE codigo=%s"
-    cursor.execute(query,codigo)
-    data = cursor.fetchone()
-    a.commit()
-    if data == None:
-        print("no se encontro el producto indicado")
-        return 0
-    else:
-        data=data[0]
+        data=data[0][0]
         return data
     c.close_connection(a)
 
@@ -255,36 +248,47 @@ def ver_vol(codigo):
         return data
     c.close_connection(a)"""
 
-def pick_posiciones(lc):
+def pick_posiciones(lc): #se le da una lsita de codigos y devuelve las posiciones
     rp=[]
     for data in lc:
         p = ver_posicion(data)
         rp.append(p)
     return rp
-"""
-def pick_productos(lc,pick):
-    n=len(lc)
-    ld=[]
-    for i in lc:
-        for j in pick:
-            desc=buscar_prod_pick(j,i)
-            lc.remove(i)
-            pick.remove(j)
-            print(desc)
-            ld.append(desc)
-    print("descripciones",ld)
-    return ld
-"""
 
-def buscar_prod_pick(posicion,codigo):
+def pick_productos(lc,pick): #confirma el codigo del prodcuto con las posiciones (arregla los que son dobles)
+    l=[]
+    i=0
+    j=0
+    n1=int(len(lc))
+    n2=int(len(pick))
+    while i<n2:
+        while j<n1:
+            p=buscar_prod_pick(pick[i],lc[j])
+            if p==0:
+                j+=1
+            else:
+                #print("p,",p)
+                l.append(p)
+                lc[j]=""
+                #print(lc)
+                j=0
+        j=0
+        i+=1
+
+    return l
+
+
+def buscar_prod_pick(posicion,codigo): #trae el codigo mientras exista coincidencia en posicion y codigo
     a = c.start_connection()
     cursor = a.cursor()
-    query = "SELECT descripcion FROM productos WHERE ubicacion=%s and codigo=%s"
-    cursor.execute(query, (posicion,codigo))
+    query = "SELECT codigo FROM productos WHERE codigo=%s AND ubicacion=%s"
+    cursor.execute(query, (codigo,posicion))
     data = cursor.fetchall()
     a.commit()
-    print(data)
-    data = data[0][0]
+    data
+    if str(data)== "()":
+        return 0
+    else: return data[0][0]
     c.close_connection(a)
     return data
 
@@ -295,8 +299,8 @@ def buscar_prod_pos(posicion):
     cursor.execute(query, posicion)
     data = cursor.fetchall()
     a.commit()
-    print(data)
-    data = data[0][0]
+    #print(data)
+    data = data
     c.close_connection(a)
     return data
 
@@ -320,11 +324,13 @@ def ver_posicion(codigo):
     cursor = a.cursor()
     query = "SELECT ubicacion FROM productos WHERE codigo=%s"
     cursor.execute(query, codigo)
-    data = cursor.fetchall()
+    data = cursor.fetchone ()
     a.commit()
-    data = data[0][0]
-    return data
+    #print("DATA, ",data)
+    data = str(data[0])
     c.close_connection(a)
+    return data
+
 
 def ver_area(codigo):
     posicion=ver_posicion(codigo)

@@ -11,7 +11,8 @@
 from PyQt5.QtWidgets import *
 # -*- coding: utf-8 -*-
 
-from CLASES import area as a
+from CLASES import area as ar
+from DB import  conexion as c
 from Interfaces.main.delete_area_ui import Ui_MainWindow
 nombreViejo = ""
 class BorrarArea(QMainWindow):
@@ -36,15 +37,38 @@ class BorrarArea(QMainWindow):
 
         area = self.ui.comboBox.currentText()
         qm = QMessageBox
+        posicion= ar.ver_posicion(area)
 
         ret = qm.warning(self, 'Esta acción es irreversible', "¿Estás seguro que quieres eliminar ésta área ?",
                          qm.Yes | qm.No)
         if ret == qm.Yes:
-            a.Area.eliminar_area(area)
+            a = c.start_connection()
+            cursor = a.cursor()
+            query = "UPDATE area SET nombre=%s WHERE posicion=%s"
+            values = (posicion, posicion)
+            cursor.execute(query, values)
+            a.commit()
+            query = "UPDATE area SET identificador=%s WHERE posicion=%s"
+            values = (posicion, posicion)
+            cursor.execute(query, values)
+            a.commit()
+            query = "UPDATE area SET pasillos=%s WHERE posicion=%s"
+            values = (0, posicion)
+            cursor.execute(query, values)
+            a.commit()
+            query = "UPDATE area SET segmentos=%s WHERE posicion=%s"
+            values = (0, posicion)
+            cursor.execute(query, values)
+            a.commit()
+            query = "UPDATE area SET disponibilidad=%s WHERE posicion=%s"
+            values = (100, posicion)
+            cursor.execute(query, values)
+            a.commit()
+
             self.close()
 
     def rellenar_campo(self):
-        areas = a.Area.listar_area()
+        areas = ar.Area.listar_area()
         for area in areas:
             self.ui.comboBox.addItem(area[0])
         self.close()

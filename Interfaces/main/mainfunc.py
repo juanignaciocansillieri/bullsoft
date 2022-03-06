@@ -333,10 +333,10 @@ class Modern(QMainWindow):
             self.ui.tableWidget_stock_2.setItem(
                 table_row, 2, QtWidgets.QTableWidgetItem(row[2]))
             self.ui.tableWidget_stock_2.setItem(
-                table_row, 3, QtWidgets.QTableWidgetItem(str(l.Lote.obtener_cantidades(row[0]))))
+                table_row, 3, QtWidgets.QTableWidgetItem(str(l.obtener_cantidades(row[0]))))
 
             self.ui.tableWidget_stock_2.setItem(
-                table_row, 4, QtWidgets.QTableWidgetItem(str(l.Lote.obtener_fecha(row[0]))))
+                table_row, 4, QtWidgets.QTableWidgetItem(str(l.obtener_fecha(row[0]))))
 
             table_row += 1
 
@@ -360,7 +360,7 @@ class Modern(QMainWindow):
         #    QtWidgets.QMessageBox.critical(self, "Error", "Cantidad no disponible")
         #    return None
         desc=p.ver_desc(codigo)
-        t = [str(codigo), desc[0], str(cantidad)]
+        t = [str(codigo), desc, str(cantidad)]
         tupla_egreso.append(t)
         #print(tupla_egreso)
         self.ui.input_codigoProdEgreso.setText("")
@@ -417,6 +417,9 @@ class Modern(QMainWindow):
         global n_egreso
         fecha=self.ui.fecha_vencimiento_egreso.date().toString("yyyy/MM/dd")
         motivo=self.ui.input_motivo_egreso.text()
+        if motivo=="":
+            QtWidgets.QMessageBox.critical(self, "Error", "Agregue motivo antes de confirmar")
+            return None
         if n_egreso==0:
             QtWidgets.QMessageBox.critical(self, "Error", "Agregue productos antes de confirmar")
             return None
@@ -427,25 +430,31 @@ class Modern(QMainWindow):
             codigo = tupla_egreso[i][0]
             lc.append(codigo)
             cantidad = tupla_egreso[i][2]
-            #l.fifo(codigo, cantidad)
-            #m.Movimientos(1,codigo,cantidad,motivo,fecha)
+            l.fifo(codigo, cantidad)
+            m.Movimientos(1,codigo,cantidad,motivo,fecha)
+            if(al.modificar_dispo_egreso(codigo,cantidad)==0):
+                QtWidgets.QMessageBox.critical(self, "Error", "No hay esa cantidad disponible")
+                return None
             i = i +1
 
         rp=p.pick_posiciones(lc)
         pick = al.pick_(rp)
-        print(lc)
-        print(rp)
-        print(pick)
+        #print(lc)
+        #print(rp)
+        #print(pick)
         self.listar_pick(pick,lc)
+        tupla_egreso=[]
+        n_egreso=0
+        self.act_egreso()
         return 0
 
     def listar_pick(self,pick,lc):
+        lc2=p.pick_productos(lc,pick)
         self.ui.tableWidget_picking.setRowCount(n_egreso)
         n=n_egreso
         table_row = 0
-        for row in pick:
-            codigo=row.split(sep="-")
-            producto=p.buscar_prod_pos(row)
+        for row in lc2:
+            codigo=p.ver_posicion(row).split(sep="-")
             self.ui.tableWidget_picking.setItem(
                 table_row, 0, QtWidgets.QTableWidgetItem(str(codigo[0])))
             self.ui.tableWidget_picking.setItem(
@@ -457,21 +466,21 @@ class Modern(QMainWindow):
             self.ui.tableWidget_picking.setItem(
                 table_row, 4, QtWidgets.QTableWidgetItem(str(codigo[4])))
             self.ui.tableWidget_picking.setItem(
-                table_row, 5, QtWidgets.QTableWidgetItem(str(producto)))
+                table_row, 5, QtWidgets.QTableWidgetItem(str(row)))
             self.ui.tableWidget_picking.setItem(
-                table_row, 6, QtWidgets.QTableWidgetItem(str(p.ver_desc(producto)[0])))
+                table_row, 6, QtWidgets.QTableWidgetItem(str(p.ver_desc(row))))
             self.ui.tableWidget_picking.setItem(
-                table_row, 7, QtWidgets.QTableWidgetItem(str(l.lote_vencimiento(producto))))
+                table_row, 7, QtWidgets.QTableWidgetItem(str(l.lote_codigo(row))))
             i=0
             while i < n:
                 codigo = tupla_egreso[i][0]
                 cantidad = tupla_egreso[i][2]
                 print(codigo,cantidad)
-                if codigo==producto:
+                if codigo==row:
                     cantidad2=cantidad
                     i=n+1
                 i = i + 1
-            print(cantidad2)
+            #print(cantidad2)
             self.ui.tableWidget_picking.setItem(
                 table_row, 8, QtWidgets.QTableWidgetItem(str(cantidad2)))
             table_row+=1
@@ -508,8 +517,8 @@ class Modern(QMainWindow):
     ## Listar lotes en la tabla
     def listar_lotes(self):
         id = self.ui.lineEdit_6.text()
-        lotes = l.Lote.listar_lote(id)
-        n = l.Lote.contar_filas_producto(id)
+        lotes = l.listar_lote(id)
+        n = l.contar_filas_producto(id)
         self.ui.tableWidget_lotes.setRowCount(n)
         table_row = 0
         for row in lotes:
