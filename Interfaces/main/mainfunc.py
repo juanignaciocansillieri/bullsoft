@@ -428,7 +428,7 @@ class Modern(QMainWindow):
             lc.append(codigo)
             cantidad = tupla_egreso[i][2]
             #l.fifo(codigo, cantidad)
-            m.Movimientos(1,codigo,cantidad,motivo,fecha)
+            #m.Movimientos(1,codigo,cantidad,motivo,fecha)
             i = i +1
 
         rp=p.pick_posiciones(lc)
@@ -442,22 +442,33 @@ class Modern(QMainWindow):
     def listar_pick(self,pick,lc):
         self.ui.tableWidget_picking.setRowCount(n_egreso)
         for row in pick:
+            codigo=row.split(sep="-")
+            producto=p.buscar_prod_pos(row)
             self.ui.tableWidget_picking.setItem(
-                table_row, 0, QtWidgets.QTableWidgetItem(str(row[1])))
+                table_row, 0, QtWidgets.QTableWidgetItem(str(codigo[0])))
             self.ui.tableWidget_picking.setItem(
-                table_row, 1, QtWidgets.QTableWidgetItem(str(row[2])))
+                table_row, 1, QtWidgets.QTableWidgetItem(str(codigo[1])))
             self.ui.tableWidget_picking.setItem(
-                table_row, 2, QtWidgets.QTableWidgetItem(str(row[3])))
+                table_row, 2, QtWidgets.QTableWidgetItem(str(codigo[2])))
             self.ui.tableWidget_picking.setItem(
-                table_row, 4, QtWidgets.QTableWidgetItem(str(row[5])))
+                table_row, 3, QtWidgets.QTableWidgetItem(str(codgio[3])))
             self.ui.tableWidget_picking.setItem(
-                table_row, 5, QtWidgets.QTableWidgetItem(str(row[1])))
+                table_row, 4, QtWidgets.QTableWidgetItem(str(codigo[4])))
             self.ui.tableWidget_picking.setItem(
-                table_row, 6, QtWidgets.QTableWidgetItem(str(row[2])))
+                table_row, 5, QtWidgets.QTableWidgetItem(str(producto)))
             self.ui.tableWidget_picking.setItem(
-                table_row, 7, QtWidgets.QTableWidgetItem(str(row[3])))
+                table_row, 6, QtWidgets.QTableWidgetItem(str(p.ver_desc(producto))))
             self.ui.tableWidget_picking.setItem(
-                table_row, 8, QtWidgets.QTableWidgetItem(str(row[5])))
+                table_row, 7, QtWidgets.QTableWidgetItem(str(l.lote_vencimiento(producto))))
+            while i < n:
+                codigo = tupla_egreso[i][0]
+                cantidad = tupla_egreso[i][2]
+                if codigo==producto:
+                    cantidad2=cantidad
+                    i=n+1
+                i = i + 1
+            self.ui.tableWidget_picking.setItem(
+                table_row, 6, QtWidgets.QTableWidgetItem(str(cantidad2)))
         return 0
 
     ## Listar Movimientos en la tabla

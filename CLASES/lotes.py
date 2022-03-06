@@ -226,7 +226,7 @@ class Lote:
                     idlote += 1
                     i = n
 
-    def ver_lote(codigo):
+def ver_lote(codigo):
         a = c.start_connection()
         cursor = a.cursor()
         query = "SELECT COUNT(*) FROM lote"
@@ -256,3 +256,18 @@ class Lote:
         else:
             c.close_connection(a)
             return 0
+
+def lote_vencimiento(idproducto):
+    a = c.start_connection()
+    cursor = a.cursor()
+    try:
+        query = "SELECT fechalote FROM lote WHERE idproducto=%s ORDER BY vencimiento"
+        cursor.execute(query, idproducto)
+        param = cursor.fetchall()
+        param = param[0][0]
+        a.commit()
+    except pymysql.err.OperationalError as err:
+        param = ""
+        print("Hubo un error:", err)
+    c.close_connection(a)
+    return param

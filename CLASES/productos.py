@@ -240,7 +240,7 @@ def ver_vol(codigo):
         return data
     c.close_connection(a)
 
-def buscar_prod_posicion(posicion):
+"""def buscar_prod_posicion(posicion):
     a = c.start_connection()
     cursor = a.cursor()
     query = "SELECT descripcion FROM productos WHERE ubicacion=%s"
@@ -253,7 +253,7 @@ def buscar_prod_posicion(posicion):
     else:
         data = data[0]
         return data
-    c.close_connection(a)
+    c.close_connection(a)"""
 
 def pick_posiciones(lc):
     rp=[]
@@ -284,10 +284,21 @@ def buscar_prod_pick(posicion,codigo):
     data = cursor.fetchall()
     a.commit()
     print(data)
-    data = data
+    data = data[0][0]
     c.close_connection(a)
     return data
 
+def buscar_prod_pos(posicion):
+    a = c.start_connection()
+    cursor = a.cursor()
+    query = "SELECT codigo FROM productos WHERE ubicacion=%s"
+    cursor.execute(query, posicion)
+    data = cursor.fetchall()
+    a.commit()
+    print(data)
+    data = data[0][0]
+    c.close_connection(a)
+    return data
 
 def ver_precio(codigo):
     a = c.start_connection()
