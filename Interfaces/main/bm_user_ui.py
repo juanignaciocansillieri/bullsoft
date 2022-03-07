@@ -445,6 +445,7 @@ class Ui_MainWindow(object):
         self.tipo_cb.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
+
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
@@ -463,4 +464,4 @@ class Ui_MainWindow(object):
         self.label_nombre.setText(_translate("MainWindow", "Nombre"))
         self.label_puesto.setText(_translate("MainWindow", "Puesto"))
         self.label_nacimiento.setText(_translate("MainWindow", "Nacimiento"))
-import img_rc
+from Interfaces.main import img_rc

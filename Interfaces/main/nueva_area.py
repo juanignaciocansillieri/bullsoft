@@ -276,7 +276,7 @@ class Ui_MainWindow(object):
         self.radioButton.setText(_translate("MainWindow", "Entrada"))
         self.radioButton_2.setText(_translate("MainWindow", "Salida"))
         self.label_5.setText(_translate("MainWindow", "Nueva Área"))
-import img_rc
+from Interfaces.main import img_rc
 
 
 if __name__ == "__main__":

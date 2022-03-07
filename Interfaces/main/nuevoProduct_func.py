@@ -55,8 +55,8 @@ class ProductWindow(QMainWindow):
         if codigo == "" or descripcion == "" or cantidad == 0 or marca == "" or venc == "" or lote == "" or precio == "" or volumen == "" or peso == "":
             QtWidgets.QMessageBox.critical(self, "Error", "Ingrese todos los datos")
             return None
-        data = pr.Productos.verificar(codigo)
-        if data == 1:
+        data = pr.ver_desc(codigo)
+        if data != 0:
 
             QtWidgets.QMessageBox.critical(self, "Error", "Codigo Existente")
             return None

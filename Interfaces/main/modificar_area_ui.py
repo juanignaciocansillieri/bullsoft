@@ -351,4 +351,4 @@ class Ui_MainWindow(object):
         self.label_disponibilidad.setText(_translate("MainWindow", "Disponibilidad"))
         self.label_pasillos.setText(_translate("MainWindow", "Pasilllos"))
         self.label_5.setText(_translate("MainWindow", "Modificar Usuario"))
-import img_rc
+from Interfaces.main import img_rc

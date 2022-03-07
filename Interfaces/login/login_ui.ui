@@ -10,8 +10,18 @@
     <height>649</height>
    </rect>
   </property>
+  <property name="maximumSize">
+   <size>
+    <width>987</width>
+    <height>649</height>
+   </size>
+  </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Bullsoft</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="Img/img.qrc">
+    <normaloff>:/fondo/logo24x24-65.png</normaloff>:/fondo/logo24x24-65.png</iconset>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout">
@@ -45,7 +55,9 @@
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: qlineargradient(spread:pad, x1:0.00609095, y1:0, x2:0.966636, y2:0.955, stop:0 rgba(18, 21, 26, 255), stop:0.477273 rgba(26, 30, 35, 255), stop:1 rgba(18, 21, 26, 255));</string>
+       <string notr="true">QFrame{
+border-image: url(:/fondo/imagenfondo4-59.jpg);
+}</string>
       </property>
       <property name="frameShape">
        <enum>QFrame::StyledPanel</enum>
@@ -59,7 +71,7 @@
          <property name="maximumSize">
           <size>
            <width>381</width>
-           <height>301</height>
+           <height>292</height>
           </size>
          </property>
          <property name="sizeIncrement">
@@ -69,8 +81,9 @@
           </size>
          </property>
          <property name="styleSheet">
-          <string notr="true">background-color: #12151a;
-border-radius: 45px
+          <string notr="true">background-color: rgba(0, 7, 66,200);
+border-radius: 45px;
+border-image: none
 </string>
          </property>
          <property name="frameShape">
@@ -82,15 +95,22 @@ border-radius: 45px
          <widget class="QLabel" name="titulo_login_lbl">
           <property name="geometry">
            <rect>
-            <x>60</x>
-            <y>20</y>
-            <width>251</width>
-            <height>81</height>
+            <x>50</x>
+            <y>47</y>
+            <width>161</width>
+            <height>31</height>
            </rect>
           </property>
+          <property name="font">
+           <font>
+            <family>Cairo Black</family>
+            <pointsize>21</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
           <property name="styleSheet">
-           <string notr="true">font: 35px bold ,Roboto;
-color: #fff;
+           <string notr="true">color: #fff;
 font-weight: bold;</string>
           </property>
           <property name="text">
@@ -100,16 +120,24 @@ font-weight: bold;</string>
          <widget class="QLabel" name="subt_login_lbl">
           <property name="geometry">
            <rect>
-            <x>60</x>
-            <y>90</y>
+            <x>50</x>
+            <y>80</y>
             <width>155</width>
-            <height>24</height>
+            <height>31</height>
            </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>Cairo Light</family>
+            <pointsize>-1</pointsize>
+            <weight>25</weight>
+            <italic>false</italic>
+            <bold>false</bold>
+           </font>
           </property>
           <property name="styleSheet">
            <string notr="true">font: 20px;
 color: #fff;
-font-family: Roboto;
 font-weight: 200;
 </string>
           </property>
@@ -121,22 +149,22 @@ font-weight: 200;
           <property name="geometry">
            <rect>
             <x>50</x>
-            <y>150</y>
+            <y>140</y>
             <width>281</width>
             <height>25</height>
            </rect>
           </property>
           <property name="font">
            <font>
-            <family>Roboto</family>
+            <family>Cairo SemiBold</family>
            </font>
           </property>
           <property name="styleSheet">
            <string notr="true">QLineEdit{
-background: #23262b;
+background: #fff;
 border-radius: 5px;
 padding: 5px;
-color: #b3b3b3;
+color: #000742;
 }
 
 QLineEdit:focus{
@@ -154,7 +182,7 @@ border: 1px solid rgb(75, 75, 75);
           <property name="geometry">
            <rect>
             <x>50</x>
-            <y>190</y>
+            <y>180</y>
             <width>281</width>
             <height>25</height>
            </rect>
@@ -166,10 +194,10 @@ border: 1px solid rgb(75, 75, 75);
           </property>
           <property name="styleSheet">
            <string notr="true">QLineEdit{
-background: #23262b;
+background: #fff;
 border-radius: 5px;
 padding: 5px;
-color: #b3b3b3;
+color: #000742;
 }
 
 QLineEdit:focus{
@@ -190,10 +218,16 @@ border: 1px solid rgb(75, 75, 75);
           <property name="geometry">
            <rect>
             <x>50</x>
-            <y>240</y>
+            <y>230</y>
             <width>91</width>
             <height>24</height>
            </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>Cairo SemiBold</family>
+            <pointsize>9</pointsize>
+           </font>
           </property>
           <property name="cursor">
            <cursorShape>PointingHandCursor</cursorShape>
@@ -202,17 +236,15 @@ border: 1px solid rgb(75, 75, 75);
            <enum>Qt::NoFocus</enum>
           </property>
           <property name="styleSheet">
-           <string notr="true">QPushButton#login_btn{
-background-color: #1173ff;
+           <string notr="true">QPushButton{
+background-color: #055ffc;
 color:#fff;
-font-size:12px;
-font-family: Roboto;
-font-weight: bold;
 border-radius: 5px;
-padding-bottom: 1px
+text-align:center;
 }
-QPushButton#login_btn:hover{
-background-color: #45a9f0;
+
+QPushButton:hover{
+
 }
 
 QPushButton#login_btn:pressed{
@@ -222,7 +254,7 @@ padding-left: 3px;
 </string>
           </property>
           <property name="text">
-           <string>Ingresar  →</string>
+           <string>Ingresar  </string>
           </property>
          </widget>
         </widget>
@@ -233,6 +265,8 @@ padding-left: 3px;
    </layout>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="Img/img.qrc"/>
+ </resources>
  <connections/>
 </ui>

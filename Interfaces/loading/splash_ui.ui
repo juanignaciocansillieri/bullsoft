@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>943</width>
-    <height>576</height>
+    <width>913</width>
+    <height>618</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -39,7 +39,7 @@
        <widget class="QFrame" name="frame">
         <property name="styleSheet">
          <string notr="true">QFrame{
-border-image: url(:/fondo/images (1).jpg);
+border-image: url(:/Icon/imagenfondo4-59.jpg);
 }</string>
         </property>
         <property name="frameShape">
@@ -69,7 +69,6 @@ border-image: url(:/fondo/images (1).jpg);
            <property name="styleSheet">
             <string notr="true">QFrame{
 border-image: none;
-background-color: rgba(18, 21, 26,235);
 }</string>
            </property>
            <property name="frameShape">
@@ -81,30 +80,39 @@ background-color: rgba(18, 21, 26,235);
            <widget class="QLabel" name="label_2">
             <property name="geometry">
              <rect>
-              <x>430</x>
-              <y>470</y>
-              <width>101</width>
-              <height>21</height>
+              <x>0</x>
+              <y>460</y>
+              <width>991</width>
+              <height>31</height>
              </rect>
             </property>
+            <property name="font">
+             <font>
+              <family>Cairo</family>
+              <pointsize>17</pointsize>
+              <weight>50</weight>
+              <bold>false</bold>
+             </font>
+            </property>
             <property name="styleSheet">
-             <string notr="true">font-family: 	Roboto;
-font-weight: bold;
-color:#FFF;
-font-size: 19px;
+             <string notr="true">color:#FFF;
+
 background:none</string>
             </property>
             <property name="text">
              <string>Cargando...</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
             </property>
            </widget>
            <widget class="QLabel" name="label">
             <property name="geometry">
              <rect>
               <x>0</x>
-              <y>10</y>
-              <width>941</width>
-              <height>141</height>
+              <y>50</y>
+              <width>991</width>
+              <height>101</height>
              </rect>
             </property>
             <property name="maximumSize">
@@ -114,8 +122,9 @@ background:none</string>
              </size>
             </property>
             <property name="styleSheet">
-             <string notr="true">image: url(:/Icon/Warehouse_Bull_Soft_Logo.png);
-background:none</string>
+             <string notr="true">background:none;
+image: url(:/Icon/logo cargando.png);
+</string>
             </property>
             <property name="text">
              <string/>
@@ -124,36 +133,13 @@ background:none</string>
            <widget class="QWidget" name="horizontalLayoutWidget">
             <property name="geometry">
              <rect>
-              <x>160</x>
+              <x>170</x>
               <y>170</y>
               <width>611</width>
               <height>251</height>
              </rect>
             </property>
             <layout class="QHBoxLayout" name="horizontalLayout_3"/>
-           </widget>
-           <widget class="QLabel" name="label_3">
-            <property name="geometry">
-             <rect>
-              <x>360</x>
-              <y>140</y>
-              <width>231</width>
-              <height>21</height>
-             </rect>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">font-family: 	Roboto;
-font-weight: bold;
-color:#FFF;
-font-size: 19px;
-background:none</string>
-            </property>
-            <property name="text">
-             <string>WAREHOUSE BULL SOFT</string>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignCenter</set>
-            </property>
            </widget>
           </widget>
          </item>

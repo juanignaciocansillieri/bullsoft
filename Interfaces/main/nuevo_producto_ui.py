@@ -456,7 +456,7 @@ class Ui_MainWindow(object):
         self.label_lote_2.setText(_translate("MainWindow", "Volumen"))
         self.label_5.setText(_translate("MainWindow", "Nuevo Producto"))
         self.label_marca_2.setText(_translate("MainWindow", "Precio"))
-import img_rc
+from Interfaces.main import img_rc
 
 
 if __name__ == "__main__":

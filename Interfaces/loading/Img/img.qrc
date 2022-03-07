@@ -1,10 +1,6 @@
 <RCC>
-  <qresource prefix="fondo">
-    <file>images (1).jpg</file>
-  </qresource>
   <qresource prefix="Icon">
-    <file>Warehouse_Bull_Soft_Logo.png</file>
-    <file>iconos logo-05.png</file>
-    <file>iconos logo-06.png</file>
+    <file>logo cargando.png</file>
+    <file>imagenfondo4-59.jpg</file>
   </qresource>
 </RCC>
