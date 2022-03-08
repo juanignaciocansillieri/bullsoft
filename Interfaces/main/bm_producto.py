@@ -409,7 +409,7 @@ class Ui_MainWindow(object):
         self.fragil_si.setText(_translate("MainWindow", "Si"))
         self.fragil_no.setText(_translate("MainWindow", "No"))
         self.peso_label_2.setText(_translate("MainWindow", "Precio"))
-import img_rc
+from Interfaces.main import img_rc
 
 
 if __name__ == "__main__":

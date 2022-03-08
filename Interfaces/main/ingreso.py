@@ -233,4 +233,4 @@ class Ui_MainWindow(object):
         self.crearprod_btn.setText(_translate("MainWindow", "Confirmar"))
         self.label_motivo.setText(_translate("MainWindow", "Lote"))
         self.label_5.setText(_translate("MainWindow", "Nuevo Ingreso"))
-import img_rc
+from  Interfaces.main import img_rc

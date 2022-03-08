@@ -444,4 +444,4 @@ class Ui_MainWindow(object):
         self.label_dni.setText(_translate("MainWindow", "DNI"))
         self.label_apellido.setText(_translate("MainWindow", "Apellido"))
         self.label_5.setText(_translate("MainWindow", "Nuevo Usuario"))
-import img_rc
+from  Interfaces.main import img_rc

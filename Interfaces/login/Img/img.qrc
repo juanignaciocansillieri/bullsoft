@@ -1,9 +1,7 @@
 <RCC>
   <qresource prefix="fondo">
-    <file>images (1).jpg</file>
-  </qresource>
-  <qresource prefix="Icon">
-    <file>iconos logo-05.png</file>
-    <file>iconos logo-06.png</file>
+    <file>logo bienvenido.png</file>
+    <file>imagenfondo4-59.jpg</file>
+    <file>logo24x24-65.png</file>
   </qresource>
 </RCC>

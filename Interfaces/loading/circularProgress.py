@@ -21,7 +21,7 @@ class CircularProgress(QWidget):
         self.lineWidth = 18
         # Timeline for animation
         # timer
-        self.timer = QTimeLine(7000, self)
+        self.timer = QTimeLine(7500, self)
         self.timer.setFrameRange(0, 360)
         self.timer.frameChanged.connect(self.progress)
         self.timer.start()
@@ -71,7 +71,7 @@ class CircularProgress(QWidget):
             the_path.addEllipse(the_rect.adjusted(
                 1+self.lineWidth, 1+self.lineWidth, -1-self.lineWidth, -1-self.lineWidth))
             # color inicial
-            painter.fillPath(the_path, QColor("#12151a"))
+            painter.fillPath(the_path, QColor(0, 7, 66,200))
 
             # Radial gradient (parameters are the center point and the starting angle), by default it is calculated
             # counterclockwise from the right

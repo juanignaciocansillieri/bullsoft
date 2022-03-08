@@ -1,4 +1,3 @@
-import pymysql
 from PIL import Image
 import os
 from PyQt5 import QtCore
@@ -23,6 +22,7 @@ from Interfaces.main.posiciones_alojamiento import PosicionAlojamiento as Pa
 from Interfaces.main.nueva_estanteria_func import Nueva_estanteria as ne
 from CLASES import matriz as mz
 from CLASES import  estanterias
+from fpdf import FPDF
 
 globalPosicion = ""
 defaultImg = ""
@@ -99,6 +99,39 @@ class Modern(QMainWindow):
         self.ui.users_btn_2.clicked.connect(lambda: self.ui.stackedWidget_3.setCurrentWidget(self.ui.user_subpage) )
         self.ui.users_btn_2.clicked.connect(self.listar_usuarios)
         self.ui.users_btn.clicked.connect(self.listar_usuarios)
+        self.ui.label_inicio_stock.mousePressEvent = self.click_label_stock
+        self.ui.label_inicio_stock_2.mousePressEvent = self.click_label_stock
+        self.ui.label_inicio_stock_3.mousePressEvent = self.click_label_stock
+        self.ui.label_inicio_lotes_2.mousePressEvent = self.click_label_lotes
+        self.ui.label_inicio_lotes_3.mousePressEvent = self.click_label_lotes
+        self.ui.label_inicio_lotes.mousePressEvent = self.click_label_lotes
+        self.ui.label_inicio_movimientos.mousePressEvent = self.click_label_mov
+        self.ui.label_inicio_movimientos_2.mousePressEvent = self.click_label_mov
+        self.ui.label_inicio_movimientos_3.mousePressEvent = self.click_label_mov
+        self.ui.label_inicio_areas.mousePressEvent = self.click_label_areas
+        self.ui.label_inicio_areas_2.mousePressEvent = self.click_label_areas
+        self.ui.label_inicio_usuarios.mousePressEvent = self.click_label_usuarios
+        self.ui.label_inicio_usuarios_2.mousePressEvent = self.click_label_usuarios
+        self.ui.btn_inicio_lotes.clicked.connect(lambda: self.ui.stackedWidget_main)
+        self.shadow = QGraphicsDropShadowEffect()
+        self.shadow1= QGraphicsDropShadowEffect()
+        self.shadow2 = QGraphicsDropShadowEffect()
+        self.shadow3 = QGraphicsDropShadowEffect()
+        self.shadow4 = QGraphicsDropShadowEffect()
+
+        self.shadow.setBlurRadius(80)
+        self.shadow1.setBlurRadius(80)
+        self.shadow2.setBlurRadius(80)
+        self.shadow3.setBlurRadius(80)
+        self.shadow4.setBlurRadius(80)
+
+        self.ui.btn_inicio_usuarios.setGraphicsEffect(self.shadow)
+        self.ui.btn_inicio_areas.setGraphicsEffect(self.shadow1)
+        self.ui.btn_inicio_stock.setGraphicsEffect(self.shadow2)
+        self.ui.btn_inicio_movimientos.setGraphicsEffect(self.shadow3)
+        self.ui.btn_inicio_lotes.setGraphicsEffect(self.shadow4)
+
+        self.ui.inicio_btn.setChecked(True)
         # Listamos productos al iniciar la ventana
 
         n = p.contar_filas()
@@ -165,11 +198,13 @@ class Modern(QMainWindow):
         self.ui.btn_actualizar_estanteria.clicked.connect(lambda: self.listar_segmentos(globalArea))
         #self.ui.btn_actualizarAreas.clicked.connect(self.crear_deposito)
         self.ui.btn_crearDeposito.clicked.connect(lambda: self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_deposito))
+        self.ui.inicio_btn.clicked.connect(lambda: self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_inicio))
+        self.ui.inicio_btn_2.clicked.connect(lambda: self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_inicio))
+        self.ui.inicio_btn.clicked.connect(lambda: self.ui.stackedWidget_3.setCurrentWidget(self.ui.user_subpage))
+        self.ui.inicio_btn_2.clicked.connect(lambda: self.ui.stackedWidget_3.setCurrentWidget(self.ui.user_subpage))
         self.ui.btn_crearDeposito.clicked.connect(self.crear_deposito)
         self.ui.btn_crearDeposito.clicked.connect(self.mostra_areas)
-        self.ui.btn_actualizarAreaInd.clicked.connect(lambda: self.listar_areas(globalArea))
         self.ui.btn_newPosicion.clicked.connect(lambda: self.new_posicion(globalArea))
-        self.ui.btn_modificarArea.clicked.connect(lambda: self.modificar_area(globalArea))
         self.ui.newArea_btn_2.clicked.connect(self.mostrar_borrar_area)
         self.ui.btn_nuevaEstanteria.clicked.connect(self.mostrar_nueva_estanteria)
         self.ui.btn_actualizarNiveles.clicked.connect(self.listar_niveles)
@@ -189,10 +224,40 @@ class Modern(QMainWindow):
         self.ui.products_btn_movimientos_2.clicked.connect(self.checkear_boton_movimientos)
         self.ui.products_btn_lotes.clicked.connect(self.checkear_boton_lotes)
         self.ui.products_btn_lotes_2.clicked.connect(self.checkear_boton_lotes)
+        self.ui.btn_inicio_stock.clicked.connect(self.click_label_stock)
+        self.ui.btn_inicio_areas.clicked.connect(self.click_label_areas)
+        self.ui.btn_inicio_lotes.clicked.connect(self.click_label_lotes)
+        self.ui.btn_inicio_movimientos.clicked.connect(self.click_label_mov)
+        self.ui.btn_inicio_usuarios.clicked.connect(self.click_label_usuarios)
 
-
+        self.ui.btn_confirmarPicking_2.clicked.connect(self.table_to_pdf)
 
         ##########################       ##################################
+
+    def click_label_stock(self,event):
+        self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_stock)
+        self.ui.stackedWidget_3.setCurrentWidget(self.ui.product_subpage)
+        self.checkear_boton_stock()
+        self.checkear_boton_prod()
+    def click_label_mov(self,event):
+        self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_movimientos)
+        self.ui.stackedWidget_3.setCurrentWidget(self.ui.product_subpage)
+        self.checkear_boton_prod()
+        self.checkear_boton_movimientos()
+
+    def click_label_lotes(self,event):
+        self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_lotes)
+        self.ui.stackedWidget_3.setCurrentWidget(self.ui.product_subpage)
+        self.checkear_boton_prod()
+        self.checkear_boton_lotes()
+    def click_label_usuarios(self,event):
+        self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_usuarios)
+        self.ui.stackedWidget_3.setCurrentWidget(self.ui.user_subpage)
+        self.checkear_boton_users()
+    def click_label_areas(self,event):
+        self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_deposito)
+        self.ui.stackedWidget_3.setCurrentWidget(self.ui.deposito_subpage)
+        self.checkear_boton_areas()
     def checkear_boton_prod(self):
 
             self.ui.users_btn.setChecked(False)
@@ -568,9 +633,10 @@ class Modern(QMainWindow):
 
     def buscarProducto(self):
         parametro = self.ui.buscar_input.text()
-        products = p.Productos.buscar_product(parametro)
-        n = p.Productos.buscar_product_rows(parametro)
+        products = p.buscar_product(parametro)
+        n = p.buscar_product_rows(parametro)
         self.ui.tableWidget_stock_2.setRowCount(n)
+        self.ui.products_btn_movimiento.setg
         table_row = 0
 
         for row in products:
@@ -823,6 +889,7 @@ class Modern(QMainWindow):
                 btn_area = QtWidgets.QPushButton(self.ui.frame)
                 btn_area.setMaximumSize(QtCore.QSize(40, 40))
                 btn_area.setObjectName(globalArea + "-" + str(x+1) + "-" + str(y+1))
+                btn_area.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
                 vertical_layout.addWidget(btn_area)
                 btn_area.released.connect(self.button_released2)
             i += 1
@@ -876,30 +943,24 @@ class Modern(QMainWindow):
             self.ui.tableWidget_prodNiveles.setItem(
                 table_row, 2, QtWidgets.QTableWidgetItem(row[2]))
             self.ui.tableWidget_prodNiveles.setItem(
-                table_row, 3, QtWidgets.QTableWidgetItem(str(l.Lote.obtener_cantidades(row[0]))))
+                table_row, 3, QtWidgets.QTableWidgetItem(str(l.obtener_cantidades(row[0]))))
 
             self.ui.tableWidget_prodNiveles.setItem(
-                table_row, 4, QtWidgets.QTableWidgetItem(str(l.Lote.obtener_fecha(row[0]))))
+                table_row, 4, QtWidgets.QTableWidgetItem(str(l.obtener_fecha(row[0]))))
 
             table_row += 1
     def listar_niveles(self):
         global globalPosicion
         global globalArea
         table_row_i = 0
-        print("gP",globalPosicion)
         posicion = globalPosicion.split(sep="-")
         area=posicion[0]
-
-        print("area",area)
         segmento=posicion[1]
-        print("segmento",segmento)
         columna=posicion[2]
-        print("columna",columna)
-        print("ga",globalArea)
         niveles = int(es.contar_niveles(globalArea,segmento))
         self.ui.tableWidget_niveles.setRowCount(niveles)
         data = al.mostrar_al(area, segmento, columna)
-        print("data",data)
+
         for n in data:
             self.ui.tableWidget_niveles.setItem(
                 table_row_i, 0, QtWidgets.QTableWidgetItem(n[0]))
@@ -913,7 +974,8 @@ class Modern(QMainWindow):
 
         for x in range(niveles):
             item = QtWidgets.QTableWidgetItem()
-            item.setText("Nivel " + str(x))
+            item.setText("Nivel " + str(x+1))
+            self.ui.tableWidget_niveles.verticalHeader().setVisible(True)
             self.ui.tableWidget_niveles.setVerticalHeaderItem(x,item)
 
     def seleccionar_niveles(self):
@@ -997,6 +1059,73 @@ class Modern(QMainWindow):
                 self.ui.tableWidget_usuarios.item(self.ui.tableWidget_usuarios.currentRow(), i).text())
             DNI = seleccionar_dni[0]
 
+    def table_to_pdf(self):
+
+        # Create instance of FPDF class
+        # Letter size paper, use inches as unit of measure
+        pdf = FPDF(format='letter', unit='in')
+
+        # Add new page. Without this you cannot create the document.
+        pdf.add_page()
+
+        # Remember to always put one of these at least once.
+        pdf.set_font('Times', '', 10.0)
+
+        # Effective page width, or just epw
+        epw = pdf.w - 2 * pdf.l_margin
+
+        # Set column width to 1/4 of effective page width to distribute content
+        # evenly across table and page
+        col_width = epw / 9
+
+        # Since we do not need to draw lines anymore, there is no need to separate
+        # headers from data matrix.
+
+        data = [['Áreas','Pas.', 'Est.','Col.','Niv.', 'Codigo', 'Descripción','Lote','Cant.'],
+                ['Jules', 'Smith', 34, 'San Juan'],
+                ['Mary', 'Ramos', 45, 'Orlando'], [
+                    'Carlson', 'Banks', 19, 'Los Angeles']
+                ]
+
+        # Document title centered, 'B'old, 14 pt
+        pdf.set_font('Times', 'B', 14.0)
+        pdf.cell(epw, 0.0, 'Demographic data', align='C')
+        pdf.set_font('Times', '', 10.0)
+        pdf.ln(0.5)
+
+        # Text height is the same as current font size
+        th = pdf.font_size
+
+        for row in data:
+            for datum in row:
+                # Enter data in colums
+                # Notice the use of the function str to coerce any input to the
+                # string type. This is needed
+                # since pyFPDF expects a string, not a number.
+                pdf.cell(col_width, th, str(datum), border=1)
+
+            pdf.ln(th)
+
+        # Line break equivalent to 4 lines
+        pdf.ln(4 * th)
+
+        pdf.set_font('Times', 'B', 14.0)
+        pdf.cell(epw, 0.0, 'With more padding', align='C')
+        pdf.set_font('Times', '', 10.0)
+        pdf.ln(0.5)
+
+        # Here we add more padding by passing 2*th as height
+        for row in data:
+            for datum in row:
+                # Enter data in colums
+                pdf.cell(col_width, 2 * th, str(datum), border=1)
+
+            pdf.ln(2 * th)
+
+        pdf.output('table-using-cell-borders.pdf', 'F')
+
+
+
 
 class BMProduct(QMainWindow):
 
@@ -1032,7 +1161,7 @@ class BMProduct(QMainWindow):
         global productId
         global codigoViejo
         global defaultImg
-        producto = p.Productos.mostrar_product(productId)
+        producto = p.mostrar_product(productId)
         atributos = list(producto[0])
         self.ui.codigo_input.setText(atributos[0])
         codigoViejo = atributos[0]
@@ -1052,7 +1181,6 @@ class BMProduct(QMainWindow):
         self.ui.num_volumen.setValue(atributos[10])
         self.ui.num_precio.setValue(atributos[11])
         self.cbox()
-        self.ui.estado_cbox.setCurrentText(atributos[12])
         self.ui.ubicacion_cbox.setCurrentText(atributos[4])
 
     def modificar_producto(self):
@@ -1073,7 +1201,7 @@ class BMProduct(QMainWindow):
         volumen = self.ui.num_volumen.value()
         precio = self.ui.num_precio.value()
         foto = defaultImg
-        p.Productos.modificar_produc(codigoViejo, codigo, marca, descripcion, ubicacion, condicion, fragil, foto, peso,
+        p.modificar_produc(codigoViejo, codigo, marca, descripcion, ubicacion, fragil, foto, peso,
                                      volumen,precio)
         self.close()
 
@@ -1084,7 +1212,7 @@ class BMProduct(QMainWindow):
         ret = qm.warning(self, 'Esta acción es irreversible', "¿Estás seguro que quieres eliminar el producto?",
                          qm.Yes | qm.No)
         if ret == qm.Yes:
-            p.Productos.borrar_producto(productId)
+            p.borrar_producto(productId)
             self.close()
 
     def upload_img(self):
@@ -1101,7 +1229,8 @@ class BMProduct(QMainWindow):
         areas = ar.Area.listar_area()
         for a in areas:
             self.ui.estado_cbox.addItem(a[0])
-        pos = al.Alojamiento.listar_posicion_alojamiento()
+        posicion = self.ui.estado_cbox.currentText()
+        pos = al.Alojamiento.listar_posicion_alojamiento(posicion)
         for p in pos:
             self.ui.ubicacion_cbox.addItem(p[0])
         self.ui.estado_cbox.currentIndexChanged.connect(self.clear_combo)
@@ -1109,7 +1238,7 @@ class BMProduct(QMainWindow):
 
     def update_combo(self):
         area_seleccionada = self.ui.estado_cbox.currentText()
-        posiciones = al.Alojamiento.listar_alojamiento_disponibles_area(area_seleccionada)
+        posiciones = al.listar_alojamiento_disponibles_area(area_seleccionada)
         for pos in posiciones:
             self.ui.ubicacion_cbox.addItem(pos[0])
 
