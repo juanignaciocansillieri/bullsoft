@@ -38,9 +38,9 @@ tupla_egreso=[]
 
 class Modern(QMainWindow):
 
-    def __init__(self, admin):
+    def __init__(self, admin,nombre):
         super(Modern, self).__init__()
-
+        nombreNuevo=nombre
         self.ui = Ui_MainWindow()
         self.uii = Na()
         self.ui.setupUi(self)
@@ -55,6 +55,7 @@ class Modern(QMainWindow):
         self.move(qt_rectangle.topLeft())
         self.ui.exit_btn.clicked.connect(lambda: self.close())
         self.show()
+        self.ui.label_nombre_usuario.setText(nombreNuevo)
         ##########################   PAGINAS   ##################################
 
         ########################## PRODUCTOS ##################################
@@ -96,7 +97,7 @@ class Modern(QMainWindow):
             lambda: self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_lotes))
         self.ui.pushButton_20.clicked.connect(self.listar_lotes)
         self.ui.btn_volver_niveles.clicked.connect(lambda: self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_areaIndividual))
-        self.ui.users_btn_2.clicked.connect(lambda: self.ui.stackedWidget_3.setCurrentWidget(self.ui.user_subpage) )
+        #self.ui.users_btn_2.clicked.connect(lambda: self.ui.stackedWidget_3.setCurrentWidget(self.ui.user_subpage) )
         self.ui.users_btn_2.clicked.connect(self.listar_usuarios)
         self.ui.users_btn.clicked.connect(self.listar_usuarios)
         self.ui.label_inicio_stock.mousePressEvent = self.click_label_stock
@@ -167,6 +168,8 @@ class Modern(QMainWindow):
             self.ui.btn_actualizarUsuarios.clicked.connect(self.listar_usuarios)
         else:
             self.ui.users_btn.clicked.connect(
+                lambda: QtWidgets.QMessageBox.critical(self, "Error", "No tiene los permisos suficientes"))
+            self.ui.users_btn_2.clicked.connect(
                 lambda: QtWidgets.QMessageBox.critical(self, "Error", "No tiene los permisos suficientes"))
         self.ui.tableWidget_usuarios.doubleClicked.connect(self.seleccionarusuario)
         self.ui.tableWidget_usuarios.doubleClicked.connect(self.mostrar_bm_user)
@@ -1381,6 +1384,8 @@ class BmUsuario(QMainWindow):
 if __name__ == "__main__":
     import sys
     app = QApplication(sys.argv)
-    window = Modern(1)
+    window = Modern(1,"nombre")
     window.show()
+    window.ui.stackedWidget_main.setCurrentWidget(window.ui.page_inicio)
+
     sys.exit(app.exec())

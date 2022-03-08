@@ -49,8 +49,11 @@ class LoginWindow(QMainWindow):
         if usuario == 1:
             # inicia
             admin_user = u.ver_tipo(user)
-            self.main = m.Modern(admin_user)
+            nombre=u.Usuarios.mostrar_user(user)
+            nombre=str(nombre[0][1])+" "+str(nombre[0][1])
+            self.main = m.Modern(admin_user,nombre)
             self.main.show()
+            self.main.ui.stackedWidget_main.setCurrentWidget(self.main.ui.page_inicio)
             self.close()
 
         if usuario == 2:
@@ -65,3 +68,4 @@ class LoginWindow(QMainWindow):
             # contraseña incorrecta
             QtWidgets.QMessageBox.critical(self, "Error", "Contraseña Incorrecta")
             self.ui.pass_login_input.setText("")
+
