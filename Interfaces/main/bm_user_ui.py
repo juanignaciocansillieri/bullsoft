@@ -489,7 +489,7 @@ class Ui_MainWindow(object):
         self.label_puesto.setText(_translate("MainWindow", "Puesto"))
         self.label_nacimiento.setText(_translate("MainWindow", "Nacimiento"))
         self.subirFoto_btn_2.setText(_translate("MainWindow", "Actualizar Imagen"))
-import img_rc
+from Interfaces.main import img_rc
 
 
 if __name__ == "__main__":

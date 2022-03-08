@@ -2218,7 +2218,7 @@ class Ui_MainWindow(object):
         self.tableWidget_picking.verticalHeader().setVisible(False)
         self.tableWidget_picking.verticalHeader().setDefaultSectionSize(41)
         self.btn_confirmarPicking_2 = QtWidgets.QPushButton(self.frame_9)
-        self.btn_confirmarPicking_2.setGeometry(QtCore.QRect(500, 580, 121, 26))
+        self.btn_confirmarPicking_2.setGeometry(QtCore.QRect(490, 650, 121, 26))
         font = QtGui.QFont()
         font.setFamily("Cairo")
         font.setPointSize(10)
@@ -3267,7 +3267,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
         self.stackedWidget_3.setCurrentIndex(0)
-        self.stackedWidget_main.setCurrentIndex(1)
+        self.stackedWidget_main.setCurrentIndex(5)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
@@ -3407,7 +3407,7 @@ class Ui_MainWindow(object):
         item.setText(_translate("MainWindow", "New Column"))
         item = self.tableWidget_picking.horizontalHeaderItem(8)
         item.setText(_translate("MainWindow", "New Column"))
-        self.btn_confirmarPicking_2.setText(_translate("MainWindow", "Confirmar"))
+        self.btn_confirmarPicking_2.setText(_translate("MainWindow", "Convertir en PDF"))
         self.lineEdit_3.setPlaceholderText(_translate("MainWindow", "Buscar usuarios"))
         self.label_66.setText(_translate("MainWindow", "DNI"))
         self.label_67.setText(_translate("MainWindow", "Nombre"))
@@ -3475,7 +3475,7 @@ class Ui_MainWindow(object):
         item = self.tableWidget_movimientos_2.horizontalHeaderItem(5)
         item.setText(_translate("MainWindow", "New Column"))
         self.new_egreso_btn.setText(_translate("MainWindow", "Nuevo Egreso "))
-import img_rc
+from Interfaces.main import img_rc
 
 
 if __name__ == "__main__":

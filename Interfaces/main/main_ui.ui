@@ -1214,7 +1214,7 @@ border:none</string>
           <item>
            <widget class="QStackedWidget" name="stackedWidget_main">
             <property name="currentIndex">
-             <number>1</number>
+             <number>5</number>
             </property>
             <widget class="QWidget" name="page_deposito">
              <layout class="QVBoxLayout" name="verticalLayout_13">
@@ -4527,8 +4527,8 @@ QHeaderView::section:vertical
                 <widget class="QPushButton" name="btn_confirmarPicking_2">
                  <property name="geometry">
                   <rect>
-                   <x>500</x>
-                   <y>580</y>
+                   <x>490</x>
+                   <y>650</y>
                    <width>121</width>
                    <height>26</height>
                   </rect>
@@ -4555,7 +4555,7 @@ QPushButton:hover{
 }</string>
                  </property>
                  <property name="text">
-                  <string>Confirmar</string>
+                  <string>Convertir en PDF</string>
                  </property>
                 </widget>
                </widget>
