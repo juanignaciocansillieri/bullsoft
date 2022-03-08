@@ -34,12 +34,15 @@ nombreNuevo = ""
 n_egreso=0
 nivelId = ""
 tupla_egreso=[]
-
+admin=False
+nombre_user=""
 
 class Modern(QMainWindow):
 
-    def __init__(self, admin,nombre):
+    def __init__(self, adm,nombre):
         super(Modern, self).__init__()
+        global admin
+        admin=adm
         nombreNuevo=nombre
         self.ui = Ui_MainWindow()
         self.uii = Na()
@@ -257,8 +260,15 @@ class Modern(QMainWindow):
         self.listar_lotes()
         self.checkear_boton_lotes()
     def click_label_usuarios(self,event):
-        self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_usuarios)
-        self.ui.stackedWidget_3.setCurrentWidget(self.ui.user_subpage)
+        admin
+        print(admin)
+        if admin:
+            self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_usuarios)
+            self.ui.stackedWidget_3.setCurrentWidget(self.ui.user_subpage)
+
+        else:
+            QtWidgets.QMessageBox.critical(self, "Error", "No tiene los permisos suficientes")
+            return None
         self.listar_usuarios()
         self.checkear_boton_users()
     def click_label_areas(self,event):
