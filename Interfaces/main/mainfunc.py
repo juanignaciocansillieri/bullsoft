@@ -241,21 +241,25 @@ class Modern(QMainWindow):
         self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_stock)
         self.ui.stackedWidget_3.setCurrentWidget(self.ui.product_subpage)
         self.checkear_boton_stock()
+        self.listar_productos()
         self.checkear_boton_prod()
     def click_label_mov(self,event):
         self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_movimientos)
         self.ui.stackedWidget_3.setCurrentWidget(self.ui.product_subpage)
         self.checkear_boton_prod()
+        self.listar_movimientos()
         self.checkear_boton_movimientos()
 
     def click_label_lotes(self,event):
         self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_lotes)
         self.ui.stackedWidget_3.setCurrentWidget(self.ui.product_subpage)
         self.checkear_boton_prod()
+        self.listar_lotes()
         self.checkear_boton_lotes()
     def click_label_usuarios(self,event):
         self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_usuarios)
         self.ui.stackedWidget_3.setCurrentWidget(self.ui.user_subpage)
+        self.listar_usuarios()
         self.checkear_boton_users()
     def click_label_areas(self,event):
         self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_deposito)
@@ -1387,5 +1391,6 @@ if __name__ == "__main__":
     window = Modern(1,"nombre")
     window.show()
     window.ui.stackedWidget_main.setCurrentWidget(window.ui.page_inicio)
+    window.ui.stackedWidget_3.setCurrentWidget(window.ui.user_subpage)
 
     sys.exit(app.exec())

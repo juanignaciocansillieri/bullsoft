@@ -50,10 +50,12 @@ class LoginWindow(QMainWindow):
             # inicia
             admin_user = u.ver_tipo(user)
             nombre=u.Usuarios.mostrar_user(user)
-            nombre=str(nombre[0][1])+" "+str(nombre[0][1])
+            print (nombre)
+            nombre=str(nombre[0][1])+" "+str(nombre[0][2])
             self.main = m.Modern(admin_user,nombre)
             self.main.show()
             self.main.ui.stackedWidget_main.setCurrentWidget(self.main.ui.page_inicio)
+            self.main.ui.stackedWidget_3.setCurrentWidget(self.main.ui.user_subpage)
             self.close()
 
         if usuario == 2:
