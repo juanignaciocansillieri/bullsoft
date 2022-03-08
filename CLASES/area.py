@@ -335,7 +335,7 @@ def ver_pasillos(area):
     cursor.execute(query,area)
     a.commit()
     b = cursor.fetchall()
-    data=str(b[0][0])
+    data=int(b[0][0])
     c.close_connection(a)
     return data
 
