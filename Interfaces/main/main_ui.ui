@@ -1214,7 +1214,7 @@ border:none</string>
           <item>
            <widget class="QStackedWidget" name="stackedWidget_main">
             <property name="currentIndex">
-             <number>5</number>
+             <number>3</number>
             </property>
             <widget class="QWidget" name="page_deposito">
              <layout class="QVBoxLayout" name="verticalLayout_13">
@@ -2655,22 +2655,22 @@ QPushButton:hover{
                    <widget class="QFrame" name="frame_area">
                     <property name="geometry">
                      <rect>
-                      <x>190</x>
+                      <x>160</x>
                       <y>40</y>
-                      <width>591</width>
-                      <height>400</height>
+                      <width>631</width>
+                      <height>450</height>
                      </rect>
                     </property>
                     <property name="minimumSize">
                      <size>
-                      <width>500</width>
-                      <height>350</height>
+                      <width>631</width>
+                      <height>450</height>
                      </size>
                     </property>
                     <property name="maximumSize">
                      <size>
-                      <width>600</width>
-                      <height>400</height>
+                      <width>620</width>
+                      <height>450</height>
                      </size>
                     </property>
                     <property name="styleSheet">
@@ -6188,9 +6188,9 @@ border-radius: 25px;
                 <widget class="QLabel" name="label_nombre_usuario">
                  <property name="geometry">
                   <rect>
-                   <x>830</x>
+                   <x>710</x>
                    <y>30</y>
-                   <width>111</width>
+                   <width>255</width>
                    <height>31</height>
                   </rect>
                  </property>
@@ -6202,7 +6202,7 @@ border-radius: 25px;
                  </property>
                  <property name="maximumSize">
                   <size>
-                   <width>168</width>
+                   <width>255</width>
                    <height>16777215</height>
                   </size>
                  </property>
@@ -6219,10 +6219,10 @@ border-radius: 25px;
 </string>
                  </property>
                  <property name="text">
-                  <string>Juan Ignacio</string>
+                  <string>Juan Ignacio Cansillieri</string>
                  </property>
                  <property name="alignment">
-                  <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                  <set>Qt::AlignCenter</set>
                  </property>
                 </widget>
                </widget>

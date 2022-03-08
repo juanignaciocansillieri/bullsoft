@@ -1305,9 +1305,9 @@ class Ui_MainWindow(object):
         self.frame_11.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_11.setObjectName("frame_11")
         self.frame_area = QtWidgets.QFrame(self.frame_11)
-        self.frame_area.setGeometry(QtCore.QRect(190, 40, 591, 400))
-        self.frame_area.setMinimumSize(QtCore.QSize(500, 350))
-        self.frame_area.setMaximumSize(QtCore.QSize(600, 400))
+        self.frame_area.setGeometry(QtCore.QRect(160, 40, 631, 450))
+        self.frame_area.setMinimumSize(QtCore.QSize(631, 450))
+        self.frame_area.setMaximumSize(QtCore.QSize(620, 450))
         self.frame_area.setStyleSheet("border: 2px solid black")
         self.frame_area.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_area.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -2953,9 +2953,9 @@ class Ui_MainWindow(object):
         self.label_inicio_lotes_2.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
         self.label_inicio_lotes_2.setObjectName("label_inicio_lotes_2")
         self.label_nombre_usuario = QtWidgets.QLabel(self.frame_12)
-        self.label_nombre_usuario.setGeometry(QtCore.QRect(830, 30, 111, 31))
+        self.label_nombre_usuario.setGeometry(QtCore.QRect(710, 30, 255, 31))
         self.label_nombre_usuario.setMinimumSize(QtCore.QSize(66, 0))
-        self.label_nombre_usuario.setMaximumSize(QtCore.QSize(168, 16777215))
+        self.label_nombre_usuario.setMaximumSize(QtCore.QSize(255, 16777215))
         font = QtGui.QFont()
         font.setFamily("Cairo")
         font.setPointSize(14)
@@ -2964,7 +2964,7 @@ class Ui_MainWindow(object):
         self.label_nombre_usuario.setFont(font)
         self.label_nombre_usuario.setStyleSheet("color: #818489 ;\n"
 "")
-        self.label_nombre_usuario.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
+        self.label_nombre_usuario.setAlignment(QtCore.Qt.AlignCenter)
         self.label_nombre_usuario.setObjectName("label_nombre_usuario")
         self.verticalLayout_14.addWidget(self.frame_12)
         self.stackedWidget_main.addWidget(self.page_inicio)
@@ -3267,7 +3267,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
         self.stackedWidget_3.setCurrentIndex(0)
-        self.stackedWidget_main.setCurrentIndex(5)
+        self.stackedWidget_main.setCurrentIndex(3)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
@@ -3452,7 +3452,7 @@ class Ui_MainWindow(object):
         self.label_inicio_movimientos_2.setText(_translate("MainWindow", "Productos"))
         self.label_inicio_lotes_3.setText(_translate("MainWindow", "- Lotes"))
         self.label_inicio_lotes_2.setText(_translate("MainWindow", "Productos"))
-        self.label_nombre_usuario.setText(_translate("MainWindow", "Juan Ignacio"))
+        self.label_nombre_usuario.setText(_translate("MainWindow", "Juan Ignacio Cansillieri"))
         self.lineEdit_5.setPlaceholderText(_translate("MainWindow", "Buscar movimientos"))
         self.label_59.setText(_translate("MainWindow", "Código EAN"))
         self.label_60.setText(_translate("MainWindow", "Descripción"))
@@ -3475,7 +3475,7 @@ class Ui_MainWindow(object):
         item = self.tableWidget_movimientos_2.horizontalHeaderItem(5)
         item.setText(_translate("MainWindow", "New Column"))
         self.new_egreso_btn.setText(_translate("MainWindow", "Nuevo Egreso "))
-from Interfaces.main import img_rc
+import img_rc
 
 
 if __name__ == "__main__":
