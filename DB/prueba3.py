@@ -15,7 +15,7 @@ pick = alojamiento.pick_(rp)
 
 print("rp",pick)
 #print(re)
-productos.pick_productos(cod,pick)
+print (productos.pick_productos(cod,pick))
 
 #print("prueba ",productos.buscar_prod_pick("1","p1-1-1-2-3"))
 
