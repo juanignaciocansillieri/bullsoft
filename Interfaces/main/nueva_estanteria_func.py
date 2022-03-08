@@ -43,7 +43,7 @@ class Nueva_estanteria(QMainWindow):
 
     def pasillos_cbox(self):
         pasillo = area.ver_pasillos(self.area)
-        for x in range(int(pasillo[0][0])):
+        for x in range(int(pasillo)):
                 self.ui.cbox_pasillo.addItem(str(x+1))
 
     def posicion_cbox(self):

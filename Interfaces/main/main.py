@@ -776,6 +776,8 @@ class Ui_MainWindow(object):
         self.tableWidget_niveles.verticalHeader().setCascadingSectionResizes(True)
         self.tableWidget_niveles.verticalHeader().setDefaultSectionSize(42)
         self.tableWidget_niveles.verticalHeader().setHighlightSections(True)
+        self.tableWidget_niveles.verticalHeader().setSortIndicatorShown(False)
+        self.tableWidget_niveles.verticalHeader().setStretchLastSection(False)
         self.frame_37 = QtWidgets.QFrame(self.page_posicionesAlojamiento)
         self.frame_37.setGeometry(QtCore.QRect(90, 140, 841, 41))
         self.frame_37.setMinimumSize(QtCore.QSize(156, 41))
@@ -1636,7 +1638,7 @@ class Ui_MainWindow(object):
         self.btn_agregarProdEgreso = QtWidgets.QPushButton(self.frame_9)
         self.btn_agregarProdEgreso.setGeometry(QtCore.QRect(340, 100, 121, 26))
         font = QtGui.QFont()
-        font.setFamily("Cairo")
+        font.setFamily("Cairo SemiBold")
         font.setPointSize(10)
         self.btn_agregarProdEgreso.setFont(font)
         self.btn_agregarProdEgreso.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
@@ -1826,12 +1828,12 @@ class Ui_MainWindow(object):
         self.btn_eliminarProdEgreso = QtWidgets.QPushButton(self.frame_9)
         self.btn_eliminarProdEgreso.setGeometry(QtCore.QRect(340, 150, 121, 26))
         font = QtGui.QFont()
-        font.setFamily("Cairo")
+        font.setFamily("Cairo SemiBold")
         font.setPointSize(10)
         self.btn_eliminarProdEgreso.setFont(font)
         self.btn_eliminarProdEgreso.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.btn_eliminarProdEgreso.setStyleSheet("QPushButton{\n"
-"background-color:rgb(223, 14, 35);\n"
+"background-color: #055ffc;\n"
 "color:#fff;\n"
 "border-radius: 5px;\n"
 "text-align:center;\n"
@@ -1860,7 +1862,7 @@ class Ui_MainWindow(object):
 "}")
         self.btn_confirmarPicking.setObjectName("btn_confirmarPicking")
         self.btn_volver_egreso = QtWidgets.QPushButton(self.frame_9)
-        self.btn_volver_egreso.setGeometry(QtCore.QRect(50, 30, 41, 26))
+        self.btn_volver_egreso.setGeometry(QtCore.QRect(50, 30, 26, 26))
         font = QtGui.QFont()
         font.setFamily("Roboto")
         font.setPointSize(10)
@@ -3264,8 +3266,8 @@ class Ui_MainWindow(object):
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
-        self.stackedWidget_3.setCurrentIndex(1)
-        self.stackedWidget_main.setCurrentIndex(8)
+        self.stackedWidget_3.setCurrentIndex(0)
+        self.stackedWidget_main.setCurrentIndex(1)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
@@ -3473,7 +3475,7 @@ class Ui_MainWindow(object):
         item = self.tableWidget_movimientos_2.horizontalHeaderItem(5)
         item.setText(_translate("MainWindow", "New Column"))
         self.new_egreso_btn.setText(_translate("MainWindow", "Nuevo Egreso "))
-from  Interfaces.main import img_rc
+import img_rc
 
 
 if __name__ == "__main__":

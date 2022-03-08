@@ -59,7 +59,8 @@ def modificar_produc(codigov, codigon, marca, descripcion, ubicacion, fragil, fo
         print("no se encontro el producto indicado")
         return 0
     else:
-        idp = str(b[0][0])
+        #idp = b[0][0]
+        idp = b
 
         try:
             query = "UPDATE productos set codigo=%s WHERE idproductos=%s"
@@ -105,7 +106,7 @@ def modificar_produc(codigov, codigon, marca, descripcion, ubicacion, fragil, fo
             values = (precio, idp)
             cursor.execute(query, values)
             a.commit()
-            lotes.Lote.mod_idpruct(codigov, codigon)
+            lotes.mod_idpruct(codigov, codigon)
             print("se MODIFICO producto correctamente")
         except pymysql.err.OperationalError as err:
             print("Hubo un error:", err)

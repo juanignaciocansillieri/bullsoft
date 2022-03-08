@@ -130,6 +130,8 @@ class Modern(QMainWindow):
         self.ui.btn_inicio_stock.setGraphicsEffect(self.shadow2)
         self.ui.btn_inicio_movimientos.setGraphicsEffect(self.shadow3)
         self.ui.btn_inicio_lotes.setGraphicsEffect(self.shadow4)
+
+        self.ui.inicio_btn.setChecked(True)
         # Listamos productos al iniciar la ventana
 
         n = p.contar_filas()
@@ -887,6 +889,7 @@ class Modern(QMainWindow):
                 btn_area = QtWidgets.QPushButton(self.ui.frame)
                 btn_area.setMaximumSize(QtCore.QSize(40, 40))
                 btn_area.setObjectName(globalArea + "-" + str(x+1) + "-" + str(y+1))
+                btn_area.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
                 vertical_layout.addWidget(btn_area)
                 btn_area.released.connect(self.button_released2)
             i += 1
@@ -970,9 +973,9 @@ class Modern(QMainWindow):
             table_row_i+=1
 
         for x in range(niveles):
-            print("x",x)
             item = QtWidgets.QTableWidgetItem()
             item.setText("Nivel " + str(x+1))
+            self.ui.tableWidget_niveles.verticalHeader().setVisible(True)
             self.ui.tableWidget_niveles.setVerticalHeaderItem(x,item)
 
     def seleccionar_niveles(self):
@@ -1198,7 +1201,7 @@ class BMProduct(QMainWindow):
         volumen = self.ui.num_volumen.value()
         precio = self.ui.num_precio.value()
         foto = defaultImg
-        p.modificar_produc(codigoViejo, codigo, marca, descripcion, ubicacion, condicion, fragil, foto, peso,
+        p.modificar_produc(codigoViejo, codigo, marca, descripcion, ubicacion, fragil, foto, peso,
                                      volumen,precio)
         self.close()
 

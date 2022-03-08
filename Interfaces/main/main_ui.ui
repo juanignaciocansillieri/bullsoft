@@ -1214,7 +1214,7 @@ border:none</string>
           <item>
            <widget class="QStackedWidget" name="stackedWidget_main">
             <property name="currentIndex">
-             <number>5</number>
+             <number>1</number>
             </property>
             <widget class="QWidget" name="page_deposito">
              <layout class="QVBoxLayout" name="verticalLayout_13">
@@ -1571,6 +1571,12 @@ QHeaderView::section {
               </attribute>
               <attribute name="verticalHeaderHighlightSections">
                <bool>true</bool>
+              </attribute>
+              <attribute name="verticalHeaderShowSortIndicator" stdset="0">
+               <bool>false</bool>
+              </attribute>
+              <attribute name="verticalHeaderStretchLastSection">
+               <bool>false</bool>
               </attribute>
               <column>
                <property name="text">
