@@ -233,21 +233,6 @@ def ver_vol(codigo):
         return data
     c.close_connection(a)
 
-"""def buscar_prod_posicion(posicion):
-    a = c.start_connection()
-    cursor = a.cursor()
-    query = "SELECT descripcion FROM productos WHERE ubicacion=%s"
-    cursor.execute(query, posicion)
-    data = cursor.fetchall()
-    a.commit()
-    if data == "()":
-        print("no se encontro el producto indicado")
-        return 0
-    else:
-        data = data[0]
-        return data
-    c.close_connection(a)"""
-
 def pick_posiciones(lc): #se le da una lsita de codigos y devuelve las posiciones
     rp=[]
     for data in lc:

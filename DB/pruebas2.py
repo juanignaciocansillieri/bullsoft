@@ -1,5 +1,5 @@
 
-from DB import conexion as c
+from DB import conexion as c, loginDB
 from CLASES import area,estanterias,alojamiento,productos,lotes,matriz,usuarios
 
 c.borrar_tabla()
@@ -56,3 +56,6 @@ productos.Productos("9", "9", "9", "p9", "p2-1-1-1-2", "9", "2020-01-01", "0", "
 usuarios.Usuarios("p1", "p1", "p1", "1", "1", "2020-01-01", "p1", "p1")
 usuarios.Usuarios("p2", "p2", "p2", "0", "2", "2020-01-01", "p2", "p2")
 usuarios.Usuarios("p3", "p3", "p3", "0", "2", "2020-01-01", "p3", "p2")
+loginDB.alta_login("p1","p1")
+loginDB.alta_login("p2","p2")
+loginDB.alta_login("p3","p3")
