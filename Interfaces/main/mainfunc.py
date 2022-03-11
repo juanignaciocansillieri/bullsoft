@@ -183,8 +183,8 @@ class Modern(QMainWindow):
         #self.ui.deposito_btn.clicked.connect(self.mostra_areas)
         ## Abrir Pagina Depositos ##
         verificar_deposito = int(conex.verificar_deposito())
-        if (verificar_deposito== 0):
-            self.ui.deposito_btn.clicked.connect(lambda: self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_area))
+        """if (verificar_deposito== 0):
+           self.ui.deposito_btn.clicked.connect(lambda: self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_area))
             self.ui.deposito_btn_2.clicked.connect(lambda: self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_area))
             print("dep0", verificar_deposito)
             self.mostra_areas()
@@ -193,11 +193,11 @@ class Modern(QMainWindow):
             self.mostra_areas()
             self.ui.deposito_btn.clicked.connect(lambda: self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_deposito))
             self.ui.deposito_btn_2.clicked.connect(lambda: self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_deposito))
-
+"""
         self.ui.btn_confirmarPicking.clicked.connect(self.width_tabla)
 
-        self.ui.deposito_btn.clicked.connect(lambda: self.ui.stackedWidget_3.setCurrentWidget(self.ui.deposito_subpage))
-        self.ui.deposito_btn_2.clicked.connect(lambda: self.ui.stackedWidget_3.setCurrentWidget(self.ui.deposito_subpage))
+        self.ui.deposito_btn.clicked.connect(self.click_label_areas)
+        self.ui.deposito_btn_2.clicked.connect(self.click_label_areas)
         self.ui.newArea_btn.clicked.connect(self.mostrar_new_area)
         self.ui.label_12.mousePressEvent = self.click_a
         self.ui.btn_actualizarAreas.clicked.connect(self.mostra_areas)
@@ -272,8 +272,13 @@ class Modern(QMainWindow):
         self.listar_usuarios()
         self.checkear_boton_users()
     def click_label_areas(self,event):
-        self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_deposito)
-        self.ui.stackedWidget_3.setCurrentWidget(self.ui.deposito_subpage)
+        if admin:
+            self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_area)
+
+        else:
+            QtWidgets.QMessageBox.critical(self, "Error", "No tiene los permisos suficientes")
+            return None
+        self.verificar_deposito_creado()
         self.checkear_boton_areas()
     def checkear_boton_prod(self):
 
@@ -348,13 +353,14 @@ class Modern(QMainWindow):
     def verificar_deposito_creado(self):
         verificar_deposito = conex.verificar_deposito()
         if (verificar_deposito == 0):
-            self.ui.deposito_btn.clicked.connect(lambda: self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_area))
+            self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_area)
             print("dep0", verificar_deposito)
             self.mostra_areas()
         else:
             print("dep1", verificar_deposito)
-            self.ui.deposito_btn.clicked.connect(lambda: self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_deposito))
+            self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_deposito)
             self.mostra_areas()
+        self.ui.stackedWidget_3.setCurrentWidget(self.ui.deposito_subpage)
 
 
 
@@ -381,6 +387,7 @@ class Modern(QMainWindow):
         self.newArea = NewArea()
         self.newArea.show()
         self.mostra_areas()
+        self.close()
 
     def mostrar_ingreso(self):
         self.newMovimiento = NewIngreso()
@@ -869,9 +876,11 @@ class Modern(QMainWindow):
             for i in reversed(range(self.ui.gridLayout_2.count())):
                 self.ui.gridLayout_2.itemAt(i).widget().deleteLater()
         i=1
-
+        j=1
         if pasillos == 2 and total_segmentos == 4:
             for x in range(segmentos):
+                if x==1 or x==4:
+                    j+=1
                 frame = QtWidgets.QFrame(self.ui.frame_area)
                 frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
                 frame.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -893,16 +902,17 @@ class Modern(QMainWindow):
                 vertical_layout = QtWidgets.QVBoxLayout(frame)
                 vertical_layout2 = QtWidgets.QVBoxLayout(frame2)
                 vertical_layout1 = QtWidgets.QVBoxLayout(frame_pasillo)
-                self.ui.gridLayout_2.addWidget(frame, 1, i)
+                self.ui.gridLayout_2.addWidget(frame, 1, j)
                 if segmentos == 4:
                     self.ui.gridLayout_2.addWidget(frame2,1,6)
                     self.ui.gridLayout_2.addWidget(frame_pasillo, 1, 2)
                     self.ui.gridLayout_2.addWidget(frame_pasillo2, 1, 5)
 
 
-
                 niveles = estanterias.mostrar_columnas(globalArea, i)
-                for y in range(int(niveles)):
+                nivel=int(niveles[0])
+                print("col")
+                for y in range(nivel):
                     btn_area = QtWidgets.QPushButton()
                     btn_area2 = QtWidgets.QPushButton()
                     btn_area.setMinimumSize(QtCore.QSize(55, 55))
@@ -916,7 +926,8 @@ class Modern(QMainWindow):
                     vertical_layout2.addWidget(btn_area2, 0, QtCore.Qt.AlignHCenter | QtCore.Qt.AlignVCenter)
                     btn_area.released.connect(self.button_released2)
                     btn_area2.released.connect(self.button_released2)
-                i+=1
+                i=niveles[1]+1
+                j+=1
 
 
         else:
@@ -928,14 +939,15 @@ class Modern(QMainWindow):
                 vertical_layout = QtWidgets.QVBoxLayout(frame)
                 self.ui.gridLayout_2.addWidget(frame,1,i)
                 niveles=estanterias.mostrar_columnas(globalArea,i)
-                for y in range(int(niveles)):
+                nivel = int(niveles[0])
+                for y in range(nivel):
                     btn_area = QtWidgets.QPushButton(self.ui.frame)
                     btn_area.setMinimumSize(QtCore.QSize(55, 55))
                     btn_area.setObjectName(globalArea + "-" + str(x+1) + "-" + str(y+1))
                     btn_area.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
                     vertical_layout.addWidget(btn_area, 0, QtCore.Qt.AlignHCenter | QtCore.Qt.AlignVCenter)
                     btn_area.released.connect(self.button_released2)
-                i += 1
+                i=niveles[1]+1
 
     def width_tabla(self):
         header = self.ui.tableWidget_picking.horizontalHeader()
