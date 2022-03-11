@@ -36,13 +36,14 @@ nivelId = ""
 tupla_egreso=[]
 admin=False
 nombre_user=""
+tupla_pdf=[]
 
 class Modern(QMainWindow):
 
-    def __init__(self, adm,nombre):
+    def __init__(self, admF,nombre):
         super(Modern, self).__init__()
         global admin
-        admin=adm
+        admin=admF
         nombreNuevo=nombre
         self.ui = Ui_MainWindow()
         self.uii = Na()
@@ -540,28 +541,41 @@ class Modern(QMainWindow):
         return 0
 
     def listar_pick(self,pick,lc):
+        global tupla_pdf
+        tupla_pdf=[]
         lc2=p.pick_productos(lc,pick)
         self.ui.tableWidget_picking.setRowCount(n_egreso)
         n=n_egreso
+        t=[]
         table_row = 0
         for row in lc2:
+            t=[]
             codigo=p.ver_posicion(row).split(sep="-")
             self.ui.tableWidget_picking.setItem(
                 table_row, 0, QtWidgets.QTableWidgetItem(str(codigo[0])))
+            t.append(str(codigo[0]))
             self.ui.tableWidget_picking.setItem(
                 table_row, 1, QtWidgets.QTableWidgetItem(str(codigo[1])))
+            t.append(str(codigo[1]))
             self.ui.tableWidget_picking.setItem(
                 table_row, 2, QtWidgets.QTableWidgetItem(str(codigo[2])))
+            t.append(str(codigo[2]))
             self.ui.tableWidget_picking.setItem(
                 table_row, 3, QtWidgets.QTableWidgetItem(str(codigo[3])))
+            t.append(str(codigo[3]))
             self.ui.tableWidget_picking.setItem(
                 table_row, 4, QtWidgets.QTableWidgetItem(str(codigo[4])))
+            t.append(str(codigo[4]))
             self.ui.tableWidget_picking.setItem(
                 table_row, 5, QtWidgets.QTableWidgetItem(str(row)))
+            t.append(str(row))
             self.ui.tableWidget_picking.setItem(
                 table_row, 6, QtWidgets.QTableWidgetItem(str(p.ver_desc(row))))
+            t.append(str(p.ver_desc(row)))
             self.ui.tableWidget_picking.setItem(
                 table_row, 7, QtWidgets.QTableWidgetItem(str(l.lote_codigo(row))))
+            t.append(str(l.lote_codigo(row)))
+
             i=0
             while i < n:
                 codigo = tupla_egreso[i][0]
@@ -569,11 +583,19 @@ class Modern(QMainWindow):
                 print(codigo,cantidad)
                 if codigo==row:
                     cantidad2=cantidad
+
                     i=n+1
                 i = i + 1
             #print(cantidad2)
+
             self.ui.tableWidget_picking.setItem(
                 table_row, 8, QtWidgets.QTableWidgetItem(str(cantidad2)))
+            t.append(str(cantidad2))
+
+            print("t, ",t )
+
+            tupla_pdf.append(t)
+
             table_row+=1
         return 0
 
@@ -1116,7 +1138,9 @@ class Modern(QMainWindow):
             DNI = seleccionar_dni[0]
 
     def table_to_pdf(self):
-
+        global tupla_pdf
+        print(tupla_pdf)
+        data=[]
         # Create instance of FPDF class
         # Letter size paper, use inches as unit of measure
         pdf = FPDF(format='letter', unit='in')
@@ -1137,48 +1161,35 @@ class Modern(QMainWindow):
         # Since we do not need to draw lines anymore, there is no need to separate
         # headers from data matrix.
 
-        data = [['Áreas','Pas.', 'Est.','Col.','Niv.', 'Codigo', 'Descripción','Lote','Cant.'],
-                ['Jules', 'Smith', 34, 'San Juan'],
-                ['Mary', 'Ramos', 45, 'Orlando'], [
-                    'Carlson', 'Banks', 19, 'Los Angeles']
-                ]
+        dat = ['Área','Pasillo', 'Estantería','Columna','Nivel', 'Código', 'Descripción','Lote','Cantidad']
+        data.append(dat)
 
-        # Document title centered, 'B'old, 14 pt
-        pdf.set_font('Times', 'B', 14.0)
-        pdf.cell(epw, 0.0, 'Demographic data', align='C')
-        pdf.set_font('Times', '', 10.0)
-        pdf.ln(0.5)
+        for x in tupla_pdf:
+            data.append(x)
+
 
         # Text height is the same as current font size
         th = pdf.font_size
 
-        for row in data:
-            for datum in row:
-                # Enter data in colums
-                # Notice the use of the function str to coerce any input to the
-                # string type. This is needed
-                # since pyFPDF expects a string, not a number.
-                pdf.cell(col_width, th, str(datum), border=1)
-
-            pdf.ln(th)
 
         # Line break equivalent to 4 lines
-        pdf.ln(4 * th)
 
-        pdf.set_font('Times', 'B', 14.0)
-        pdf.cell(epw, 0.0, 'With more padding', align='C')
-        pdf.set_font('Times', '', 10.0)
+        pdf.set_font('Times', 'B', 20.0)
+        pdf.cell(epw, 0.0, 'Picking', align='C')
+        pdf.set_font('Times', '', 11.0)
         pdf.ln(0.5)
 
         # Here we add more padding by passing 2*th as height
         for row in data:
+            print ("row, ",row)
             for datum in row:
+                print("datum, ",datum)
                 # Enter data in colums
                 pdf.cell(col_width, 2 * th, str(datum), border=1)
 
             pdf.ln(2 * th)
 
-        pdf.output('table-using-cell-borders.pdf', 'F')
+        pdf.output(s'picking.pdf', 'F')
 
 
 
