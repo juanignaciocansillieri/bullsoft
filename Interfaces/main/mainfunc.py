@@ -388,7 +388,6 @@ class Modern(QMainWindow):
         self.newArea = NewArea()
         self.newArea.show()
         self.mostra_areas()
-        self.close()
 
     def mostrar_ingreso(self):
         self.newMovimiento = NewIngreso()
@@ -1189,7 +1188,7 @@ class Modern(QMainWindow):
 
             pdf.ln(2 * th)
 
-        pdf.output(s'picking.pdf', 'F')
+        pdf.output('picking.pdf', 'F')
 
 
 
