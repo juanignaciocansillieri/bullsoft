@@ -223,48 +223,6 @@ def crear_tabla():  # crea una tabla (al iniciar por primera vez el programa se 
         print("Hubo un error:", err)
     close_connection(con)
 
-
-def contar_filas_tabla():  # despues hay que poner de que tabla queremos contar
-    # cuenta las filas de una tabla especifica
-    # (modificacion futura: definir la sentencia de la funcion para que cuente en la tabal donde sea necesario)
-    con = start_connection()
-    q = "SELECT COUNT(*) from productos;"
-    try:
-        cur = con.cursor()
-        cur.execute(q)
-        a = cur.fetchall()  # fetchall hace que el cursor muestre todos las filas
-        a = int(a[0][0])  # convierte la tupla del cursor en un entero
-        cur.close  # cierra el cursor
-    except pymysql.err.OperationalError as err:
-        print("Hubo un error:", err)
-        # despues tiene que hacer un return
-    close_connection(con)
-
-
-def controlador(con, tabla, columna):
-    a = start_connection()
-    cursor = a.cursor()
-    str(con)
-    str(tabla)
-    str(columna)
-    try:
-        query = "SELECT * FROM %s WHERE %s = %s"
-        values = (tabla, columna, con)
-        cursor.execute(query, values)
-        a.commit()
-        b = cursor.fetchone()
-        control1 = str(b)
-        if control1 == "None":  # and
-            print("no se encuentra")
-            return 0
-        else:
-            return 1
-
-    except pymysql.err.OperationalError as err:
-        print("Ha ocurrido un error", err)
-    close_connection(a)
-
-
 def verificar_deposito():
     a = first_connection()
     cursor = a.cursor()

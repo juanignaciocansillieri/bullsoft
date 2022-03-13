@@ -11,7 +11,7 @@
 from PyQt5.QtWidgets import *
 # -*- coding: utf-8 -*-
 
-from CLASES import area as ar
+from CLASES import area as ar,estanterias as es,alojamiento as al
 from DB import  conexion as c
 from Interfaces.main.delete_area_ui import Ui_MainWindow
 nombreViejo = ""
@@ -42,6 +42,8 @@ class BorrarArea(QMainWindow):
         ret = qm.warning(self, 'Esta acción es irreversible', "¿Estás seguro que quieres eliminar ésta área ?",
                          qm.Yes | qm.No)
         if ret == qm.Yes:
+            es.Estanterias.borrar_estanteria(area)
+            al.Alojamiento.elim_pos_area(area)
             a = c.start_connection()
             cursor = a.cursor()
             query = "UPDATE area SET nombre=%s WHERE posicion=%s"
@@ -64,6 +66,7 @@ class BorrarArea(QMainWindow):
             values = (100, posicion)
             cursor.execute(query, values)
             a.commit()
+
 
             self.close()
 

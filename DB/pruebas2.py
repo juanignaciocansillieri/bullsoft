@@ -21,24 +21,7 @@ estanterias.Estanterias("p2-1-1","p2","1","1","2","2")
 estanterias.Estanterias("p3-1-1","p3","1","1","3","1")
 
 #largo, ancho, alto, area, pasillo, segmento, nivel, limite, columna
-"""
-alojamiento.Alojamiento("0", "0", "0", "p1", "1", "1", "1", "0", "1")
-alojamiento.Alojamiento("0", "0", "0", "p1", "1", "1", "2", "0", "1")
-alojamiento.Alojamiento("0", "0", "0", "p1", "1", "1", "3", "0", "1")
-alojamiento.Alojamiento("0", "0", "0", "p1", "1", "1", "1", "0", "2")
-alojamiento.Alojamiento("0", "0", "0", "p1", "1", "1", "2", "0", "2")
-alojamiento.Alojamiento("0", "0", "0", "p1", "1", "1", "3", "0", "2")
-alojamiento.Alojamiento("0", "0", "0", "p1", "1", "1", "1", "0", "3")
-alojamiento.Alojamiento("0", "0", "0", "p1", "1", "1", "2", "0", "3")
-alojamiento.Alojamiento("0", "0", "0", "p1", "1", "1", "3", "0", "3")
-alojamiento.Alojamiento("0", "0", "0", "p2", "1", "1", "1", "0", "1")
-alojamiento.Alojamiento("0", "0", "0", "p2", "1", "1", "2", "0", "1")
-alojamiento.Alojamiento("0", "0", "0", "p2", "1", "1", "1", "0", "2")
-alojamiento.Alojamiento("0", "0", "0", "p2", "1", "1", "2", "0", "2")
-alojamiento.Alojamiento("0", "0", "0", "p3", "1", "1", "1", "0", "1")
-alojamiento.Alojamiento("0", "0", "0", "p3", "1", "1", "1", "0", "2")
-alojamiento.Alojamiento("0", "0", "0", "p3", "1", "1", "1", "0", "3")
-"""
+
 #codigo, marca, cantidad, descripcion, ubicacion, fechalote, vencimiento, fragil, foto,peso,volumen, precio
 
 productos.Productos("1", "1", "1", "p1", "p1-1-1-1-1", "1", "2020-01-01", "0", "0","1","1", "1")

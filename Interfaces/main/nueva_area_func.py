@@ -58,12 +58,14 @@ class NewArea(QMainWindow):
         if self.ui.radioButton_2.isChecked() == True:
             if ar.ver_s()!=0:
                 QtWidgets.QMessageBox.critical(self, "Error", "Salida ya ocupada")
+
                 return None
             else:
                 entrada=0
                 salida=1
         if ar.confirmar_area_disponible(posicion) == 1:
             a.Area.modificar_area(nom, ide , posicion, pasillo, segmento,entrada,salida)
+
         else:
             QtWidgets.QMessageBox.critical(self, "Error", "Espacio ya ocupado")
             return None

@@ -27,7 +27,6 @@ def log_in(dni, contraseña):
         a.commit()
         b = cursor.fetchone()
         password = str(b)
-        # contraseña=str(contraseña)
         print(password, b)
         if password == "None":
             print("no se encontro el dni indicado")
@@ -40,7 +39,6 @@ def log_in(dni, contraseña):
             else:
                 print("contraseña incorrecta")
                 return 3
-
     except pymysql.err.OperationalError as err:
         print("Ha ocurrido un error", err)
     c.close_connection(a)

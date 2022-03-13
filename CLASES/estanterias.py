@@ -29,11 +29,11 @@ class Estanterias:
             print("Hubo un error:", err)
         c.close_connection(a)
 
-    def borrar_estanteria(codigo):
+    def borrar_estanteria(area):
         a = c.start_connection()
         cursor = a.cursor()
-        query = "DELETE from estanterias WHERE codigo =%s"
-        cursor.execute(query, codigo)
+        query = "DELETE from estanterias WHERE area =%s"
+        cursor.execute(query, area)
         a.commit()
         print("Se elimino estanterias correctamente")
 
@@ -122,24 +122,40 @@ def contar_estanterias_area(area):
     return n
 
 def mostrar_columnas(area,posicion):
+    print("posinicial", posicion)
+    posicion = int(posicion)
     a = c.start_connection()
     cursor = a.cursor()
     query = "SELECT columnas FROM estanterias where area=%s and posicion=%s"
-    cursor.execute(query, (area,posicion))
+    cursor.execute(query, (area, posicion))
     a.commit()
     b = cursor.fetchall()
-    b=b[0][0]
+    while str(b) == "()":
+        posicion += 1
+        query = "SELECT columnas FROM estanterias where area=%s and posicion=%s"
+        cursor.execute(query, (area, posicion))
+        a.commit()
+        b = cursor.fetchall()
+
+    b = b[0][0]
     c.close_connection(a)
-    return b
+    return [b, posicion]
 
 def contar_niveles(area,posicion):
+    posicion = int(posicion)
     a = c.start_connection()
     cursor = a.cursor()
     query = "SELECT niveles FROM estanterias where area=%s and posicion=%s"
-    cursor.execute(query, (area,posicion))
+    cursor.execute(query, (area, posicion))
     a.commit()
     b = cursor.fetchall()
-    b=b[0][0]
+    while str(b) == "()":
+        posicion += 1
+        query = "SELECT niveles FROM estanterias where area=%s and posicion=%s"
+        cursor.execute(query, (area, posicion))
+        a.commit()
+        b = cursor.fetchall()
+    b = b[0][0]
     c.close_connection(a)
     return b
 

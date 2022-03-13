@@ -3475,7 +3475,7 @@ class Ui_MainWindow(object):
         item = self.tableWidget_movimientos_2.horizontalHeaderItem(5)
         item.setText(_translate("MainWindow", "New Column"))
         self.new_egreso_btn.setText(_translate("MainWindow", "Nuevo Egreso "))
-import img_rc
+#import img_rc
 
 
 if __name__ == "__main__":
