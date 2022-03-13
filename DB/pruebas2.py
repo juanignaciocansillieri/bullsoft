@@ -34,6 +34,10 @@ productos.Productos("7", "7", "7", "p7", "p1-1-1-2-1", "7", "2020-01-01", "0", "
 productos.Productos("8", "8", "8", "p8", "p1-1-1-1-1", "8", "2020-01-01", "0", "0","8","8", "8")
 productos.Productos("9", "9", "9", "p9", "p2-1-1-1-2", "9", "2020-01-01", "0", "0","9","9", "9")
 
+#idproducto, cantidad, fechalote, vencimiento
+
+lotes.Lote(1,10,10,"2020-01-01")
+
 #nombre, apellido, dni, tipo, puesto, nacimiento, mail, foto
 
 usuarios.Usuarios("p1", "p1", "p1", "1", "1", "2020-01-01", "p1", "p1")

@@ -35,6 +35,12 @@ class PosicionAlojamiento(QMainWindow):
         largo = self.ui.largo_num.value()
         limite = self.ui.limite_num.value()
         posicion=self.ui.comboBox_area.currentText()
+        if (posicion == ""):
+            QtWidgets.QMessageBox.critical(self, "Error", "Llene todos los campos")
+            return None
+        if (ancho == 0 or alto == 0 or largo == 0 or limite==0):
+            QtWidgets.QMessageBox.critical(self, "Error", "Llene todos los campos")
+            return None
         if al.verificar_posicion(posicion)==1:
             al.Alojamiento.modificar_alojamiento(posicion,largo,ancho,alto,limite)
         else:
