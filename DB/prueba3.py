@@ -1,5 +1,5 @@
-from CLASES import area,productos,alojamiento
-re=alojamiento.pick_recorrido()
+from CLASES import area,productos,alojamiento, lotes
+"""re=alojamiento.pick_recorrido()
 n=productos.contar_filas()
 i=0
 rp=[]
@@ -16,8 +16,9 @@ pick = alojamiento.pick_(rp)
 print("rp",pick)
 #print(re)
 print (productos.pick_productos(cod,pick))
-
+"""
 #print("prueba ",productos.buscar_prod_pick("1","p1-1-1-2-3"))
-
+n=lotes.fifo("1",5)
+print(n)
 
 

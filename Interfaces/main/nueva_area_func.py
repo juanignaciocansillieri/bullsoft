@@ -48,6 +48,9 @@ class NewArea(QMainWindow):
         if segmento<(pasillo*2)-1 or segmento>pasillo*2:
             QtWidgets.QMessageBox.critical(self, "Error", "Para esa cantidad de pasillos solo puede tener "+str((pasillo*2)-1)+" o "+str(pasillo*2)+" estanterias")
             return None
+        if (segmento > 4):
+            QtWidgets.QMessageBox.critical(self, "Error", "no pueden existir mas de 4 estanterias")
+            return None
         if self.ui.radioButton.isChecked()==True:
             if ar.ver_e()!=0:
                 QtWidgets.QMessageBox.critical(self, "Error", "Entrada ya ocupada")

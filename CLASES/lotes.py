@@ -184,27 +184,37 @@ def verificar(param):
 
 def fifo(idproducto, cantidad):
     cantidad=int(cantidad)
-    n = contar_filas_producto(idproducto)
+    n2 = contar_filas_producto(idproducto)
     i = 0
     a = c.start_connection()
     cursor = a.cursor()
     query = "SELECT idlote FROM lote WHERE idproducto=%s ORDER BY vencimiento"
     cursor.execute(query, idproducto)
+    cantidad_total=0
     idlote = cursor.fetchall()
     idlote = idlote[0][0]
+
+    query = "SELECT cantidad FROM lote WHERE idproducto=%s ORDER BY vencimiento"
+    cursor.execute(query, idproducto)
+    data = cursor.fetchall()
+    data = data
+    for x in data:
+        cantidad_total = cantidad_total + x[0]
+    if cantidad_total < cantidad:
+        return 1
+
     if idlote == "()":
         return 0
     else:
 
         a.commit()
 
-        while i < n:
+        while i < n2:
             query = "SELECT cantidad FROM lote WHERE idproducto=%s ORDER BY vencimiento"
             cursor.execute(query, idproducto)
-            n = cursor.fetchall()
+            data = cursor.fetchall()
+            n=data[0][0]
             a.commit()
-            n = n[0][0]
-
             if n < cantidad:
                 query = "DELETE FROM lote WHERE idproducto=%s and cantidad=%s"
                 values = (idproducto, n)

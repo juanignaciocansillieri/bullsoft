@@ -529,10 +529,12 @@ class Modern(QMainWindow):
             codigo = tupla_egreso[i][0]
             lc.append(codigo)
             cantidad = tupla_egreso[i][2]
-            l.fifo(codigo, cantidad)
+            if l.fifo(codigo, cantidad)==1:
+                QtWidgets.QMessageBox.critical(self, "Error", "No hay esa cantidad disponible")
+                return None
             m.Movimientos(1,codigo,cantidad,motivo,fecha)
             if(al.modificar_dispo_egreso(codigo,cantidad)==0):
-                QtWidgets.QMessageBox.critical(self, "Error", "No hay esa cantidad disponible")
+                QtWidgets.QMessageBox.critical(self, "Error", "No hay esa disponibilidad")
                 return None
             i = i +1
 
@@ -1220,6 +1222,7 @@ class BMProduct(QMainWindow):
         global codigoViejo
         global defaultImg
         producto = p.mostrar_product(productId)
+        print(producto)
         atributos = list(producto[0])
         self.ui.codigo_input.setText(atributos[0])
         codigoViejo = atributos[0]
@@ -1239,6 +1242,7 @@ class BMProduct(QMainWindow):
         self.ui.num_volumen.setValue(atributos[10])
         self.ui.num_precio.setValue(atributos[11])
         self.cbox()
+        self.ui.estado_cbox.setCurrentText(al.ver_area(atributos[4]))
         self.ui.ubicacion_cbox.setCurrentText(atributos[4])
 
     def modificar_producto(self):
@@ -1249,7 +1253,6 @@ class BMProduct(QMainWindow):
         descripcion = self.ui.descripcion_input.toPlainText()
         marca = self.ui.marca_input.text()
         ubicacion = self.ui.ubicacion_cbox.currentText()
-        condicion = self.ui.estado_cbox.currentText()
         if self.ui.fragil_si.isChecked():
             fragil = "1"
         else:
@@ -1261,6 +1264,18 @@ class BMProduct(QMainWindow):
         foto = defaultImg
         p.modificar_produc(codigoViejo, codigo, marca, descripcion, ubicacion, fragil, foto, peso,
                                      volumen,precio)
+        if p.ver_posicion(codigo)==ubicacion:
+            a = conex.start_connection()
+            cursor = a.cursor()
+            query = "SELECT cantidad FROM lote WHERE idproducto=%s ORDER BY vencimiento"
+            cursor.execute(query, codigoViejo)
+            data = cursor.fetchall()
+            data = data
+            conex.close_connection(a)
+            for x in data:
+                cantidad_total = cantidad_total + x[0]
+            al.modificar_dispo_egreso(p.ver_posicion(codigo),cantidad_total)
+            al.modificar_dispo_ingreso(ubicacion,cantidad_total)
         self.close()
 
     def borrar_producto(self):
