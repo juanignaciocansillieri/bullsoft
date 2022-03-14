@@ -39,11 +39,11 @@ class NewIngreso(QMainWindow):
         if l.verificar(lote) == 0:
             QtWidgets.QMessageBox.critical(self, "Error", "Lote ya existe")
             return None
+        if al.modificar_dispo_ingreso(cod,cantidad) == 0 or al.modificar_dispo_ingreso(cod,cantidad)==1:
+            QtWidgets.QMessageBox.critical(self, "Error", "No hay espacio disponible")
+            return None
         l.Lote(cod, cantidad, lote, venc)
         m.Movimientos(tipo, cod, cantidad, "Ingreso", fecha_igreso)
-        if al.modificar_dispo_ingreso(cod,cantidad) == 0 or al.modificar_dispo_ingreso(cod,cantidad)==1:
-            QtWidgets.QMessageBox.critical(self, "Error", "No hay disponibilidad disponible")
-            return None
         self.close()
 
 

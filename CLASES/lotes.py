@@ -162,14 +162,16 @@ def obtener_fecha(idproducto):
     try:
         query = "SELECT vencimiento FROM lote WHERE idproducto=%s ORDER BY vencimiento"
         cursor.execute(query, idproducto)
-        param = cursor.fetchall()
-        param=param[0][0]
+        param = cursor.fetchone()
         a.commit()
+        if param == None:
+            return "No hay productos"
+        else:
+            param=param[0]
+            return param
     except pymysql.err.OperationalError as err:
-        param = ""
         print("Hubo un error:", err)
     c.close_connection(a)
-    return param
 
 def verificar(param):
     a = c.start_connection()
@@ -184,7 +186,7 @@ def verificar(param):
 
 def fifo(idproducto, cantidad):
     cantidad=int(cantidad)
-    n2 = contar_filas_producto(idproducto)
+    n3 = contar_filas_producto(idproducto)
     i = 0
     a = c.start_connection()
     cursor = a.cursor()
@@ -209,7 +211,7 @@ def fifo(idproducto, cantidad):
 
         a.commit()
 
-        while i < n2:
+        while i < n3:
             query = "SELECT cantidad FROM lote WHERE idproducto=%s ORDER BY vencimiento"
             cursor.execute(query, idproducto)
             data = cursor.fetchall()
@@ -226,17 +228,19 @@ def fifo(idproducto, cantidad):
             else:
                 n2 = n - cantidad
                 if n2 == 0:
+
                     query = "DELETE FROM lote WHERE idproducto=%s and cantidad=%s"
-                    values = (idproducto, n2)
+                    values = (idproducto,n)
                     cursor.execute(query, values)
                     a.commit()
-                query = "UPDATE lote set cantidad=%s WHERE idproducto=%s and cantidad=%s"
-                values = (n2, idproducto, n)
-                cursor.execute(query, values)
-                a.commit()
-                cantidad = cantidad - n
+                else:
+                    query = "UPDATE lote set cantidad=%s WHERE idproducto=%s and cantidad=%s"
+                    values = (n2, idproducto, n)
+                    cursor.execute(query, values)
+                    a.commit()
+                    cantidad = cantidad - n
                 idlote += 1
-                i = n
+                i = i+1
 
 def ver_lote(codigo):
         a = c.start_connection()
@@ -276,10 +280,14 @@ def lote_codigo(idproducto):
         query = "SELECT fechalote FROM lote WHERE idproducto=%s ORDER BY vencimiento"
         cursor.execute(query, str(idproducto))
         param = cursor.fetchall()
-        param = param[0][0]
         a.commit()
+        print(param)
+        c.close_connection(a)
+        if str(param) == "()":
+            return 0
+        else:
+            param = param[0][0]
+            return param
     except pymysql.err.OperationalError as err:
-        param = ""
         print("Hubo un error:", err)
-    c.close_connection(a)
-    return param
+

@@ -63,6 +63,7 @@ class ProductWindow(QMainWindow):
         else:
             pr.Productos(codigo, marca, cantidad, descripcion, posicion, lote, venc, fragil, defaultImg,
                          peso, volumen, precio)
+            p.modificar_dispo_ingreso(codigo,cantidad)
 
         self.close()
 

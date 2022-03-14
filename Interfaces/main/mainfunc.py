@@ -573,8 +573,12 @@ class Modern(QMainWindow):
             self.ui.tableWidget_picking.setItem(
                 table_row, 6, QtWidgets.QTableWidgetItem(str(p.ver_desc(row))))
             t.append(str(p.ver_desc(row)))
+
+            fechalote=l.lote_codigo(row)
+            if fechalote==0:
+                fechalote="-"
             self.ui.tableWidget_picking.setItem(
-                table_row, 7, QtWidgets.QTableWidgetItem(str(l.lote_codigo(row))))
+                table_row, 7, QtWidgets.QTableWidgetItem(fechalote))
             t.append(str(l.lote_codigo(row)))
 
             i=0

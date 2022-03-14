@@ -30,7 +30,7 @@ def start_connection():  # inicia conexion a db
     db = os.environ.get('DB_MYSQL')
 
     try:
-        con = pymysql.Connect(host=h, port=p, user=u, password=ps, database=db)
+        con = pymysql.Connect(host=h, port=p, user="root", password="asd123", database="bullsoft")
     except pymysql.err.OperationalError as err:
         print("Hubo un error:", err)
 
@@ -48,8 +48,8 @@ def close_connection(con):  # cierra conexion a db
 def borrar_tabla():  # borra tablas (posible modificacion futura: ingresar el nombre de la tabla y que la borre)
     # se usa "," para mas de una
     con = start_connection()
-    q1 = """drop database if exists prueba1;"""
-    q2 = """create database if not exists prueba1;"""
+    q1 = """drop database if exists bullsoft;"""
+    q2 = """create database if not exists bullsoft;"""
     # q = "DROP TABLE IF EXISTS productos, usuarios,alojamiento,login,matriz,datosmatriz;"
     try:
         cur = con.cursor()
@@ -63,9 +63,9 @@ def borrar_tabla():  # borra tablas (posible modificacion futura: ingresar el no
 
 
 def crear_tabla():  # crea una tabla (al iniciar por primera vez el programa se crearan todas)
-    q0 = """CREATE DATABASE IF NOT EXISTS prueba1;"""
+    q0 = """CREATE DATABASE IF NOT EXISTS bullsoft;"""
 
-    q1 = """USE prueba1;"""
+    q1 = """USE bullsoft;"""
 
     q2 = """CREATE TABLE IF NOT EXISTS login (
     idlogin INT UNSIGNED AUTO_INCREMENT PRIMARY KEY NOT NULL,

@@ -316,7 +316,7 @@ def verificar_posicion(codigo):
 def listar_alojamiento_disponibles_area(area):
     a = c.start_connection()
     cursor = a.cursor()
-    query = "SELECT codigo FROM alojamiento WHERE area=%s"
+    query = "SELECT codigo FROM alojamiento WHERE area=%s and disponibilidad=100"
     cursor.execute(query, area)
     a.commit()
     data = cursor.fetchall()
@@ -391,11 +391,11 @@ def modificar_dispo_ingreso(prod,cantidad):
             data = cursor.fetchall()
             a.commit()
             vol=int(data[0][0])
-
-            x=(vol*100)/volumen
+            x=0.0
+            x=(volumen*100)/vol
 
             dispo=dispo-int(x)
-            if (dispo <=100):
+            if (dispo >0):
 
                 query = "UPDATE alojamiento set disponibilidad=%s WHERE codigo=%s"
                 values = (dispo, codigo)
@@ -403,18 +403,21 @@ def modificar_dispo_ingreso(prod,cantidad):
                 a.commit()
                 print("se MODIFICO alojamiento correctamente")
             else:
-                print("no hay disponibilidad suficiente")
+                print("no hay espacio suficiente")
                 return 1
 
         else:
-            print("no hay disponibilidad")
+            print("no hay espacio")
             return 0
     except pymysql.err.OperationalError as err:
         print("Hubo un error:", err)
     c.close_connection(a)
 
 def modificar_dispo_egreso(prod,cantidad):
-    codigo=p.ver_posicion(prod)
+    codigo = p.ver_posicion(prod)
+    v = int(p.ver_vol(prod))
+    print(v, cantidad)
+    volumen = v * cantidad
     a = c.start_connection()
     cursor = a.cursor()
     try:
@@ -431,13 +434,11 @@ def modificar_dispo_egreso(prod,cantidad):
             a.commit()
             data=int(data[0][0])
             vol = int(data*cantidad)
-
-            x = (vol * 100) / vol
-
+            x=int((vol*100))/int(volumen)
             dispo = dispo + x
 
             query = "UPDATE alojamiento set disponibilidad=%s WHERE codigo=%s"
-            values = (x, codigo)
+            values = (dispo, codigo)
             cursor.execute(query, values)
             a.commit()
             print("se MODIFICO alojamiento correctamente")
