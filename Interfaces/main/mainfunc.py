@@ -156,6 +156,7 @@ class Modern(QMainWindow):
         self.ui.product_new_btn.clicked.connect(self.mostrar_new_product)
 
         ########################## USUARIOS ##################################
+        """
         if admin:
             self.ui.user_new_btn.clicked.connect(self.mostrar_new_user)
 
@@ -165,9 +166,14 @@ class Modern(QMainWindow):
             ## Abrir Pagina Usuarios ##
             self.ui.users_btn.clicked.connect(
                 lambda: self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_usuarios))
+
+            self.ui.users_btn.clicked.connect(
+                lambda: self.ui.stackedWidget_3.setCurrentWidget(self.ui.user_subpage))
+
             self.ui.users_btn_2.clicked.connect(
                 lambda: self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_usuarios))
-            self.ui.users_btn.clicked.connect(lambda: self.ui.stackedWidget_3.setCurrentWidget(self.ui.user_subpage))
+
+            self.ui.users_btn_2.clicked.connect(lambda: self.ui.stackedWidget_3.setCurrentWidget(self.ui.user_subpage))
 
             self.ui.btn_actualizarUsuarios.clicked.connect(self.listar_usuarios)
         else:
@@ -175,6 +181,7 @@ class Modern(QMainWindow):
                 lambda: QtWidgets.QMessageBox.critical(self, "Error", "No tiene los permisos suficientes"))
             self.ui.users_btn_2.clicked.connect(
                 lambda: QtWidgets.QMessageBox.critical(self, "Error", "No tiene los permisos suficientes"))
+        """
         self.ui.tableWidget_usuarios.doubleClicked.connect(self.seleccionarusuario)
         self.ui.tableWidget_usuarios.doubleClicked.connect(self.mostrar_bm_user)
 
@@ -236,7 +243,9 @@ class Modern(QMainWindow):
         self.ui.btn_inicio_lotes.clicked.connect(self.click_label_lotes)
         self.ui.btn_inicio_movimientos.clicked.connect(self.click_label_mov)
         self.ui.btn_inicio_usuarios.clicked.connect(self.click_label_usuarios)
-
+        self.ui.users_btn.clicked.connect(self.click_label_usuarios)
+        self.ui.users_btn_2.clicked.connect(self.click_label_usuarios)
+        self.ui.btn_volver_egreso.clicked.connect(lambda : self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_movimientos))
         self.ui.btn_confirmarPicking_2.clicked.connect(self.table_to_pdf)
 
         ##########################       ##################################
@@ -262,7 +271,6 @@ class Modern(QMainWindow):
         self.checkear_boton_lotes()
     def click_label_usuarios(self,event):
         admin
-        print(admin)
         if admin:
             self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_usuarios)
             self.ui.stackedWidget_3.setCurrentWidget(self.ui.user_subpage)
@@ -1138,27 +1146,17 @@ class Modern(QMainWindow):
 
     def table_to_pdf(self):
         global tupla_pdf
-        print(tupla_pdf)
         data=[]
-        # Create instance of FPDF class
-        # Letter size paper, use inches as unit of measure
         pdf = FPDF(format='letter', unit='in')
 
-        # Add new page. Without this you cannot create the document.
         pdf.add_page()
 
-        # Remember to always put one of these at least once.
         pdf.set_font('Times', '', 10.0)
 
-        # Effective page width, or just epw
         epw = pdf.w - 2 * pdf.l_margin
 
-        # Set column width to 1/4 of effective page width to distribute content
-        # evenly across table and page
         col_width = epw / 9
 
-        # Since we do not need to draw lines anymore, there is no need to separate
-        # headers from data matrix.
 
         dat = ['Área','Pasillo', 'Estantería','Columna','Nivel', 'Código', 'Descripción','Lote','Cantidad']
         data.append(dat)
@@ -1167,28 +1165,22 @@ class Modern(QMainWindow):
             data.append(x)
 
 
-        # Text height is the same as current font size
         th = pdf.font_size
-
-
-        # Line break equivalent to 4 lines
 
         pdf.set_font('Times', 'B', 20.0)
         pdf.cell(epw, 0.0, 'Picking', align='C')
         pdf.set_font('Times', '', 11.0)
         pdf.ln(0.5)
 
-        # Here we add more padding by passing 2*th as height
         for row in data:
             print ("row, ",row)
             for datum in row:
                 print("datum, ",datum)
-                # Enter data in colums
                 pdf.cell(col_width, 2 * th, str(datum), border=1)
 
             pdf.ln(2 * th)
 
-        pdf.output('picking.pdf', 'F')
+        pdf.output('D', 'picking.pdf')
 
 
 
