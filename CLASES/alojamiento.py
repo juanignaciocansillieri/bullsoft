@@ -236,7 +236,7 @@ def listar_alojamiento_disponibles_area(area):
 def contar_filas_disponibles_area(area):
     a = c.start_connection()
     cursor = a.cursor()
-    query = "SELECT COUNT(*) FROM alojamiento where disponibilidad=0 and area=%s"
+    query = "SELECT COUNT(*) FROM alojamiento where area=%s"
     cursor.execute(query, area)
     a.commit()
     b = cursor.fetchall()
@@ -372,9 +372,10 @@ def pick_(lp):
 
 
 def modificar_dispo_ingreso(prod,cantidad):
+    cantidad=int(cantidad)
     codigo=p.ver_posicion(prod)
-    v=int(p.ver_vol(prod))
-    print(v,cantidad)
+    v=p.ver_vol(prod)
+    v=int(v)
     volumen=v*cantidad
     a = c.start_connection()
     cursor = a.cursor()
@@ -391,8 +392,8 @@ def modificar_dispo_ingreso(prod,cantidad):
             data = cursor.fetchall()
             a.commit()
             vol=int(data[0][0])
-            x=0.0
-            x=(volumen*100)/vol
+            print(volumen,vol)
+            x=(volumen*100)/int(vol)
 
             dispo=dispo-int(x)
             if (dispo >0):
@@ -414,9 +415,9 @@ def modificar_dispo_ingreso(prod,cantidad):
     c.close_connection(a)
 
 def modificar_dispo_egreso(prod,cantidad):
+    cantidad=int(cantidad)
     codigo = p.ver_posicion(prod)
     v = int(p.ver_vol(prod))
-    print(v, cantidad)
     volumen = v * cantidad
     a = c.start_connection()
     cursor = a.cursor()
@@ -428,13 +429,13 @@ def modificar_dispo_egreso(prod,cantidad):
         dispo = int(data[0][0])
         if (dispo <= 100):
 
-            query = "SELECT volumen FROM productos WHERE codigo=%s"
-            cursor.execute(query, prod)
+            query = "SELECT volumen FROM alojamiento WHERE codigo=%s"
+            cursor.execute(query, codigo)
             data = cursor.fetchall()
             a.commit()
             data=int(data[0][0])
             vol = int(data*cantidad)
-            x=int((vol*100))/int(volumen)
+            x=int((volumen*100))/int(vol)
             dispo = dispo + x
 
             query = "UPDATE alojamiento set disponibilidad=%s WHERE codigo=%s"

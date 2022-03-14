@@ -32,6 +32,7 @@ class Productos:
             cursor.execute(query, values)
             a.commit()
             lotes.Lote(self.codigo, self.cantidad, self.fechalote, self.vencimiento)
+            alojamiento.modificar_dispo_ingreso(self.codigo,self.cantidad)
             print("se dio alta producto correctamente")
 
         except pymysql.err.OperationalError as err:
