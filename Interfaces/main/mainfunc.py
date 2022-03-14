@@ -1182,7 +1182,7 @@ class Modern(QMainWindow):
 
             pdf.ln(2 * th)
 
-        pdf.output('D', 'picking.pdf')
+        pdf.output('picking.pdf','F')
 
 
 
