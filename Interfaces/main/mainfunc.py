@@ -272,9 +272,13 @@ class Modern(QMainWindow):
     def click_label_usuarios(self,event):
         admin
         if admin:
+            self.ui.user_new_btn.clicked.connect(self.mostrar_new_user)
+            self.listar_usuarios()
+            self.ui.btn_buscarU.clicked.connect(self.buscar_usuarios)
+
             self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_usuarios)
             self.ui.stackedWidget_3.setCurrentWidget(self.ui.user_subpage)
-
+            self.ui.btn_actualizarUsuarios.clicked.connect(self.listar_usuarios)
         else:
             QtWidgets.QMessageBox.critical(self, "Error", "No tiene los permisos suficientes")
             return None
