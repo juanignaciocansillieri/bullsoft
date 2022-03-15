@@ -61,8 +61,7 @@ class ProductWindow(QMainWindow):
             QtWidgets.QMessageBox.critical(self, "Error", "Codigo Existente")
             return None
         else:
-            pr.Productos(codigo, marca, cantidad, descripcion, posicion, lote, venc, fragil, defaultImg,
-                         peso, volumen, precio)
+            pr.Productos(codigo, marca, cantidad, descripcion, posicion, lote, venc, fragil, defaultImg, peso, volumen, precio)
 
         self.close()
 
@@ -92,20 +91,20 @@ class ProductWindow(QMainWindow):
     def cbox(self):
         areas = a.Area.listar_area()
         for ar in areas:
-            self.ui.area_comboBox.addItem(ar[0])
-        area_seleccionada = self.ui.area_comboBox.currentText()
+            self.ui.posicion_comboBox.addItem(ar[0])
+        area_seleccionada = self.ui.posicion_comboBox.currentText()
         posiciones = p.listar_alojamiento_disponibles_area(area_seleccionada)
         for pos in posiciones:
-            self.ui.posicion_comboBox.addItem(pos[0])
+            self.ui.area_comboBox.addItem(pos[0])
 
-        self.ui.area_comboBox.currentIndexChanged.connect(self.clear_combo)
-        self.ui.area_comboBox.currentIndexChanged.connect(self.update_combo)
+        self.ui.posicion_comboBox.currentIndexChanged.connect(self.clear_combo)
+        self.ui.posicion_comboBox.currentIndexChanged.connect(self.update_combo)
 
     def update_combo(self):
-        area_seleccionada = self.ui.area_comboBox.currentText()
+        area_seleccionada = self.ui.posicion_comboBox.currentText()
         posiciones = p.Alojamiento.listar_alojamiento_disponibles_area(area_seleccionada)
         for pos in posiciones:
             self.ui.posicion_comboBox.addItem(pos[0])
 
     def clear_combo(self):
-        self.ui.posicion_comboBox.clear()
+        self.ui.area_comboBox.clear()
