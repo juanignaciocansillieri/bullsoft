@@ -276,7 +276,11 @@ def ver_posicion(area):
     cursor.execute(query,area)
     a.commit()
     b = cursor.fetchall()
-    nombre=str(b[0][0])
+    print (b)
+    if str(b) == "()":
+        return 0
+    else:
+        nombre=str(b[0][0])
     c.close_connection(a)
     return nombre
 

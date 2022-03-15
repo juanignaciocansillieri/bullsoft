@@ -864,7 +864,10 @@ class Modern(QMainWindow):
         global globalArea
         sending_button = self.sender()
         nombre_area = str(sending_button.objectName())
-        if ar.ver_pasillos(nombre_area)==0:
+        if ar.ver_posicion(nombre_area)==0:
+            QtWidgets.QMessageBox.critical(self, "Error", "Actualice para poder ingresar")
+            return None
+        if ar.ver_pasillos(nombre_area)==0 or ar.ver_nombre(nombre_area)==0:
             QtWidgets.QMessageBox.critical(self, "Error", "Cree el area para poder ingresar")
             return None
         else:

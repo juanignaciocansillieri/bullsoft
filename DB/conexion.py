@@ -30,7 +30,7 @@ def start_connection():  # inicia conexion a db
     db = os.environ.get('DB_MYSQL')
 
     try:
-        con = pymysql.Connect(host=h, port=p, user="root", password="asd123", database="bullsoft")
+        con = pymysql.Connect(host=h, port=p, user=u, password=ps, database=db)
     except pymysql.err.OperationalError as err:
         print("Hubo un error:", err)
 

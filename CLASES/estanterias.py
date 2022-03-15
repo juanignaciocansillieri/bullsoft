@@ -159,4 +159,14 @@ def contar_niveles(area,posicion):
     c.close_connection(a)
     return b
 
+def ver_posicion(area):
+    a = c.start_connection()
+    cursor = a.cursor()
+    query = "SELECT posicion FROM estanterias where area=%s"
+    cursor.execute(query,area)
+    a.commit()
+    data = cursor.fetchall()
+    c.close_connection(a)
+    return data
+
 
