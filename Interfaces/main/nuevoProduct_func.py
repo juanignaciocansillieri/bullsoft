@@ -44,8 +44,8 @@ class ProductWindow(QMainWindow):
         else:
             fragil = "0"
 
-        condicion = self.ui.area_comboBox.currentText()
-        posicion = self.ui.posicion_comboBox.currentText()
+        posicion = self.ui.area_comboBox.currentText()
+        area = self.ui.posicion_comboBox.currentText()
 
         volumen = self.ui.num_volumen.value()
         precio = self.ui.num_precio.value()
