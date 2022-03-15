@@ -44,8 +44,8 @@ class ProductWindow(QMainWindow):
         else:
             fragil = "0"
 
-        condicion = self.ui.area_comboBox.currentText()
-        posicion = self.ui.posicion_comboBox.currentText()
+        posicion = self.ui.area_comboBox.currentText()
+        area = self.ui.posicion_comboBox.currentText()
 
         volumen = self.ui.num_volumen.value()
         precio = self.ui.num_precio.value()
@@ -102,9 +102,9 @@ class ProductWindow(QMainWindow):
 
     def update_combo(self):
         area_seleccionada = self.ui.posicion_comboBox.currentText()
-        posiciones = p.Alojamiento.listar_alojamiento_disponibles_area(area_seleccionada)
+        posiciones = p.listar_alojamiento_disponibles_area(area_seleccionada)
         for pos in posiciones:
-            self.ui.posicion_comboBox.addItem(pos[0])
+            self.ui.area_comboBox.addItem(pos[0])
 
     def clear_combo(self):
         self.ui.area_comboBox.clear()
