@@ -90,6 +90,7 @@ class ProductWindow(QMainWindow):
 
     def cbox(self):
         areas = a.Area.listar_area()
+        print(areas)
         for ar in areas:
             self.ui.posicion_comboBox.addItem(ar[0])
         area_seleccionada = self.ui.posicion_comboBox.currentText()
@@ -102,9 +103,9 @@ class ProductWindow(QMainWindow):
 
     def update_combo(self):
         area_seleccionada = self.ui.posicion_comboBox.currentText()
-        posiciones = p.Alojamiento.listar_alojamiento_disponibles_area(area_seleccionada)
+        posiciones = p.listar_alojamiento_disponibles_area(area_seleccionada)
         for pos in posiciones:
-            self.ui.posicion_comboBox.addItem(pos[0])
+            self.ui.area_comboBox.addItem(pos[0])
 
     def clear_combo(self):
         self.ui.area_comboBox.clear()
