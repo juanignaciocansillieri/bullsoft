@@ -158,7 +158,6 @@ def ver_nombre(nombre):
         a.commit()
         b = cursor.fetchall()
         b = str(b)
-        print(b,nombre)
         if str(b) == str(nombre):
             i = n + 2
         else:

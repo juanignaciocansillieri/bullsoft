@@ -56,28 +56,48 @@ class Nueva_estanteria(QMainWindow):
         for a in pos:
             pos2.append(int(a[0]))
         j=0
-        i=0
-        while i<segmento:
+        i=1
+        #print(pos2,segmento,len(pos2))
+        #print("print")
+        while i<=segmento:
+            if (int(len(pos2)) == 0):
+                #print("if2")
+                cbox.append(i)
             j=0
             while j< len(pos2):
-                if i+1==pos2[j]:
+                #print(i,j,len(pos2))
+                #print(i, pos2[j])
+                if i==pos2[j]:
+                    #print("if")
+                    #print(pos2)
                     pos2.pop(j)
-                    i=i+1
-                    if(int(len(pos2))==0):
-                        cbox.append(i + 1)
-                    j=0
+                    #print(pos2)
+                    j=j+len(pos2)+2
                 else:
+                    #print("else")
+                    cbox.append(i)
                     j=j+1
-                    cbox.append(i+1)
-                    j=j+1
+            #print("sali del if",i)
             i=i+1
-
+                    #i=i+1
+                    #if (int(len(pos2)) == 0):
+                    #    print("if2")
+                    #    cbox.append(i)
+                #else:
+                 #   print("else")
+                  #  j=j+1
+                   # cbox.append(i)
+                    #j=j+1
+                    #i=i+1
+            #i=i+1
+        #print("cbox ", cbox)
         for x in cbox:
             if x>segmento:
                 cbox.remove(x)
         if len(cbox)==0:
             QtWidgets.QMessageBox.critical(self, "Error", "No hay posiciones para crear estanterias")
             return None
+        #print("cbox ",cbox)
 
         for y in cbox:
             self.ui.cbox_posicion.addItem(str(y))
