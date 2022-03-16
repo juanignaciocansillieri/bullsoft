@@ -190,7 +190,6 @@ class Modern(QMainWindow):
 
         #self.ui.deposito_btn.clicked.connect(self.mostra_areas)
         ## Abrir Pagina Depositos ##
-        verificar_deposito = int(conex.verificar_deposito())
         """if (verificar_deposito== 0):
            self.ui.deposito_btn.clicked.connect(lambda: self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_area))
             self.ui.deposito_btn_2.clicked.connect(lambda: self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_area))
