@@ -10,6 +10,18 @@
     <height>618</height>
    </rect>
   </property>
+  <property name="minimumSize">
+   <size>
+    <width>673</width>
+    <height>618</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>673</width>
+    <height>618</height>
+   </size>
+  </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
@@ -64,9 +76,6 @@
        </property>
        <property name="text">
         <string/>
-       </property>
-       <property name="pixmap">
-        <pixmap resource="../img/img.qrc">:/img/aa.jpg</pixmap>
        </property>
        <property name="scaledContents">
         <bool>true</bool>
@@ -187,7 +196,6 @@ QPushButton:hover{
        </property>
        <property name="font">
         <font>
-         <family>Cairo</family>
          <pointsize>-1</pointsize>
         </font>
        </property>
@@ -376,7 +384,6 @@ margin-left: 10px;
        </property>
        <property name="font">
         <font>
-         <family>Cairo</family>
          <pointsize>-1</pointsize>
         </font>
        </property>
@@ -453,7 +460,6 @@ border: 1px solid #b8b9bd;
        </property>
        <property name="font">
         <font>
-         <family>Cairo</family>
          <pointsize>-1</pointsize>
         </font>
        </property>
@@ -485,7 +491,6 @@ margin-left:10px
        </property>
        <property name="font">
         <font>
-         <family>Cairo</family>
          <pointsize>-1</pointsize>
         </font>
        </property>
@@ -565,7 +570,6 @@ border: 1px solid #b8b9bd;
        </property>
        <property name="font">
         <font>
-         <family>Cairo</family>
          <pointsize>-1</pointsize>
         </font>
        </property>
@@ -592,7 +596,6 @@ margin-left:10px
        </property>
        <property name="font">
         <font>
-         <family>Cairo</family>
          <pointsize>-1</pointsize>
         </font>
        </property>
@@ -674,7 +677,6 @@ border: 1px solid #b8b9bd;
        </property>
        <property name="font">
         <font>
-         <family>Cairo</family>
          <pointsize>-1</pointsize>
         </font>
        </property>
@@ -747,7 +749,6 @@ border: 1px solid #b8b9bd;
        </property>
        <property name="font">
         <font>
-         <family>Cairo</family>
          <pointsize>-1</pointsize>
         </font>
        </property>
@@ -775,7 +776,6 @@ margin-left:10px
        </property>
        <property name="font">
         <font>
-         <family>Cairo</family>
          <pointsize>-1</pointsize>
         </font>
        </property>
@@ -836,7 +836,6 @@ border: 1px solid #b8b9bd;</string>
        </property>
        <property name="font">
         <font>
-         <family>Cairo</family>
          <pointsize>-1</pointsize>
         </font>
        </property>

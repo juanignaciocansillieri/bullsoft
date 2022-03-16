@@ -7,8 +7,20 @@
     <x>0</x>
     <y>0</y>
     <width>785</width>
-    <height>461</height>
+    <height>457</height>
    </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>785</width>
+    <height>457</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>785</width>
+    <height>457</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>Nuevo Producto</string>

@@ -15,6 +15,8 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(312, 244)
+        MainWindow.setMaximumSize(QtCore.QSize(312, 244))
+        MainWindow.setSizeIncrement(QtCore.QSize(312, 244))
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.frame_2 = QtWidgets.QFrame(self.centralwidget)
@@ -96,3 +98,13 @@ class Ui_MainWindow(object):
         self.label_Area.setText(_translate("MainWindow", "Elegir Área"))
         self.modificar_btn.setText(_translate("MainWindow", "Eliminar"))
         self.label_5.setText(_translate("MainWindow", "Eliminar Área"))
+
+
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+    MainWindow = QtWidgets.QMainWindow()
+    ui = Ui_MainWindow()
+    ui.setupUi(MainWindow)
+    MainWindow.show()
+    sys.exit(app.exec_())

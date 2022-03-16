@@ -6,9 +6,21 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1192</width>
-    <height>703</height>
+    <width>1191</width>
+    <height>671</height>
    </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1191</width>
+    <height>671</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1191</width>
+    <height>671</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>Bullsoft</string>
@@ -95,7 +107,7 @@ background: #fff;
             <x>0</x>
             <y>348</y>
             <width>203</width>
-            <height>291</height>
+            <height>281</height>
            </rect>
           </property>
           <property name="styleSheet">
@@ -201,6 +213,9 @@ QPushButton:hover{
             </property>
            </widget>
            <widget class="QPushButton" name="products_btn_lotes_2">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
             <property name="geometry">
              <rect>
               <x>61</x>
@@ -240,9 +255,9 @@ QPushButton:hover{
              <string/>
             </property>
             <property name="icon">
-             <iconset>
-              <normaloff>img/iconos_grises_lotes.png</normaloff>
-              <normalon>:/img/iconos_azules_lotes azul.png</normalon>img/iconos_grises_lotes.png</iconset>
+             <iconset resource="img/img.qrc">
+              <normaloff>:/img/iconos_grises_lotes.png</normaloff>
+              <normalon>:/img/iconos_azules_lotes azul.png</normalon>:/img/iconos_grises_lotes.png</iconset>
             </property>
             <property name="iconSize">
              <size>
@@ -1060,7 +1075,7 @@ font-family: Cairo ExtraBold
           <property name="geometry">
            <rect>
             <x>90</x>
-            <y>642</y>
+            <y>632</y>
             <width>31</width>
             <height>21</height>
            </rect>
@@ -1100,7 +1115,7 @@ font-family: Cairo semibold
           <property name="geometry">
            <rect>
             <x>64</x>
-            <y>640</y>
+            <y>630</y>
             <width>21</width>
             <height>31</height>
            </rect>
@@ -1213,8 +1228,14 @@ border:none</string>
           </property>
           <item>
            <widget class="QStackedWidget" name="stackedWidget_main">
+            <property name="maximumSize">
+             <size>
+              <width>986</width>
+              <height>669</height>
+             </size>
+            </property>
             <property name="currentIndex">
-             <number>3</number>
+             <number>1</number>
             </property>
             <widget class="QWidget" name="page_deposito">
              <layout class="QVBoxLayout" name="verticalLayout_13">
@@ -1900,7 +1921,7 @@ color: #fff ;
                 <x>40</x>
                 <y>430</y>
                 <width>931</width>
-                <height>251</height>
+                <height>231</height>
                </rect>
               </property>
               <property name="maximumSize">
@@ -2092,8 +2113,8 @@ QPushButton:hover{
                <string/>
               </property>
               <property name="icon">
-               <iconset>
-                <normaloff>img/icono_volver.png</normaloff>img/icono_volver.png</iconset>
+               <iconset resource="img/img.qrc">
+                <normaloff>:/img/icono_volver.png</normaloff>:/img/icono_volver.png</iconset>
               </property>
               <property name="iconSize">
                <size>
@@ -2629,8 +2650,8 @@ QPushButton:hover{
                      <string/>
                     </property>
                     <property name="icon">
-                     <iconset>
-                      <normaloff>img/icono_volver.png</normaloff>img/icono_volver.png</iconset>
+                     <iconset resource="img/img.qrc">
+                      <normaloff>:/img/icono_volver.png</normaloff>:/img/icono_volver.png</iconset>
                     </property>
                     <property name="iconSize">
                      <size>
@@ -3759,7 +3780,7 @@ QPushButton:hover{
                  <property name="geometry">
                   <rect>
                    <x>40</x>
-                   <y>650</y>
+                   <y>630</y>
                    <width>121</width>
                    <height>26</height>
                   </rect>
@@ -3829,8 +3850,8 @@ QPushButton:hover{
                   <string/>
                  </property>
                  <property name="icon">
-                  <iconset>
-                   <normaloff>img/icono_volver.png</normaloff>img/icono_volver.png</iconset>
+                  <iconset resource="img/img.qrc">
+                   <normaloff>:/img/icono_volver.png</normaloff>:/img/icono_volver.png</iconset>
                  </property>
                  <property name="iconSize">
                   <size>
@@ -4528,7 +4549,7 @@ QHeaderView::section:vertical
                  <property name="geometry">
                   <rect>
                    <x>490</x>
-                   <y>650</y>
+                   <y>630</y>
                    <width>121</width>
                    <height>26</height>
                   </rect>
@@ -5565,6 +5586,9 @@ QHeaderView::section:vertical
               </property>
               <item>
                <widget class="QFrame" name="frame_12">
+                <property name="enabled">
+                 <bool>true</bool>
+                </property>
                 <property name="frameShape">
                  <enum>QFrame::StyledPanel</enum>
                 </property>

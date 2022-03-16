@@ -128,7 +128,6 @@ font-weight: bold;</string>
           </property>
           <property name="font">
            <font>
-            <family>Cairo Light</family>
             <pointsize>-1</pointsize>
             <weight>25</weight>
             <italic>false</italic>
@@ -175,7 +174,7 @@ border: 1px solid rgb(75, 75, 75);
            <string/>
           </property>
           <property name="placeholderText">
-           <string>Código Empleado</string>
+           <string>DNI Empleado</string>
           </property>
          </widget>
          <widget class="QLineEdit" name="pass_login_input">

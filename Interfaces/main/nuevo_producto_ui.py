@@ -14,7 +14,9 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(785, 461)
+        MainWindow.resize(785, 457)
+        MainWindow.setMinimumSize(QtCore.QSize(785, 457))
+        MainWindow.setMaximumSize(QtCore.QSize(785, 457))
         MainWindow.setToolTipDuration(0)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
@@ -456,7 +458,7 @@ class Ui_MainWindow(object):
         self.label_lote_2.setText(_translate("MainWindow", "Volumen"))
         self.label_5.setText(_translate("MainWindow", "Nuevo Producto"))
         self.label_marca_2.setText(_translate("MainWindow", "Precio"))
-from Interfaces.main import img_rc
+from  Interfaces.main import img_rc
 
 
 if __name__ == "__main__":

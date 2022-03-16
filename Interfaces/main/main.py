@@ -14,7 +14,9 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(1192, 703)
+        MainWindow.resize(1191, 671)
+        MainWindow.setMinimumSize(QtCore.QSize(1191, 671))
+        MainWindow.setMaximumSize(QtCore.QSize(1191, 671))
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap(":/img/WEB FINAL_icono azul.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         MainWindow.setWindowIcon(icon)
@@ -43,7 +45,7 @@ class Ui_MainWindow(object):
         self.left_frame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.left_frame.setObjectName("left_frame")
         self.stackedWidget_3 = QtWidgets.QStackedWidget(self.left_frame)
-        self.stackedWidget_3.setGeometry(QtCore.QRect(0, 348, 203, 291))
+        self.stackedWidget_3.setGeometry(QtCore.QRect(0, 348, 203, 281))
         self.stackedWidget_3.setStyleSheet("background:#fff")
         self.stackedWidget_3.setObjectName("stackedWidget_3")
         self.product_subpage = QtWidgets.QWidget()
@@ -95,6 +97,7 @@ class Ui_MainWindow(object):
         self.products_btn_movimientos_2.setCheckable(True)
         self.products_btn_movimientos_2.setObjectName("products_btn_movimientos_2")
         self.products_btn_lotes_2 = QtWidgets.QPushButton(self.product_subpage)
+        self.products_btn_lotes_2.setEnabled(True)
         self.products_btn_lotes_2.setGeometry(QtCore.QRect(61, 158, 16, 16))
         font = QtGui.QFont()
         font.setFamily("Roboto")
@@ -119,7 +122,7 @@ class Ui_MainWindow(object):
 "}")
         self.products_btn_lotes_2.setText("")
         icon2 = QtGui.QIcon()
-        icon2.addPixmap(QtGui.QPixmap("img/iconos_grises_lotes.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon2.addPixmap(QtGui.QPixmap(":/img/iconos_grises_lotes.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         icon2.addPixmap(QtGui.QPixmap(":/img/iconos_azules_lotes azul.png"), QtGui.QIcon.Normal, QtGui.QIcon.On)
         self.products_btn_lotes_2.setIcon(icon2)
         self.products_btn_lotes_2.setIconSize(QtCore.QSize(16, 16))
@@ -529,7 +532,7 @@ class Ui_MainWindow(object):
         self.users_btn_2.setIconSize(QtCore.QSize(30, 30))
         self.users_btn_2.setObjectName("users_btn_2")
         self.exit_btn = QtWidgets.QPushButton(self.left_frame)
-        self.exit_btn.setGeometry(QtCore.QRect(90, 642, 31, 21))
+        self.exit_btn.setGeometry(QtCore.QRect(90, 632, 31, 21))
         font = QtGui.QFont()
         font.setFamily("Cairo semibold")
         font.setPointSize(11)
@@ -548,7 +551,7 @@ class Ui_MainWindow(object):
         self.exit_btn.setIconSize(QtCore.QSize(30, 35))
         self.exit_btn.setObjectName("exit_btn")
         self.exit_btn_2 = QtWidgets.QPushButton(self.left_frame)
-        self.exit_btn_2.setGeometry(QtCore.QRect(64, 640, 21, 31))
+        self.exit_btn_2.setGeometry(QtCore.QRect(64, 630, 21, 31))
         self.exit_btn_2.setMaximumSize(QtCore.QSize(50, 41))
         font = QtGui.QFont()
         font.setFamily("Roboto")
@@ -596,6 +599,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_2.setSpacing(0)
         self.verticalLayout_2.setObjectName("verticalLayout_2")
         self.stackedWidget_main = QtWidgets.QStackedWidget(self.right_frame)
+        self.stackedWidget_main.setMaximumSize(QtCore.QSize(986, 669))
         self.stackedWidget_main.setObjectName("stackedWidget_main")
         self.page_deposito = QtWidgets.QWidget()
         self.page_deposito.setObjectName("page_deposito")
@@ -941,7 +945,7 @@ class Ui_MainWindow(object):
         self.label_86.setObjectName("label_86")
         self.horizontalLayout_19.addWidget(self.label_86, 0, QtCore.Qt.AlignLeft)
         self.tableWidget_prodNiveles = QtWidgets.QTableWidget(self.page_posicionesAlojamiento)
-        self.tableWidget_prodNiveles.setGeometry(QtCore.QRect(40, 430, 931, 251))
+        self.tableWidget_prodNiveles.setGeometry(QtCore.QRect(40, 430, 931, 231))
         self.tableWidget_prodNiveles.setMaximumSize(QtCore.QSize(16777215, 489))
         self.tableWidget_prodNiveles.viewport().setProperty("cursor", QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.tableWidget_prodNiveles.setStyleSheet("QTableWidget{\n"
@@ -1051,7 +1055,7 @@ class Ui_MainWindow(object):
 "}")
         self.btn_volver_niveles.setText("")
         icon12 = QtGui.QIcon()
-        icon12.addPixmap(QtGui.QPixmap("img/icono_volver.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon12.addPixmap(QtGui.QPixmap(":/img/icono_volver.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.btn_volver_niveles.setIcon(icon12)
         self.btn_volver_niveles.setIconSize(QtCore.QSize(14, 16))
         self.btn_volver_niveles.setCheckable(True)
@@ -1844,7 +1848,7 @@ class Ui_MainWindow(object):
 "}")
         self.btn_eliminarProdEgreso.setObjectName("btn_eliminarProdEgreso")
         self.btn_confirmarPicking = QtWidgets.QPushButton(self.frame_9)
-        self.btn_confirmarPicking.setGeometry(QtCore.QRect(40, 650, 121, 26))
+        self.btn_confirmarPicking.setGeometry(QtCore.QRect(40, 630, 121, 26))
         font = QtGui.QFont()
         font.setFamily("Cairo")
         font.setPointSize(10)
@@ -2218,7 +2222,7 @@ class Ui_MainWindow(object):
         self.tableWidget_picking.verticalHeader().setVisible(False)
         self.tableWidget_picking.verticalHeader().setDefaultSectionSize(41)
         self.btn_confirmarPicking_2 = QtWidgets.QPushButton(self.frame_9)
-        self.btn_confirmarPicking_2.setGeometry(QtCore.QRect(490, 650, 121, 26))
+        self.btn_confirmarPicking_2.setGeometry(QtCore.QRect(490, 630, 121, 26))
         font = QtGui.QFont()
         font.setFamily("Cairo")
         font.setPointSize(10)
@@ -2735,6 +2739,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_14.setSpacing(0)
         self.verticalLayout_14.setObjectName("verticalLayout_14")
         self.frame_12 = QtWidgets.QFrame(self.page_inicio)
+        self.frame_12.setEnabled(True)
         self.frame_12.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_12.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_12.setObjectName("frame_12")
@@ -3267,7 +3272,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
         self.stackedWidget_3.setCurrentIndex(0)
-        self.stackedWidget_main.setCurrentIndex(3)
+        self.stackedWidget_main.setCurrentIndex(1)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
@@ -3475,7 +3480,7 @@ class Ui_MainWindow(object):
         item = self.tableWidget_movimientos_2.horizontalHeaderItem(5)
         item.setText(_translate("MainWindow", "New Column"))
         self.new_egreso_btn.setText(_translate("MainWindow", "Nuevo Egreso "))
-#import img_rc
+from  Interfaces.main import img_rc
 
 
 if __name__ == "__main__":

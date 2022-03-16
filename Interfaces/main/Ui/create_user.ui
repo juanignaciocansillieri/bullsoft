@@ -10,6 +10,18 @@
     <height>485</height>
    </rect>
   </property>
+  <property name="minimumSize">
+   <size>
+    <width>490</width>
+    <height>485</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>490</width>
+    <height>485</height>
+   </size>
+  </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
@@ -145,10 +157,7 @@ margin-left: 10px;
        </property>
        <property name="font">
         <font>
-         <family>Cairo</family>
          <pointsize>-1</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
         </font>
        </property>
        <property name="styleSheet">
@@ -179,10 +188,7 @@ margin-left:10px
        </property>
        <property name="font">
         <font>
-         <family>Cairo</family>
          <pointsize>-1</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
         </font>
        </property>
        <property name="styleSheet">
@@ -354,10 +360,7 @@ margin-left: 10px;
        </property>
        <property name="font">
         <font>
-         <family>Cairo</family>
          <pointsize>-1</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
         </font>
        </property>
        <property name="styleSheet">
@@ -465,10 +468,7 @@ margin-left: 10px;
        </property>
        <property name="font">
         <font>
-         <family>Cairo</family>
          <pointsize>-1</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
         </font>
        </property>
        <property name="styleSheet">
@@ -533,10 +533,7 @@ margin-left: 10px;
        </property>
        <property name="font">
         <font>
-         <family>Cairo</family>
          <pointsize>-1</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
         </font>
        </property>
        <property name="styleSheet">
@@ -561,10 +558,7 @@ margin-left:10px
        </property>
        <property name="font">
         <font>
-         <family>Cairo</family>
          <pointsize>-1</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
         </font>
        </property>
        <property name="styleSheet">
@@ -677,10 +671,7 @@ margin-left: 10px;
        </property>
        <property name="font">
         <font>
-         <family>Cairo</family>
          <pointsize>-1</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
         </font>
        </property>
        <property name="styleSheet">
@@ -751,10 +742,7 @@ margin-left: 10px;
        </property>
        <property name="font">
         <font>
-         <family>Cairo</family>
          <pointsize>-1</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
         </font>
        </property>
        <property name="styleSheet">
@@ -779,10 +767,7 @@ margin-left:10px
        </property>
        <property name="font">
         <font>
-         <family>Cairo</family>
          <pointsize>-1</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
         </font>
        </property>
        <property name="styleSheet">
@@ -807,10 +792,7 @@ margin-left:10px
        </property>
        <property name="font">
         <font>
-         <family>Cairo</family>
          <pointsize>-1</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
         </font>
        </property>
        <property name="styleSheet">

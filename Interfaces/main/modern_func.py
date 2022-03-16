@@ -823,11 +823,3 @@ class BmUsuario(QMainWindow):
             img.save('../main/img/{0}'.format(defaultImg))
 
 
-
-
-if __name__ == "__main__":
-    import sys
-    app = QApplication(sys.argv)
-    window = Modern(1)
-    window.show()
-    sys.exit(app.exec())

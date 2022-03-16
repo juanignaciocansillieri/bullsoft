@@ -309,6 +309,7 @@ class Modern(QMainWindow):
             self.ui.products_btn_movimientos_2.setChecked(False)
             self.ui.products_btn_movimiento.setChecked(False)
 
+
     def checkear_boton_stock(self):
         self.ui.products_btn_stock.setChecked(True)
         self.ui.products_btn_stock_2.setChecked(True)
@@ -536,17 +537,17 @@ class Modern(QMainWindow):
             if l.fifo(codigo, cantidad)==1:
                 QtWidgets.QMessageBox.critical(self, "Error", "No hay esa cantidad disponible")
                 return None
-            m.Movimientos(1,codigo,cantidad,motivo,fecha)
+
             if(al.modificar_dispo_egreso(codigo,cantidad)==0):
                 QtWidgets.QMessageBox.critical(self, "Error", "No hay esa disponibilidad")
                 return None
+            else: m.Movimientos(1,codigo,cantidad,motivo,fecha)
+
             i = i +1
 
         rp=p.pick_posiciones(lc)
         pick = al.pick_(rp)
-        #print(lc)
-        #print(rp)
-        #print(pick)
+
         self.listar_pick(pick,lc)
         tupla_egreso=[]
         n_egreso=0

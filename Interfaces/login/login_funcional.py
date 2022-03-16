@@ -50,7 +50,6 @@ class LoginWindow(QMainWindow):
             # inicia
             admin_user = u.ver_tipo(user)
             nombre=u.Usuarios.mostrar_user(user)
-            print (nombre)
             nombre=str(nombre[0][1])+" "+str(nombre[0][2])
             self.main = m.Modern(admin_user,nombre)
             self.main.show()
@@ -59,7 +58,6 @@ class LoginWindow(QMainWindow):
             self.close()
 
         if usuario == 2:
-            # no se encuentra dni
             if user == "admin":
                 pass
             else:
