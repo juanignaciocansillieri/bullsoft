@@ -1219,10 +1219,10 @@ class BMProduct(QMainWindow):
 
         # Modificar producto btn
         self.ui.modificarprod_btn.clicked.connect(self.modificar_producto)
+        self.cbox()
 
         # Eliminar producto btn
         self.ui.eliminarprod_btn.clicked.connect(self.borrar_producto)
-
         # Mostrar Ventana
         self.show()
 
@@ -1252,9 +1252,6 @@ class BMProduct(QMainWindow):
         self.ui.peso_num.setValue(atributos[9])
         self.ui.num_volumen.setValue(atributos[10])
         self.ui.num_precio.setValue(atributos[11])
-        self.cbox()
-        self.ui.estado_cbox.setCurrentText(al.ver_area(atributos[4]))
-        self.ui.ubicacion_cbox.setCurrentText(atributos[4])
 
     def modificar_producto(self):
         global productId
@@ -1314,7 +1311,7 @@ class BMProduct(QMainWindow):
         for a in areas:
             self.ui.estado_cbox.addItem(a[0])
         posicion = self.ui.estado_cbox.currentText()
-        pos = al.Alojamiento.listar_posicion_alojamiento(posicion)
+        pos = al.listar_alojamiento_disponibles_area(posicion)
         for p in pos:
             self.ui.ubicacion_cbox.addItem(p[0])
         self.ui.estado_cbox.currentIndexChanged.connect(self.clear_combo)
