@@ -26,9 +26,6 @@ class Nueva_estanteria(QMainWindow):
         self.pasillos_cbox()
         self.ui.btn_nueva_estanteria.clicked.connect(self.crear_estanteria)
 
-    def crear_estanteria2(self):
-        self.close()
-
     def crear_estanteria(self):
         columnas = self.ui.num_columnas.value()
         niveles=self.ui.num_niveles.value()
@@ -40,12 +37,11 @@ class Nueva_estanteria(QMainWindow):
             return None
         if int(estanterias.verificar_segmentos(self.area,posicion) )== 1:
             estanterias.Estanterias(codigo,self.area,pasillo,posicion,columnas,niveles)
+            self.close()
         else:
             QtWidgets.QMessageBox.critical(self, "Error", "Estanteria ya creada")
             return None
 
-
-        self.close()
 
     def pasillos_cbox(self):
         pasillo = area.ver_pasillos(self.area)
@@ -53,18 +49,39 @@ class Nueva_estanteria(QMainWindow):
                 self.ui.cbox_pasillo.addItem(str(x+1))
 
     def posicion_cbox(self):
-        segmento = area.ver_segmentos(self.area)
-        pos=estanterias.ver_posicion(self.area)
-        for x in range(int(segmento[0][0])):
-                for j in pos:
-                    if int(j[0])==int(x+1):
-                        x=x+1
-                    else:
-                        if int(x+1)==int(segmento[0][0]):
-                            QtWidgets.QMessageBox.critical(self, "Error", "No hay posiciones para crear estanterias")
-                            return None
-                        else:
-                            self.ui.cbox_posicion.addItem(str(x + 1))
+        segmento = int(area.ver_segmentos(self.area))
+        pos = estanterias.ver_posicion(self.area)
+        pos2=[]
+        cbox=[]
+        for a in pos:
+            pos2.append(int(a[0]))
+        j=0
+        i=0
+        while i<segmento:
+            j=0
+            while j< len(pos2):
+                if i+1==pos2[j]:
+                    pos2.pop(j)
+                    i=i+1
+                    if(int(len(pos2))==0):
+                        cbox.append(i + 1)
+                    j=0
+                else:
+                    j=j+1
+                    cbox.append(i+1)
+                    j=j+1
+            i=i+1
+
+        for x in cbox:
+            if x>segmento:
+                cbox.remove(x)
+        if len(cbox)==0:
+            QtWidgets.QMessageBox.critical(self, "Error", "No hay posiciones para crear estanterias")
+            return None
+
+        for y in cbox:
+            self.ui.cbox_posicion.addItem(str(y))
+
 
 
 if __name__ == "__main__":
