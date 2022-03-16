@@ -20,6 +20,7 @@ print (productos.pick_productos(cod,pick))
 #print("prueba ",productos.buscar_prod_pick("1","p1-1-1-2-3"))
 #n=lotes.fifo("1",2)
 #print(n)
-alojamiento.modificar_dispo_egreso(1,1)
+#alojamiento.modificar_dispo_egreso(1,1)
+print(area.ver_nombre("p1pp"))
 
 

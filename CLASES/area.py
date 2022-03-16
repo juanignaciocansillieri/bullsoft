@@ -149,21 +149,21 @@ def ver_nombre(nombre):
     b = cursor.fetchall()
     b = str(b[0][0])
     n = int(b)
-    i = 0
+    i = 1
     nombre = "(('" + nombre + "',),)"
-    while i < n:
+    while i <= n:
         query = "SELECT nombre FROM area WHERE idarea = %s"
         values = i
         cursor.execute(query, values)
         a.commit()
         b = cursor.fetchall()
         b = str(b)
-        #print(b)
-        if b == nombre:
-            i = n + 1
+        print(b,nombre)
+        if str(b) == str(nombre):
+            i = n + 2
         else:
             i += 1
-    if i == n + 1:
+    if i == n + 2:
         c.close_connection(a)
         # nombre existe
         return 1
