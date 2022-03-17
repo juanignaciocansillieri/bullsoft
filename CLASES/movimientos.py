@@ -88,8 +88,8 @@ def buscar_product(param):
     a = c.start_connection()
     cursor = a.cursor()
     query = (
-        "SELECT m.tipo,m.codigo,p.descripcion,m.cantidad,m.motivo,m.fecha FROM movimientos m JOIN productos p ON m.codigo=p.codigo WHERE m.codigo=%s or descripcion=%s or tipo=%s")
-    cursor.execute(query, (param, param, param))
+        "SELECT m.tipo,m.codigo,p.descripcion,m.cantidad,m.motivo,m.fecha FROM movimientos m JOIN productos p ON m.codigo=p.codigo WHERE m.codigo=%s or tipo=%s")
+    cursor.execute(query, (param, param))
     data = cursor.fetchall()
     a.commit()
     print(data)

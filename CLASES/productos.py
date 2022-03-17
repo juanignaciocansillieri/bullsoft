@@ -221,6 +221,7 @@ def ver_desc(codigo):
 
 
 def ver_vol(codigo):
+    print("codigo",codigo)
     a = c.start_connection()
     cursor = a.cursor()
     query = "SELECT volumen FROM productos WHERE codigo=%s"
@@ -231,6 +232,7 @@ def ver_vol(codigo):
         print("no se encontro el producto indicado")
         return 0
     else:
+        print("data",data)
         data=data[0][0]
         return data
     c.close_connection(a)

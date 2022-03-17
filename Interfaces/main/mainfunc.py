@@ -316,6 +316,7 @@ class Modern(QMainWindow):
         self.ui.products_btn_movimientos_2.setChecked(False)
         self.ui.products_btn_lotes.setChecked(False)
         self.ui.products_btn_lotes_2.setChecked(False)
+        self.ui.buscar_input.setText("")
     def checkear_boton_movimientos(self):
         self.ui.products_btn_stock.setChecked(False)
         self.ui.products_btn_stock_2.setChecked(False)
@@ -323,6 +324,7 @@ class Modern(QMainWindow):
         self.ui.products_btn_movimientos_2.setChecked(True)
         self.ui.products_btn_lotes.setChecked(False)
         self.ui.products_btn_lotes_2.setChecked(False)
+        self.ui.lineEdit_5.setText("")
     def checkear_boton_lotes(self):
         self.ui.products_btn_stock.setChecked(False)
         self.ui.products_btn_stock_2.setChecked(False)
@@ -330,6 +332,8 @@ class Modern(QMainWindow):
         self.ui.products_btn_movimientos_2.setChecked(False)
         self.ui.products_btn_lotes.setChecked(True)
         self.ui.products_btn_lotes_2.setChecked(True)
+        self.ui.lineEdit_6.setText("")
+        self.ui.tableWidget_lotes.setRowCount(0)
 
 
     def checkear_boton_areas(self):
@@ -352,6 +356,7 @@ class Modern(QMainWindow):
             self.ui.inicio_btn_2.setChecked(False)
             self.ui.deposito_btn.setChecked(False)
             self.ui.deposito_btn_2.setChecked(False)
+            self.ui.lineEdit_3.setText("")
     def checkear_boton_inicio(self):
             self.ui.products_btn.setChecked(False)
             self.ui.products_btn_2.setChecked(False)
@@ -412,6 +417,9 @@ class Modern(QMainWindow):
         tupla_egreso=[]
         self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_egreso)
         self.act_egreso()
+        self.ui.input_codigoProdEgreso.setText("")
+        self.ui.input_motivo_egreso.setText("")
+        self.ui.num_cantidadEgreso.setValue(0)
 
     def mostrar_borrar_area(self):
         self.borrarArea = BorrarArea()
@@ -545,8 +553,9 @@ class Modern(QMainWindow):
             i = i +1
 
         rp=p.pick_posiciones(lc)
+        #print("rp",rp)
         pick = al.pick_(rp)
-
+        #print(pick)
         self.listar_pick(pick,lc)
         tupla_egreso=[]
         n_egreso=0
@@ -1219,7 +1228,6 @@ class BMProduct(QMainWindow):
 
         # Modificar producto btn
         self.ui.modificarprod_btn.clicked.connect(self.modificar_producto)
-        self.cbox()
 
         # Eliminar producto btn
         self.ui.eliminarprod_btn.clicked.connect(self.borrar_producto)
@@ -1228,7 +1236,7 @@ class BMProduct(QMainWindow):
 
     # Rellenar los campos con los atributos del producto seleccionado
     def rellenar_campos(self):
-
+        self.cbox()
         global productId
         global codigoViejo
         global defaultImg
@@ -1249,6 +1257,9 @@ class BMProduct(QMainWindow):
         else:
             self.ui.fragil_no.setChecked(1)
 
+        area=atributos[4].split(sep="-")
+        self.ui.estado_cbox.setCurrentText(str(area[0]))
+        self.ui.ubicacion_cbox.setCurrentText(atributos[4])
         self.ui.peso_num.setValue(atributos[9])
         self.ui.num_volumen.setValue(atributos[10])
         self.ui.num_precio.setValue(atributos[11])
@@ -1270,9 +1281,8 @@ class BMProduct(QMainWindow):
         volumen = self.ui.num_volumen.value()
         precio = self.ui.num_precio.value()
         foto = defaultImg
-        p.modificar_produc(codigoViejo, codigo, marca, descripcion, ubicacion, fragil, foto, peso,
-                                     volumen,precio)
-        if p.ver_posicion(codigo)==ubicacion:
+
+        if p.ver_posicion(codigo)!=ubicacion or volumen!=p.ver_vol(codigo):
             a = conex.start_connection()
             cursor = a.cursor()
             query = "SELECT cantidad FROM lote WHERE idproducto=%s ORDER BY vencimiento"
@@ -1280,12 +1290,18 @@ class BMProduct(QMainWindow):
             data = cursor.fetchall()
             data = data
             conex.close_connection(a)
+            cantidad_total=0
+            print(data)
             for x in data:
                 cantidad_total = cantidad_total + x[0]
-            al.modificar_dispo_egreso(p.ver_posicion(codigo),cantidad_total)
-            al.modificar_dispo_ingreso(ubicacion,cantidad_total)
-        self.close()
+            al.modificar_dispo_egreso(codigo,cantidad_total)
+            p.modificar_produc(codigoViejo, codigo, marca, descripcion, ubicacion, fragil, foto, peso,
+                               volumen, precio)
+            al.modificar_dispo_ingreso(codigo,cantidad_total)
 
+        else:
+            p.modificar_produc(codigoViejo, codigo, marca, descripcion, ubicacion, fragil, foto, peso,volumen, precio)
+        self.close()
     def borrar_producto(self):
         global productId
         qm = QMessageBox
@@ -1314,6 +1330,7 @@ class BMProduct(QMainWindow):
         pos = al.listar_alojamiento_disponibles_area(posicion)
         for p in pos:
             self.ui.ubicacion_cbox.addItem(p[0])
+
         self.ui.estado_cbox.currentIndexChanged.connect(self.clear_combo)
         self.ui.estado_cbox.currentIndexChanged.connect(self.update_combo)
 
