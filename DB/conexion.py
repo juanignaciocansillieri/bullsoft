@@ -81,14 +81,14 @@ def crear_tabla():  # crea una tabla (al iniciar por primera vez el programa se 
 
     q4 = """CREATE TABLE IF NOT EXISTS usuarios (
     idusuarios INT UNSIGNED AUTO_INCREMENT PRIMARY KEY NOT NULL,
-    nombre VARCHAR(20) NOT NULL,
-    apellido VARCHAR(20) NOT NULL,
+    nombre VARCHAR(100) NOT NULL,
+    apellido VARCHAR(100) NOT NULL,
     dni VARCHAR(20) NOT NULL,
     tipo VARCHAR(20) NOT NULL,
     alta BINARY(1) NOT NULL,
-    puesto VARCHAR(20) NOT NULL,
+    puesto VARCHAR(100) NOT NULL,
     nacimiento DATE NOT NULL,
-    mail VARCHAR(20) NOT NULL,
+    mail VARCHAR(100) NOT NULL,
     foto VARCHAR(100) NOT NULL
     );"""
 
@@ -96,31 +96,31 @@ def crear_tabla():  # crea una tabla (al iniciar por primera vez el programa se 
     idlote INT UNSIGNED AUTO_INCREMENT PRIMARY KEY NOT NULL,
     idproducto VARCHAR(20) NOT NULL,
     cantidad int not null,
-    fechalote VARCHAR(20) NOT NULL,
+    fechalote VARCHAR(100) NOT NULL,
     vencimiento DATE
     );"""
 
     q6 = """CREATE TABLE IF NOT EXISTS condicion (
     idcondicion INT UNSIGNED AUTO_INCREMENT PRIMARY KEY NOT NULL,
-    nombre VARCHAR(20) NOT NULL,
+    nombre VARCHAR(100) NOT NULL,
     identificador VARCHAR(20) NOT NULL
     );"""
 
     q7 = """CREATE TABLE IF NOT EXISTS alojamiento (
     idalojamiento INT UNSIGNED AUTO_INCREMENT PRIMARY KEY NOT NULL,
-    area VARCHAR(20) NOT NULL,
-    pasillo VARCHAR(20) NOT NULL,
-    segmento VARCHAR(20) NOT NULL,
-    columna VARCHAR(20) NOT NULL,
-    nivel VARCHAR(20) NOT NULL,
+    area VARCHAR(100) NOT NULL,
+    pasillo VARCHAR(100) NOT NULL,
+    segmento VARCHAR(100) NOT NULL,
+    columna VARCHAR(100) NOT NULL,
+    nivel VARCHAR(100) NOT NULL,
     codigo VARCHAR(100) NOT NULL,
     posicion VARCHAR(100) NOT NULL,
     largo INT NOT NULL,
     ancho INT NOT NULL,
     alto INT NOT NULL,
-    volumen VARCHAR(20) NOT NULL,
-    disponibilidad VARCHAR(20) NOT NULL,
-    limite VARCHAR(20) NOT NULL
+    volumen VARCHAR(100) NOT NULL,
+    disponibilidad VARCHAR(100) NOT NULL,
+    limite VARCHAR(100) NOT NULL
     );"""
 
     q8 = """ CREATE TABLE IF NOT EXISTS matrizarea (
@@ -157,11 +157,11 @@ def crear_tabla():  # crea una tabla (al iniciar por primera vez el programa se 
 
     q11 = """CREATE TABLE IF NOT EXISTS area (
     idarea INT UNSIGNED AUTO_INCREMENT PRIMARY KEY NOT NULL,
-    nombre VARCHAR(20) NOT NULL,
+    nombre VARCHAR(100) NOT NULL,
     identificador VARCHAR(20) NOT NULL,
-    posicion VARCHAR(20) NOT NULL,
-    pasillos VARCHAR(20) NOT NULL,
-    segmentos VARCHAR(20) NOT NULL,
+    posicion VARCHAR(100) NOT NULL,
+    pasillos VARCHAR(100) NOT NULL,
+    segmentos VARCHAR(100) NOT NULL,
     entrada INT,
     salida INT,
     disponibilidad VARCHAR(5) NOT NULL
@@ -170,9 +170,9 @@ def crear_tabla():  # crea una tabla (al iniciar por primera vez el programa se 
     q12 = """CREATE TABLE IF NOT EXISTS productos (
     idproductos INT UNSIGNED AUTO_INCREMENT PRIMARY KEY NOT NULL,
     codigo VARCHAR(20) NOT NULL,
-    marca VARCHAR(20) NOT NULL,
-    descripcion VARCHAR(60) NOT NULL,
-    ubicacion VARCHAR(20) NOT NULL,
+    marca VARCHAR(100) NOT NULL,
+    descripcion VARCHAR(100) NOT NULL,
+    ubicacion VARCHAR(100) NOT NULL,
     fragil BINARY(1) NOT NULL,
     foto VARCHAR(100) NOT NULL,
     peso INT NOT NULL,
@@ -183,16 +183,16 @@ def crear_tabla():  # crea una tabla (al iniciar por primera vez el programa se 
     q13 = """CREATE TABLE IF NOT EXISTS movimientos (
     idmovimientos INT UNSIGNED AUTO_INCREMENT PRIMARY KEY NOT NULL,
     tipo BINARY(1) NOT NULL,
-    codigo VARCHAR(20) NOT NULL,
+    codigo VARCHAR(100) NOT NULL,
     cantidad INT NOT NULL,
-    motivo VARCHAR(20) NOT NULL,
+    motivo VARCHAR(100) NOT NULL,
     fecha DATE NOT NULL
     );"""
 
     q16 = """CREATE TABLE IF NOT EXISTS estanterias (
     idestanterias INT UNSIGNED AUTO_INCREMENT PRIMARY KEY NOT NULL,
-    codigo VARCHAR(50) NOT NULL,
-    area VARCHAR(20) NOT NULL,
+    codigo VARCHAR(100) NOT NULL,
+    area VARCHAR(100) NOT NULL,
     pasillo VARCHAR(20) NOT NULL,
     posicion VARCHAR(20) NOT NULL,
     columnas VARCHAR(20) NOT NULL,
