@@ -15,7 +15,8 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(657, 289)
-        MainWindow.setMaximumSize(QtCore.QSize(16777215, 300))
+        MainWindow.setMinimumSize(QtCore.QSize(657, 289))
+        MainWindow.setMaximumSize(QtCore.QSize(657, 289))
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.verticalLayout = QtWidgets.QVBoxLayout(self.centralwidget)
@@ -94,10 +95,7 @@ class Ui_MainWindow(object):
         self.label_egr_ing = QtWidgets.QLabel(self.frame_3)
         self.label_egr_ing.setGeometry(QtCore.QRect(30, 70, 131, 27))
         font = QtGui.QFont()
-        font.setFamily("Cairo")
         font.setPointSize(-1)
-        font.setBold(True)
-        font.setWeight(75)
         self.label_egr_ing.setFont(font)
         self.label_egr_ing.setStyleSheet("font-size: 14px;\n"
 "margin-top:10px;\n"
@@ -108,10 +106,7 @@ class Ui_MainWindow(object):
         self.label_egr_ing_2 = QtWidgets.QLabel(self.frame_3)
         self.label_egr_ing_2.setGeometry(QtCore.QRect(30, 150, 131, 27))
         font = QtGui.QFont()
-        font.setFamily("Cairo")
         font.setPointSize(-1)
-        font.setBold(True)
-        font.setWeight(75)
         self.label_egr_ing_2.setFont(font)
         self.label_egr_ing_2.setStyleSheet("\n"
 "font-size: 14px;\n"
@@ -142,10 +137,7 @@ class Ui_MainWindow(object):
         self.label_pasillos = QtWidgets.QLabel(self.frame_3)
         self.label_pasillos.setGeometry(QtCore.QRect(290, 70, 131, 27))
         font = QtGui.QFont()
-        font.setFamily("Cairo")
         font.setPointSize(-1)
-        font.setBold(True)
-        font.setWeight(75)
         self.label_pasillos.setFont(font)
         self.label_pasillos.setStyleSheet("\n"
 "font-size: 14px;\n"
@@ -157,10 +149,7 @@ class Ui_MainWindow(object):
         self.label_pasillos_2 = QtWidgets.QLabel(self.frame_3)
         self.label_pasillos_2.setGeometry(QtCore.QRect(290, 150, 131, 27))
         font = QtGui.QFont()
-        font.setFamily("Cairo")
         font.setPointSize(-1)
-        font.setBold(True)
-        font.setWeight(75)
         self.label_pasillos_2.setFont(font)
         self.label_pasillos_2.setStyleSheet("\n"
 "font-size: 14px;\n"
@@ -212,10 +201,7 @@ class Ui_MainWindow(object):
         self.label_pasillos_3 = QtWidgets.QLabel(self.frame_3)
         self.label_pasillos_3.setGeometry(QtCore.QRect(500, 70, 131, 27))
         font = QtGui.QFont()
-        font.setFamily("Cairo")
         font.setPointSize(-1)
-        font.setBold(True)
-        font.setWeight(75)
         self.label_pasillos_3.setFont(font)
         self.label_pasillos_3.setStyleSheet("\n"
 "font-size: 14px;\n"
@@ -276,7 +262,7 @@ class Ui_MainWindow(object):
         self.radioButton.setText(_translate("MainWindow", "Entrada"))
         self.radioButton_2.setText(_translate("MainWindow", "Salida"))
         self.label_5.setText(_translate("MainWindow", "Nueva Área"))
-from Interfaces.main import img_rc
+from  Interfaces.main import img_rc
 
 
 if __name__ == "__main__":

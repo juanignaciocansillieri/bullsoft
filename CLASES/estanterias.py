@@ -23,7 +23,6 @@ class Estanterias:
             values = (self.codigo, self.area,self.pasillo,self.segmento,self.columnas,self.niveles)
             cursor.execute(query, values)
             a.commit()
-            print("se dio alta estanteria correctamente")
 
         except pymysql.err.OperationalError as err:
             print("Hubo un error:", err)
@@ -76,7 +75,6 @@ class Estanterias:
                 values = (niveles, idp)
                 cursor.execute(query, values)
                 a.commit()
-                print("se MODIFICO estanteria correctamente")
             except pymysql.err.OperationalError as err:
                 print("Hubo un error:", err)
             c.close_connection(a)
@@ -122,7 +120,6 @@ def contar_estanterias_area(area):
     return n
 
 def mostrar_columnas(area,posicion):
-    print("posinicial", posicion)
     posicion = int(posicion)
     a = c.start_connection()
     cursor = a.cursor()

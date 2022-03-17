@@ -60,7 +60,6 @@ class Ui_MainWindow(object):
         self.subt_login_lbl = QtWidgets.QLabel(self.login_frame)
         self.subt_login_lbl.setGeometry(QtCore.QRect(50, 80, 155, 31))
         font = QtGui.QFont()
-        font.setFamily("Cairo Light")
         font.setPointSize(-1)
         font.setBold(False)
         font.setItalic(False)
@@ -143,10 +142,10 @@ class Ui_MainWindow(object):
         MainWindow.setWindowTitle(_translate("MainWindow", "Bullsoft"))
         self.titulo_login_lbl.setText(_translate("MainWindow", "BIENVENIDO"))
         self.subt_login_lbl.setText(_translate("MainWindow", "Ingresa tus datos"))
-        self.user_login_input.setPlaceholderText(_translate("MainWindow", "Código Empleado"))
+        self.user_login_input.setPlaceholderText(_translate("MainWindow", "DNI Empleado"))
         self.pass_login_input.setPlaceholderText(_translate("MainWindow", "Contraseña"))
         self.login_btn.setText(_translate("MainWindow", "Ingresar  "))
-from Interfaces.login.Img import img
+from  Interfaces.login.Img import img
 
 
 if __name__ == "__main__":

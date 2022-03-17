@@ -16,6 +16,7 @@ class Ui_MainWindow(object):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(475, 296)
         MainWindow.setMaximumSize(QtCore.QSize(475, 296))
+        MainWindow.setSizeIncrement(QtCore.QSize(475, 296))
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.verticalLayout = QtWidgets.QVBoxLayout(self.centralwidget)
@@ -53,10 +54,7 @@ class Ui_MainWindow(object):
         self.label_fecha.setGeometry(QtCore.QRect(270, 90, 131, 27))
         self.label_fecha.setMaximumSize(QtCore.QSize(174, 16777215))
         font = QtGui.QFont()
-        font.setFamily("Cairo")
         font.setPointSize(-1)
-        font.setBold(True)
-        font.setWeight(75)
         self.label_fecha.setFont(font)
         self.label_fecha.setStyleSheet("font-size: 14px;\n"
 "margin-top:10px;\n"
@@ -99,10 +97,7 @@ class Ui_MainWindow(object):
         self.label_fecha_2.setGeometry(QtCore.QRect(270, 160, 151, 27))
         self.label_fecha_2.setMaximumSize(QtCore.QSize(174, 16777215))
         font = QtGui.QFont()
-        font.setFamily("Cairo")
         font.setPointSize(-1)
-        font.setBold(True)
-        font.setWeight(75)
         self.label_fecha_2.setFont(font)
         self.label_fecha_2.setStyleSheet("font-size: 14px;\n"
 "margin-top:10px;\n"
@@ -131,10 +126,7 @@ class Ui_MainWindow(object):
         self.label_cantidad = QtWidgets.QLabel(self.frame_2)
         self.label_cantidad.setGeometry(QtCore.QRect(60, 220, 141, 27))
         font = QtGui.QFont()
-        font.setFamily("Cairo")
         font.setPointSize(-1)
-        font.setBold(True)
-        font.setWeight(75)
         self.label_cantidad.setFont(font)
         self.label_cantidad.setStyleSheet("font-size: 14px;\n"
 "margin-top:10px;\n"
@@ -145,10 +137,7 @@ class Ui_MainWindow(object):
         self.label_codigo_producto = QtWidgets.QLabel(self.frame_2)
         self.label_codigo_producto.setGeometry(QtCore.QRect(60, 90, 141, 27))
         font = QtGui.QFont()
-        font.setFamily("Cairo")
         font.setPointSize(-1)
-        font.setBold(True)
-        font.setWeight(75)
         self.label_codigo_producto.setFont(font)
         self.label_codigo_producto.setStyleSheet("font-size: 14px;\n"
 "margin-top:10px;\n"
@@ -177,10 +166,7 @@ class Ui_MainWindow(object):
         self.label_motivo = QtWidgets.QLabel(self.frame_2)
         self.label_motivo.setGeometry(QtCore.QRect(60, 160, 71, 27))
         font = QtGui.QFont()
-        font.setFamily("Cairo")
         font.setPointSize(-1)
-        font.setBold(True)
-        font.setWeight(75)
         self.label_motivo.setFont(font)
         self.label_motivo.setStyleSheet("font-size: 14px;\n"
 "margin-top:10px;\n"
@@ -234,3 +220,13 @@ class Ui_MainWindow(object):
         self.label_motivo.setText(_translate("MainWindow", "Lote"))
         self.label_5.setText(_translate("MainWindow", "Nuevo Ingreso"))
 from  Interfaces.main import img_rc
+
+
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+    MainWindow = QtWidgets.QMainWindow()
+    ui = Ui_MainWindow()
+    ui.setupUi(MainWindow)
+    MainWindow.show()
+    sys.exit(app.exec_())

@@ -15,6 +15,8 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(673, 618)
+        MainWindow.setMinimumSize(QtCore.QSize(673, 618))
+        MainWindow.setMaximumSize(QtCore.QSize(673, 618))
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.verticalLayout = QtWidgets.QVBoxLayout(self.centralwidget)
@@ -31,7 +33,6 @@ class Ui_MainWindow(object):
         self.label = QtWidgets.QLabel(self.frame)
         self.label.setGeometry(QtCore.QRect(230, 20, 221, 181))
         self.label.setText("")
-        self.label.setPixmap(QtGui.QPixmap(":/img/aa.jpg"))
         self.label.setScaledContents(True)
         self.label.setObjectName("label")
         self.verticalLayout.addWidget(self.frame)
@@ -87,7 +88,6 @@ class Ui_MainWindow(object):
         self.label_rep_mail.setGeometry(QtCore.QRect(250, 160, 90, 27))
         self.label_rep_mail.setMaximumSize(QtCore.QSize(90, 16777215))
         font = QtGui.QFont()
-        font.setFamily("Cairo")
         font.setPointSize(-1)
         self.label_rep_mail.setFont(font)
         self.label_rep_mail.setStyleSheet("font-size: 14px;\n"
@@ -172,7 +172,6 @@ class Ui_MainWindow(object):
         self.label_apellido = QtWidgets.QLabel(self.frame_2)
         self.label_apellido.setGeometry(QtCore.QRect(60, 160, 67, 27))
         font = QtGui.QFont()
-        font.setFamily("Cairo")
         font.setPointSize(-1)
         self.label_apellido.setFont(font)
         self.label_apellido.setStyleSheet("font-size: 14px;\n"
@@ -207,7 +206,6 @@ class Ui_MainWindow(object):
         self.label_mail.setGeometry(QtCore.QRect(250, 100, 90, 27))
         self.label_mail.setMaximumSize(QtCore.QSize(90, 16777215))
         font = QtGui.QFont()
-        font.setFamily("Cairo")
         font.setPointSize(-1)
         self.label_mail.setFont(font)
         self.label_mail.setStyleSheet("font-size: 14px;\n"
@@ -220,7 +218,6 @@ class Ui_MainWindow(object):
         self.label_password.setGeometry(QtCore.QRect(430, 100, 154, 27))
         self.label_password.setMaximumSize(QtCore.QSize(154, 16777215))
         font = QtGui.QFont()
-        font.setFamily("Cairo")
         font.setPointSize(-1)
         self.label_password.setFont(font)
         self.label_password.setStyleSheet("\n"
@@ -258,7 +255,6 @@ class Ui_MainWindow(object):
         self.label_rep_password.setGeometry(QtCore.QRect(430, 160, 158, 27))
         self.label_rep_password.setMaximumSize(QtCore.QSize(500, 16777215))
         font = QtGui.QFont()
-        font.setFamily("Cairo")
         font.setPointSize(-1)
         self.label_rep_password.setFont(font)
         self.label_rep_password.setStyleSheet("\n"
@@ -271,7 +267,6 @@ class Ui_MainWindow(object):
         self.label_dni = QtWidgets.QLabel(self.frame_2)
         self.label_dni.setGeometry(QtCore.QRect(60, 40, 71, 27))
         font = QtGui.QFont()
-        font.setFamily("Cairo")
         font.setPointSize(-1)
         self.label_dni.setFont(font)
         self.label_dni.setStyleSheet("font-size: 14px;\n"
@@ -309,7 +304,6 @@ class Ui_MainWindow(object):
         self.label_tipo.setGeometry(QtCore.QRect(430, 40, 90, 27))
         self.label_tipo.setMaximumSize(QtCore.QSize(90, 16777215))
         font = QtGui.QFont()
-        font.setFamily("Cairo")
         font.setPointSize(-1)
         self.label_tipo.setFont(font)
         self.label_tipo.setStyleSheet("font-size: 14px;\n"
@@ -345,7 +339,6 @@ class Ui_MainWindow(object):
         self.label_nombre = QtWidgets.QLabel(self.frame_2)
         self.label_nombre.setGeometry(QtCore.QRect(60, 100, 71, 27))
         font = QtGui.QFont()
-        font.setFamily("Cairo")
         font.setPointSize(-1)
         self.label_nombre.setFont(font)
         self.label_nombre.setStyleSheet("\n"
@@ -359,7 +352,6 @@ class Ui_MainWindow(object):
         self.label_puesto = QtWidgets.QLabel(self.frame_2)
         self.label_puesto.setGeometry(QtCore.QRect(250, 40, 84, 27))
         font = QtGui.QFont()
-        font.setFamily("Cairo")
         font.setPointSize(-1)
         self.label_puesto.setFont(font)
         self.label_puesto.setStyleSheet("font-size: 14px;\n"
@@ -386,7 +378,6 @@ class Ui_MainWindow(object):
         self.label_nacimiento = QtWidgets.QLabel(self.frame_2)
         self.label_nacimiento.setGeometry(QtCore.QRect(60, 210, 91, 27))
         font = QtGui.QFont()
-        font.setFamily("Cairo")
         font.setPointSize(-1)
         self.label_nacimiento.setFont(font)
         self.label_nacimiento.setStyleSheet("\n"
@@ -489,7 +480,7 @@ class Ui_MainWindow(object):
         self.label_puesto.setText(_translate("MainWindow", "Puesto"))
         self.label_nacimiento.setText(_translate("MainWindow", "Nacimiento"))
         self.subirFoto_btn_2.setText(_translate("MainWindow", "Actualizar Imagen"))
-from Interfaces.main import img_rc
+from  Interfaces.main import img_rc
 
 
 if __name__ == "__main__":

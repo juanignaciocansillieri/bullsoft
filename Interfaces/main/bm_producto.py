@@ -15,6 +15,8 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(678, 578)
+        MainWindow.setMinimumSize(QtCore.QSize(678, 578))
+        MainWindow.setMaximumSize(QtCore.QSize(678, 578))
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.verticalLayout = QtWidgets.QVBoxLayout(self.centralwidget)
@@ -409,7 +411,7 @@ class Ui_MainWindow(object):
         self.fragil_si.setText(_translate("MainWindow", "Si"))
         self.fragil_no.setText(_translate("MainWindow", "No"))
         self.peso_label_2.setText(_translate("MainWindow", "Precio"))
-from Interfaces.main import img_rc
+from  Interfaces.main import img_rc
 
 
 if __name__ == "__main__":

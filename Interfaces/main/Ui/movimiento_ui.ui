@@ -16,6 +16,12 @@
     <height>296</height>
    </size>
   </property>
+  <property name="sizeIncrement">
+   <size>
+    <width>475</width>
+    <height>296</height>
+   </size>
+  </property>
   <property name="windowTitle">
    <string>Nuevo Ingreso</string>
   </property>
@@ -117,10 +123,7 @@ margin-left: 10px;
        </property>
        <property name="font">
         <font>
-         <family>Cairo</family>
          <pointsize>-1</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
         </font>
        </property>
        <property name="styleSheet">
@@ -209,10 +212,7 @@ margin-left: 10px;
        </property>
        <property name="font">
         <font>
-         <family>Cairo</family>
          <pointsize>-1</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
         </font>
        </property>
        <property name="styleSheet">
@@ -276,10 +276,7 @@ margin-left: 10px;
        </property>
        <property name="font">
         <font>
-         <family>Cairo</family>
          <pointsize>-1</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
         </font>
        </property>
        <property name="styleSheet">
@@ -304,10 +301,7 @@ margin-left:10px
        </property>
        <property name="font">
         <font>
-         <family>Cairo</family>
          <pointsize>-1</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
         </font>
        </property>
        <property name="styleSheet">
@@ -366,10 +360,7 @@ QPushButton:hover{
        </property>
        <property name="font">
         <font>
-         <family>Cairo</family>
          <pointsize>-1</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
         </font>
        </property>
        <property name="styleSheet">
