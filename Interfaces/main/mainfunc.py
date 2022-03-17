@@ -1257,6 +1257,7 @@ class BMProduct(QMainWindow):
         global productId
         global codigoViejo
         global defaultImg
+        cantidad_total = 0
         codigo = self.ui.codigo_input.text()
         descripcion = self.ui.descripcion_input.toPlainText()
         marca = self.ui.marca_input.text()
