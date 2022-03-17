@@ -323,7 +323,7 @@ def listar_alojamiento_disponibles_area(area):
     return data
 
 def ver_area(codigo):
-    print  (codigo)
+    #print  (codigo)
     a = c.start_connection()
     cursor = a.cursor()
     query = "SELECT area FROM alojamiento WHERE codigo=%s"
@@ -363,17 +363,23 @@ def pick_recorrido(): #obetiene recorrido de posiciones en orden
 
 def pick_(lp):
     pick=[]
+    #print("lp",lp)
+
     lr=pick_recorrido()
+    #print("lr",lr)
     for i in lr:
         for j in lp:
+     #       print(i,j)
             if i==j:
                 pick.append(j)
     return pick
 
 
 def modificar_dispo_ingreso(prod,cantidad):
+    print("INGRESO")
     cantidad=int(cantidad)
     codigo=p.ver_posicion(prod)
+    codigo=codigo
     v=p.ver_vol(prod)
     v=int(v)
     volumen=v*cantidad
@@ -386,15 +392,15 @@ def modificar_dispo_ingreso(prod,cantidad):
         a.commit()
         if str(data)=="()":
             return 0
-        dispo=int(data[0][0])
-        if(int(dispo)<=100):
+        dispo=float(data[0][0])
+        if(dispo<=100):
 
             query = "SELECT volumen FROM alojamiento WHERE codigo=%s"
             cursor.execute(query, codigo)
             data = cursor.fetchall()
             a.commit()
             vol=int(data[0][0])
-            print(volumen,vol)
+            #print(volumen,vol)
             x=(volumen*100)/int(vol)
 
             dispo=dispo-int(x)
@@ -417,8 +423,10 @@ def modificar_dispo_ingreso(prod,cantidad):
     c.close_connection(a)
 
 def modificar_dispo_egreso(prod,cantidad):
+    print("EGRESO")
     cantidad=int(cantidad)
     codigo = p.ver_posicion(prod)
+    codigo=codigo
     v = int(p.ver_vol(prod))
     volumen = v * cantidad
     a = c.start_connection()
@@ -428,9 +436,10 @@ def modificar_dispo_egreso(prod,cantidad):
         cursor.execute(query, codigo)
         data = cursor.fetchall()
         a.commit()
+        #print(codigo,data)
         if str(data)=="()":
             return 0
-        dispo = int(data[0][0])
+        dispo = float(data[0][0])
         if (dispo <= 100):
 
             query = "SELECT volumen FROM alojamiento WHERE codigo=%s"
@@ -438,7 +447,7 @@ def modificar_dispo_egreso(prod,cantidad):
             data = cursor.fetchall()
             a.commit()
             data=int(data[0][0])
-            vol = int(data*cantidad)
+            vol = data
             x=int((volumen*100))/int(vol)
             dispo = dispo + x
 

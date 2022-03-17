@@ -31,9 +31,9 @@ class PosicionAlojamiento(QMainWindow):
         # RECIBIR VALORES DE LA VENTANA
         global area
         ancho = self.ui.ancho_num.value()
-        alto = self.ui.alto_num.value()
+        limite = self.ui.alto_num.value()#
         largo = self.ui.largo_num.value()
-        limite = self.ui.limite_num.value()
+        alto  = self.ui.limite_num.value()#
         posicion=self.ui.comboBox_area.currentText()
         if (posicion == ""):
             QtWidgets.QMessageBox.critical(self, "Error", "Llene todos los campos")
@@ -42,6 +42,7 @@ class PosicionAlojamiento(QMainWindow):
             QtWidgets.QMessageBox.critical(self, "Error", "Llene todos los campos")
             return None
         if al.verificar_posicion(posicion)==1:
+            print(largo,ancho,alto)
             al.Alojamiento.modificar_alojamiento(posicion,largo,ancho,alto,limite)
         else:
             QtWidgets.QMessageBox.critical(self, "Error", "posicion ya creada")

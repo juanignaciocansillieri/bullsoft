@@ -118,9 +118,9 @@ def listar_lote(idproducto):
     a = c.start_connection()
     cursor = a.cursor()
     try:
-        query = "SELECT l.idproducto,p.descripcion,l.cantidad,l.fechalote,l.vencimiento FROM lote l JOIN productos p ON l.idproducto=p.codigo WHERE idproducto=%s"
-        values = idproducto
-        cursor.execute(query, values)
+        query = "SELECT l.idproducto,p.descripcion,l.cantidad,l.fechalote,l.vencimiento FROM lote l JOIN productos p ON l.idproducto=p.codigo WHERE l.idproducto=%s"
+        #values = idproducto,idproducto
+        cursor.execute(query, idproducto)
         area = cursor.fetchall()
         a.commit()
     except pymysql.err.OperationalError as err:
@@ -185,8 +185,9 @@ def verificar(param):
     else: return 0
 
 def fifo(idproducto, cantidad):
+    print("fifo")
     cantidad=int(cantidad)
-    n3 = contar_filas_producto(idproducto)
+    n = contar_filas_producto(idproducto)
     i = 0
     a = c.start_connection()
     cursor = a.cursor()
@@ -202,6 +203,9 @@ def fifo(idproducto, cantidad):
     data = data
     for x in data:
         cantidad_total = cantidad_total + x[0]
+    print("cantidad_total ", cantidad_total)
+    print("cantidad a sacar ", cantidad)
+    #print("n3 ",n3)
     if cantidad_total < cantidad:
         return 1
 
@@ -211,36 +215,41 @@ def fifo(idproducto, cantidad):
 
         a.commit()
 
-        while i < n3:
-            query = "SELECT cantidad FROM lote WHERE idproducto=%s ORDER BY vencimiento"
-            cursor.execute(query, idproducto)
-            data = cursor.fetchall()
-            n=data[0][0]
+    while i < n:
+        print("i ",i)
+        query = "SELECT cantidad FROM lote WHERE idproducto=%s ORDER BY vencimiento"
+        cursor.execute(query, idproducto)
+        data = cursor.fetchall()
+        n=data[0][0]
+        print("cantidad de lote ", n)
+        a.commit()
+        if n < cantidad:
+            query = "DELETE FROM lote WHERE idproducto=%s and cantidad=%s"
+            values = (idproducto, n)
+            cursor.execute(query, values)
             a.commit()
-            if n < cantidad:
+            cantidad = cantidad - n
+            idlote += 1
+            i = i + 1
+        else:
+            n2 = n - cantidad
+            print("n2 ",n2)
+            if n2 == 0:
+
                 query = "DELETE FROM lote WHERE idproducto=%s and cantidad=%s"
-                values = (idproducto, n)
+                values = (idproducto,n)
                 cursor.execute(query, values)
                 a.commit()
-                cantidad = cantidad - n
-                idlote += 1
-                i = i + 1
-            else:
-                n2 = n - cantidad
-                if n2 == 0:
 
-                    query = "DELETE FROM lote WHERE idproducto=%s and cantidad=%s"
-                    values = (idproducto,n)
-                    cursor.execute(query, values)
-                    a.commit()
-                else:
-                    query = "UPDATE lote set cantidad=%s WHERE idproducto=%s and cantidad=%s"
-                    values = (n2, idproducto, n)
-                    cursor.execute(query, values)
-                    a.commit()
-                    cantidad = cantidad - n
-                idlote += 1
-                i = i+1
+            query = "UPDATE lote set cantidad=%s WHERE idproducto=%s and cantidad=%s and idlote=%s"
+            values = (n2, idproducto, n,idlote)
+            cursor.execute(query, values)
+            a.commit()
+            cantidad = cantidad - n
+            print("cantidad a sacar con lo sacado ",cantidad)
+
+            idlote += 1
+            i = n
 
 def ver_lote(codigo):
         a = c.start_connection()
