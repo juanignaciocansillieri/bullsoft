@@ -208,12 +208,12 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.label_segmento.setText(_translate("MainWindow", "Largo"))
+        self.label_segmento.setText(_translate("MainWindow", "Largo (cm)"))
         self.modificar_btn.setText(_translate("MainWindow", "Crear Posición"))
-        self.label_alto.setText(_translate("MainWindow", "Alto"))
+        self.label_alto.setText(_translate("MainWindow", "Alto (cm)"))
         self.label_Area.setText(_translate("MainWindow", "Posición"))
-        self.label_ancho.setText(_translate("MainWindow", "Ancho"))
-        self.label_limite.setText(_translate("MainWindow", "Peso Maximo"))
+        self.label_ancho.setText(_translate("MainWindow", "Ancho (cm)"))
+        self.label_limite.setText(_translate("MainWindow", "Peso Maximo (kg)"))
         self.label_5.setText(_translate("MainWindow", "Nueva Posición de Alojamiento"))
 
 

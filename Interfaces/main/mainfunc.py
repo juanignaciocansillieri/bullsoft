@@ -188,7 +188,7 @@ class Modern(QMainWindow):
 
         ########################## DEPOSITOS ##################################
 
-        #self.ui.deposito_btn.clicked.connect(self.mostra_areas)
+        self.ui.deposito_btn.clicked.connect(self.mostra_areas)
         ## Abrir Pagina Depositos ##
         """if (verificar_deposito== 0):
            self.ui.deposito_btn.clicked.connect(lambda: self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_area))
@@ -283,7 +283,9 @@ class Modern(QMainWindow):
             return None
         self.listar_usuarios()
         self.checkear_boton_users()
+
     def click_label_areas(self,event):
+
         if admin:
             self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_area)
 
