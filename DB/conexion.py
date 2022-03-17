@@ -171,7 +171,7 @@ def crear_tabla():  # crea una tabla (al iniciar por primera vez el programa se 
     idproductos INT UNSIGNED AUTO_INCREMENT PRIMARY KEY NOT NULL,
     codigo VARCHAR(20) NOT NULL,
     marca VARCHAR(20) NOT NULL,
-    descripcion VARCHAR(50) NOT NULL,
+    descripcion VARCHAR(60) NOT NULL,
     ubicacion VARCHAR(20) NOT NULL,
     fragil BINARY(1) NOT NULL,
     foto VARCHAR(100) NOT NULL,
@@ -191,7 +191,7 @@ def crear_tabla():  # crea una tabla (al iniciar por primera vez el programa se 
 
     q16 = """CREATE TABLE IF NOT EXISTS estanterias (
     idestanterias INT UNSIGNED AUTO_INCREMENT PRIMARY KEY NOT NULL,
-    codigo VARCHAR(20) NOT NULL,
+    codigo VARCHAR(50) NOT NULL,
     area VARCHAR(20) NOT NULL,
     pasillo VARCHAR(20) NOT NULL,
     posicion VARCHAR(20) NOT NULL,

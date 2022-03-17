@@ -4,7 +4,7 @@ from CLASES import area,estanterias,alojamiento,productos,lotes,matriz,usuarios
 
 c.borrar_tabla()
 c.crear_tabla()
-
+"""
 matriz.alta_datos_matriz(2,2)
 
 #nombre, identificador,posicion, pasillos, segmentos,entrada,salida
@@ -49,3 +49,4 @@ usuarios.Usuarios("p3", "p3", "p3", "0", "2", "2020-01-01", "p3", "p2")
 loginDB.alta_login("p1","p1")
 loginDB.alta_login("p2","p2")
 loginDB.alta_login("p3","p3")
+"""
