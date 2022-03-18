@@ -309,7 +309,7 @@ class Modern(QMainWindow):
             self.ui.products_btn_lotes_2.setChecked(False)
             self.ui.products_btn_movimientos_2.setChecked(False)
             self.ui.products_btn_movimiento.setChecked(False)
-
+            self.ui.buscar_input.setText("")
 
     def checkear_boton_stock(self):
         self.ui.products_btn_stock.setChecked(True)
@@ -710,7 +710,6 @@ class Modern(QMainWindow):
         products = p.buscar_product(parametro)
         n = p.buscar_product_rows(parametro)
         self.ui.tableWidget_stock_2.setRowCount(n)
-        self.ui.products_btn_movimiento.setg
         table_row = 0
 
         for row in products:
