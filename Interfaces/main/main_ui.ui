@@ -1235,7 +1235,7 @@ border:none</string>
              </size>
             </property>
             <property name="currentIndex">
-             <number>1</number>
+             <number>5</number>
             </property>
             <widget class="QWidget" name="page_deposito">
              <layout class="QVBoxLayout" name="verticalLayout_13">
@@ -3982,7 +3982,7 @@ margin-left: 10px;
                 <widget class="QLabel" name="label_18">
                  <property name="geometry">
                   <rect>
-                   <x>220</x>
+                   <x>180</x>
                    <y>20</y>
                    <width>128</width>
                    <height>40</height>

@@ -4,7 +4,7 @@ from CLASES import area,estanterias,alojamiento,productos,lotes,matriz,usuarios
 
 c.borrar_tabla()
 c.crear_tabla()
-
+"""
 matriz.alta_datos_matriz(2,2)
 
 #nombre, identificador,posicion, pasillos, segmentos,entrada,salida
@@ -13,6 +13,7 @@ area.Area("p1", "p1","1x1", "2", "4","0","0")
 area.Area("p2", "p2","1x2", "1", "2","0","0")
 area.Area("p3", "p3","2x1", "1", "2","0","0")
 area.Area("p4", "p4","2x2", "1", "2","0","0")
+"""
 """
 #codigo,area,pasillo,posicion,columnas,niveles
 

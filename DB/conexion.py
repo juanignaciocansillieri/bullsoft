@@ -224,13 +224,14 @@ def crear_tabla():  # crea una tabla (al iniciar por primera vez el programa se 
     close_connection(con)
 
 def verificar_deposito():
-    a = first_connection()
+    a = start_connection()
     cursor = a.cursor()
     try:
         query = "SELECT * FROM area "
         cursor.execute(query)
         a.commit()
         b = cursor.fetchone()
+        print("b",b)
         control1 = str(b)
         if control1 == "None":  # and
             print(control1)

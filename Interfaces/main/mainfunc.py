@@ -188,7 +188,7 @@ class Modern(QMainWindow):
 
         ########################## DEPOSITOS ##################################
 
-        #self.ui.deposito_btn.clicked.connect(self.mostra_areas)
+        self.ui.deposito_btn.clicked.connect(self.mostra_areas)
         ## Abrir Pagina Depositos ##
         """if (verificar_deposito== 0):
            self.ui.deposito_btn.clicked.connect(lambda: self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_area))
@@ -283,7 +283,9 @@ class Modern(QMainWindow):
             return None
         self.listar_usuarios()
         self.checkear_boton_users()
+
     def click_label_areas(self,event):
+
         if admin:
             self.ui.stackedWidget_main.setCurrentWidget(self.ui.page_area)
 
@@ -307,7 +309,7 @@ class Modern(QMainWindow):
             self.ui.products_btn_lotes_2.setChecked(False)
             self.ui.products_btn_movimientos_2.setChecked(False)
             self.ui.products_btn_movimiento.setChecked(False)
-
+            self.ui.buscar_input.setText("")
 
     def checkear_boton_stock(self):
         self.ui.products_btn_stock.setChecked(True)
@@ -712,7 +714,6 @@ class Modern(QMainWindow):
         products = p.buscar_product(parametro)
         n = p.buscar_product_rows(parametro)
         self.ui.tableWidget_stock_2.setRowCount(n)
-        self.ui.products_btn_movimiento.setg
         table_row = 0
 
         for row in products:
@@ -1272,6 +1273,7 @@ class BMProduct(QMainWindow):
         global productId
         global codigoViejo
         global defaultImg
+        cantidad_total = 0
         codigo = self.ui.codigo_input.text()
         descripcion = self.ui.descripcion_input.toPlainText()
         marca = self.ui.marca_input.text()
