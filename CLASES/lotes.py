@@ -195,6 +195,8 @@ def fifo(idproducto, cantidad):
     cursor.execute(query, idproducto)
     cantidad_total=0
     idlote = cursor.fetchall()
+    if(str(idlote)=="()"):
+        return 0
     idlote = idlote[0][0]
 
     query = "SELECT cantidad FROM lote WHERE idproducto=%s ORDER BY vencimiento"

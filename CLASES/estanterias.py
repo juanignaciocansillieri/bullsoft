@@ -139,6 +139,7 @@ def mostrar_columnas(area,posicion):
     return [b, posicion]
 
 def contar_niveles(area,posicion):
+    print(posicion)
     posicion = int(posicion)
     a = c.start_connection()
     cursor = a.cursor()

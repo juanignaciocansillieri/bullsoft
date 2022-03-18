@@ -544,6 +544,9 @@ class Modern(QMainWindow):
             if l.fifo(codigo, cantidad)==1:
                 QtWidgets.QMessageBox.critical(self, "Error", "No hay esa cantidad disponible")
                 return None
+            if l.fifo(codigo, cantidad)==0:
+                QtWidgets.QMessageBox.critical(self, "Error", "No hay lo del producto disponible")
+                return None
 
             if(al.modificar_dispo_egreso(codigo,cantidad)==0):
                 QtWidgets.QMessageBox.critical(self, "Error", "No hay esa disponibilidad")
@@ -1191,7 +1194,7 @@ class Modern(QMainWindow):
 
         pdf.set_font('Times', 'B', 20.0)
         pdf.cell(epw, 0.0, 'Picking', align='C')
-        pdf.set_font('Times', '', 11.0)
+        pdf.set_font('Times', '', 10.5)
         pdf.ln(0.5)
 
         for row in data:

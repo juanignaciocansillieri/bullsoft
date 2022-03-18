@@ -402,8 +402,9 @@ def modificar_dispo_ingreso(prod,cantidad):
             vol=int(data[0][0])
             #print(volumen,vol)
             x=(volumen*100)/int(vol)
-
+            #print(x)
             dispo=dispo-int(x)
+            #print("dispo", dispo)
             if (dispo >0):
 
                 query = "UPDATE alojamiento set disponibilidad=%s WHERE codigo=%s"
