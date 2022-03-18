@@ -437,7 +437,7 @@ def modificar_dispo_egreso(prod,cantidad):
         cursor.execute(query, codigo)
         data = cursor.fetchall()
         a.commit()
-        #print(codigo,data)
+        print("c,d ",codigo,data)
         if str(data)=="()":
             return 0
         dispo = float(data[0][0])

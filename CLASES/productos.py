@@ -316,7 +316,7 @@ def ver_posicion(codigo):
     data = cursor.fetchone ()
     a.commit()
     #print("DATA, ",data)
-    data = str(data)
+    data = str(data[0])
     c.close_connection(a)
     return data
 
