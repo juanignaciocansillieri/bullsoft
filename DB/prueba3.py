@@ -18,7 +18,7 @@ print("rp",pick)
 print (productos.pick_productos(cod,pick))
 """
 #print("prueba ",productos.buscar_prod_pick("1","p1-1-1-2-3"))
-n=lotes.fifo(978020137962,11)
+n=lotes.fifo(97802013796,1)
 print(n)
 #n=lotes.fifo(368520137962,5)
 #print(n)

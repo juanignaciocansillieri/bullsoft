@@ -541,10 +541,11 @@ class Modern(QMainWindow):
             codigo = tupla_egreso[i][0]
             lc.append(codigo)
             cantidad = tupla_egreso[i][2]
-            if l.fifo(codigo, cantidad)==1:
+            fifo=l.fifo(codigo, cantidad)
+            if fifo==1 :
                 QtWidgets.QMessageBox.critical(self, "Error", "No hay esa cantidad disponible")
                 return None
-            if l.fifo(codigo, cantidad)==0:
+            if fifo==0:
                 QtWidgets.QMessageBox.critical(self, "Error", "No hay lo del producto disponible")
                 return None
 
